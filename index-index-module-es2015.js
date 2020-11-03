@@ -129,7 +129,7 @@ const routes = [
             // },
             {
                 path: '',
-                loadChildren: () => __webpack_require__.e(/*! import() | pages-login-login-module */ "pages-login-login-module").then(__webpack_require__.bind(null, /*! ../pages/login/login.module */ "./src/app/pages/login/login.module.ts")).then((e) => e.LoginPageModule)
+                loadChildren: () => __webpack_require__.e(/*! import() | pages-login-image-background-login-image-background-module */ "pages-login-image-background-login-image-background-module").then(__webpack_require__.bind(null, /*! ../pages/login-image-background/login-image-background.module */ "./src/app/pages/login-image-background/login-image-background.module.ts")).then((e) => e.LoginImageBackgroundPageModule)
             }, {
                 path: 'signup',
                 loadChildren: () => __webpack_require__.e(/*! import() | pages-signup-signup-module */ "pages-signup-signup-module").then(__webpack_require__.bind(null, /*! ../pages/signup/signup.module */ "./src/app/pages/signup/signup.module.ts")).then((e) => e.SignupPageModule)
