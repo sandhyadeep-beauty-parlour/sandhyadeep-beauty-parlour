@@ -245,6 +245,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         }
       }, {
+        path: 'about-us',
+        loadChildren: function loadChildren() {
+          return Promise.all(
+          /*! import() | pages-about-us-about-us-module */
+          [__webpack_require__.e("common"), __webpack_require__.e("pages-about-us-about-us-module")]).then(__webpack_require__.bind(null,
+          /*! ../pages/about-us/about-us.module */
+          "./src/app/pages/about-us/about-us.module.ts")).then(function (e) {
+            return e.AboutUsPageModule;
+          });
+        }
+      }, {
         path: 'services',
         loadChildren: function loadChildren() {
           return Promise.all(

@@ -126,10 +126,16 @@ const routes = [
             {
                 path: '',
                 loadChildren: () => Promise.all(/*! import() | pages-feed-feed-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-feed-feed-module")]).then(__webpack_require__.bind(null, /*! ../pages/feed/feed.module */ "./src/app/pages/feed/feed.module.ts")).then((e) => e.FeedPageModule)
-            }, {
+            },
+            {
                 path: 'feed',
                 loadChildren: () => Promise.all(/*! import() | pages-feed-feed-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-feed-feed-module")]).then(__webpack_require__.bind(null, /*! ../pages/feed/feed.module */ "./src/app/pages/feed/feed.module.ts")).then((e) => e.FeedPageModule)
-            }, {
+            },
+            {
+                path: 'about-us',
+                loadChildren: () => Promise.all(/*! import() | pages-about-us-about-us-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-about-us-about-us-module")]).then(__webpack_require__.bind(null, /*! ../pages/about-us/about-us.module */ "./src/app/pages/about-us/about-us.module.ts")).then((e) => e.AboutUsPageModule)
+            },
+            {
                 path: 'services',
                 loadChildren: () => Promise.all(/*! import() | pages-services-services-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-services-services-module")]).then(__webpack_require__.bind(null, /*! ../pages/services/services.module */ "./src/app/pages/services/services.module.ts")).then((e) => e.MessagesPageModule)
             }, {
