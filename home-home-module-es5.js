@@ -225,9 +225,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       children: [{
         path: '',
         loadChildren: function loadChildren() {
-          return __webpack_require__.e(
+          return Promise.all(
           /*! import() | pages-feed-feed-module */
-          "pages-feed-feed-module").then(__webpack_require__.bind(null,
+          [__webpack_require__.e("common"), __webpack_require__.e("pages-feed-feed-module")]).then(__webpack_require__.bind(null,
           /*! ../pages/feed/feed.module */
           "./src/app/pages/feed/feed.module.ts")).then(function (e) {
             return e.FeedPageModule;
@@ -236,12 +236,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         path: 'feed',
         loadChildren: function loadChildren() {
-          return __webpack_require__.e(
+          return Promise.all(
           /*! import() | pages-feed-feed-module */
-          "pages-feed-feed-module").then(__webpack_require__.bind(null,
+          [__webpack_require__.e("common"), __webpack_require__.e("pages-feed-feed-module")]).then(__webpack_require__.bind(null,
           /*! ../pages/feed/feed.module */
           "./src/app/pages/feed/feed.module.ts")).then(function (e) {
             return e.FeedPageModule;
+          });
+        }
+      }, {
+        path: 'services',
+        loadChildren: function loadChildren() {
+          return Promise.all(
+          /*! import() | pages-services-services-module */
+          [__webpack_require__.e("common"), __webpack_require__.e("pages-services-services-module")]).then(__webpack_require__.bind(null,
+          /*! ../pages/services/services.module */
+          "./src/app/pages/services/services.module.ts")).then(function (e) {
+            return e.MessagesPageModule;
           });
         }
       }, {

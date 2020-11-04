@@ -125,10 +125,13 @@ const routes = [
         children: [
             {
                 path: '',
-                loadChildren: () => __webpack_require__.e(/*! import() | pages-feed-feed-module */ "pages-feed-feed-module").then(__webpack_require__.bind(null, /*! ../pages/feed/feed.module */ "./src/app/pages/feed/feed.module.ts")).then((e) => e.FeedPageModule)
+                loadChildren: () => Promise.all(/*! import() | pages-feed-feed-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-feed-feed-module")]).then(__webpack_require__.bind(null, /*! ../pages/feed/feed.module */ "./src/app/pages/feed/feed.module.ts")).then((e) => e.FeedPageModule)
             }, {
                 path: 'feed',
-                loadChildren: () => __webpack_require__.e(/*! import() | pages-feed-feed-module */ "pages-feed-feed-module").then(__webpack_require__.bind(null, /*! ../pages/feed/feed.module */ "./src/app/pages/feed/feed.module.ts")).then((e) => e.FeedPageModule)
+                loadChildren: () => Promise.all(/*! import() | pages-feed-feed-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-feed-feed-module")]).then(__webpack_require__.bind(null, /*! ../pages/feed/feed.module */ "./src/app/pages/feed/feed.module.ts")).then((e) => e.FeedPageModule)
+            }, {
+                path: 'services',
+                loadChildren: () => Promise.all(/*! import() | pages-services-services-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-services-services-module")]).then(__webpack_require__.bind(null, /*! ../pages/services/services.module */ "./src/app/pages/services/services.module.ts")).then((e) => e.MessagesPageModule)
             }, {
                 path: 'notifications',
                 loadChildren: () => __webpack_require__.e(/*! import() | pages-notifications-notifications-module */ "pages-notifications-notifications-module").then(__webpack_require__.bind(null, /*! ../pages/notifications/notifications.module */ "./src/app/pages/notifications/notifications.module.ts")).then((e) => e.NotificationsPageModule)
