@@ -924,13 +924,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @angular/common */
+    "./node_modules/@angular/common/fesm2015/common.js");
 
     var AboutUsPage = /*#__PURE__*/function () {
-      function AboutUsPage(modalController, router) {
+      function AboutUsPage(modalController, router, location) {
         _classCallCheck(this, AboutUsPage);
 
         this.modalController = modalController;
         this.router = router;
+        this.location = location;
         this.slideOpts = {
           initialSlide: 1,
           speed: 400,
@@ -1162,6 +1169,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function onSeeAllPortfolios() {
           this.router.navigate(['home/portfolio']);
         }
+      }, {
+        key: "backClicked",
+        value: function backClicked() {
+          this.location.back();
+        }
       }]);
 
       return AboutUsPage;
@@ -1172,6 +1184,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"]
       }, {
         type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]
+      }, {
+        type: _angular_common__WEBPACK_IMPORTED_MODULE_5__["Location"]
       }];
     };
 
@@ -1192,7 +1206,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./about-us.page.scss */
       "./src/app/pages/about-us/about-us.page.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])], AboutUsPage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["Location"]])], AboutUsPage);
     /***/
   },
 
