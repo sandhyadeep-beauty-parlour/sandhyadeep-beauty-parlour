@@ -155,6 +155,9 @@ const routes = [
                 path: 'services',
                 loadChildren: () => __webpack_require__.e(/*! import() | pages-services-services-module */ "default~pages-about-us-about-us-module~pages-services-services-module").then(__webpack_require__.bind(null, /*! ../pages/services/services.module */ "./src/app/pages/services/services.module.ts")).then((e) => e.ServicePageModule)
             }, {
+                path: 'portfolio',
+                loadChildren: () => __webpack_require__.e(/*! import() | pages-portfolio-portfolio-module */ "pages-portfolio-portfolio-module").then(__webpack_require__.bind(null, /*! ../pages/portfolio/portfolio.module */ "./src/app/pages/portfolio/portfolio.module.ts")).then((e) => e.PortfolioModule)
+            }, {
                 path: 'notifications',
                 loadChildren: () => __webpack_require__.e(/*! import() | pages-notifications-notifications-module */ "pages-notifications-notifications-module").then(__webpack_require__.bind(null, /*! ../pages/notifications/notifications.module */ "./src/app/pages/notifications/notifications.module.ts")).then((e) => e.NotificationsPageModule)
             }, {
