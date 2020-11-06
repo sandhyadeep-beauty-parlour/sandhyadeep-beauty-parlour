@@ -169,6 +169,9 @@ const routes = [
             }, {
                 path: 'packages',
                 loadChildren: () => __webpack_require__.e(/*! import() | pages-packages-packages-module */ "pages-packages-packages-module").then(__webpack_require__.bind(null, /*! ../pages/packages/packages.module */ "./src/app/pages/packages/packages.module.ts")).then((e) => e.PackagesModule)
+            }, {
+                path: 'products',
+                loadChildren: () => __webpack_require__.e(/*! import() | pages-products-products-module */ "pages-products-products-module").then(__webpack_require__.bind(null, /*! ../pages/products/products.module */ "./src/app/pages/products/products.module.ts")).then((e) => e.ProductsModule)
             }
         ]
     }
