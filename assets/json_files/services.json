@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "serviceName": "Eyebrow shaping",
     "duration": "15",
     "price": "50",
@@ -8,6 +9,7 @@
     "isChecked": false
   },
   {
+    "id":  2,
     "serviceName": "Upper lips",
     "duration": "15",
     "price": "15",
@@ -16,6 +18,7 @@
     "isChecked": false
   },
   {
+    "id":  3,
     "serviceName": "Chin",
     "duration": "15",
     "price": "15",
@@ -24,6 +27,7 @@
     "isChecked": false
   },
   {
+    "id":  4,
     "serviceName": "Forehead",
     "duration": "15",
     "price": "15",
@@ -32,6 +36,7 @@
     "isChecked": false
   },
   {
+    "id":  5,
     "serviceName": "Jawline",
     "duration": "15",
     "price": "30",
@@ -40,6 +45,7 @@
     "isChecked": false
   },
   {
+    "id":  6,
     "serviceName": "Face - Eyebrows Waxing",
     "duration": "15",
     "price": "90",
@@ -48,6 +54,7 @@
     "isChecked": false
   },
   {
+    "id":  7,
     "serviceName": "Face - Upperlips Waxing",
     "duration": "15",
     "price": "50",
@@ -56,6 +63,7 @@
     "isChecked": false
   },
   {
+    "id":  8,
     "serviceName": "Face - Forehead Waxing",
     "duration": "15",
     "price": "50",
@@ -64,6 +72,7 @@
     "isChecked": false
   },
   {
+    "id":  9,
     "serviceName": "Face - Jawline Waxing",
     "duration": "15",
     "price": "150",
@@ -72,6 +81,7 @@
     "isChecked": false
   },
   {
+    "id":  10,
     "serviceName": "Face - Sidelocks Waxing",
     "duration": "15",
     "price": "100",
@@ -80,6 +90,7 @@
     "isChecked": false
   },
   {
+    "id":  11,
     "serviceName": "Face - Full face Waxing",
     "duration": "15",
     "price": "250",
@@ -88,6 +99,7 @@
     "isChecked": false
   },
   {
+    "id":  12,
     "serviceName": "Full hands Waxing",
     "duration": "15",
     "price": "180",
@@ -96,6 +108,7 @@
     "isChecked": false
   },
   {
+    "id":  13,
     "serviceName": "Under arms Waxing",
     "duration": "15",
     "price": "50",
@@ -104,6 +117,7 @@
     "isChecked": false
   },
   {
+    "id":  14,
     "serviceName": "Half legs",
     "duration": "15",
     "price": "180",
@@ -112,6 +126,7 @@
     "isChecked": false
   },
   {
+    "id":  15,
     "serviceName": "Full legs",
     "duration": "15",
     "price": "350",
@@ -120,6 +135,7 @@
     "isChecked": false
   },
   {
+    "id":  16,
     "serviceName": "Bikini wax",
     "duration": "15",
     "price": "750",

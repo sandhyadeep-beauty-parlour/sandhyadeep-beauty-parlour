@@ -135,6 +135,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           return this.http.get(localUrl);
         }
       }, {
+        key: "getCombos",
+        value: function getCombos() {
+          var localUrl = 'assets/json_files/packages.json';
+          return this.http.get(localUrl);
+        }
+      }, {
         key: "commonError",
         value: function commonError(err) {
           console.log(err);
