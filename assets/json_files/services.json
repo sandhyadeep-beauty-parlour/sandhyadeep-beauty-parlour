@@ -1,0 +1,130 @@
+[
+  {
+    "serviceName": "Eyebrow shaping",
+    "duration": "15",
+    "price": "50",
+    "mainServiceId": 1,
+    "type": "convincing/frequent",
+    "isChecked": false
+  },
+  {
+    "serviceName": "Upper lips",
+    "duration": "15",
+    "price": "15",
+    "mainServiceId": 1,
+    "type": "convincing/frequent",
+    "isChecked": false
+  },
+  {
+    "serviceName": "Chin",
+    "duration": "15",
+    "price": "15",
+    "mainServiceId": 1,
+    "type": "convincing/frequent",
+    "isChecked": false
+  },
+  {
+    "serviceName": "Forehead",
+    "duration": "15",
+    "price": "15",
+    "mainServiceId": 1,
+    "type": "convincing/frequent",
+    "isChecked": false
+  },
+  {
+    "serviceName": "Jawline",
+    "duration": "15",
+    "price": "30",
+    "mainServiceId": 1,
+    "type": "convincing/frequent",
+    "isChecked": false
+  },
+  {
+    "serviceName": "Face - Eyebrows Waxing",
+    "duration": "15",
+    "price": "90",
+    "mainServiceId": 2,
+    "type": "convincing/frequent",
+    "isChecked": false
+  },
+  {
+    "serviceName": "Face - Upperlips Waxing",
+    "duration": "15",
+    "price": "50",
+    "mainServiceId": 2,
+    "type": "convincing/frequent",
+    "isChecked": false
+  },
+  {
+    "serviceName": "Face - Forehead Waxing",
+    "duration": "15",
+    "price": "50",
+    "mainServiceId": 2,
+    "type": "convincing/frequent",
+    "isChecked": false
+  },
+  {
+    "serviceName": "Face - Jawline Waxing",
+    "duration": "15",
+    "price": "150",
+    "mainServiceId": 2,
+    "type": "convincing/frequent",
+    "isChecked": false
+  },
+  {
+    "serviceName": "Face - Sidelocks Waxing",
+    "duration": "15",
+    "price": "100",
+    "mainServiceId": 2,
+    "type": "convincing/frequent",
+    "isChecked": false
+  },
+  {
+    "serviceName": "Face - Full face Waxing",
+    "duration": "15",
+    "price": "250",
+    "mainServiceId": 2,
+    "type": "convincing/frequent",
+    "isChecked": false
+  },
+  {
+    "serviceName": "Full hands Waxing",
+    "duration": "15",
+    "price": "180",
+    "mainServiceId": 2,
+    "type": "convincing/frequent",
+    "isChecked": false
+  },
+  {
+    "serviceName": "Under arms Waxing",
+    "duration": "15",
+    "price": "50",
+    "mainServiceId": 2,
+    "type": "convincing/frequent",
+    "isChecked": false
+  },
+  {
+    "serviceName": "Half legs",
+    "duration": "15",
+    "price": "180",
+    "mainServiceId": 2,
+    "type": "convincing/frequent",
+    "isChecked": false
+  },
+  {
+    "serviceName": "Full legs",
+    "duration": "15",
+    "price": "350",
+    "mainServiceId": 2,
+    "type": "convincing/frequent",
+    "isChecked": false
+  },
+  {
+    "serviceName": "Bikini wax",
+    "duration": "15",
+    "price": "750",
+    "mainServiceId": 2,
+    "type": "convincing/frequent",
+    "isChecked": false
+  }
+]
