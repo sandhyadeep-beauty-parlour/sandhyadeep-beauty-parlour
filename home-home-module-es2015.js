@@ -176,8 +176,11 @@ const routes = [
                 path: 'bookings',
                 loadChildren: () => __webpack_require__.e(/*! import() | pages-bookings-bookings-module */ "pages-bookings-bookings-module").then(__webpack_require__.bind(null, /*! ../pages/bookings/bookings.module */ "./src/app/pages/bookings/bookings.module.ts")).then((e) => e.BookingsModule)
             }, {
+                path: 'apply-coupon',
+                loadChildren: () => Promise.all(/*! import() | pages-apply-coupon-apply-coupon-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-apply-coupon-apply-coupon-module")]).then(__webpack_require__.bind(null, /*! ../pages/apply-coupon/apply-coupon.module */ "./src/app/pages/apply-coupon/apply-coupon.module.ts")).then((e) => e.ApplyCouponModule)
+            }, {
                 path: 'schedule-appointment',
-                loadChildren: () => __webpack_require__.e(/*! import() | pages-schedule-appointment-schedule-appointment-module */ "pages-schedule-appointment-schedule-appointment-module").then(__webpack_require__.bind(null, /*! ../pages/schedule-appointment/schedule-appointment.module */ "./src/app/pages/schedule-appointment/schedule-appointment.module.ts"))
+                loadChildren: () => Promise.all(/*! import() | pages-schedule-appointment-schedule-appointment-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-schedule-appointment-schedule-appointment-module")]).then(__webpack_require__.bind(null, /*! ../pages/schedule-appointment/schedule-appointment.module */ "./src/app/pages/schedule-appointment/schedule-appointment.module.ts"))
                     .then((e) => e.ScheduleAppointmentModule)
             }
         ]
