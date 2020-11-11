@@ -391,6 +391,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             return e.ScheduleAppointmentModule;
           });
         }
+      }, {
+        path: 'payments',
+        loadChildren: function loadChildren() {
+          return Promise.all(
+          /*! import() | pages-payment-payment-module */
+          [__webpack_require__.e("common"), __webpack_require__.e("pages-payment-payment-module")]).then(__webpack_require__.bind(null,
+          /*! ../pages/payment/payment.module */
+          "./src/app/pages/payment/payment.module.ts")).then(function (e) {
+            return e.PaymentModule;
+          });
+        }
       }]
     }];
 
