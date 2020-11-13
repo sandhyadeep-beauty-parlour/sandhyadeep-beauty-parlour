@@ -341,6 +341,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     _context.next = 2;
                     return this.toastController.create({
                       message: displayMessage,
+                      position: 'top',
                       cssClass: 'customToastClass',
                       duration: 2000
                     });

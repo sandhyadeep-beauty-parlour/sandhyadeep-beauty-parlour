@@ -195,6 +195,7 @@ let LoginPage = class LoginPage {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
             const toast = yield this.toastController.create({
                 message: displayMessage,
+                position: 'top',
                 cssClass: 'customToastClass',
                 duration: 2000,
             });
