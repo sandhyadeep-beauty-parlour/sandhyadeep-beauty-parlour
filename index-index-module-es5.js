@@ -230,11 +230,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         path: '',
         loadChildren: function loadChildren() {
           return __webpack_require__.e(
-          /*! import() | pages-login-image-background-login-image-background-module */
-          "pages-login-image-background-login-image-background-module").then(__webpack_require__.bind(null,
-          /*! ../pages/login-image-background/login-image-background.module */
-          "./src/app/pages/login-image-background/login-image-background.module.ts")).then(function (e) {
-            return e.LoginImageBackgroundPageModule;
+          /*! import() | pages-login-login-module */
+          "pages-login-login-module").then(__webpack_require__.bind(null,
+          /*! ../pages/login/login.module */
+          "./src/app/pages/login/login.module.ts")).then(function (e) {
+            return e.LoginPageModule;
           });
         }
       }, {
