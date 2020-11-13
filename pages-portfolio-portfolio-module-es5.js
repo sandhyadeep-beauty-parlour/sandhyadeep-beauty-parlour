@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<sandhyadeep-header class=\"z-index-99\"></sandhyadeep-header>\n<ion-content>\n    <div class=\"page-heading\">\n        <div (click)=\"backClicked()\" class=\"back-navigator\">\n            <i class=\"fa fa-angle-left\"></i>\n        </div>\n        <div class=\"heading-text\">\n            <b>Portfolio</b>\n        </div>\n    </div>\n    <div class=\"portfolio-container\">\n        <div class=\"photos-container\">\n            <div class=\"photo left\" *ngFor=\"let image of imagesData; let index = index\">\n                <div (click)=\"onLike(imagesData, index)\" class=\"single-photo\">\n                    <svg class=\"icon icon-heart\" [class.like]=\"image.check\">\n                        <use xlink:href=\"#icon-heart\"></use>\n                    </svg>\n                    <img src=\"{{image.url}}\" />\n                </div>\n                <div class=\"photo-likes-container\">\n                    <div class=\"photo-likes\">\n                        Likes {{image.likes}}\n                    </div>\n                    <div (click)=\"onUnlike(imagesData, index)\" *ngIf=\"image.isLiked\" class=\"like-icon\"><i class=\"fa fa-heart\"></i></div>\n                    <div *ngIf=\"!image.isLiked\" class=\"like-icon\"><i class=\"fa fa-heart-o\"></i></div>\n                </div>\n            </div>\n        </div>\n        <div class=\"photos-container\">\n            <div class=\"photo right\" *ngFor=\"let image of imagesData1; let index = index\">\n                <div (click)=\"onLike(imagesData1, index)\" class=\"single-photo\">\n                    <svg class=\"icon icon-heart\" [class.like]=\"image.check\">\n                        <use xlink:href=\"#icon-heart\"></use>\n                    </svg>\n                    <img src=\"{{image.url}}\" />\n                </div>\n                <div class=\"photo-likes-container\">\n                    <div class=\"photo-likes\">\n                        Likes {{image.likes}}\n                    </div>\n                    <div (click)=\"onUnlike(imagesData1, index)\"  *ngIf=\"image.isLiked\" class=\"like-icon\"><i class=\"fa fa-heart\"></i></div>\n                    <div *ngIf=\"!image.isLiked\" class=\"like-icon\"><i class=\"fa fa-heart-o\"></i></div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <svg aria-hidden=\"true\" style=\"position: absolute; width: 0; height: 0; overflow: hidden;\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n        <defs>\n            <symbol id=\"icon-heart\" viewBox=\"0 0 32 32\">\n                <path d=\"M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z\"></path>\n            </symbol>\n        </defs>\n    </svg>\n</ion-content>\n";
+    __webpack_exports__["default"] = "<sandhyadeep-header class=\"z-index-99\"></sandhyadeep-header>\n<ion-content>\n    <div class=\"page-heading\">\n        <div (click)=\"backClicked()\" class=\"back-navigator\">\n            <i class=\"fa fa-angle-left\"></i>\n        </div>\n        <div class=\"heading-text\">\n            <b>Portfolio</b>\n        </div>\n    </div>\n    <div class=\"portfolio-container\">\n        <div class=\"photos-container\">\n            <div class=\"photo left\" *ngFor=\"let image of imagesData; let index = index\">\n                <div (dblclick)=\"onLike(imagesData, index)\" (click)=\"showImage(image.url)\" class=\"single-photo\">\n                    <svg class=\"icon icon-heart\" [class.like]=\"image.check\">\n                        <use xlink:href=\"#icon-heart\"></use>\n                    </svg>\n                    <img src=\"{{image.url}}\" />\n                </div>\n                <div class=\"photo-likes-container\">\n                    <div class=\"photo-likes\">\n                        Likes {{image.likes}}\n                    </div>\n                    <div (click)=\"onUnlike(imagesData, index)\" *ngIf=\"image.isLiked\" class=\"like-icon\"><i class=\"fa fa-heart\"></i></div>\n                    <div *ngIf=\"!image.isLiked\" class=\"like-icon\"><i class=\"fa fa-heart-o\"></i></div>\n                </div>\n            </div>\n        </div>\n        <div class=\"photos-container\">\n            <div class=\"photo right\" *ngFor=\"let image of imagesData1; let index = index\">\n                <div (dblclick)=\"onLike(imagesData1, index)\" (click)=\"showImage(image.url)\" class=\"single-photo\">\n                    <svg class=\"icon icon-heart\" [class.like]=\"image.check\">\n                        <use xlink:href=\"#icon-heart\"></use>\n                    </svg>\n                    <img src=\"{{image.url}}\" />\n                </div>\n                <div class=\"photo-likes-container\">\n                    <div class=\"photo-likes\">\n                        Likes {{image.likes}}\n                    </div>\n                    <div (click)=\"onUnlike(imagesData1, index)\"  *ngIf=\"image.isLiked\" class=\"like-icon\"><i class=\"fa fa-heart\"></i></div>\n                    <div *ngIf=\"!image.isLiked\" class=\"like-icon\"><i class=\"fa fa-heart-o\"></i></div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <svg aria-hidden=\"true\" style=\"position: absolute; width: 0; height: 0; overflow: hidden;\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n        <defs>\n            <symbol id=\"icon-heart\" viewBox=\"0 0 32 32\">\n                <path d=\"M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z\"></path>\n            </symbol>\n        </defs>\n    </svg>\n</ion-content>\n";
     /***/
   },
 
@@ -152,13 +152,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _shared_components_header_component_header_component_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! ../../shared-components/header-component/header-component.module */
     "./src/app/shared-components/header-component/header-component.module.ts");
+    /* harmony import */
+
+
+    var _shared_components_modal_popup_modal_popup_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    /*! ../../shared-components/modal-popup/modal-popup.module */
+    "./src/app/shared-components/modal-popup/modal-popup.module.ts");
+    /* harmony import */
+
+
+    var _shared_components_modal_popup_modal_popup_page__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    /*! ../../shared-components/modal-popup/modal-popup.page */
+    "./src/app/shared-components/modal-popup/modal-popup.page.ts");
 
     var PortfolioModule = function PortfolioModule() {
       _classCallCheck(this, PortfolioModule);
     };
 
     PortfolioModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _portfolio_routing_module__WEBPACK_IMPORTED_MODULE_5__["PortfolioRoutingModule"], _shared_components_header_component_header_component_module__WEBPACK_IMPORTED_MODULE_7__["HeaderModule"]],
+      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _portfolio_routing_module__WEBPACK_IMPORTED_MODULE_5__["PortfolioRoutingModule"], _shared_components_header_component_header_component_module__WEBPACK_IMPORTED_MODULE_7__["HeaderModule"], _shared_components_modal_popup_modal_popup_module__WEBPACK_IMPORTED_MODULE_8__["ModalPopupModule"]],
+      entryComponents: [_shared_components_modal_popup_modal_popup_page__WEBPACK_IMPORTED_MODULE_9__["ModalPopupPage"]],
       declarations: [_portfolio_page__WEBPACK_IMPORTED_MODULE_6__["PortfolioPage"]]
     })], PortfolioModule);
     /***/
@@ -221,12 +234,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/fesm2015/common.js");
+    /* harmony import */
+
+
+    var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @ionic/angular */
+    "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
+    /* harmony import */
+
+
+    var _shared_components_modal_popup_modal_popup_page__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ../../shared-components/modal-popup/modal-popup.page */
+    "./src/app/shared-components/modal-popup/modal-popup.page.ts");
 
     var PortfolioPage = /*#__PURE__*/function () {
-      function PortfolioPage(location) {
+      function PortfolioPage(location, modalController) {
         _classCallCheck(this, PortfolioPage);
 
         this.location = location;
+        this.modalController = modalController;
         this.imagesData = [{
           url: 'assets/work14.jpg',
           likes: 125,
@@ -314,6 +340,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }, 1200);
         }
       }, {
+        key: "showImage",
+        value: function showImage(image) {
+          this.openModal(image);
+        }
+      }, {
         key: "onUnlike",
         value: function onUnlike(list, index) {
           if (list[index].isLiked) {
@@ -326,6 +357,46 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function backClicked() {
           this.location.back();
         }
+      }, {
+        key: "openModal",
+        value: function openModal(image) {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+            var _this = this;
+
+            var modal;
+            return regeneratorRuntime.wrap(function _callee$(_context) {
+              while (1) {
+                switch (_context.prev = _context.next) {
+                  case 0:
+                    _context.next = 2;
+                    return this.modalController.create({
+                      component: _shared_components_modal_popup_modal_popup_page__WEBPACK_IMPORTED_MODULE_4__["ModalPopupPage"],
+                      componentProps: {
+                        "imageUrl": image
+                      }
+                    });
+
+                  case 2:
+                    modal = _context.sent;
+                    modal.onDidDismiss().then(function (dataReturned) {
+                      if (dataReturned !== null) {
+                        _this.dataReturned = dataReturned.data; //alert('Modal Sent Data :'+ dataReturned);
+                      }
+                    });
+                    _context.next = 6;
+                    return modal.present();
+
+                  case 6:
+                    return _context.abrupt("return", _context.sent);
+
+                  case 7:
+                  case "end":
+                    return _context.stop();
+                }
+              }
+            }, _callee, this);
+          }));
+        }
       }]);
 
       return PortfolioPage;
@@ -334,6 +405,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     PortfolioPage.ctorParameters = function () {
       return [{
         type: _angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"]
+      }, {
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ModalController"]
       }];
     };
 
@@ -345,7 +418,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./portfolio.page.scss */
       "./src/app/pages/portfolio/portfolio.page.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"]])], PortfolioPage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"], _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ModalController"]])], PortfolioPage);
     /***/
   }
 }]);
