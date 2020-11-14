@@ -186,6 +186,10 @@ const routes = [
                 path: 'payments',
                 loadChildren: () => Promise.all(/*! import() | pages-payment-payment-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-payment-payment-module")]).then(__webpack_require__.bind(null, /*! ../pages/payment/payment.module */ "./src/app/pages/payment/payment.module.ts"))
                     .then((e) => e.PaymentModule)
+            }, {
+                path: 'package-details',
+                loadChildren: () => __webpack_require__.e(/*! import() | pages-packages-package-details-package-details-module */ "pages-packages-package-details-package-details-module").then(__webpack_require__.bind(null, /*! ../pages/packages/package-details/package-details.module */ "./src/app/pages/packages/package-details/package-details.module.ts"))
+                    .then((e) => e.PackageDetailsModule)
             }
         ]
     }
