@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<sandhyadeep-header class=\"z-index-99\"></sandhyadeep-header>\n<ion-content>\n<!--    <ion-searchbar color=\"light\" class=\"search-bar\" placeholder=\"Search\"></ion-searchbar>-->\n    <ion-slides zoom class=\"feed-sliders\" pager=\"true\" [options]=\"slideOpts\">\n        <ion-slide class=\"feed-images feed-slider feed-slider-one\">\n\n        </ion-slide>\n        <ion-slide class=\"feed-images feed-slider feed-slider-two\">\n\n        </ion-slide>\n        <ion-slide class=\"feed-images feed-slider feed-slider-three\">\n\n        </ion-slide>\n    </ion-slides>\n\n\n    <div class=\"menu-container\">\n<!--        <div class=\"feed-heading\">-->\n<!--            <h2><b>Services</b></h2>-->\n<!--        </div>-->\n<!--        <div class=\"height-95px slide_container\">-->\n<!--            <div class=\"slider s1 filter-bright-03\"></div>-->\n<!--            <div class=\"slider s2 filter-bright-03\"></div>-->\n<!--            <div class=\"slider s3 filter-bright-03\"></div>-->\n<!--            <div class=\"slider s4 filter-bright-03\"></div>-->\n<!--        </div>-->\n\n        <div class=\"quick_menus\">\n            <div *ngFor=\"let treatment of treatments\" (click)=\"goServices()\" class=\"menu-container\">\n                <div class=\"menu-image\"><img src=\"{{treatment.url}}\" alt=\"\"></div>\n                <div class=\"menu-text\">{{treatment.name}}</div>\n            </div>\n        </div>\n\n        <div class=\"feed-heading\">\n            <div class=\"heading-text\">\n                <b>Packages</b>\n            </div>\n            <div [routerLink]=\"['/home/packages']\" class=\"know-more\">See All <i class=\"fa fa-angle-right\"></i></div>\n        </div>\n        <div class=\"slide_container\">\n            <div *ngFor=\"let package of packages\" class=\"slider\">\n                <img src=\"{{package.url}}\" alt=\"\">\n            </div>\n        </div>\n\n        <div class=\"feed-heading\">\n            <div class=\"heading-text\">\n                <b>Products</b>\n            </div>\n            <div [routerLink]=\"['/home/products']\" class=\"know-more\">See All <i class=\"fa fa-angle-right\"></i></div>\n        </div>\n        <div class=\"products_container\">\n            <div *ngFor=\"let product of productImages, let index = index\" class=\"image-slider-container\">\n                <div class=\"slider-image\">\n                    <img src=\"{{product.url}}\" alt=\"\">\n                </div>\n                <div class=\"slider-text\">\n                    <div class=\"product-name-container\">\n                        <div class=\"product-name\">\n                            {{product.name}}\n                        </div>\n                        <div class=\"product-price-details\">\n                            <div class=\"price-container\">\n                                <div class=\"price\">\n                                    {{product.price}} ₹\n                                </div>\n                                <div class=\"discounted-price\">\n                                    <del> {{product.discountedPrice}} ₹ </del>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <add-button (updateCounter)=\"onUpdateCounter($event, index)\" ></add-button>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"safety-measures\">\n            <div class=\"margin-bottom-10\">\n                Best-in-class safety measures\n            </div>\n            <div class=\"measures-container margin-bottom-10\">\n                <div class=\"measure\">\n                    <div class=\"measure-image\"><img src=\"assets/mask.png\" alt=\"\"></div>\n                    <div class=\"measure-text\">Usage of mask & gloves</div>\n                </div>\n                <div class=\"measure\">\n                    <div class=\"measure-image\"><img src=\"assets/thermometer.png\" alt=\"\"></div>\n                    <div class=\"measure-text\">Temperature Checks</div>\n                </div>\n                <div class=\"measure\">\n                    <div class=\"measure-image\"><img src=\"assets/liquid-soap.png\" alt=\"\"></div>\n                    <div class=\"measure-text\">Sanitizations of tools & area</div>\n                </div>\n                <div class=\"measure\">\n                    <div class=\"measure-image\"><img src=\"assets/setu.png\" alt=\"\"></div>\n                    <div class=\"measure-text\">Arogya Setu to ensure Safety</div>\n                </div>\n            </div>\n        </div>\n<!--        <div class=\"safety-measures\">-->\n<!--            <div class=\"margin-bottom-10\">-->\n<!--                We use best brands in 1-time use-->\n<!--            </div>-->\n<!--            <div style=\"display: flex; flex-wrap: wrap\">-->\n<!--                <div style=\"flex-basis: 33%; display: flex; justify-content: center; align-items: center; padding: 0 15px\" *ngFor=\"let brand of brandsList\">-->\n<!--                    <img style=\"width: 70px\" src={{brand.url}} alt=\"\">-->\n<!--                </div>-->\n<!--            </div>-->\n<!--        </div>-->\n        <div class=\"feed-heading\">\n            <div class=\"heading-text\">\n                <b>Our Stylist</b>\n            </div>\n            <div (click)=\"onKnowMore()\" class=\"know-more\">Know More <i class=\"fa fa-angle-right\"></i></div>\n        </div>\n        <div class=\"application-details\">\n            <div class=\"owner-info-container\">\n                <div class=\"owner-image\">\n                    <img src=\"../../../assets/deepaa_bhagwat.jpg\">\n                </div>\n                <div class=\"owner-details\">\n                    <div class=\"owner-name\">Deepaa Bhagwat</div>\n                    <div class=\"social-media-icons\">\n                        <div class=\"fb-icon\"><i class=\"media-icon fa fa-facebook\"></i></div>\n                        <div class=\"insta-icon\"><i class=\"media-icon fa fa-instagram\"></i></div>\n                        <div class=\"linkedin-icon\"><i class=\"media-icon fa fa-linkedin\"></i></div>\n                    </div>\n                </div>\n            </div>\n            <div>\n                <div>\n                    <ul>\n                        <li>Media & Beauty Makeup Diploma · Media Makeup · Fsx · Singapore</li>\n                        <li>Makeup Techniques with Air Brush Machine · Mumbai, Maharashtra</li>\n                        <li>Master Diploma in Makeup Artistry · Singapore</li>\n                        <li>Comite International D’Esthetique Et De Cosmetologie., Zurich.</li>\n                        <li>British Association of Beauty Therapy & Cosmetology, London.</li>\n                    </ul>\n                </div>\n            </div>\n        </div>\n        <div class=\"copy-rights\">\n            <i class=\"fa fa-copyright\"></i> Copyright 2020 <br> Sandhyadeep Beauty Parlour. <br>\n        </div>\n<!--        <div class=\"feed-container\">-->\n<!--            <div class=\"feed-image-container\">-->\n<!--                <div>-->\n<!--                    <div class=\"feed-image feed-image-hair\"></div>-->\n<!--                    <div class=\"feed-text\"> Hair</div>-->\n<!--                </div>-->\n<!--            </div>-->\n<!--            <div class=\"feed-image-container\">-->\n<!--                <div>-->\n<!--                    <div class=\"feed-image feed-image-skin\"></div>-->\n<!--                    <div class=\"feed-text\"> Skin</div>-->\n<!--                </div>-->\n<!--            </div>-->\n<!--            <div class=\"feed-image-container\">-->\n<!--                <div>-->\n<!--                    <div class=\"feed-image feed-image-makeup\"></div>-->\n<!--                    <div class=\"feed-text\"> Makeup</div>-->\n<!--                </div>-->\n<!--            </div>-->\n<!--            <div class=\"feed-image-container\">-->\n<!--                <div>-->\n<!--                    <div class=\"feed-image feed-image-course\"></div>-->\n<!--                    <div class=\"feed-text\"> Courses</div>-->\n<!--                </div>-->\n<!--            </div>-->\n<!--        </div>-->\n    </div>\n\n</ion-content>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<sandhyadeep-header class=\"z-index-99\"></sandhyadeep-header>\n<ion-content>\n<!--    <ion-searchbar color=\"light\" class=\"search-bar\" placeholder=\"Search\"></ion-searchbar>-->\n    <ion-slides zoom class=\"feed-sliders\" pager=\"true\" [options]=\"slideOpts\">\n        <ion-slide class=\"feed-images feed-slider feed-slider-one\">\n\n        </ion-slide>\n        <ion-slide class=\"feed-images feed-slider feed-slider-two\">\n\n        </ion-slide>\n        <ion-slide class=\"feed-images feed-slider feed-slider-three\">\n\n        </ion-slide>\n    </ion-slides>\n\n\n    <div class=\"menu-container\">\n<!--        <div class=\"feed-heading\">-->\n<!--            <h2><b>Services</b></h2>-->\n<!--        </div>-->\n<!--        <div class=\"height-95px slide_container\">-->\n<!--            <div class=\"slider s1 filter-bright-03\"></div>-->\n<!--            <div class=\"slider s2 filter-bright-03\"></div>-->\n<!--            <div class=\"slider s3 filter-bright-03\"></div>-->\n<!--            <div class=\"slider s4 filter-bright-03\"></div>-->\n<!--        </div>-->\n\n        <div class=\"quick_menus\">\n            <div *ngFor=\"let treatment of treatments\" (click)=\"goServices()\" class=\"menu-container\">\n                <div class=\"menu-image\"><img src=\"{{treatment.url}}\" alt=\"\"></div>\n                <div class=\"menu-text\">{{treatment.name}}</div>\n            </div>\n        </div>\n\n        <div class=\"feed-heading\">\n            <div class=\"heading-text\">\n                <b>Packages</b>\n            </div>\n            <div [routerLink]=\"['/home/packages']\" class=\"know-more\">See All <i class=\"fa fa-angle-right\"></i></div>\n        </div>\n        <div class=\"slide_container\">\n            <div *ngFor=\"let packageData of packageList\" class=\"slider\" (click)=\"onClickPackage(packageData.id)\">\n                <img src=\"{{packageData?.displayImage}}\" alt=\"\">\n            </div>\n        </div>\n\n        <div class=\"feed-heading\">\n            <div class=\"heading-text\">\n                <b>Products</b>\n            </div>\n            <div [routerLink]=\"['/home/products']\" class=\"know-more\">See All <i class=\"fa fa-angle-right\"></i></div>\n        </div>\n        <div class=\"products_container\">\n            <div *ngFor=\"let product of productImages, let index = index\" class=\"image-slider-container\">\n                <div class=\"slider-image\">\n                    <img src=\"{{product.url}}\" alt=\"\">\n                </div>\n                <div class=\"slider-text\">\n                    <div class=\"product-name-container\">\n                        <div class=\"product-name\">\n                            {{product.name}}\n                        </div>\n                        <div class=\"product-price-details\">\n                            <div class=\"price-container\">\n                                <div class=\"price\">\n                                    {{product.price}} ₹\n                                </div>\n                                <div class=\"discounted-price\">\n                                    <del> {{product.discountedPrice}} ₹ </del>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <add-button (updateCounter)=\"onUpdateCounter($event, index)\" ></add-button>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"safety-measures\">\n            <div class=\"margin-bottom-10\">\n                Best-in-class safety measures\n            </div>\n            <div class=\"measures-container margin-bottom-10\">\n                <div class=\"measure\">\n                    <div class=\"measure-image\"><img src=\"assets/mask.png\" alt=\"\"></div>\n                    <div class=\"measure-text\">Usage of mask & gloves</div>\n                </div>\n                <div class=\"measure\">\n                    <div class=\"measure-image\"><img src=\"assets/thermometer.png\" alt=\"\"></div>\n                    <div class=\"measure-text\">Temperature Checks</div>\n                </div>\n                <div class=\"measure\">\n                    <div class=\"measure-image\"><img src=\"assets/liquid-soap.png\" alt=\"\"></div>\n                    <div class=\"measure-text\">Sanitizations of tools & area</div>\n                </div>\n                <div class=\"measure\">\n                    <div class=\"measure-image\"><img src=\"assets/setu.png\" alt=\"\"></div>\n                    <div class=\"measure-text\">Arogya Setu to ensure Safety</div>\n                </div>\n            </div>\n        </div>\n<!--        <div class=\"safety-measures\">-->\n<!--            <div class=\"margin-bottom-10\">-->\n<!--                We use best brands in 1-time use-->\n<!--            </div>-->\n<!--            <div style=\"display: flex; flex-wrap: wrap\">-->\n<!--                <div style=\"flex-basis: 33%; display: flex; justify-content: center; align-items: center; padding: 0 15px\" *ngFor=\"let brand of brandsList\">-->\n<!--                    <img style=\"width: 70px\" src={{brand.url}} alt=\"\">-->\n<!--                </div>-->\n<!--            </div>-->\n<!--        </div>-->\n        <div class=\"feed-heading\">\n            <div class=\"heading-text\">\n                <b>Our Stylist</b>\n            </div>\n            <div (click)=\"onKnowMore()\" class=\"know-more\">Know More <i class=\"fa fa-angle-right\"></i></div>\n        </div>\n        <div class=\"application-details\">\n            <div class=\"owner-info-container\">\n                <div class=\"owner-image\">\n                    <img src=\"../../../assets/deepaa_bhagwat.jpg\">\n                </div>\n                <div class=\"owner-details\">\n                    <div class=\"owner-name\">Deepaa Bhagwat</div>\n                    <div class=\"social-media-icons\">\n                        <div class=\"fb-icon\"><i class=\"media-icon fa fa-facebook\"></i></div>\n                        <div class=\"insta-icon\"><i class=\"media-icon fa fa-instagram\"></i></div>\n                        <div class=\"linkedin-icon\"><i class=\"media-icon fa fa-linkedin\"></i></div>\n                    </div>\n                </div>\n            </div>\n            <div>\n                <div>\n                    <ul>\n                        <li>Media & Beauty Makeup Diploma · Media Makeup · Fsx · Singapore</li>\n                        <li>Makeup Techniques with Air Brush Machine · Mumbai, Maharashtra</li>\n                        <li>Master Diploma in Makeup Artistry · Singapore</li>\n                        <li>Comite International D’Esthetique Et De Cosmetologie., Zurich.</li>\n                        <li>British Association of Beauty Therapy & Cosmetology, London.</li>\n                    </ul>\n                </div>\n            </div>\n        </div>\n        <div class=\"copy-rights\">\n            <i class=\"fa fa-copyright\"></i> Copyright 2020 <br> Sandhyadeep Beauty Parlour. <br>\n        </div>\n<!--        <div class=\"feed-container\">-->\n<!--            <div class=\"feed-image-container\">-->\n<!--                <div>-->\n<!--                    <div class=\"feed-image feed-image-hair\"></div>-->\n<!--                    <div class=\"feed-text\"> Hair</div>-->\n<!--                </div>-->\n<!--            </div>-->\n<!--            <div class=\"feed-image-container\">-->\n<!--                <div>-->\n<!--                    <div class=\"feed-image feed-image-skin\"></div>-->\n<!--                    <div class=\"feed-text\"> Skin</div>-->\n<!--                </div>-->\n<!--            </div>-->\n<!--            <div class=\"feed-image-container\">-->\n<!--                <div>-->\n<!--                    <div class=\"feed-image feed-image-makeup\"></div>-->\n<!--                    <div class=\"feed-text\"> Makeup</div>-->\n<!--                </div>-->\n<!--            </div>-->\n<!--            <div class=\"feed-image-container\">-->\n<!--                <div>-->\n<!--                    <div class=\"feed-image feed-image-course\"></div>-->\n<!--                    <div class=\"feed-text\"> Courses</div>-->\n<!--                </div>-->\n<!--            </div>-->\n<!--        </div>-->\n    </div>\n\n</ion-content>\n\n");
 
 /***/ }),
 
@@ -23,6 +23,82 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"add-item\">\n  <div *ngIf=\"counter === 0\" class=\"custom-add-button\">\n    <div class=\"add-text\">Add</div>\n    <i (click)=\"onChange('plus')\"\n       class=\"fa fa-plus\"></i>\n  </div>\n  <div *ngIf=\"counter > 0\" class=\"custom-add-more-button\">\n    <div (click)=\"onChange('minus')\">\n      <i class=\"fa fa-minus\"></i>\n    </div>\n    <div class=\"in-cart-box\">\n      {{counter}}\n    </div>\n    <div (click)=\"onChange('plus')\">\n      <i class=\"fa fa-plus\"></i>\n    </div>\n  </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./src/app/api.service.ts":
+/*!********************************!*\
+  !*** ./src/app/api.service.ts ***!
+  \********************************/
+/*! exports provided: ApiService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApiService", function() { return ApiService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+
+
+
+
+
+let ApiService = class ApiService {
+    constructor(http) {
+        this.http = http;
+        this.baseURL = _environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].baseURLAdminAPIs;
+        this.country = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"]('');
+        this.currentCountry = this.country.asObservable();
+        this.header = new _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpHeaders"]({
+            Authorization: 'Bearer ' + localStorage.getItem('token'),
+            'Content-Type': 'application/json'
+        });
+    }
+    getUserRole() {
+        return localStorage.getItem('role');
+    }
+    setHeaderToken() {
+        const token = localStorage.getItem('token');
+        this.header = new _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpHeaders"]({ Authorization: `Bearer ${token}` });
+    }
+    getServicesData() {
+        const localUrl = 'assets/json_files/services.json';
+        return this.http.get(localUrl);
+    }
+    getMainServiceData() {
+        const localUrl = 'assets/json_files/MainServices.json';
+        return this.http.get(localUrl);
+    }
+    getCombos() {
+        const localUrl = 'assets/json_files/packages.json';
+        return this.http.get(localUrl);
+    }
+    getCoupons() {
+        const localUrl = 'assets/json_files/coupons.json';
+        return this.http.get(localUrl);
+    }
+    getServicePackage() {
+        const localUrl = 'assets/json_files/service-packages.json';
+        return this.http.get(localUrl);
+    }
+    commonError(err) {
+        console.log(err);
+    }
+};
+ApiService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] }
+];
+ApiService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"]])
+], ApiService);
+
+
 
 /***/ }),
 
@@ -137,12 +213,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _api_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../api.service */ "./src/app/api.service.ts");
+
 
 
 
 let FeedPage = class FeedPage {
-    constructor(router) {
+    constructor(router, adminService) {
         this.router = router;
+        this.adminService = adminService;
         this.slideOpts = {
             initialSlide: 1,
             speed: 400,
@@ -280,8 +359,21 @@ let FeedPage = class FeedPage {
                 url: 'assets/s4.jpeg',
             }
         ];
+        this.packageList = [];
     }
     ngOnInit() {
+        this.getPackages();
+    }
+    getPackages() {
+        this.adminService.getServicePackage().subscribe(res => this.getServicePackageSuccess(res), error => {
+            this.adminService.commonError(error);
+        });
+    }
+    getServicePackageSuccess(res) {
+        this.packageList = res;
+    }
+    onClickPackage(id) {
+        this.router.navigate(['home/package-details'], { queryParams: { packageId: id } });
     }
     goServices() {
         this.router.navigate(['home/services']);
@@ -294,7 +386,8 @@ let FeedPage = class FeedPage {
     }
 };
 FeedPage.ctorParameters = () => [
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+    { type: _api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"] }
 ];
 FeedPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -302,7 +395,7 @@ FeedPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./feed.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/feed/feed.page.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./feed.page.scss */ "./src/app/pages/feed/feed.page.scss")).default]
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"]])
 ], FeedPage);
 
 
