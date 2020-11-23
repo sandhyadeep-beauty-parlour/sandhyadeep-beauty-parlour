@@ -168,7 +168,7 @@ const routes = [
                 loadChildren: () => __webpack_require__.e(/*! import() | pages-settings-settings-module */ "pages-settings-settings-module").then(__webpack_require__.bind(null, /*! ../pages/settings/settings.module */ "./src/app/pages/settings/settings.module.ts")).then((e) => e.SettingsPageModule)
             }, {
                 path: 'packages',
-                loadChildren: () => __webpack_require__.e(/*! import() | pages-packages-packages-module */ "pages-packages-packages-module").then(__webpack_require__.bind(null, /*! ../pages/packages/packages.module */ "./src/app/pages/packages/packages.module.ts")).then((e) => e.PackagesModule)
+                loadChildren: () => Promise.all(/*! import() | pages-packages-packages-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-packages-packages-module")]).then(__webpack_require__.bind(null, /*! ../pages/packages/packages.module */ "./src/app/pages/packages/packages.module.ts")).then((e) => e.PackagesModule)
             }, {
                 path: 'products',
                 loadChildren: () => __webpack_require__.e(/*! import() | pages-products-products-module */ "pages-products-products-module").then(__webpack_require__.bind(null, /*! ../pages/products/products.module */ "./src/app/pages/products/products.module.ts")).then((e) => e.ProductsModule)
@@ -188,7 +188,7 @@ const routes = [
                     .then((e) => e.PaymentModule)
             }, {
                 path: 'package-details',
-                loadChildren: () => __webpack_require__.e(/*! import() | pages-packages-package-details-package-details-module */ "pages-packages-package-details-package-details-module").then(__webpack_require__.bind(null, /*! ../pages/packages/package-details/package-details.module */ "./src/app/pages/packages/package-details/package-details.module.ts"))
+                loadChildren: () => Promise.all(/*! import() | pages-packages-package-details-package-details-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-packages-package-details-package-details-module")]).then(__webpack_require__.bind(null, /*! ../pages/packages/package-details/package-details.module */ "./src/app/pages/packages/package-details/package-details.module.ts"))
                     .then((e) => e.PackageDetailsModule)
             }
         ]

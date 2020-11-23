@@ -21,7 +21,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<search-header></search-header>\n<ion-content>\n    <div class=\"feed-heading\">\n        <div class=\"heading-text\">\n            <b>Packages</b>\n        </div>\n    </div>\n    <div class=\"package-list\">\n        <div *ngFor=\"let singlePackage of packageList, let index = index\" class=\"package\">\n            <div class=\"package-tag\">\n                {{singlePackage?.discount?.type}}\n            </div>\n            <div class=\"package-img\">\n                <div class=\"image-container\" *ngFor=\"let singleImage of singlePackage?.images\">\n                    <img src=\"{{singleImage?.imgUrl}}\" alt=\"\">\n                </div>\n            </div>\n            <div class=\"package-details-container\">\n                <div class=\"package-title-details\">\n                    <div class=\"package-name\">{{singlePackage.name}}</div>\n                    <div class=\"package-price\">{{singlePackage.price}} ₹</div>\n                    <div class=\"package-duration\"><i class=\"fa fa-clock-o\"></i>{{singlePackage.duration}}</div>\n                </div>\n                <div *ngIf=\"!singlePackage.addedInCart\" class=\"add-button\">\n                    <div (click)=\"addToCart(index)\" class=\"default-button\">\n                        <button> Add</button>\n                    </div>\n                </div>\n                <div *ngIf=\"singlePackage.addedInCart\">\n                    <div (click)=\"addToCart(index)\" class=\"booked-button\">\n                        <img src=\"assets/green-tick.png\" alt=\"\">\n                        <div>Added</div>\n                    </div>\n                </div>\n            </div>\n            <div class=\"package-details\">\n                <ul>\n                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</li>\n                    <li>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis n</li>\n                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</li>\n                    <li>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis n</li>\n                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</li>\n                    <li> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in</li>\n                </ul>\n                <div class=\"show-details\"><u>Show Details</u></div>\n            </div>\n        </div>\n    </div>\n</ion-content>\n<ion-footer class=\"ion-no-border\">\n    <ion-toolbar>\n        <div class=\"coupon-footer\">\n            <div class=\"coupon-button-container\">\n                <div class=\"coupon-discount\">600 ₹</div>\n                <div class=\"details\">3 Services</div>\n            </div>\n            <div class=\"default-button\">\n                <button>PAY NOW</button>\n            </div>\n        </div>\n    </ion-toolbar>\n</ion-footer>\n";
+    __webpack_exports__["default"] = "<search-header></search-header>\n<ion-content>\n    <div class=\"feed-heading\">\n        <div class=\"heading-text\">\n            <b>Packages</b>\n        </div>\n    </div>\n    <div class=\"package-list\">\n        <div *ngFor=\"let singlePackage of packageList, let index = index\" class=\"package\">\n            <div class=\"package-tag\">\n                {{singlePackage?.discount?.type}}\n            </div>\n            <div class=\"package-img\">\n                <div class=\"image-container\" *ngFor=\"let singleImage of singlePackage?.images\">\n                    <img (click)=\"showImage(singleImage?.imgUrl)\" src=\"{{singleImage?.imgUrl}}\" alt=\"\">\n                </div>\n            </div>\n            <div class=\"package-details-container\">\n                <div class=\"package-title-details\">\n                    <div class=\"package-name\">{{singlePackage.name}}</div>\n                    <div class=\"package-price\">{{singlePackage.price}} ₹</div>\n                    <div class=\"package-duration\"><i class=\"fa fa-clock-o\"></i>{{singlePackage.duration}}</div>\n                </div>\n                <div *ngIf=\"!singlePackage.addedInCart\" class=\"add-button\">\n                    <div (click)=\"addToCart(index)\" class=\"default-button\">\n                        <button> Add</button>\n                    </div>\n                </div>\n                <div *ngIf=\"singlePackage.addedInCart\">\n                    <div (click)=\"addToCart(index)\" class=\"booked-button\">\n                        <img src=\"assets/green-tick.png\" alt=\"\">\n                        <div>Added</div>\n                    </div>\n                </div>\n            </div>\n            <div class=\"package-details\">\n                <ul>\n                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</li>\n                    <li>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis n</li>\n                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</li>\n                    <li>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis n</li>\n                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</li>\n                    <li> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in</li>\n                </ul>\n                <div (click)=\"onShowDetails(singlePackage.id)\" class=\"show-details\"><u>Show Details</u></div>\n            </div>\n        </div>\n    </div>\n</ion-content>\n<ion-footer class=\"ion-no-border\">\n    <ion-toolbar>\n        <div class=\"coupon-footer\">\n            <div class=\"coupon-button-container\">\n                <div class=\"coupon-discount\">600 ₹</div>\n                <div class=\"details\">3 Packages</div>\n            </div>\n            <div class=\"default-button\">\n                <button>PAY NOW</button>\n            </div>\n        </div>\n    </ion-toolbar>\n</ion-footer>\n";
     /***/
   },
 
@@ -307,14 +307,27 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _shared_components_search_header_component_search_header_component_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
     /*! ../../shared-components/search-header-component/search-header-component.module */
     "./src/app/shared-components/search-header-component/search-header-component.module.ts");
+    /* harmony import */
+
+
+    var _shared_components_modal_popup_modal_popup_page__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    /*! ../../shared-components/modal-popup/modal-popup.page */
+    "./src/app/shared-components/modal-popup/modal-popup.page.ts");
+    /* harmony import */
+
+
+    var _shared_components_modal_popup_modal_popup_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    /*! ../../shared-components/modal-popup/modal-popup.module */
+    "./src/app/shared-components/modal-popup/modal-popup.module.ts");
 
     var PackagesModule = function PackagesModule() {
       _classCallCheck(this, PackagesModule);
     };
 
     PackagesModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _packages_routing_module__WEBPACK_IMPORTED_MODULE_5__["PackagesRoutingModule"], _shared_components_header_component_header_component_module__WEBPACK_IMPORTED_MODULE_7__["HeaderModule"], _shared_components_search_header_component_search_header_component_module__WEBPACK_IMPORTED_MODULE_8__["SearchHeaderComponentModule"]],
-      declarations: [_packages_page__WEBPACK_IMPORTED_MODULE_6__["PackagesPage"]]
+      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _packages_routing_module__WEBPACK_IMPORTED_MODULE_5__["PackagesRoutingModule"], _shared_components_header_component_header_component_module__WEBPACK_IMPORTED_MODULE_7__["HeaderModule"], _shared_components_search_header_component_search_header_component_module__WEBPACK_IMPORTED_MODULE_8__["SearchHeaderComponentModule"], _shared_components_modal_popup_modal_popup_module__WEBPACK_IMPORTED_MODULE_10__["ModalPopupModule"]],
+      declarations: [_packages_page__WEBPACK_IMPORTED_MODULE_6__["PackagesPage"]],
+      entryComponents: [_shared_components_modal_popup_modal_popup_page__WEBPACK_IMPORTED_MODULE_9__["ModalPopupPage"]]
     })], PackagesModule);
     /***/
   },
@@ -382,13 +395,26 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _shared_components_modal_popup_modal_popup_page__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ../../shared-components/modal-popup/modal-popup.page */
+    "./src/app/shared-components/modal-popup/modal-popup.page.ts");
+    /* harmony import */
+
+
+    var _ionic_angular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @ionic/angular */
+    "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
 
     var PackagesPage = /*#__PURE__*/function () {
-      function PackagesPage(adminService, router) {
+      function PackagesPage(adminService, router, modalController) {
         _classCallCheck(this, PackagesPage);
 
         this.adminService = adminService;
         this.router = router;
+        this.modalController = modalController;
         this.selectedServices = 0;
         this.amountPurchased = 0;
         this.slideOpts = {
@@ -430,6 +456,60 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function onBookAppointment() {
           this.router.navigate(['home/schedule-appointment']);
         }
+      }, {
+        key: "showImage",
+        value: function showImage(image) {
+          this.openModal(image);
+        }
+      }, {
+        key: "openModal",
+        value: function openModal(image) {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+            var _this2 = this;
+
+            var modal;
+            return regeneratorRuntime.wrap(function _callee$(_context) {
+              while (1) {
+                switch (_context.prev = _context.next) {
+                  case 0:
+                    _context.next = 2;
+                    return this.modalController.create({
+                      component: _shared_components_modal_popup_modal_popup_page__WEBPACK_IMPORTED_MODULE_4__["ModalPopupPage"],
+                      componentProps: {
+                        imageUrl: image
+                      }
+                    });
+
+                  case 2:
+                    modal = _context.sent;
+                    modal.onDidDismiss().then(function (dataReturned) {
+                      if (dataReturned !== null) {
+                        _this2.dataReturned = dataReturned.data;
+                      }
+                    });
+                    _context.next = 6;
+                    return modal.present();
+
+                  case 6:
+                    return _context.abrupt("return", _context.sent);
+
+                  case 7:
+                  case "end":
+                    return _context.stop();
+                }
+              }
+            }, _callee, this);
+          }));
+        }
+      }, {
+        key: "onShowDetails",
+        value: function onShowDetails(id) {
+          this.router.navigate(['home/package-details'], {
+            queryParams: {
+              packageId: id
+            }
+          });
+        }
       }]);
 
       return PackagesPage;
@@ -440,6 +520,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         type: _api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"]
       }, {
         type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+      }, {
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["ModalController"]
       }];
     };
 
@@ -451,7 +533,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./packages.page.scss */
       "./src/app/pages/packages/packages.page.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])], PackagesPage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["ModalController"]])], PackagesPage);
     /***/
   },
 
