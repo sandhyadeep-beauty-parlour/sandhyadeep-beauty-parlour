@@ -21,7 +21,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<search-header></search-header>\n<ion-content>\n    <div class=\"page-container\">\n        <div class=\"page-heading\">\n            <div class=\"heading-text\">\n                <b>Services</b>\n            </div>\n        </div>\n        <service-list (updateAmount)=\"updateData($event)\"></service-list>\n    </div>\n</ion-content>\n<ion-footer class=\"ion-no-border\">\n    <ion-toolbar>\n        <div class=\"appointment-footer\">\n            <div class=\"total-div-container\">\n                <div class=\"total-div\">\n                    <div>Total</div>\n                    <div class=\"total-div-price\">{{selectedServices}} Services</div>\n                </div>\n                <div>\n                    {{amountPurchased}} ₹\n                </div>\n            </div>\n            <div (click)=\"onBookAppointment()\" class=\"default-button\">\n                <button> Book Appointment</button>\n            </div>\n        </div>\n    </ion-toolbar>\n</ion-footer>\n";
+    __webpack_exports__["default"] = "<search-header></search-header>\n<ion-content>\n    <ion-refresher slot=\"fixed\" (ionRefresh)=\"refreshPage($event)\">\n        <ion-refresher-content pulling-icon=\"arrow-dropdown\" refreshing-spinner=\"circles\">\n\n        </ion-refresher-content>\n    </ion-refresher>\n    <div class=\"page-container\">\n        <div class=\"page-heading\">\n            <div class=\"heading-text\">\n                <b>Services</b>\n            </div>\n        </div>\n        <service-list [isRefreshed]=\"isRefreshed\" (updateAmount)=\"updateData($event)\"></service-list>\n    </div>\n</ion-content>\n<ion-footer class=\"ion-no-border\">\n    <ion-toolbar>\n        <div class=\"appointment-footer\">\n            <div class=\"total-div-container\">\n                <div class=\"total-div\">\n                    <div>Total</div>\n                    <div class=\"total-div-price\">{{selectedServices}} Services</div>\n                </div>\n                <div>\n                    {{amountPurchased}} ₹\n                </div>\n            </div>\n            <div (click)=\"onBookAppointment()\" class=\"default-button\">\n                <button> Book Appointment</button>\n            </div>\n        </div>\n    </ion-toolbar>\n</ion-footer>\n";
     /***/
   },
 
@@ -424,11 +424,24 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.adminService = adminService;
         this.amountPurchased = 0;
         this.selectedServices = 0;
+        this.isRefreshed = false;
       }
 
       _createClass(ServicesPage, [{
         key: "ngOnInit",
         value: function ngOnInit() {}
+      }, {
+        key: "refreshPage",
+        value: function refreshPage(event) {
+          var _this = this;
+
+          setTimeout(function () {
+            _this.isRefreshed = !_this.isRefreshed;
+            _this.amountPurchased = 0;
+            _this.selectedServices = 0;
+            event.target.complete();
+          }, 1500);
+        }
       }, {
         key: "onBookAppointment",
         value: function onBookAppointment() {
@@ -782,6 +795,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           this.getMainServices();
         }
       }, {
+        key: "ngOnChanges",
+        value: function ngOnChanges(changes) {
+          this.getMainServices();
+        }
+      }, {
         key: "onBookAppointment",
         value: function onBookAppointment() {
           this.router.navigate(['home/schedule-appointment']);
@@ -789,33 +807,33 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "getServices",
         value: function getServices() {
-          var _this = this;
-
-          this.adminService.getServicesData().subscribe(function (res) {
-            return _this.getAllServicesSuccess(res);
-          }, function (error) {
-            _this.adminService.commonError(error);
-          });
-        }
-      }, {
-        key: "getMainServices",
-        value: function getMainServices() {
           var _this2 = this;
 
-          this.adminService.getMainServiceData().subscribe(function (res) {
-            return _this2.getMainServicesSuccess(res);
+          this.adminService.getServicesData().subscribe(function (res) {
+            return _this2.getAllServicesSuccess(res);
           }, function (error) {
             _this2.adminService.commonError(error);
           });
         }
       }, {
+        key: "getMainServices",
+        value: function getMainServices() {
+          var _this3 = this;
+
+          this.adminService.getMainServiceData().subscribe(function (res) {
+            return _this3.getMainServicesSuccess(res);
+          }, function (error) {
+            _this3.adminService.commonError(error);
+          });
+        }
+      }, {
         key: "getAllServicesSuccess",
         value: function getAllServicesSuccess(res) {
-          var _this3 = this;
+          var _this4 = this;
 
           this.services = res;
           this.mainServices = this.mainServices.map(function (serv) {
-            serv.services = _this3.services.filter(function (v) {
+            serv.services = _this4.services.filter(function (v) {
               return v.mainServiceId === serv.id;
             });
             serv.show = false;
@@ -872,6 +890,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     };
 
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)], ServicesListPage.prototype, "updateAmount", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)], ServicesListPage.prototype, "isRefreshed", void 0);
     ServicesListPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'service-list',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
