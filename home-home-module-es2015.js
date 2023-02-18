@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<router-outlet></router-outlet>\n<div class=\"footer-container\">\n  <ion-tabs>\n    <div class=\"footer-tab\">\n      <ion-tab-bar slot=\"bottom\">\n        <ion-tab-button tab=\"feed\">\n          <img class=\"width-30\" src=\"assets/home.png\" alt=\"\">\n          <ion-label>Feed</ion-label>\n        </ion-tab-button>\n\n        <ion-tab-button tab=\"messages\">\n          <img class=\"width-30\" src=\"assets/checklist.png\" alt=\"\">\n          <ion-label>My Bookings</ion-label>\n        </ion-tab-button>\n\n        <ion-tab-button tab=\"portfolio\">\n          <img class=\"width-30\" src=\"assets/makeup_icon.png\" alt=\"\">\n          <ion-label>Portfolio</ion-label>\n        </ion-tab-button>\n\n        <ion-tab-button tab=\"settings\">\n          <img class=\"width-30\" src=\"assets/businesswoman.png\" alt=\"\">\n          <ion-label>Profile</ion-label>\n        </ion-tab-button>\n      </ion-tab-bar>\n    </div>\n  </ion-tabs>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<router-outlet></router-outlet>\n<div class=\"footer-container\">\n  <ion-tabs>\n    <div class=\"footer-tab\">\n      <ion-tab-bar slot=\"bottom\">\n        <ion-tab-button tab=\"feed\">\n          <img class=\"width-30\" src=\"assets/home.png\" alt=\"\">\n          <ion-label>Feed</ion-label>\n        </ion-tab-button>\n\n        <ion-tab-button tab=\"bookings\">\n          <img class=\"width-30\" src=\"assets/checklist.png\" alt=\"\">\n          <ion-label>My Bookings</ion-label>\n        </ion-tab-button>\n\n        <ion-tab-button tab=\"portfolio\">\n          <img class=\"width-30\" src=\"assets/makeup_icon.png\" alt=\"\">\n          <ion-label>Portfolio</ion-label>\n        </ion-tab-button>\n\n        <ion-tab-button tab=\"settings\">\n          <img class=\"width-30\" src=\"assets/businesswoman.png\" alt=\"\">\n          <ion-label>Profile</ion-label>\n        </ion-tab-button>\n      </ion-tab-bar>\n    </div>\n  </ion-tabs>\n</div>\n");
 
 /***/ }),
 
@@ -172,6 +172,9 @@ const routes = [
             }, {
                 path: 'products',
                 loadChildren: () => __webpack_require__.e(/*! import() | pages-products-products-module */ "pages-products-products-module").then(__webpack_require__.bind(null, /*! ../pages/products/products.module */ "./src/app/pages/products/products.module.ts")).then((e) => e.ProductsModule)
+            }, {
+                path: 'bookings',
+                loadChildren: () => __webpack_require__.e(/*! import() | pages-bookings-bookings-module */ "pages-bookings-bookings-module").then(__webpack_require__.bind(null, /*! ../pages/bookings/bookings.module */ "./src/app/pages/bookings/bookings.module.ts")).then((e) => e.BookingsModule)
             }
         ]
     }
