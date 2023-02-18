@@ -275,7 +275,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | pages-about-us-about-us-module */
-          [__webpack_require__.e("default~pages-about-us-about-us-module~pages-services-services-module"), __webpack_require__.e("pages-about-us-about-us-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~pages-about-us-about-us-module~pages-services-services-module"), __webpack_require__.e("common"), __webpack_require__.e("pages-about-us-about-us-module")]).then(__webpack_require__.bind(null,
           /*! ../pages/about-us/about-us.module */
           "./src/app/pages/about-us/about-us.module.ts")).then(function (e) {
             return e.AboutUsPageModule;
@@ -295,9 +295,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         path: 'portfolio',
         loadChildren: function loadChildren() {
-          return __webpack_require__.e(
+          return Promise.all(
           /*! import() | pages-portfolio-portfolio-module */
-          "pages-portfolio-portfolio-module").then(__webpack_require__.bind(null,
+          [__webpack_require__.e("common"), __webpack_require__.e("pages-portfolio-portfolio-module")]).then(__webpack_require__.bind(null,
           /*! ../pages/portfolio/portfolio.module */
           "./src/app/pages/portfolio/portfolio.module.ts")).then(function (e) {
             return e.PortfolioModule;

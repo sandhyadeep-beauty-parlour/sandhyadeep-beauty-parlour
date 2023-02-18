@@ -483,6 +483,26 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   },
 
   /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/shared-components/modal-popup/modal-popup.page.html":
+  /*!***********************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/shared-components/modal-popup/modal-popup.page.html ***!
+    \***********************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppSharedComponentsModalPopupModalPopupPageHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<ion-header>\n  <div (click)=\"closeModal()\" class=\"cross-container\"><ion-icon class=\"cross-icon\" name=\"close-outline\"></ion-icon></div>\n</ion-header>\n<ion-content>\n  <div class=\"image-zoom-container\">\n    <ion-slides  zoom [options]=\"slideOptsTest\">\n      <ion-slide>\n        <div class=\"swiper-zoom-container\">\n          <img src=\"{{imageUrl}}\" alt=\"\">\n        </div>\n      </ion-slide>\n    </ion-slides>\n  </div>\n</ion-content>\n\n<style>\n  .image-zoom-container {\n    display: flex; justify-content: center; height: 100%;\n  }\n\n  .cross-icon {\n    color: white;\n    font-size: 30px;\n    font-weight: bold;\n    display: inline-block;\n    float: right;\n  }\n</style>\n";
+    /***/
+  },
+
+  /***/
   "./src/app/shared-components/back-logo-component/back-logo-component.module.ts":
   /*!*************************************************************************************!*\
     !*** ./src/app/shared-components/back-logo-component/back-logo-component.module.ts ***!
@@ -643,6 +663,197 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       /*! ./back-logo-component.page.scss */
       "./src/app/shared-components/back-logo-component/back-logo-component.page.scss"))["default"]]
     }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"]])], BackLogoComponentPage);
+    /***/
+  },
+
+  /***/
+  "./src/app/shared-components/modal-popup/modal-popup.module.ts":
+  /*!*********************************************************************!*\
+    !*** ./src/app/shared-components/modal-popup/modal-popup.module.ts ***!
+    \*********************************************************************/
+
+  /*! exports provided: ModalPopupModule */
+
+  /***/
+  function srcAppSharedComponentsModalPopupModalPopupModuleTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ModalPopupModule", function () {
+      return ModalPopupModule;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/common */
+    "./node_modules/@angular/common/fesm2015/common.js");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @ionic/angular */
+    "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
+    /* harmony import */
+
+
+    var _modal_popup_page__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ./modal-popup.page */
+    "./src/app/shared-components/modal-popup/modal-popup.page.ts");
+
+    var ModalPopupModule = function ModalPopupModule() {
+      _classCallCheck(this, ModalPopupModule);
+    };
+
+    ModalPopupModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"]],
+      exports: [_modal_popup_page__WEBPACK_IMPORTED_MODULE_5__["ModalPopupPage"]],
+      declarations: [_modal_popup_page__WEBPACK_IMPORTED_MODULE_5__["ModalPopupPage"]]
+    })], ModalPopupModule);
+    /***/
+  },
+
+  /***/
+  "./src/app/shared-components/modal-popup/modal-popup.page.scss":
+  /*!*********************************************************************!*\
+    !*** ./src/app/shared-components/modal-popup/modal-popup.page.scss ***!
+    \*********************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppSharedComponentsModalPopupModalPopupPageScss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "ion-content {\n  --background: transparent;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2x0LTEwMC9zYW5kaHlhZGVlcDE5OTMtcmVwby9zcmMvYXBwL3NoYXJlZC1jb21wb25lbnRzL21vZGFsLXBvcHVwL21vZGFsLXBvcHVwLnBhZ2Uuc2NzcyIsInNyYy9hcHAvc2hhcmVkLWNvbXBvbmVudHMvbW9kYWwtcG9wdXAvbW9kYWwtcG9wdXAucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UseUJBQUE7QUNDRiIsImZpbGUiOiJzcmMvYXBwL3NoYXJlZC1jb21wb25lbnRzL21vZGFsLXBvcHVwL21vZGFsLXBvcHVwLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImlvbi1jb250ZW50e1xuICAtLWJhY2tncm91bmQ6IHRyYW5zcGFyZW50O1xufVxuIiwiaW9uLWNvbnRlbnQge1xuICAtLWJhY2tncm91bmQ6IHRyYW5zcGFyZW50O1xufSJdfQ== */";
+    /***/
+  },
+
+  /***/
+  "./src/app/shared-components/modal-popup/modal-popup.page.ts":
+  /*!*******************************************************************!*\
+    !*** ./src/app/shared-components/modal-popup/modal-popup.page.ts ***!
+    \*******************************************************************/
+
+  /*! exports provided: ModalPopupPage */
+
+  /***/
+  function srcAppSharedComponentsModalPopupModalPopupPageTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ModalPopupPage", function () {
+      return ModalPopupPage;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @ionic/angular */
+    "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
+
+    var ModalPopupPage = /*#__PURE__*/function () {
+      function ModalPopupPage(modalController, navParams) {
+        _classCallCheck(this, ModalPopupPage);
+
+        this.modalController = modalController;
+        this.navParams = navParams;
+        this.slideOptsTest = {
+          zoom: {
+            maxRatio: 3
+          }
+        };
+      }
+
+      _createClass(ModalPopupPage, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          this.imageUrl = this.navParams.data.imageUrl;
+          this.modalTitle = this.navParams.data.paramTitle;
+        }
+      }, {
+        key: "closeModal",
+        value: function closeModal() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
+            var onClosedData;
+            return regeneratorRuntime.wrap(function _callee3$(_context3) {
+              while (1) {
+                switch (_context3.prev = _context3.next) {
+                  case 0:
+                    onClosedData = "Wrapped Up!";
+                    _context3.next = 3;
+                    return this.modalController.dismiss(onClosedData);
+
+                  case 3:
+                  case "end":
+                    return _context3.stop();
+                }
+              }
+            }, _callee3, this);
+          }));
+        }
+      }]);
+
+      return ModalPopupPage;
+    }();
+
+    ModalPopupPage.ctorParameters = function () {
+      return [{
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"]
+      }, {
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavParams"]
+      }];
+    };
+
+    ModalPopupPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'modal-popup',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./modal-popup.page.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/shared-components/modal-popup/modal-popup.page.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./modal-popup.page.scss */
+      "./src/app/shared-components/modal-popup/modal-popup.page.scss"))["default"]]
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"], _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavParams"]])], ModalPopupPage);
     /***/
   }
 }]);
