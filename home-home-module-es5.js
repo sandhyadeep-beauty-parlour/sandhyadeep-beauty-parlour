@@ -251,9 +251,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       children: [{
         path: '',
         loadChildren: function loadChildren() {
-          return __webpack_require__.e(
+          return Promise.all(
           /*! import() | pages-feed-feed-module */
-          "pages-feed-feed-module").then(__webpack_require__.bind(null,
+          [__webpack_require__.e("common"), __webpack_require__.e("pages-feed-feed-module")]).then(__webpack_require__.bind(null,
           /*! ../pages/feed/feed.module */
           "./src/app/pages/feed/feed.module.ts")).then(function (e) {
             return e.FeedPageModule;
@@ -262,9 +262,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         path: 'feed',
         loadChildren: function loadChildren() {
-          return __webpack_require__.e(
+          return Promise.all(
           /*! import() | pages-feed-feed-module */
-          "pages-feed-feed-module").then(__webpack_require__.bind(null,
+          [__webpack_require__.e("common"), __webpack_require__.e("pages-feed-feed-module")]).then(__webpack_require__.bind(null,
           /*! ../pages/feed/feed.module */
           "./src/app/pages/feed/feed.module.ts")).then(function (e) {
             return e.FeedPageModule;
@@ -350,9 +350,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         path: 'products',
         loadChildren: function loadChildren() {
-          return __webpack_require__.e(
+          return Promise.all(
           /*! import() | pages-products-products-module */
-          "pages-products-products-module").then(__webpack_require__.bind(null,
+          [__webpack_require__.e("common"), __webpack_require__.e("pages-products-products-module")]).then(__webpack_require__.bind(null,
           /*! ../pages/products/products.module */
           "./src/app/pages/products/products.module.ts")).then(function (e) {
             return e.ProductsModule;
@@ -411,6 +411,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           /*! ../pages/packages/package-details/package-details.module */
           "./src/app/pages/packages/package-details/package-details.module.ts")).then(function (e) {
             return e.PackageDetailsModule;
+          });
+        }
+      }, {
+        path: 'product-details',
+        loadChildren: function loadChildren() {
+          return Promise.all(
+          /*! import() | pages-products-product-details-product-details-module */
+          [__webpack_require__.e("common"), __webpack_require__.e("pages-products-product-details-product-details-module")]).then(__webpack_require__.bind(null,
+          /*! ../pages/products/product-details/product-details.module */
+          "./src/app/pages/products/product-details/product-details.module.ts")).then(function (e) {
+            return e.ProductDetailsModule;
           });
         }
       }]

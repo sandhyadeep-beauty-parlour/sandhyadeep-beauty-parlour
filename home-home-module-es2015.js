@@ -141,11 +141,11 @@ const routes = [
         children: [
             {
                 path: '',
-                loadChildren: () => __webpack_require__.e(/*! import() | pages-feed-feed-module */ "pages-feed-feed-module").then(__webpack_require__.bind(null, /*! ../pages/feed/feed.module */ "./src/app/pages/feed/feed.module.ts")).then((e) => e.FeedPageModule)
+                loadChildren: () => Promise.all(/*! import() | pages-feed-feed-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-feed-feed-module")]).then(__webpack_require__.bind(null, /*! ../pages/feed/feed.module */ "./src/app/pages/feed/feed.module.ts")).then((e) => e.FeedPageModule)
             },
             {
                 path: 'feed',
-                loadChildren: () => __webpack_require__.e(/*! import() | pages-feed-feed-module */ "pages-feed-feed-module").then(__webpack_require__.bind(null, /*! ../pages/feed/feed.module */ "./src/app/pages/feed/feed.module.ts")).then((e) => e.FeedPageModule)
+                loadChildren: () => Promise.all(/*! import() | pages-feed-feed-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-feed-feed-module")]).then(__webpack_require__.bind(null, /*! ../pages/feed/feed.module */ "./src/app/pages/feed/feed.module.ts")).then((e) => e.FeedPageModule)
             },
             {
                 path: 'about-us',
@@ -171,7 +171,7 @@ const routes = [
                 loadChildren: () => Promise.all(/*! import() | pages-packages-packages-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-packages-packages-module")]).then(__webpack_require__.bind(null, /*! ../pages/packages/packages.module */ "./src/app/pages/packages/packages.module.ts")).then((e) => e.PackagesModule)
             }, {
                 path: 'products',
-                loadChildren: () => __webpack_require__.e(/*! import() | pages-products-products-module */ "pages-products-products-module").then(__webpack_require__.bind(null, /*! ../pages/products/products.module */ "./src/app/pages/products/products.module.ts")).then((e) => e.ProductsModule)
+                loadChildren: () => Promise.all(/*! import() | pages-products-products-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-products-products-module")]).then(__webpack_require__.bind(null, /*! ../pages/products/products.module */ "./src/app/pages/products/products.module.ts")).then((e) => e.ProductsModule)
             }, {
                 path: 'bookings',
                 loadChildren: () => __webpack_require__.e(/*! import() | pages-bookings-bookings-module */ "pages-bookings-bookings-module").then(__webpack_require__.bind(null, /*! ../pages/bookings/bookings.module */ "./src/app/pages/bookings/bookings.module.ts")).then((e) => e.BookingsModule)
@@ -190,6 +190,10 @@ const routes = [
                 path: 'package-details',
                 loadChildren: () => Promise.all(/*! import() | pages-packages-package-details-package-details-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-packages-package-details-package-details-module")]).then(__webpack_require__.bind(null, /*! ../pages/packages/package-details/package-details.module */ "./src/app/pages/packages/package-details/package-details.module.ts"))
                     .then((e) => e.PackageDetailsModule)
+            }, {
+                path: 'product-details',
+                loadChildren: () => Promise.all(/*! import() | pages-products-product-details-product-details-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-products-product-details-product-details-module")]).then(__webpack_require__.bind(null, /*! ../pages/products/product-details/product-details.module */ "./src/app/pages/products/product-details/product-details.module.ts"))
+                    .then((e) => e.ProductDetailsModule)
             }
         ]
     }

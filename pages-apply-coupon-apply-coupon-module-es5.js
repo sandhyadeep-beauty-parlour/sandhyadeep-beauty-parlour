@@ -133,6 +133,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           return this.http.get(localUrl);
         }
       }, {
+        key: "getProducts",
+        value: function getProducts() {
+          var localUrl = 'assets/json_files/products.json';
+          return this.http.get(localUrl);
+        }
+      }, {
         key: "commonError",
         value: function commonError(err) {
           console.log(err);

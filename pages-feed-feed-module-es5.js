@@ -26,26 +26,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/shared-components/add-button/add-button.page.html":
-  /*!*********************************************************************************************************!*\
-    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/shared-components/add-button/add-button.page.html ***!
-    \*********************************************************************************************************/
-
-  /*! exports provided: default */
-
-  /***/
-  function node_modulesRawLoaderDistCjsJsSrcAppSharedComponentsAddButtonAddButtonPageHtml(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony default export */
-
-
-    __webpack_exports__["default"] = "<div class=\"add-item\">\n  <div *ngIf=\"counter === 0\" class=\"custom-add-button\">\n    <div class=\"add-text\">Add</div>\n    <i (click)=\"onChange('plus')\"\n       class=\"fa fa-plus\"></i>\n  </div>\n  <div *ngIf=\"counter > 0\" class=\"custom-add-more-button\">\n    <div (click)=\"onChange('minus')\">\n      <i class=\"fa fa-minus\"></i>\n    </div>\n    <div class=\"in-cart-box\">\n      {{counter}}\n    </div>\n    <div (click)=\"onChange('plus')\">\n      <i class=\"fa fa-plus\"></i>\n    </div>\n  </div>\n</div>\n";
-    /***/
-  },
-
-  /***/
   "./src/app/api.service.ts":
   /*!********************************!*\
     !*** ./src/app/api.service.ts ***!
@@ -150,6 +130,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "getServicePackage",
         value: function getServicePackage() {
           var localUrl = 'assets/json_files/service-packages.json';
+          return this.http.get(localUrl);
+        }
+      }, {
+        key: "getProducts",
+        value: function getProducts() {
+          var localUrl = 'assets/json_files/products.json';
           return this.http.get(localUrl);
         }
       }, {
@@ -569,167 +555,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       /*! ./feed.page.scss */
       "./src/app/pages/feed/feed.page.scss"))["default"]]
     }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"]])], FeedPage);
-    /***/
-  },
-
-  /***/
-  "./src/app/shared-components/add-button/add-button.module.ts":
-  /*!*******************************************************************!*\
-    !*** ./src/app/shared-components/add-button/add-button.module.ts ***!
-    \*******************************************************************/
-
-  /*! exports provided: AddButtonModule */
-
-  /***/
-  function srcAppSharedComponentsAddButtonAddButtonModuleTs(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "AddButtonModule", function () {
-      return AddButtonModule;
-    });
-    /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
-    /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
-    /* harmony import */
-
-
-    var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! @angular/common */
-    "./node_modules/@angular/common/fesm2015/common.js");
-    /* harmony import */
-
-
-    var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
-    /* harmony import */
-
-
-    var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! @ionic/angular */
-    "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
-    /* harmony import */
-
-
-    var _add_button_page__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-    /*! ./add-button.page */
-    "./src/app/shared-components/add-button/add-button.page.ts");
-
-    var AddButtonModule = function AddButtonModule() {
-      _classCallCheck(this, AddButtonModule);
-    };
-
-    AddButtonModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"]],
-      exports: [_add_button_page__WEBPACK_IMPORTED_MODULE_5__["AddButtonPage"]],
-      declarations: [_add_button_page__WEBPACK_IMPORTED_MODULE_5__["AddButtonPage"]]
-    })], AddButtonModule);
-    /***/
-  },
-
-  /***/
-  "./src/app/shared-components/add-button/add-button.page.scss":
-  /*!*******************************************************************!*\
-    !*** ./src/app/shared-components/add-button/add-button.page.scss ***!
-    \*******************************************************************/
-
-  /*! exports provided: default */
-
-  /***/
-  function srcAppSharedComponentsAddButtonAddButtonPageScss(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony default export */
-
-
-    __webpack_exports__["default"] = ".add-item .custom-add-button {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  border: 1px solid #753a88;\n  border-radius: 5px;\n}\n.add-item .custom-add-button .add-text {\n  padding: 7px 5px;\n  color: #753a88;\n}\n.add-item .custom-add-button i.fa.fa-plus {\n  padding: 9px 6px;\n  background: #d3d3d382;\n  color: #753a88;\n}\n.add-item .custom-add-more-button {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  border: 1px solid #753a88;\n  border-radius: 5px;\n}\n.add-item .custom-add-more-button .add-text {\n  padding: 7px 5px;\n  color: #753a88;\n}\n.add-item .custom-add-more-button .in-cart-box {\n  padding: 0 6px;\n  color: #753a88;\n}\n.add-item .custom-add-more-button i.fa.fa-plus {\n  padding: 9px 6px;\n  background: #753a88;\n  color: white;\n}\n.add-item .custom-add-more-button i.fa.fa-minus {\n  padding: 9px 6px;\n  background: #753a88;\n  color: white;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2x0LTEwMC9zYW5kaHlhZGVlcDE5OTMtcmVwby9zcmMvYXBwL3NoYXJlZC1jb21wb25lbnRzL2FkZC1idXR0b24vYWRkLWJ1dHRvbi5wYWdlLnNjc3MiLCJzcmMvYXBwL3NoYXJlZC1jb21wb25lbnRzL2FkZC1idXR0b24vYWRkLWJ1dHRvbi5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0U7RUFDRSxhQUFBO0VBQWUsOEJBQUE7RUFDZixtQkFBQTtFQUFxQix5QkFBQTtFQUNyQixrQkFBQTtBQ0VKO0FEREk7RUFDRSxnQkFBQTtFQUNBLGNBQUE7QUNHTjtBRERJO0VBQ0UsZ0JBQUE7RUFDQSxxQkFBQTtFQUNBLGNBQUE7QUNHTjtBREFFO0VBQ0UsYUFBQTtFQUNBLDhCQUFBO0VBQ0EsbUJBQUE7RUFDQSx5QkFBQTtFQUNBLGtCQUFBO0FDRUo7QURESTtFQUNFLGdCQUFBO0VBQ0EsY0FBQTtBQ0dOO0FEREk7RUFDRSxjQUFBO0VBQ0EsY0FBQTtBQ0dOO0FEREk7RUFDRSxnQkFBQTtFQUNBLG1CQUFBO0VBQ0EsWUFBQTtBQ0dOO0FEREk7RUFDRSxnQkFBQTtFQUNBLG1CQUFBO0VBQ0EsWUFBQTtBQ0dOIiwiZmlsZSI6InNyYy9hcHAvc2hhcmVkLWNvbXBvbmVudHMvYWRkLWJ1dHRvbi9hZGQtYnV0dG9uLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5hZGQtaXRlbSB7XG4gIC5jdXN0b20tYWRkLWJ1dHRvbiB7XG4gICAgZGlzcGxheTogZmxleDsganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7IGJvcmRlcjogMXB4IHNvbGlkICM3NTNhODg7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIC5hZGQtdGV4dCB7XG4gICAgICBwYWRkaW5nOiA3cHggNXB4O1xuICAgICAgY29sb3I6ICM3NTNhODg7XG4gICAgfVxuICAgIGkuZmEuZmEtcGx1cyB7XG4gICAgICBwYWRkaW5nOiA5cHggNnB4O1xuICAgICAgYmFja2dyb3VuZDogI2QzZDNkMzgyO1xuICAgICAgY29sb3I6ICM3NTNhODg7XG4gICAgfVxuICB9XG4gIC5jdXN0b20tYWRkLW1vcmUtYnV0dG9uIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGJvcmRlcjogMXB4IHNvbGlkICM3NTNhODg7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIC5hZGQtdGV4dCB7XG4gICAgICBwYWRkaW5nOiA3cHggNXB4O1xuICAgICAgY29sb3I6ICM3NTNhODg7XG4gICAgfVxuICAgIC5pbi1jYXJ0LWJveCB7XG4gICAgICBwYWRkaW5nOiAwIDZweDtcbiAgICAgIGNvbG9yOiAjNzUzYTg4O1xuICAgIH1cbiAgICBpLmZhLmZhLXBsdXMge1xuICAgICAgcGFkZGluZzogOXB4IDZweDtcbiAgICAgIGJhY2tncm91bmQ6ICM3NTNhODg7XG4gICAgICBjb2xvcjogd2hpdGU7XG4gICAgfVxuICAgIGkuZmEuZmEtbWludXMge1xuICAgICAgcGFkZGluZzogOXB4IDZweDtcbiAgICAgIGJhY2tncm91bmQ6ICM3NTNhODg7XG4gICAgICBjb2xvcjogd2hpdGU7XG4gICAgfVxuICB9XG59XG4iLCIuYWRkLWl0ZW0gLmN1c3RvbS1hZGQtYnV0dG9uIHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBib3JkZXI6IDFweCBzb2xpZCAjNzUzYTg4O1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG59XG4uYWRkLWl0ZW0gLmN1c3RvbS1hZGQtYnV0dG9uIC5hZGQtdGV4dCB7XG4gIHBhZGRpbmc6IDdweCA1cHg7XG4gIGNvbG9yOiAjNzUzYTg4O1xufVxuLmFkZC1pdGVtIC5jdXN0b20tYWRkLWJ1dHRvbiBpLmZhLmZhLXBsdXMge1xuICBwYWRkaW5nOiA5cHggNnB4O1xuICBiYWNrZ3JvdW5kOiAjZDNkM2QzODI7XG4gIGNvbG9yOiAjNzUzYTg4O1xufVxuLmFkZC1pdGVtIC5jdXN0b20tYWRkLW1vcmUtYnV0dG9uIHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBib3JkZXI6IDFweCBzb2xpZCAjNzUzYTg4O1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG59XG4uYWRkLWl0ZW0gLmN1c3RvbS1hZGQtbW9yZS1idXR0b24gLmFkZC10ZXh0IHtcbiAgcGFkZGluZzogN3B4IDVweDtcbiAgY29sb3I6ICM3NTNhODg7XG59XG4uYWRkLWl0ZW0gLmN1c3RvbS1hZGQtbW9yZS1idXR0b24gLmluLWNhcnQtYm94IHtcbiAgcGFkZGluZzogMCA2cHg7XG4gIGNvbG9yOiAjNzUzYTg4O1xufVxuLmFkZC1pdGVtIC5jdXN0b20tYWRkLW1vcmUtYnV0dG9uIGkuZmEuZmEtcGx1cyB7XG4gIHBhZGRpbmc6IDlweCA2cHg7XG4gIGJhY2tncm91bmQ6ICM3NTNhODg7XG4gIGNvbG9yOiB3aGl0ZTtcbn1cbi5hZGQtaXRlbSAuY3VzdG9tLWFkZC1tb3JlLWJ1dHRvbiBpLmZhLmZhLW1pbnVzIHtcbiAgcGFkZGluZzogOXB4IDZweDtcbiAgYmFja2dyb3VuZDogIzc1M2E4ODtcbiAgY29sb3I6IHdoaXRlO1xufSJdfQ== */";
-    /***/
-  },
-
-  /***/
-  "./src/app/shared-components/add-button/add-button.page.ts":
-  /*!*****************************************************************!*\
-    !*** ./src/app/shared-components/add-button/add-button.page.ts ***!
-    \*****************************************************************/
-
-  /*! exports provided: AddButtonPage */
-
-  /***/
-  function srcAppSharedComponentsAddButtonAddButtonPageTs(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "AddButtonPage", function () {
-      return AddButtonPage;
-    });
-    /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
-    /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
-
-    var AddButtonPage = /*#__PURE__*/function () {
-      function AddButtonPage() {
-        _classCallCheck(this, AddButtonPage);
-
-        this.counter = 0;
-        this.updateCounter = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
-      }
-
-      _createClass(AddButtonPage, [{
-        key: "onChange",
-        value: function onChange(key) {
-          switch (key) {
-            case 'plus':
-              this.counter = this.counter + 1;
-              this.updateCounter.emit(this.counter);
-              break;
-
-            case 'minus':
-              this.counter = this.counter - 1;
-              this.updateCounter.emit(this.counter);
-              break;
-          }
-        }
-      }]);
-
-      return AddButtonPage;
-    }();
-
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)], AddButtonPage.prototype, "updateCounter", void 0);
-    AddButtonPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-      selector: 'add-button',
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./add-button.page.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/shared-components/add-button/add-button.page.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./add-button.page.scss */
-      "./src/app/shared-components/add-button/add-button.page.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])], AddButtonPage);
     /***/
   }
 }]);
