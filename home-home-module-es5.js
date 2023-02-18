@@ -347,6 +347,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             return e.PackagesModule;
           });
         }
+      }, {
+        path: 'products',
+        loadChildren: function loadChildren() {
+          return __webpack_require__.e(
+          /*! import() | pages-products-products-module */
+          "pages-products-products-module").then(__webpack_require__.bind(null,
+          /*! ../pages/products/products.module */
+          "./src/app/pages/products/products.module.ts")).then(function (e) {
+            return e.ProductsModule;
+          });
+        }
       }]
     }];
 

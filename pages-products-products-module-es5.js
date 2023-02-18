@@ -4,17 +4,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["pages-packages-packages-module"], {
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["pages-products-products-module"], {
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/packages/packages.page.html":
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/products/products.page.html":
   /*!*****************************************************************************************!*\
-    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/packages/packages.page.html ***!
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/products/products.page.html ***!
     \*****************************************************************************************/
 
   /*! exports provided: default */
 
   /***/
-  function node_modulesRawLoaderDistCjsJsSrcAppPagesPackagesPackagesPageHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppPagesProductsProductsPageHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
@@ -46,23 +46,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
-  "./src/app/pages/packages/packages-routing.module.ts":
+  "./src/app/pages/products/products-routing.module.ts":
   /*!***********************************************************!*\
-    !*** ./src/app/pages/packages/packages-routing.module.ts ***!
+    !*** ./src/app/pages/products/products-routing.module.ts ***!
     \***********************************************************/
 
-  /*! exports provided: PackagesRoutingModule */
+  /*! exports provided: ProductsRoutingModule */
 
   /***/
-  function srcAppPagesPackagesPackagesRoutingModuleTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppPagesProductsProductsRoutingModuleTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
 
 
-    __webpack_require__.d(__webpack_exports__, "PackagesRoutingModule", function () {
-      return PackagesRoutingModule;
+    __webpack_require__.d(__webpack_exports__, "ProductsRoutingModule", function () {
+      return ProductsRoutingModule;
     });
     /* harmony import */
 
@@ -85,44 +85,44 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _packages_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! ./packages.page */
-    "./src/app/pages/packages/packages.page.ts");
+    var _products_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ./products.page */
+    "./src/app/pages/products/products.page.ts");
 
     var routes = [{
       path: '',
-      component: _packages_page__WEBPACK_IMPORTED_MODULE_3__["PackagesPage"]
+      component: _products_page__WEBPACK_IMPORTED_MODULE_3__["ProductsPage"]
     }];
 
-    var PackagesRoutingModule = function PackagesRoutingModule() {
-      _classCallCheck(this, PackagesRoutingModule);
+    var ProductsRoutingModule = function ProductsRoutingModule() {
+      _classCallCheck(this, ProductsRoutingModule);
     };
 
-    PackagesRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+    ProductsRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
       imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(routes)],
       exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
-    })], PackagesRoutingModule);
+    })], ProductsRoutingModule);
     /***/
   },
 
   /***/
-  "./src/app/pages/packages/packages.module.ts":
+  "./src/app/pages/products/products.module.ts":
   /*!***************************************************!*\
-    !*** ./src/app/pages/packages/packages.module.ts ***!
+    !*** ./src/app/pages/products/products.module.ts ***!
     \***************************************************/
 
-  /*! exports provided: PackagesModule */
+  /*! exports provided: ProductsModule */
 
   /***/
-  function srcAppPagesPackagesPackagesModuleTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppPagesProductsProductsModuleTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
 
 
-    __webpack_require__.d(__webpack_exports__, "PackagesModule", function () {
-      return PackagesModule;
+    __webpack_require__.d(__webpack_exports__, "ProductsModule", function () {
+      return ProductsModule;
     });
     /* harmony import */
 
@@ -157,77 +157,71 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _packages_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-    /*! ./packages-routing.module */
-    "./src/app/pages/packages/packages-routing.module.ts");
+    var _products_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ./products-routing.module */
+    "./src/app/pages/products/products-routing.module.ts");
     /* harmony import */
 
 
-    var _packages_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-    /*! ./packages.page */
-    "./src/app/pages/packages/packages.page.ts");
+    var _products_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ./products.page */
+    "./src/app/pages/products/products.page.ts");
     /* harmony import */
 
 
-    var _shared_components_header_component_header_component_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-    /*! ../../shared-components/header-component/header-component.module */
-    "./src/app/shared-components/header-component/header-component.module.ts");
-    /* harmony import */
-
-
-    var _shared_components_search_header_component_search_header_component_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    var _shared_components_search_header_component_search_header_component_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! ../../shared-components/search-header-component/search-header-component.module */
     "./src/app/shared-components/search-header-component/search-header-component.module.ts");
 
-    var PackagesModule = function PackagesModule() {
-      _classCallCheck(this, PackagesModule);
+    var ProductsModule = function ProductsModule() {
+      _classCallCheck(this, ProductsModule);
     };
 
-    PackagesModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _packages_routing_module__WEBPACK_IMPORTED_MODULE_5__["PackagesRoutingModule"], _shared_components_header_component_header_component_module__WEBPACK_IMPORTED_MODULE_7__["HeaderModule"], _shared_components_search_header_component_search_header_component_module__WEBPACK_IMPORTED_MODULE_8__["SearchHeaderComponentModule"]],
-      declarations: [_packages_page__WEBPACK_IMPORTED_MODULE_6__["PackagesPage"]]
-    })], PackagesModule);
+    ProductsModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _products_routing_module__WEBPACK_IMPORTED_MODULE_5__["ProductsRoutingModule"], _shared_components_search_header_component_search_header_component_module__WEBPACK_IMPORTED_MODULE_7__["SearchHeaderComponentModule"]],
+      declarations: [_products_page__WEBPACK_IMPORTED_MODULE_6__["ProductsPage"]]
+    })], ProductsModule);
     /***/
   },
 
   /***/
-  "./src/app/pages/packages/packages.page.scss":
+  "./src/app/pages/products/products.page.scss":
   /*!***************************************************!*\
-    !*** ./src/app/pages/packages/packages.page.scss ***!
+    !*** ./src/app/pages/products/products.page.scss ***!
     \***************************************************/
 
   /*! exports provided: default */
 
   /***/
-  function srcAppPagesPackagesPackagesPageScss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppPagesProductsProductsPageScss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3BhY2thZ2VzL3BhY2thZ2VzLnBhZ2Uuc2NzcyJ9 */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3Byb2R1Y3RzL3Byb2R1Y3RzLnBhZ2Uuc2NzcyJ9 */";
     /***/
   },
 
   /***/
-  "./src/app/pages/packages/packages.page.ts":
+  "./src/app/pages/products/products.page.ts":
   /*!*************************************************!*\
-    !*** ./src/app/pages/packages/packages.page.ts ***!
+    !*** ./src/app/pages/products/products.page.ts ***!
     \*************************************************/
 
-  /*! exports provided: PackagesPage */
+  /*! exports provided: ProductsPage */
 
   /***/
-  function srcAppPagesPackagesPackagesPageTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppPagesProductsProductsPageTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
 
 
-    __webpack_require__.d(__webpack_exports__, "PackagesPage", function () {
-      return PackagesPage;
+    __webpack_require__.d(__webpack_exports__, "ProductsPage", function () {
+      return ProductsPage;
     });
     /* harmony import */
 
@@ -242,28 +236,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var PackagesPage = /*#__PURE__*/function () {
-      function PackagesPage() {
-        _classCallCheck(this, PackagesPage);
+    var ProductsPage = /*#__PURE__*/function () {
+      function ProductsPage() {
+        _classCallCheck(this, ProductsPage);
       }
 
-      _createClass(PackagesPage, [{
+      _createClass(ProductsPage, [{
         key: "ngOnInit",
         value: function ngOnInit() {}
       }]);
 
-      return PackagesPage;
+      return ProductsPage;
     }();
 
-    PackagesPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-      selector: 'app-messages',
+    ProductsPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'products',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./packages.page.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/packages/packages.page.html"))["default"],
+      /*! raw-loader!./products.page.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/products/products.page.html"))["default"],
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./packages.page.scss */
-      "./src/app/pages/packages/packages.page.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])], PackagesPage);
+      /*! ./products.page.scss */
+      "./src/app/pages/products/products.page.scss"))["default"]]
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])], ProductsPage);
     /***/
   },
 
@@ -431,4 +425,4 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /***/
   }
 }]);
-//# sourceMappingURL=pages-packages-packages-module-es5.js.map
+//# sourceMappingURL=pages-products-products-module-es5.js.map
