@@ -72,6 +72,10 @@ let ApiService = class ApiService {
         const localUrl = 'assets/json_files/MainServices.json';
         return this.http.get(localUrl);
     }
+    getCombos() {
+        const localUrl = 'assets/json_files/packages.json';
+        return this.http.get(localUrl);
+    }
     commonError(err) {
         console.log(err);
     }
