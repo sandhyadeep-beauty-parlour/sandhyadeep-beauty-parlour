@@ -402,6 +402,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             return e.PaymentModule;
           });
         }
+      }, {
+        path: 'package-details',
+        loadChildren: function loadChildren() {
+          return __webpack_require__.e(
+          /*! import() | pages-packages-package-details-package-details-module */
+          "pages-packages-package-details-package-details-module").then(__webpack_require__.bind(null,
+          /*! ../pages/packages/package-details/package-details.module */
+          "./src/app/pages/packages/package-details/package-details.module.ts")).then(function (e) {
+            return e.PackageDetailsModule;
+          });
+        }
       }]
     }];
 

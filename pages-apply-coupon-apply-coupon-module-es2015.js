@@ -67,6 +67,10 @@ let ApiService = class ApiService {
         const localUrl = 'assets/json_files/coupons.json';
         return this.http.get(localUrl);
     }
+    getServicePackage() {
+        const localUrl = 'assets/json_files/service-packages.json';
+        return this.http.get(localUrl);
+    }
     commonError(err) {
         console.log(err);
     }
