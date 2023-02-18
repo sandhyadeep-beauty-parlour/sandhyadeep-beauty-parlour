@@ -31,13 +31,13 @@
   },
   {
     "id": 6,
-    "name": "Hair Treatments",
+    "name": "Hairs",
     "sequence": 6,
     "url": "assets/vector-icons/hair-straightener.png"
   },
   {
     "id": 7,
-    "name": "Body Treatments",
+    "name": "Body",
     "sequence": 7,
     "url": "assets/vector-icons/body-treatments.png"
   },
