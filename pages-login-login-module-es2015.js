@@ -177,6 +177,7 @@ let LoginPage = class LoginPage {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required
             ])
         });
+        this.loginForm.get('dob').setValue('1990-01-01T15:43:40.394Z');
     }
     onContinue() {
         this.isContinue = true;

@@ -308,6 +308,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               disabled: false
             }, [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required])
           });
+          this.loginForm.get('dob').setValue('1990-01-01T15:43:40.394Z');
         }
       }, {
         key: "onContinue",
