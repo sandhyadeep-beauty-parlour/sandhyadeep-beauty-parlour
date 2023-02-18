@@ -7929,7 +7929,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-slides pager=\"true\" [options]=\"slideOpts\">\r\n  <ion-slide *ngFor=\"let slide of slides\">\r\n    <ion-toolbar>\r\n      <div>\r\n        <ion-button class=\"ion-float-right\" fill=\"clear\" (click)=\"onSlideSubmit()\" [color]=\"'primary'\">Skip</ion-button>\r\n      </div>\r\n    </ion-toolbar>\r\n    <div class=\"ion-slides-container\">\r\n      <img style=\"height: 300px\" *ngIf=\"slide.svg === 'img-1'\" src=\"/assets/slide-image-final-1.png\" alt=\"\">\r\n      <img style=\"height: 300px\" *ngIf=\"slide.svg === 'img-2'\" src=\"/assets/slide-image-final-2.png\" alt=\"\">\r\n<!--      <img class=\"ion-slide-image-1\" *ngIf=\"slide.svg === 'img-1'\" src=\"/assets/slide-1-image.png\" alt=\"\">-->\r\n<!--      <img class=\"ion-slide-image-2\" *ngIf=\"slide.svg === 'img-2'\" src=\"/assets/slide-2-image.png\" alt=\"\">-->\r\n<!--      <svg *ngIf=\"slide.svg === 'img-1'\" class=\"ion-svg-1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\">-->\r\n<!--        <path fill=\"#FF0066\" d=\"M55.8,-45.4C69.8,-27,76.7,-4,71.7,15.7C66.7,35.4,49.7,51.8,30.3,60.1C10.8,68.4,-11.2,68.6,-31.2,60.6C-51.3,52.6,-69.4,36.3,-74,16.7C-78.6,-2.8,-69.7,-25.6,-55.1,-44.2C-40.5,-62.7,-20.3,-77,0.3,-77.3C20.9,-77.6,41.9,-63.8,55.8,-45.4Z\" transform=\"translate(100 100)\"/>-->\r\n<!--      </svg>-->\r\n<!--      <svg class=\"ion-svg-2\" *ngIf=\"slide.svg === 'img-2'\" viewBox=\"0 0 200 200\" xmlns=\"http://www.w3.org/2000/svg\"> <path fill=\"#614D7F\" d=\"M57.6,-48.5C67.6,-33.3,64,-9.7,56.6,9C49.2,27.7,37.9,41.5,21.7,52C5.4,62.6,-15.8,69.7,-28.4,62.3C-41,55,-45,33.1,-49.9,11.4C-54.8,-10.2,-60.6,-31.6,-52.4,-46.4C-44.3,-61.1,-22.1,-69.3,0.8,-69.9C23.7,-70.6,47.5,-63.7,57.6,-48.5Z\" transform=\"translate(100 100)\" /> </svg>-->\r\n    </div>\r\n    <div style=\"padding: 0 20px\">\r\n      <h2 class=\"slide-title\" [innerHTML]=\"slide.title\"></h2>\r\n      <p [innerHTML]=\"slide.description\"></p>\r\n    </div>\r\n  </ion-slide>\r\n  <ion-slide class=\"ion-slide-one\">\r\n    <ion-toolbar></ion-toolbar>\r\n    <img class=\"ion-slide-image-3\" src=\"/assets/slide-3-image-2.png\" alt=\"\">\r\n    <div style=\"padding: 0 20px;\">\r\n      <h2 class=\"slide-title\">Discover the Best Services</h2>\r\n      <p>Explore a wide range of beauty services, from hair care to skin care. Choose <br> the services that suit your needs and preferences, <br> and let us take care of the rest.</p>\r\n    </div>\r\n    <ion-button (click)=\"onSlideSubmit()\" size=\"large\" [color]=\"'primary'\">\r\n      Continue\r\n    </ion-button>\r\n  </ion-slide>\r\n</ion-slides>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-slides pager=\"true\" [options]=\"slideOpts\">\r\n  <ion-slide *ngFor=\"let slide of slides\">\r\n    <ion-toolbar>\r\n      <div>\r\n        <ion-button class=\"ion-float-right\" fill=\"clear\" (click)=\"onSlideSubmit()\" [color]=\"'primary'\">Skip</ion-button>\r\n      </div>\r\n    </ion-toolbar>\r\n    <div class=\"ion-slides-container\">\r\n      <img style=\"height: 300px\" *ngIf=\"slide.svg === 'img-1'\" src=\"/assets/slide-image-final-1.png\" alt=\"\">\r\n      <img style=\"height: 300px\" *ngIf=\"slide.svg === 'img-2'\" src=\"/assets/slide-image-final-2.png\" alt=\"\">\r\n    </div>\r\n    <div style=\"padding: 0 20px\">\r\n      <h2 class=\"slide-title\" [innerHTML]=\"slide.title\"></h2>\r\n      <p [innerHTML]=\"slide.description\"></p>\r\n    </div>\r\n  </ion-slide>\r\n  <ion-slide class=\"ion-slide-one\">\r\n    <ion-toolbar></ion-toolbar>\r\n    <img class=\"ion-slide-image-3\" src=\"/assets/slide-3-image-2.png\" alt=\"\">\r\n    <div style=\"padding: 0 20px;\">\r\n      <h2 class=\"slide-title\">Discover the Best Services</h2>\r\n      <p>Explore a wide range of beauty services, from hair care to skin care. Choose <br> the services that suit your needs and preferences, <br> and let us take care of the rest.</p>\r\n    </div>\r\n    <ion-button (click)=\"onSlideSubmit()\" size=\"large\" [color]=\"'primary'\">\r\n      Continue\r\n    </ion-button>\r\n  </ion-slide>\r\n</ion-slides>\r\n");
 
 /***/ }),
 
@@ -7955,113 +7955,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-slides (onSubmit)=\"onSlideSubmit()\" *ngIf=\"showSlides\"></app-slides>\r\n\r\n<ng-container *ngIf=\"!showSlides\">\r\n    <ion-content>\r\n        <svg class=\"back-blob\" viewBox=\"0 0 200 200\" xmlns=\"http://www.w3.org/2000/svg\">\r\n            <path fill=\"#901180\" d=\"M68.6,-33.5C81.6,-17.2,79.6,13.8,65.7,37.6C51.8,61.3,25.9,77.8,2.1,76.6C-21.7,75.4,-43.5,56.5,-54.2,34.6C-65,12.7,-64.8,-12.3,-53.9,-27.4C-43,-42.4,-21.5,-47.6,3.2,-49.4C27.9,-51.2,55.7,-49.7,68.6,-33.5Z\" transform=\"translate(100 100)\" />\r\n        </svg>\r\n        <svg class=\"next-blob\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\">\r\n            <path fill=\"#614D7F\" d=\"M36.5,-23.6C43.9,-8.3,44,8.6,36.8,28.3C29.5,48,14.7,70.6,-2.1,71.8C-19,73,-37.9,52.9,-51.7,29.4C-65.6,5.9,-74.3,-21,-64.9,-37.5C-55.4,-54,-27.7,-60,-6.6,-56.3C14.6,-52.5,29.1,-38.9,36.5,-23.6Z\" transform=\"translate(100 100)\"/>\r\n        </svg>\r\n        <svg class=\"next-blob-2\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\">\r\n            <path fill=\"#614D7F\" d=\"M40,-15.6C49.8,-6.1,54.2,13.9,46.7,21.5C39.1,29.2,19.6,24.4,4.9,21.6C-9.7,18.8,-19.4,17.8,-22.8,12.6C-26.2,7.3,-23.2,-2.2,-18.4,-8.8C-13.5,-15.5,-6.7,-19.2,4.2,-21.6C15.1,-24,30.2,-25.1,40,-15.6Z\" transform=\"translate(100 100)\"/>\r\n        </svg>\r\n        <div class=\"login-main-container\">\r\n            <div class=\"login-container\">\r\n                <div (click)=\"onBackButton()\" *ngIf=\"showBackButton\" class=\"back-container\">\r\n                    <div class=\"back-button\">\r\n                        <i class=\"fa fa-angle-left\"></i>\r\n                    </div>\r\n                </div>\r\n                <div *ngIf=\"showLogo\" class=\"logo-container\">\r\n                    <div class=\"logo-image\"></div>\r\n                    <div class=\"logo-text\">\r\n                        Sandhyadeep\r\n                    </div>\r\n                    <div class=\"slogan-text\">\r\n                        Have a hair affair with us\r\n                    </div>\r\n                </div>\r\n                <div *ngIf=\"!otpSubmitted || !phoneNumberSubmitted\" class=\"login-buttons\">\r\n                    <ng-container *ngIf=\"!phoneNumberSubmitted\">\r\n                        <form [formGroup]='phoneForm'>\r\n                            <div class=\"phone-container\" style=\"margin-bottom: 10px\">\r\n                                <ngx-intl-tel-input [cssClass]=\"'custom'\"\r\n                                                    [enableAutoCountrySelect]=\"true\"\r\n                                                    [enablePlaceholder]=\"true\"\r\n                                                    [searchCountryFlag]=\"true\"\r\n                                                    [customPlaceholder]=\"'Phone Number'\"\r\n                                                    [searchCountryField]=\"[SearchCountryField.Iso2, SearchCountryField.Name]\"\r\n                                                    [selectFirstCountry]=\"false\"\r\n                                                    [selectedCountryISO]=\"CountryISO.India\"\r\n                                                    [maxLength]=\"10\"\r\n                                                    [tooltipField]=\"TooltipLabel.Name\"\r\n                                                    [phoneValidation]=\"true\"\r\n                                                    [separateDialCode]=\"separateDialCode\"\r\n                                                    formControlName=\"mobileNumber\"\r\n                                >\r\n                                </ngx-intl-tel-input>\r\n                            </div>\r\n                            <div style=\"display: flex; padding: 0 5px 10px; align-items: center;\">\r\n                                <mat-checkbox color=\"primary\">This number is available on Whatsapp</mat-checkbox>\r\n                            </div>\r\n                            <div>\r\n                                <button (click)=\"onSubmitPhone($event)\"\r\n                                        class=\"custom-button\" mat-raised-button color=\"primary\">Continue\r\n                                </button>\r\n                            </div>\r\n                        </form>\r\n                    </ng-container>\r\n\r\n\r\n                    <div *ngIf=\"phoneNumberSubmitted\" class=\"otp-box\">\r\n                        <div style=\"padding: 0 10px; display: flex; flex-direction: column; text-align: center;\">\r\n                            <h3>Enter Verification Code</h3>\r\n                            <div>We have sent you a 5 digit verification code on the given mobile number.</div>\r\n                        </div>\r\n                        <div style=\"display: flex; justify-content: center;\">\r\n                            <ng-otp-input #ngOtpInput (onInputChange)=\"onOtpInput($event)\"\r\n                                    [config]=\"{length:4,inputClass: 'otpInput', containerClass: 'otpContainer'}\"></ng-otp-input>\r\n                        </div>\r\n                        <div style=\"display: flex; justify-content: center; color: #901180; margin-bottom: 25px; font-size: 14px;\">\r\n                            <u>Resend OTP</u>\r\n                        </div>\r\n                        <div style=\"display: flex; justify-content: center; align-items: center; margin: 10px 0 15px; font-size: 16px; font-weight: 500; color: #901180;\">\r\n                            {{counter | formatTime}}\r\n                        </div>\r\n                        <div>\r\n                            <button (click)=\"onSubmitOtp(selectedOtp)\"  class=\"custom-button\"\r\n                                    mat-raised-button color=\"primary\">Continue\r\n                            </button>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n\r\n                <div *ngIf=\"otpSubmitted && phoneNumberSubmitted\" class=\"form-main-container\">\r\n                    <form [formGroup]='loginForm'>\r\n                        <div style=\"margin-bottom: 10px\">\r\n                            <ion-item class=\"ion-input-box\">\r\n                                <ion-input class=\"custom-ion-input\" formControlName=\"name\" placeholder=\"Enter Your Name\" type=\"text\"></ion-input>\r\n                                <ion-button slot=\"end\" fill=\"clear\" >\r\n                                    <i style=\"font-size: 14px\" class=\"fa fa-user\"></i>\r\n                                </ion-button>\r\n                            </ion-item>\r\n                            <ion-item class=\"ion-input-box\">\r\n                                <ion-input formControlName=\"email\" type=\"email\" placeholder=\"Enter Your Email\"></ion-input>\r\n                                <ion-button slot=\"end\" fill=\"clear\" >\r\n                                    <i style=\"font-size: 14px\" class=\"fa fa-envelope\"></i>\r\n                                </ion-button>\r\n                            </ion-item>\r\n                            <ion-item class=\"ion-input-box\">\r\n                                <ion-datetime style=\"padding: 0\" formControlName=\"dob\" display-timezone=\"ist\"></ion-datetime>\r\n                                <ion-button slot=\"end\" fill=\"clear\" >\r\n                                    <i style=\"font-size: 14px\" class=\"fa fa-calendar\"></i>\r\n                                </ion-button>\r\n                            </ion-item>\r\n                            <ion-item class=\"ion-input-box\">\r\n                                <ion-input [attr.maxlength]=\"4\" formControlName=\"age\" type=\"number\" placeholder=\"Enter Your Age\"></ion-input>\r\n                                <ion-button slot=\"end\" fill=\"clear\" >\r\n                                    <i style=\"font-size: 14px\" class=\"fa fa-user-o\"></i>\r\n                                </ion-button>\r\n                            </ion-item>\r\n                        </div>\r\n                        <button (click)=\"onLogIn()\" class=\"custom-button\"\r\n                                mat-raised-button color=\"primary\">Continue\r\n                        </button>\r\n\r\n                        <!--                        <mat-form-field class=\"example-full-width\">-->\r\n                        <!--                            <mat-label>Name</mat-label>-->\r\n                        <!--                            <input type=\"text\" matInput placeholder=\"Enter Your Name\">-->\r\n                        <!--                            <mat-icon matSuffix>mode_edit</mat-icon>-->\r\n                        <!--                        </mat-form-field>-->\r\n                        <!--                        <mat-form-field class=\"example-full-width\">-->\r\n                        <!--                            <mat-label>Email</mat-label>-->\r\n                        <!--                            <input type=\"email\" matInput placeholder=\"Enter Your Email\">-->\r\n                        <!--                            <mat-icon matSuffix>mode_edit</mat-icon>-->\r\n                        <!--                        </mat-form-field>-->\r\n\r\n\r\n                        <!--                        <div class=\"form-container\">-->\r\n                        <!--                            <div class=\"form-input-container\">-->\r\n                        <!--                                <div class=\"input-group\">-->\r\n                        <!--                                    <span class=\"input-group-addon\"><i class=\"fa fa-user\"></i></span>-->\r\n                        <!--                                    <input formControlName=\"name\" type=\"text\" class=\"default form-control\" name=\"name\"-->\r\n                        <!--                                           placeholder=\"Enter Your Name\">-->\r\n                        <!--                                </div>-->\r\n                        <!--                            </div>-->\r\n                        <!--                            <div class=\"form-input-container\">-->\r\n                        <!--                                <div class=\"input-group\">-->\r\n                        <!--                                    <span class=\"input-group-addon\"><i class=\"fa fa-phone\"></i></span>-->\r\n                        <!--                                    <input formControlName=\"mobileNumber\" type=\"text\" class=\"default form-control\"-->\r\n                        <!--                                           name=\"email\" placeholder=\"Enter Mobile Number\">-->\r\n                        <!--                                </div>-->\r\n                        <!--                            </div>-->\r\n                        <!--                            <div class=\"form-input-container\">-->\r\n                        <!--                                <div class=\"input-group\">-->\r\n                        <!--                                    <span class=\"input-group-addon\"><i class=\"fa fa-calendar\"></i></span>-->\r\n<!--                                                            <ion-datetime formControlName=\"dob\" class=\"default form-control\"-->\r\n<!--                                                                          placeholder=\"Date of Birth\" display-timezone=\"ist\"></ion-datetime>-->\r\n                        <!--                                </div>-->\r\n                        <!--                            </div>-->\r\n                        <!--                            <div class=\"form-input-container\">-->\r\n                        <!--                                <div class=\"input-group\">-->\r\n                        <!--                                    <span class=\"input-group-addon\"><i class=\"fa fa-at\"></i></span>-->\r\n                        <!--                                    <input formControlName=\"email\" type=\"email\" class=\"default form-control\"-->\r\n                        <!--                                           name=\"email\" placeholder=\"Enter Email\">-->\r\n                        <!--                                </div>-->\r\n                        <!--                            </div>-->\r\n                        <!--                            <div>-->\r\n                        <!--                                <button (click)=\"onLogIn()\" [disabled]=\"loginForm.invalid\" class=\"custom-button\"-->\r\n                        <!--                                        mat-raised-button color=\"primary\">Continue-->\r\n                        <!--                                </button>-->\r\n                        <!--                            </div>-->\r\n                        <!--                        </div>-->\r\n                    </form>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </ion-content>\r\n</ng-container>\r\n");
-
-/***/ }),
-
-/***/ "./src/app/api.service.ts":
-/*!********************************!*\
-  !*** ./src/app/api.service.ts ***!
-  \********************************/
-/*! exports provided: ApiService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApiService", function() { return ApiService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
-
-
-
-
-
-
-let ApiService = class ApiService {
-    constructor(http, toastController) {
-        this.http = http;
-        this.toastController = toastController;
-        this.baseURL = _environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].baseURLAdminAPIs;
-        this.country = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"]('');
-        this.currentCountry = this.country.asObservable();
-        this.header = new _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpHeaders"]({
-            Authorization: 'Bearer ' + localStorage.getItem('token'),
-            'Content-Type': 'application/json'
-        });
-    }
-    getUserRole() {
-        return localStorage.getItem('role');
-    }
-    setHeaderToken() {
-        const token = localStorage.getItem('token');
-        this.header = new _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpHeaders"]({ Authorization: `Bearer ${token}` });
-    }
-    getServicesData() {
-        const localUrl = 'assets/json_files/services.json';
-        return this.http.get(localUrl);
-    }
-    getMainServiceData() {
-        const localUrl = 'assets/json_files/MainServices.json';
-        return this.http.get(localUrl);
-    }
-    getCombos() {
-        const localUrl = 'assets/json_files/packages.json';
-        return this.http.get(localUrl);
-    }
-    getCoupons() {
-        const localUrl = 'assets/json_files/coupons.json';
-        return this.http.get(localUrl);
-    }
-    getServicePackage() {
-        const localUrl = 'assets/json_files/service-packages.json';
-        return this.http.get(localUrl);
-    }
-    getProducts() {
-        const localUrl = 'assets/json_files/products.json';
-        return this.http.get(localUrl);
-    }
-    getBookings() {
-        const localUrl = 'assets/json_files/bookings.json';
-        return this.http.get(localUrl);
-    }
-    commonError(err) {
-        this.presentToast(err.error.message).then();
-    }
-    presentToast(displayMessage) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            const toast = yield this.toastController.create({
-                message: displayMessage,
-                position: 'top',
-                cssClass: 'ionic-error-toast',
-                duration: 2000,
-            });
-            toast.present();
-        });
-    }
-    //Actual APIS -
-    signInApi(data) {
-        return this.http.post(`${this.baseURL}signin`, data, {});
-    }
-    verifyOtp(data) {
-        return this.http.post(`${this.baseURL}verifyOtp`, data, {});
-    }
-};
-ApiService.ctorParameters = () => [
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["ToastController"] }
-];
-ApiService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-        providedIn: 'root'
-    }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"], _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["ToastController"]])
-], ApiService);
-
-
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-content>\r\n    <svg class=\"back-blob\" viewBox=\"0 0 200 200\" xmlns=\"http://www.w3.org/2000/svg\">\r\n        <path fill=\"#901180\"\r\n              d=\"M68.6,-33.5C81.6,-17.2,79.6,13.8,65.7,37.6C51.8,61.3,25.9,77.8,2.1,76.6C-21.7,75.4,-43.5,56.5,-54.2,34.6C-65,12.7,-64.8,-12.3,-53.9,-27.4C-43,-42.4,-21.5,-47.6,3.2,-49.4C27.9,-51.2,55.7,-49.7,68.6,-33.5Z\"\r\n              transform=\"translate(100 100)\"/>\r\n    </svg>\r\n    <svg class=\"next-blob\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\">\r\n        <path fill=\"#614D7F\"\r\n              d=\"M36.5,-23.6C43.9,-8.3,44,8.6,36.8,28.3C29.5,48,14.7,70.6,-2.1,71.8C-19,73,-37.9,52.9,-51.7,29.4C-65.6,5.9,-74.3,-21,-64.9,-37.5C-55.4,-54,-27.7,-60,-6.6,-56.3C14.6,-52.5,29.1,-38.9,36.5,-23.6Z\"\r\n              transform=\"translate(100 100)\"/>\r\n    </svg>\r\n    <svg class=\"next-blob-2\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\">\r\n        <path fill=\"#614D7F\"\r\n              d=\"M40,-15.6C49.8,-6.1,54.2,13.9,46.7,21.5C39.1,29.2,19.6,24.4,4.9,21.6C-9.7,18.8,-19.4,17.8,-22.8,12.6C-26.2,7.3,-23.2,-2.2,-18.4,-8.8C-13.5,-15.5,-6.7,-19.2,4.2,-21.6C15.1,-24,30.2,-25.1,40,-15.6Z\"\r\n              transform=\"translate(100 100)\"/>\r\n    </svg>\r\n    <div class=\"login-main-container\">\r\n        <div class=\"login-container\">\r\n            <div (click)=\"onBackButton()\" *ngIf=\"showBackButton\" class=\"back-container\">\r\n                <div class=\"back-button\">\r\n                    <i class=\"fa fa-angle-left\"></i>\r\n                </div>\r\n            </div>\r\n            <div *ngIf=\"showLogo\" class=\"logo-container\">\r\n                <div class=\"logo-image\"></div>\r\n                <div class=\"logo-text\">\r\n                    Sandhyadeep\r\n                </div>\r\n                <div class=\"slogan-text\">\r\n                    Have a hair affair with us\r\n                </div>\r\n            </div>\r\n            <div *ngIf=\"!otpSubmitted || !phoneNumberSubmitted\" class=\"login-buttons\">\r\n                <ng-container *ngIf=\"!phoneNumberSubmitted\">\r\n                    <form [formGroup]='phoneForm'>\r\n                        <div class=\"phone-container\" style=\"margin-bottom: 10px\">\r\n                            <ngx-intl-tel-input [cssClass]=\"'custom'\"\r\n                                                [enableAutoCountrySelect]=\"true\"\r\n                                                [enablePlaceholder]=\"true\"\r\n                                                [searchCountryFlag]=\"true\"\r\n                                                [customPlaceholder]=\"'Phone Number'\"\r\n                                                [searchCountryField]=\"[SearchCountryField.Iso2, SearchCountryField.Name]\"\r\n                                                [selectFirstCountry]=\"false\"\r\n                                                [selectedCountryISO]=\"CountryISO.India\"\r\n                                                [maxLength]=\"10\"\r\n                                                [tooltipField]=\"TooltipLabel.Name\"\r\n                                                [phoneValidation]=\"true\"\r\n                                                [separateDialCode]=\"separateDialCode\"\r\n                                                formControlName=\"mobileNumber\"\r\n                            >\r\n                            </ngx-intl-tel-input>\r\n                        </div>\r\n                        <div style=\"display: flex; padding: 0 5px 10px; align-items: center;\">\r\n                            <mat-checkbox formControlName=\"isWhatsAppAvailable\" color=\"primary\">This number is available on Whatsapp</mat-checkbox>\r\n                        </div>\r\n                        <div>\r\n                            <button (click)=\"onSubmitPhone($event)\"\r\n                                    class=\"custom-button\" mat-raised-button color=\"primary\">Continue\r\n                            </button>\r\n                        </div>\r\n                    </form>\r\n                </ng-container>\r\n\r\n\r\n                <div *ngIf=\"phoneNumberSubmitted\" class=\"otp-box\">\r\n                    <div style=\"padding: 0 10px; display: flex; flex-direction: column; text-align: center;\">\r\n                        <h3>Enter Verification Code</h3>\r\n                        <div>We have sent you a 5 digit verification code on the given mobile number.</div>\r\n                    </div>\r\n                    <div style=\"display: flex; justify-content: center;\">\r\n                        <ng-otp-input #ngOtpInput (onInputChange)=\"onOtpInput($event)\"\r\n                                      [config]=\"{allowNumbersOnly: true, length:4,inputClass: 'otpInput', containerClass: 'otpContainer'}\"></ng-otp-input>\r\n                    </div>\r\n                    <div style=\"display: flex; justify-content: center; color: #901180; margin-bottom: 25px; font-size: 14px;\">\r\n                        <u>Resend OTP</u>\r\n                    </div>\r\n                    <div style=\"display: flex; justify-content: center; align-items: center; margin: 10px 0 15px; font-size: 16px; font-weight: 500; color: #901180;\">\r\n                        {{counter | formatTime}}\r\n                    </div>\r\n                    <div>\r\n                        <button (click)=\"onSubmitOtp(selectedOtp)\" class=\"custom-button\"\r\n                                mat-raised-button color=\"primary\">Continue\r\n                        </button>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n            <div *ngIf=\"otpSubmitted && phoneNumberSubmitted\" class=\"form-main-container\">\r\n                <form [formGroup]='loginForm'>\r\n                    <div style=\"margin-bottom: 10px\">\r\n                        <ion-item class=\"ion-input-box\">\r\n                            <ion-input class=\"custom-ion-input\" formControlName=\"name\" placeholder=\"Enter Your Name\"\r\n                                       type=\"text\"></ion-input>\r\n                            <ion-button slot=\"end\" fill=\"clear\">\r\n                                <i style=\"font-size: 14px\" class=\"fa fa-user\"></i>\r\n                            </ion-button>\r\n                        </ion-item>\r\n                        <ion-item class=\"ion-input-box\">\r\n                            <ion-input formControlName=\"email\" type=\"email\" placeholder=\"Enter Your Email\"></ion-input>\r\n                            <ion-button slot=\"end\" fill=\"clear\">\r\n                                <i style=\"font-size: 14px\" class=\"fa fa-envelope\"></i>\r\n                            </ion-button>\r\n                        </ion-item>\r\n                        <ion-item class=\"ion-input-box\">\r\n                            <ion-datetime style=\"padding: 0\" formControlName=\"dob\"\r\n                                          display-timezone=\"ist\"></ion-datetime>\r\n                            <ion-button slot=\"end\" fill=\"clear\">\r\n                                <i style=\"font-size: 14px\" class=\"fa fa-calendar\"></i>\r\n                            </ion-button>\r\n                        </ion-item>\r\n                        <ion-item class=\"ion-input-box\">\r\n                            <ion-input [attr.maxlength]=\"4\" formControlName=\"age\" type=\"number\"\r\n                                       placeholder=\"Enter Your Age\"></ion-input>\r\n                            <ion-button slot=\"end\" fill=\"clear\">\r\n                                <i style=\"font-size: 14px\" class=\"fa fa-user-o\"></i>\r\n                            </ion-button>\r\n                        </ion-item>\r\n                    </div>\r\n                    <button (click)=\"onLogIn()\" class=\"custom-button\"\r\n                            mat-raised-button color=\"primary\">Continue\r\n                    </button>\r\n\r\n                    <!--                        <mat-form-field class=\"example-full-width\">-->\r\n                    <!--                            <mat-label>Name</mat-label>-->\r\n                    <!--                            <input type=\"text\" matInput placeholder=\"Enter Your Name\">-->\r\n                    <!--                            <mat-icon matSuffix>mode_edit</mat-icon>-->\r\n                    <!--                        </mat-form-field>-->\r\n                    <!--                        <mat-form-field class=\"example-full-width\">-->\r\n                    <!--                            <mat-label>Email</mat-label>-->\r\n                    <!--                            <input type=\"email\" matInput placeholder=\"Enter Your Email\">-->\r\n                    <!--                            <mat-icon matSuffix>mode_edit</mat-icon>-->\r\n                    <!--                        </mat-form-field>-->\r\n\r\n\r\n                    <!--                        <div class=\"form-container\">-->\r\n                    <!--                            <div class=\"form-input-container\">-->\r\n                    <!--                                <div class=\"input-group\">-->\r\n                    <!--                                    <span class=\"input-group-addon\"><i class=\"fa fa-user\"></i></span>-->\r\n                    <!--                                    <input formControlName=\"name\" type=\"text\" class=\"default form-control\" name=\"name\"-->\r\n                    <!--                                           placeholder=\"Enter Your Name\">-->\r\n                    <!--                                </div>-->\r\n                    <!--                            </div>-->\r\n                    <!--                            <div class=\"form-input-container\">-->\r\n                    <!--                                <div class=\"input-group\">-->\r\n                    <!--                                    <span class=\"input-group-addon\"><i class=\"fa fa-phone\"></i></span>-->\r\n                    <!--                                    <input formControlName=\"mobileNumber\" type=\"text\" class=\"default form-control\"-->\r\n                    <!--                                           name=\"email\" placeholder=\"Enter Mobile Number\">-->\r\n                    <!--                                </div>-->\r\n                    <!--                            </div>-->\r\n                    <!--                            <div class=\"form-input-container\">-->\r\n                    <!--                                <div class=\"input-group\">-->\r\n                    <!--                                    <span class=\"input-group-addon\"><i class=\"fa fa-calendar\"></i></span>-->\r\n                    <!--                                                            <ion-datetime formControlName=\"dob\" class=\"default form-control\"-->\r\n                    <!--                                                                          placeholder=\"Date of Birth\" display-timezone=\"ist\"></ion-datetime>-->\r\n                    <!--                                </div>-->\r\n                    <!--                            </div>-->\r\n                    <!--                            <div class=\"form-input-container\">-->\r\n                    <!--                                <div class=\"input-group\">-->\r\n                    <!--                                    <span class=\"input-group-addon\"><i class=\"fa fa-at\"></i></span>-->\r\n                    <!--                                    <input formControlName=\"email\" type=\"email\" class=\"default form-control\"-->\r\n                    <!--                                           name=\"email\" placeholder=\"Enter Email\">-->\r\n                    <!--                                </div>-->\r\n                    <!--                            </div>-->\r\n                    <!--                            <div>-->\r\n                    <!--                                <button (click)=\"onLogIn()\" [disabled]=\"loginForm.invalid\" class=\"custom-button\"-->\r\n                    <!--                                        mat-raised-button color=\"primary\">Continue-->\r\n                    <!--                                </button>-->\r\n                    <!--                            </div>-->\r\n                    <!--                        </div>-->\r\n                </form>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</ion-content>\r\n");
 
 /***/ }),
 
@@ -8453,7 +8347,6 @@ let LoginPage = class LoginPage {
         this.formBuilder = formBuilder;
         this.toastController = toastController;
         this.notification = notification;
-        this.showSlides = true;
         this.separateDialCode = false;
         this.showBackButton = false;
         this.userId = '';
@@ -8468,9 +8361,9 @@ let LoginPage = class LoginPage {
         this.preferredCountries = [ngx_intl_tel_input__WEBPACK_IMPORTED_MODULE_6__["CountryISO"].UnitedStates, ngx_intl_tel_input__WEBPACK_IMPORTED_MODULE_6__["CountryISO"].UnitedKingdom];
         this.otpSubmitted = false;
     }
-    onSlideSubmit() {
-        this.showSlides = false;
-    }
+    // onSlideSubmit() {
+    //   this.showSlides = false;
+    // }
     onOtpChange(event) {
         console.log(event);
     }
@@ -8480,7 +8373,8 @@ let LoginPage = class LoginPage {
     loginNumber() {
         this.sharedService.showSpinner.next(true);
         const data = {
-            mobileNo: this.phoneForm.get('mobileNumber').value.number
+            mobileNo: this.phoneForm.get('mobileNumber').value.number,
+            isWhatsAppAvailable: this.phoneForm.get('isWhatsAppAvailable').value
         };
         this.adminService.signInApi(data).subscribe(res => this.signInApiSuccess(res), error => {
             this.adminService.commonError(error);
@@ -8497,22 +8391,9 @@ let LoginPage = class LoginPage {
     }
     ngOnInit() {
         this.countDown = Object(rxjs__WEBPACK_IMPORTED_MODULE_7__["timer"])(0, this.tick).subscribe(() => --this.counter);
-        this.loginForm = this.formBuilder.group({
-            name: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]({ value: '', disabled: false }, [
-                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required
-            ]),
-            dob: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]({ value: '01/01/1993', disabled: false }, [
-                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required
-            ]),
-            email: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]({ value: '', disabled: false }, [
-                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required
-            ]),
-            age: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]({ value: '', disabled: false }, [
-                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].max(100)
-            ]),
-        });
         this.phoneForm = this.formBuilder.group({
             mobileNumber: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]({ disabled: false }, [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]),
+            isWhatsAppAvailable: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]({ value: false, disabled: false }, [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]),
         });
         this.otpForm = this.formBuilder.group({
             mobileOtp: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]({ disabled: false }, [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]),
@@ -8542,14 +8423,14 @@ let LoginPage = class LoginPage {
     }
     onSubmitPhone(event) {
         if (this.phoneForm.invalid) {
-            this.presentToast('Please Enter Valid Phone Number', 'error').then();
+            this.sharedService.presentToast('Please Enter Valid Phone Number', 'error').then();
             return;
         }
         this.loginNumber();
     }
     onSubmitOtp(event) {
         if (!this.selectedOtp) {
-            this.presentToast('Please Enter Valid OTP', 'error').then();
+            this.sharedService.presentToast('Please Enter Valid OTP', 'error').then();
             return;
         }
         this.verifyOtp();
@@ -8567,28 +8448,19 @@ let LoginPage = class LoginPage {
         });
     }
     verifyOtpSuccess(res) {
-        this.presentToast(res.message, 'success').then();
+        this.sharedService.presentToast(res.message, 'success').then();
         this.sharedService.showSpinner.next(false);
         this.otpSubmitted = true;
         this.showLogo = true;
-    }
-    onLogIn() {
-        if (this.loginForm.invalid) {
-            this.presentToast('Please fill all the mandatory fields', 'error');
-            return;
+        if (res.data.name) {
+            this.sharedService.setUserName(res.data.name);
         }
-        this.router.navigate(['home/feed']);
-    }
-    presentToast(displayMessage, status) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            const toast = yield this.toastController.create({
-                message: displayMessage,
-                position: 'top',
-                cssClass: `ionic-${status}-toast`,
-                duration: 2000,
-            });
-            toast.present();
-        });
+        if (res.data.isRegistered) {
+            this.router.navigate(['home/feed']);
+        }
+        else {
+            this.router.navigate(['sign-up']);
+        }
     }
     presentToastWithOptions() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {

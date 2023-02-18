@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<router-outlet></router-outlet>\r\n<div class=\"footer-container\">\r\n  <ion-tabs>\r\n    <div class=\"footer-tab\">\r\n      <ion-tab-bar slot=\"bottom\">\r\n        <ion-tab-button class=\"menu-container\" tab=\"feed\">\r\n          <i style=\"font-size: 30px;\" class=\"fa fa-home\"></i>\r\n          <ion-label>Feed</ion-label>\r\n        </ion-tab-button>\r\n\r\n        <ion-tab-button class=\"menu-container\" tab=\"bookings\">\r\n          <i style=\"font-size: 30px;\" class=\"fa fa-calendar-check-o\"></i>\r\n          <ion-label>Appointments</ion-label>\r\n        </ion-tab-button>\r\n\r\n        <ion-tab-button class=\"menu-container\" tab=\"portfolio\">\r\n          <i style=\"font-size: 30px;\" class=\"fa fa-suitcase\"></i>\r\n          <ion-label>Portfolio</ion-label>\r\n        </ion-tab-button>\r\n\r\n        <ion-tab-button class=\"menu-container\" tab=\"settings\">\r\n          <i style=\"font-size: 30px;\" class=\"fa fa-user-circle-o\"></i>\r\n          <ion-label>Profile</ion-label>\r\n        </ion-tab-button>\r\n      </ion-tab-bar>\r\n    </div>\r\n  </ion-tabs>\r\n</div>\r\n";
+    __webpack_exports__["default"] = "<router-outlet></router-outlet>\r\n<app-logo-spinner></app-logo-spinner>\r\n\r\n<div class=\"footer-container\">\r\n  <ion-tabs>\r\n    <div class=\"footer-tab\">\r\n      <ion-tab-bar slot=\"bottom\">\r\n        <ion-tab-button class=\"menu-container\" tab=\"feed\">\r\n          <i style=\"font-size: 30px;\" class=\"fa fa-home\"></i>\r\n          <ion-label>Feed</ion-label>\r\n        </ion-tab-button>\r\n\r\n        <ion-tab-button class=\"menu-container\" tab=\"bookings\">\r\n          <i style=\"font-size: 30px;\" class=\"fa fa-calendar-check-o\"></i>\r\n          <ion-label>Appointments</ion-label>\r\n        </ion-tab-button>\r\n\r\n        <ion-tab-button class=\"menu-container\" tab=\"portfolio\">\r\n          <i style=\"font-size: 30px;\" class=\"fa fa-suitcase\"></i>\r\n          <ion-label>Portfolio</ion-label>\r\n        </ion-tab-button>\r\n\r\n        <ion-tab-button class=\"menu-container\" tab=\"settings\">\r\n          <i style=\"font-size: 30px;\" class=\"fa fa-user-circle-o\"></i>\r\n          <ion-label>Profile</ion-label>\r\n        </ion-tab-button>\r\n      </ion-tab-bar>\r\n    </div>\r\n  </ion-tabs>\r\n</div>\r\n";
     /***/
   },
 
@@ -112,13 +112,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _shared_components_header_component_header_component_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! ../shared-components/header-component/header-component.module */
     "./src/app/shared-components/header-component/header-component.module.ts");
+    /* harmony import */
+
+
+    var _shared_components_logo_spinner_logo_spinner_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    /*! ../shared-components/logo-spinner/logo-spinner.module */
+    "./src/app/shared-components/logo-spinner/logo-spinner.module.ts");
 
     var HomePageModule = function HomePageModule() {
       _classCallCheck(this, HomePageModule);
     };
 
     HomePageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _home_router__WEBPACK_IMPORTED_MODULE_6__["HomeRouter"], _shared_components_header_component_header_component_module__WEBPACK_IMPORTED_MODULE_7__["HeaderModule"]],
+      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _home_router__WEBPACK_IMPORTED_MODULE_6__["HomeRouter"], _shared_components_header_component_header_component_module__WEBPACK_IMPORTED_MODULE_7__["HeaderModule"], _shared_components_logo_spinner_logo_spinner_module__WEBPACK_IMPORTED_MODULE_8__["LogoSpinnerModule"]],
       declarations: [_home_page__WEBPACK_IMPORTED_MODULE_5__["HomePage"]]
     })], HomePageModule);
     /***/
@@ -251,9 +257,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       children: [{
         path: '',
         loadChildren: function loadChildren() {
-          return __webpack_require__.e(
+          return Promise.all(
           /*! import() | pages-feed-feed-module */
-          "pages-feed-feed-module").then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("pages-feed-feed-module")]).then(__webpack_require__.bind(null,
           /*! ../pages/feed/feed.module */
           "./src/app/pages/feed/feed.module.ts")).then(function (e) {
             return e.FeedPageModule;
@@ -262,9 +268,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         path: 'feed',
         loadChildren: function loadChildren() {
-          return __webpack_require__.e(
+          return Promise.all(
           /*! import() | pages-feed-feed-module */
-          "pages-feed-feed-module").then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("pages-feed-feed-module")]).then(__webpack_require__.bind(null,
           /*! ../pages/feed/feed.module */
           "./src/app/pages/feed/feed.module.ts")).then(function (e) {
             return e.FeedPageModule;
@@ -275,7 +281,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | pages-about-us-about-us-module */
-          [__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~4061a8d9"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-packages-packages-module~pages-products-products-module~620d296f"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-products-products-module"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-services-services-module"), __webpack_require__.e("common"), __webpack_require__.e("pages-about-us-about-us-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-app-slides-slides-module~pages-apply-coupon-apply-coupo~8876a910"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-products-products-module"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-services-services-module"), __webpack_require__.e("common"), __webpack_require__.e("pages-about-us-about-us-module")]).then(__webpack_require__.bind(null,
           /*! ../pages/about-us/about-us.module */
           "./src/app/pages/about-us/about-us.module.ts")).then(function (e) {
             return e.AboutUsPageModule;
@@ -286,7 +292,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | pages-services-services-module */
-          [__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~4061a8d9"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-packages-packages-module~pages-products-products-module~620d296f"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-services-services-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-app-slides-slides-module~pages-apply-coupon-apply-coupo~8876a910"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-services-services-module"), __webpack_require__.e("pages-services-services-module")]).then(__webpack_require__.bind(null,
           /*! ../pages/services/services.module */
           "./src/app/pages/services/services.module.ts")).then(function (e) {
             return e.ServicePageModule;
@@ -330,7 +336,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | pages-settings-settings-module */
-          [__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~4061a8d9"), __webpack_require__.e("pages-settings-settings-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-app-slides-slides-module~pages-apply-coupon-apply-coupo~8876a910"), __webpack_require__.e("pages-settings-settings-module")]).then(__webpack_require__.bind(null,
           /*! ../pages/settings/settings.module */
           "./src/app/pages/settings/settings.module.ts")).then(function (e) {
             return e.SettingsPageModule;
@@ -341,7 +347,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | pages-packages-packages-module */
-          [__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~4061a8d9"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-packages-packages-module~pages-products-products-module~620d296f"), __webpack_require__.e("common"), __webpack_require__.e("pages-packages-packages-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-app-slides-slides-module~pages-apply-coupon-apply-coupo~8876a910"), __webpack_require__.e("common"), __webpack_require__.e("pages-packages-packages-module")]).then(__webpack_require__.bind(null,
           /*! ../pages/packages/packages.module */
           "./src/app/pages/packages/packages.module.ts")).then(function (e) {
             return e.PackagesModule;
@@ -352,7 +358,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | pages-products-products-module */
-          [__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~4061a8d9"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-packages-packages-module~pages-products-products-module~620d296f"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-products-products-module"), __webpack_require__.e("pages-products-products-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-app-slides-slides-module~pages-apply-coupon-apply-coupo~8876a910"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-products-products-module"), __webpack_require__.e("pages-products-products-module")]).then(__webpack_require__.bind(null,
           /*! ../pages/products/products.module */
           "./src/app/pages/products/products.module.ts")).then(function (e) {
             return e.ProductsModule;
@@ -363,7 +369,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | pages-bookings-bookings-module */
-          [__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~4061a8d9"), __webpack_require__.e("pages-bookings-bookings-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-app-slides-slides-module~pages-apply-coupon-apply-coupo~8876a910"), __webpack_require__.e("pages-bookings-bookings-module")]).then(__webpack_require__.bind(null,
           /*! ../pages/bookings/bookings.module */
           "./src/app/pages/bookings/bookings.module.ts")).then(function (e) {
             return e.BookingsModule;
@@ -374,7 +380,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | pages-apply-coupon-apply-coupon-module */
-          [__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~4061a8d9"), __webpack_require__.e("pages-apply-coupon-apply-coupon-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-app-slides-slides-module~pages-apply-coupon-apply-coupo~8876a910"), __webpack_require__.e("pages-apply-coupon-apply-coupon-module")]).then(__webpack_require__.bind(null,
           /*! ../pages/apply-coupon/apply-coupon.module */
           "./src/app/pages/apply-coupon/apply-coupon.module.ts")).then(function (e) {
             return e.ApplyCouponModule;
@@ -385,7 +391,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | pages-schedule-appointment-schedule-appointment-module */
-          [__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~4061a8d9"), __webpack_require__.e("pages-schedule-appointment-schedule-appointment-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-app-slides-slides-module~pages-apply-coupon-apply-coupo~8876a910"), __webpack_require__.e("pages-schedule-appointment-schedule-appointment-module")]).then(__webpack_require__.bind(null,
           /*! ../pages/schedule-appointment/schedule-appointment.module */
           "./src/app/pages/schedule-appointment/schedule-appointment.module.ts")).then(function (e) {
             return e.ScheduleAppointmentModule;
@@ -405,9 +411,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         path: 'package-details',
         loadChildren: function loadChildren() {
-          return __webpack_require__.e(
+          return Promise.all(
           /*! import() | pages-packages-package-details-package-details-module */
-          "pages-packages-package-details-package-details-module").then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("pages-packages-package-details-package-details-module")]).then(__webpack_require__.bind(null,
           /*! ../pages/packages/package-details/package-details.module */
           "./src/app/pages/packages/package-details/package-details.module.ts")).then(function (e) {
             return e.PackageDetailsModule;
@@ -416,9 +422,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         path: 'product-details',
         loadChildren: function loadChildren() {
-          return __webpack_require__.e(
+          return Promise.all(
           /*! import() | pages-products-product-details-product-details-module */
-          "pages-products-product-details-product-details-module").then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("pages-products-product-details-product-details-module")]).then(__webpack_require__.bind(null,
           /*! ../pages/products/product-details/product-details.module */
           "./src/app/pages/products/product-details/product-details.module.ts")).then(function (e) {
             return e.ProductDetailsModule;

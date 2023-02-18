@@ -1,8 +1,8 @@
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["pages-feed-feed-module"], {
   /***/
@@ -21,7 +21,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<sandhyadeep-header class=\"z-index-99\"></sandhyadeep-header>\r\n<ion-content>\r\n    <ion-refresher slot=\"fixed\" (ionRefresh)=\"refreshPage($event)\">\r\n        <ion-refresher-content pulling-icon=\"arrow-dropdown\" refreshing-spinner=\"circles\">\r\n\r\n        </ion-refresher-content>\r\n    </ion-refresher>\r\n    <ion-slides (ionSlidePrevEnd)=\"onLastBannerSlide()\" #bannerSlider class=\"feed-sliders\" pager=\"true\" [options]=\"slideOpts\">\r\n        <ion-slide class=\"feed-images feed-slider feed-slider-one\">\r\n\r\n        </ion-slide>\r\n        <ion-slide class=\"feed-images feed-slider feed-slider-two\">\r\n\r\n        </ion-slide>\r\n        <ion-slide class=\"feed-images feed-slider feed-slider-three\">\r\n\r\n        </ion-slide>\r\n    </ion-slides>\r\n\r\n\r\n    <div class=\"menu-container\">\r\n        <!--        <div class=\"feed-heading\">-->\r\n        <!--            <h2><b>Services</b></h2>-->\r\n        <!--        </div>-->\r\n        <!--        <div class=\"height-95px slide_container\">-->\r\n        <!--            <div class=\"slider s1 filter-bright-03\"></div>-->\r\n        <!--            <div class=\"slider s2 filter-bright-03\"></div>-->\r\n        <!--            <div class=\"slider s3 filter-bright-03\"></div>-->\r\n        <!--            <div class=\"slider s4 filter-bright-03\"></div>-->\r\n        <!--        </div>-->\r\n\r\n        <div class=\"quick_menus\">\r\n            <div *ngFor=\"let treatment of treatments\" (click)=\"goServices()\" class=\"menu-container\">\r\n                <div class=\"menu-image\"><img src=\"{{treatment.url}}\" alt=\"\"></div>\r\n                <div class=\"menu-text\">{{treatment.name}}</div>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"feed-heading\">\r\n            <div class=\"heading-text\">\r\n                <b>Packages</b>\r\n            </div>\r\n            <div [routerLink]=\"['/home/packages']\" class=\"know-more\">See All <i class=\"fa fa-angle-right\"></i></div>\r\n        </div>\r\n        <div class=\"slide_container\">\r\n            <ion-content scroll-y=\"false\" [fullscreen]=\"true\">\r\n                <ion-slides (ionSlidePrevEnd)=\"onLastPackageSlide()\" #packagesSlider [options]=\"packagesOption\">\r\n                    <ion-slide *ngFor=\"let packageData of packageList\">\r\n                        <ion-card>\r\n                            <img src=\"{{packageData?.displayImage}}\" alt=\"\">\r\n                        </ion-card>\r\n                    </ion-slide>\r\n                </ion-slides>\r\n            </ion-content>\r\n        </div>\r\n\r\n        <div class=\"feed-heading\">\r\n            <div class=\"heading-text\">\r\n                <b>Products</b>\r\n            </div>\r\n            <div [routerLink]=\"['/home/products']\" class=\"know-more\">See All <i class=\"fa fa-angle-right\"></i></div>\r\n        </div>\r\n        <div class=\"products_container\">\r\n            <div *ngFor=\"let product of productList, let index = index\" class=\"image-slider-container\">\r\n                <div class=\"slider-image\">\r\n                    <img src=\"{{product.url}}\" alt=\"\">\r\n                </div>\r\n                <div class=\"slider-text\">\r\n                    <div class=\"product-name-container\">\r\n                        <div class=\"product-name\">\r\n                            {{product.name}}\r\n                        </div>\r\n                        <div class=\"product-price-details\">\r\n                            <div class=\"price-container\">\r\n                                <div class=\"price\">\r\n                                    {{product.price}} ₹\r\n                                </div>\r\n                                <div class=\"discounted-price\">\r\n                                    <del> {{product.discountedPrice}} ₹</del>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <add-button (updateCounter)=\"onUpdateCounter($event, index)\"></add-button>\r\n                </div>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"safety-measures\">\r\n            <div class=\"margin-bottom-10\">\r\n                Best-in-class safety measures\r\n            </div>\r\n            <div class=\"measures-container margin-bottom-10\">\r\n                <div class=\"measure\">\r\n                    <div class=\"measure-image\"><img src=\"assets/mask.png\" alt=\"\"></div>\r\n                    <div class=\"measure-text\">Usage of mask & gloves</div>\r\n                </div>\r\n                <div class=\"measure\">\r\n                    <div class=\"measure-image\"><img src=\"assets/thermometer.png\" alt=\"\"></div>\r\n                    <div class=\"measure-text\">Temperature Checks</div>\r\n                </div>\r\n                <div class=\"measure\">\r\n                    <div class=\"measure-image\"><img src=\"assets/liquid-soap.png\" alt=\"\"></div>\r\n                    <div class=\"measure-text\">Sanitizations of tools & area</div>\r\n                </div>\r\n                <div class=\"measure\">\r\n                    <div class=\"measure-image\"><img src=\"assets/setu.png\" alt=\"\"></div>\r\n                    <div class=\"measure-text\">Arogya Setu to ensure Safety</div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"feed-heading\">\r\n            <div class=\"heading-text\">\r\n                <b>Our Stylist</b>\r\n            </div>\r\n            <div (click)=\"onKnowMore()\" class=\"know-more\">Know More <i class=\"fa fa-angle-right\"></i></div>\r\n        </div>\r\n        <div class=\"application-details\">\r\n            <div class=\"owner-info-container\">\r\n                <div [routerLink]=\"['/home/about-us']\" class=\"owner-image\">\r\n                    <img src=\"../../../assets/deepaa_bhagwat.jpg\">\r\n                </div>\r\n                <div class=\"owner-details\">\r\n                    <div class=\"owner-name\">Deepaa Bhagwat</div>\r\n                    <div class=\"social-media-icons\">\r\n                        <div class=\"fb-icon\"><i class=\"media-icon fa fa-facebook\"></i></div>\r\n                        <div class=\"insta-icon\"><i class=\"media-icon fa fa-instagram\"></i></div>\r\n                        <div class=\"linkedin-icon\"><i class=\"media-icon fa fa-linkedin\"></i></div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div>\r\n                <div>\r\n                    <ul>\r\n                        <li>Media & Beauty Makeup Diploma · Media Makeup · Fsx · Singapore</li>\r\n                        <li>Makeup Techniques with Air Brush Machine · Mumbai, Maharashtra</li>\r\n                        <li>Master Diploma in Makeup Artistry · Singapore</li>\r\n                        <li>Comite International D’Esthetique Et De Cosmetologie., Zurich.</li>\r\n                        <li>British Association of Beauty Therapy & Cosmetology, London.</li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"copy-rights\">\r\n            <i class=\"fa fa-copyright\"></i> Copyright {{todayYear}} <br> Sandhyadeep Beauty Parlour <br>\r\n        </div>\r\n    </div>\r\n\r\n</ion-content>\r\n\r\n";
+    __webpack_exports__["default"] = "<sandhyadeep-header class=\"z-index-99\"></sandhyadeep-header>\r\n<ion-content (ionScroll)=\"onIonScroll($event)\"  [scrollEvents]=\"true\">\r\n    <ion-refresher slot=\"fixed\" (ionRefresh)=\"refreshPage($event)\">\r\n        <ion-refresher-content pulling-icon=\"arrow-dropdown\" refreshing-spinner=\"circles\">\r\n\r\n        </ion-refresher-content>\r\n    </ion-refresher>\r\n    <ion-slides #bannerSlider (ionSlidesDidLoad)=\"slidesDidLoad($event)\" (ionSlidePrevEnd)=\"onLastBannerSlide()\"  class=\"feed-sliders\" pager=\"true\" [options]=\"slideOpts\">\r\n        <ion-slide class=\"feed-images feed-slider feed-slider-one\">\r\n\r\n        </ion-slide>\r\n        <ion-slide class=\"feed-images feed-slider feed-slider-two\">\r\n\r\n        </ion-slide>\r\n        <ion-slide class=\"feed-images feed-slider feed-slider-three\">\r\n\r\n        </ion-slide>\r\n    </ion-slides>\r\n\r\n\r\n    <div  #animationRef class=\"menu-container\">\r\n        <div class=\"quick_menus\">\r\n            <ng-container *ngFor=\"let treatment of serviceTypesList; let index = index\">\r\n                <div [ngStyle]=\"{'animation-delay': (index+1)/6 + 's'}\" [ngClass]=\"{ animate__animated: changeAnim1, animate__fadeInRight: changeAnim1 }\"  (click)=\"goServices()\" class=\"animate__animated animate__fadeInRight menu-container\">\r\n                    <div class=\"menu-image\"><img src=\"{{treatment.url}}\" alt=\"\"></div>\r\n                    <div class=\"menu-text\">{{treatment.name}}</div>\r\n                </div>\r\n            </ng-container>\r\n        </div>\r\n\r\n        <div class=\"feed-heading\">\r\n            <div class=\"heading-text\">\r\n                <b>Packages</b>\r\n            </div>\r\n            <div [routerLink]=\"['/home/packages']\" class=\"know-more\">See All <i class=\"fa fa-angle-right\"></i></div>\r\n        </div>\r\n        <div [ngClass]=\"{ animate__animated: changeAnim2, animate__bounceIn: changeAnim2, animate__fast: changeAnim2 }\" #animationRef class=\"slide_container\">\r\n            <ion-content scroll-y=\"false\" [fullscreen]=\"true\">\r\n                <ion-slides (ionSlidePrevEnd)=\"onLastPackageSlide()\" #packagesSlider [options]=\"packagesOption\">\r\n                    <ion-slide *ngFor=\"let packageData of packageList\">\r\n                        <ion-card>\r\n                            <img src=\"{{packageData?.displayImage}}\" alt=\"\">\r\n                        </ion-card>\r\n                    </ion-slide>\r\n                </ion-slides>\r\n            </ion-content>\r\n        </div>\r\n\r\n        <div class=\"feed-heading\">\r\n            <div class=\"heading-text\">\r\n                <b>Products</b>\r\n            </div>\r\n            <div [routerLink]=\"['/home/products']\" class=\"know-more\">See All <i class=\"fa fa-angle-right\"></i></div>\r\n        </div>\r\n        <div class=\"products_container\">\r\n            <div *ngFor=\"let product of productList, let index = index\" class=\"image-slider-container\">\r\n                <div class=\"slider-image\">\r\n                    <img src=\"{{product.url}}\" alt=\"\">\r\n                </div>\r\n                <div class=\"slider-text\">\r\n                    <div class=\"product-name-container\">\r\n                        <div class=\"product-name\">\r\n                            {{product.name}}\r\n                        </div>\r\n                        <div class=\"product-price-details\">\r\n                            <div class=\"price-container\">\r\n                                <div class=\"price\">\r\n                                    {{product.price}} ₹\r\n                                </div>\r\n                                <div class=\"discounted-price\">\r\n                                    <del> {{product.discountedPrice}} ₹</del>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <add-button (updateCounter)=\"onUpdateCounter($event, index)\"></add-button>\r\n                </div>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"safety-measures\">\r\n            <div class=\"margin-bottom-10\">\r\n                Best-in-class safety measures\r\n            </div>\r\n            <div class=\"measures-container margin-bottom-10\">\r\n                <div class=\"measure\">\r\n                    <div class=\"measure-image\"><img src=\"assets/mask.png\" alt=\"\"></div>\r\n                    <div class=\"measure-text\">Usage of mask & gloves</div>\r\n                </div>\r\n                <div class=\"measure\">\r\n                    <div class=\"measure-image\"><img src=\"assets/thermometer.png\" alt=\"\"></div>\r\n                    <div class=\"measure-text\">Temperature Checks</div>\r\n                </div>\r\n                <div class=\"measure\">\r\n                    <div class=\"measure-image\"><img src=\"assets/liquid-soap.png\" alt=\"\"></div>\r\n                    <div class=\"measure-text\">Sanitizations of tools & area</div>\r\n                </div>\r\n                <div class=\"measure\">\r\n                    <div class=\"measure-image\"><img src=\"assets/setu.png\" alt=\"\"></div>\r\n                    <div class=\"measure-text\">Arogya Setu to ensure Safety</div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"feed-heading\">\r\n            <div class=\"heading-text\">\r\n                <b>Our Stylist</b>\r\n            </div>\r\n            <div (click)=\"onKnowMore()\" class=\"know-more\">Know More <i class=\"fa fa-angle-right\"></i></div>\r\n        </div>\r\n        <div class=\"application-details\">\r\n            <div class=\"owner-info-container\">\r\n                <div [routerLink]=\"['/home/about-us']\" class=\"owner-image\">\r\n                    <img src=\"../../../assets/deepaa_bhagwat.jpg\">\r\n                </div>\r\n                <div class=\"owner-details\">\r\n                    <div class=\"owner-name\">Deepaa Bhagwat</div>\r\n                    <div class=\"social-media-icons\">\r\n                        <div class=\"fb-icon\"><i class=\"media-icon fa fa-facebook\"></i></div>\r\n                        <div class=\"insta-icon\"><i class=\"media-icon fa fa-instagram\"></i></div>\r\n                        <div class=\"linkedin-icon\"><i class=\"media-icon fa fa-linkedin\"></i></div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div>\r\n                <div>\r\n                    <ul>\r\n                        <li>Media & Beauty Makeup Diploma · Media Makeup · Fsx · Singapore</li>\r\n                        <li>Makeup Techniques with Air Brush Machine · Mumbai, Maharashtra</li>\r\n                        <li>Master Diploma in Makeup Artistry · Singapore</li>\r\n                        <li>Comite International D’Esthetique Et De Cosmetologie., Zurich.</li>\r\n                        <li>British Association of Beauty Therapy & Cosmetology, London.</li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"copy-rights\">\r\n            <i class=\"fa fa-copyright\"></i> Copyright {{todayYear}} <br> Sandhyadeep Beauty Parlour <br>\r\n        </div>\r\n    </div>\r\n\r\n</ion-content>\r\n\r\n";
     /***/
   },
 
@@ -42,196 +42,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
     __webpack_exports__["default"] = "<div class=\"add-item\">\r\n  <div *ngIf=\"counter === 0\" class=\"custom-add-button\">\r\n    <div class=\"add-text\">Add</div>\r\n    <i (click)=\"onChange('plus')\"\r\n       class=\"fa fa-plus\"></i>\r\n  </div>\r\n  <div *ngIf=\"counter > 0\" class=\"custom-add-more-button\">\r\n    <div (click)=\"onChange('minus')\">\r\n      <i class=\"fa fa-minus\"></i>\r\n    </div>\r\n    <div class=\"in-cart-box\">\r\n      {{counter}}\r\n    </div>\r\n    <div (click)=\"onChange('plus')\">\r\n      <i class=\"fa fa-plus\"></i>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
-    /***/
-  },
-
-  /***/
-  "./src/app/api.service.ts":
-  /*!********************************!*\
-    !*** ./src/app/api.service.ts ***!
-    \********************************/
-
-  /*! exports provided: ApiService */
-
-  /***/
-  function srcAppApiServiceTs(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "ApiService", function () {
-      return ApiService;
-    });
-    /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
-    /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
-    /* harmony import */
-
-
-    var _environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! ../environments/environment */
-    "./src/environments/environment.ts");
-    /* harmony import */
-
-
-    var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! rxjs */
-    "./node_modules/rxjs/_esm2015/index.js");
-    /* harmony import */
-
-
-    var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! @angular/common/http */
-    "./node_modules/@angular/common/fesm2015/http.js");
-    /* harmony import */
-
-
-    var _ionic_angular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-    /*! @ionic/angular */
-    "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
-
-    var ApiService = /*#__PURE__*/function () {
-      function ApiService(http, toastController) {
-        _classCallCheck(this, ApiService);
-
-        this.http = http;
-        this.toastController = toastController;
-        this.baseURL = _environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].baseURLAdminAPIs;
-        this.country = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"]('');
-        this.currentCountry = this.country.asObservable();
-        this.header = new _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpHeaders"]({
-          Authorization: 'Bearer ' + localStorage.getItem('token'),
-          'Content-Type': 'application/json'
-        });
-      }
-
-      _createClass(ApiService, [{
-        key: "getUserRole",
-        value: function getUserRole() {
-          return localStorage.getItem('role');
-        }
-      }, {
-        key: "setHeaderToken",
-        value: function setHeaderToken() {
-          var token = localStorage.getItem('token');
-          this.header = new _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpHeaders"]({
-            Authorization: "Bearer ".concat(token)
-          });
-        }
-      }, {
-        key: "getServicesData",
-        value: function getServicesData() {
-          var localUrl = 'assets/json_files/services.json';
-          return this.http.get(localUrl);
-        }
-      }, {
-        key: "getMainServiceData",
-        value: function getMainServiceData() {
-          var localUrl = 'assets/json_files/MainServices.json';
-          return this.http.get(localUrl);
-        }
-      }, {
-        key: "getCombos",
-        value: function getCombos() {
-          var localUrl = 'assets/json_files/packages.json';
-          return this.http.get(localUrl);
-        }
-      }, {
-        key: "getCoupons",
-        value: function getCoupons() {
-          var localUrl = 'assets/json_files/coupons.json';
-          return this.http.get(localUrl);
-        }
-      }, {
-        key: "getServicePackage",
-        value: function getServicePackage() {
-          var localUrl = 'assets/json_files/service-packages.json';
-          return this.http.get(localUrl);
-        }
-      }, {
-        key: "getProducts",
-        value: function getProducts() {
-          var localUrl = 'assets/json_files/products.json';
-          return this.http.get(localUrl);
-        }
-      }, {
-        key: "getBookings",
-        value: function getBookings() {
-          var localUrl = 'assets/json_files/bookings.json';
-          return this.http.get(localUrl);
-        }
-      }, {
-        key: "commonError",
-        value: function commonError(err) {
-          this.presentToast(err.error.message).then();
-        }
-      }, {
-        key: "presentToast",
-        value: function presentToast(displayMessage) {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-            var toast;
-            return regeneratorRuntime.wrap(function _callee$(_context) {
-              while (1) {
-                switch (_context.prev = _context.next) {
-                  case 0:
-                    _context.next = 2;
-                    return this.toastController.create({
-                      message: displayMessage,
-                      position: 'top',
-                      cssClass: 'ionic-error-toast',
-                      duration: 2000
-                    });
-
-                  case 2:
-                    toast = _context.sent;
-                    toast.present();
-
-                  case 4:
-                  case "end":
-                    return _context.stop();
-                }
-              }
-            }, _callee, this);
-          }));
-        } //Actual APIS -
-
-      }, {
-        key: "signInApi",
-        value: function signInApi(data) {
-          return this.http.post("".concat(this.baseURL, "signin"), data, {});
-        }
-      }, {
-        key: "verifyOtp",
-        value: function verifyOtp(data) {
-          return this.http.post("".concat(this.baseURL, "verifyOtp"), data, {});
-        }
-      }]);
-
-      return ApiService;
-    }();
-
-    ApiService.ctorParameters = function () {
-      return [{
-        type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"]
-      }, {
-        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["ToastController"]
-      }];
-    };
-
-    ApiService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-      providedIn: 'root'
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"], _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["ToastController"]])], ApiService);
     /***/
   },
 
@@ -455,11 +265,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! rxjs */
     "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var _shared_service_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ../../shared-service.service */
+    "./src/app/shared-service.service.ts");
 
     var FeedPage = /*#__PURE__*/function () {
-      function FeedPage(router, adminService) {
+      function FeedPage(sharedService, router, adminService) {
         _classCallCheck(this, FeedPage);
 
+        this.sharedService = sharedService;
         this.router = router;
         this.adminService = adminService;
         this.slideOpts = {
@@ -565,6 +382,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         }];
         this.packageList = [];
         this.productList = [];
+        this.serviceTypesList = [];
+        this.bannerAnim1 = false;
+        this.changeAnim1 = false;
+        this.changeAnim2 = false;
         this.packagesSliderObservable = new rxjs__WEBPACK_IMPORTED_MODULE_5__["Observable"]();
         this.bannerSliderObservable = new rxjs__WEBPACK_IMPORTED_MODULE_5__["Observable"]();
       }
@@ -582,10 +403,49 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           });
         }
       }, {
+        key: "onIonScroll",
+        value: function onIonScroll(event) {
+          var _this2 = this;
+
+          var eventDetails = event.detail;
+          var slideUpCssList = ['animate__animated', 'animate__slideInUp', 'animate__fast'];
+
+          switch (eventDetails.scrollTop) {
+            case 200:
+              {
+                this.changeAnim1 = false;
+                setTimeout(function () {
+                  _this2.changeAnim1 = true;
+                }, 20);
+                break;
+              }
+
+            case 600:
+              {
+                this.changeAnim2 = false;
+                setTimeout(function () {
+                  _this2.changeAnim2 = true;
+                }, 20);
+                break;
+              }
+          }
+        }
+      }, {
         key: "ionViewDidLeave",
         value: function ionViewDidLeave() {
           this.packagesSliderObservable.unsubscribe();
           this.bannerSliderObservable.unsubscribe();
+        }
+      }, {
+        key: "slidesDidLoad",
+        value: function slidesDidLoad(event) {
+          var _this3 = this;
+
+          setTimeout(function () {
+            _this3.packagesSlider.startAutoplay().then();
+
+            _this3.bannerSlider.startAutoplay().then();
+          }, 1000);
         }
       }, {
         key: "onLastBannerSlide",
@@ -602,17 +462,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function ngOnInit() {
           this.getPackages();
           this.getProducts();
+          this.getServiceTypes();
           this.todayYear = new Date().getFullYear();
         }
       }, {
         key: "refreshPage",
         value: function refreshPage(event) {
-          var _this2 = this;
+          var _this4 = this;
 
           setTimeout(function () {
-            _this2.getPackages();
+            _this4.getPackages();
 
-            _this2.getProducts();
+            _this4.getProducts();
 
             event.target.complete();
           }, 2000);
@@ -620,34 +481,54 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "getPackages",
         value: function getPackages() {
-          var _this3 = this;
+          var _this5 = this;
 
+          this.sharedService.showSpinner.next(true);
           this.adminService.getServicePackage().subscribe(function (res) {
-            return _this3.getServicePackageSuccess(res);
+            return _this5.getServicePackageSuccess(res);
           }, function (error) {
-            _this3.adminService.commonError(error);
+            _this5.adminService.commonError(error);
           });
         }
       }, {
         key: "getServicePackageSuccess",
         value: function getServicePackageSuccess(res) {
           this.packageList = res;
+          this.sharedService.showSpinner.next(true);
         }
       }, {
         key: "getProducts",
         value: function getProducts() {
-          var _this4 = this;
+          var _this6 = this;
 
           this.adminService.getProducts().subscribe(function (res) {
-            return _this4.getProductSuccess(res);
+            return _this6.getProductSuccess(res);
           }, function (error) {
-            _this4.adminService.commonError(error);
+            _this6.adminService.commonError(error);
           });
         }
       }, {
         key: "getProductSuccess",
         value: function getProductSuccess(res) {
           this.productList = res;
+        }
+      }, {
+        key: "getServiceTypes",
+        value: function getServiceTypes() {
+          var _this7 = this;
+
+          this.sharedService.showSpinner.next(true);
+          this.adminService.getAllServiceTypes().subscribe(function (res) {
+            return _this7.getAllServiceTypesSuccess(res);
+          }, function (error) {
+            _this7.adminService.commonError(error);
+          });
+        }
+      }, {
+        key: "getAllServiceTypesSuccess",
+        value: function getAllServiceTypesSuccess(res) {
+          this.serviceTypesList = res.data;
+          this.sharedService.showSpinner.next(false);
         }
       }, {
         key: "onClickPackage",
@@ -680,6 +561,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     FeedPage.ctorParameters = function () {
       return [{
+        type: _shared_service_service__WEBPACK_IMPORTED_MODULE_6__["SharedServiceService"]
+      }, {
         type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
       }, {
         type: _api_service__WEBPACK_IMPORTED_MODULE_4__["ApiService"]
@@ -692,6 +575,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('bannerSlider', {
       "static": false
     }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["IonSlides"])], FeedPage.prototype, "bannerSlider", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('animationRef', {
+      read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"],
+      "static": false
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"])], FeedPage.prototype, "animationRef", void 0);
     FeedPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-feed',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
@@ -700,7 +587,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./feed.page.scss */
       "./src/app/pages/feed/feed.page.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _api_service__WEBPACK_IMPORTED_MODULE_4__["ApiService"]])], FeedPage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_service_service__WEBPACK_IMPORTED_MODULE_6__["SharedServiceService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _api_service__WEBPACK_IMPORTED_MODULE_4__["ApiService"]])], FeedPage);
     /***/
   },
 

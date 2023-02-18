@@ -114,6 +114,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _index_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index.page */ "./src/app/index/index.page.ts");
+/* harmony import */ var _shared_components_authentication_auth_guards_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../shared-components/authentication/auth-guards.service */ "./src/app/shared-components/authentication/auth-guards.service.ts");
+
 
 
 
@@ -123,16 +125,18 @@ const routes = [
         path: '',
         component: _index_page__WEBPACK_IMPORTED_MODULE_3__["IndexPage"],
         children: [
-            // {
-            //     path: '',
-            //     loadChildren: () => import('../pages/welcome/welcome.module').then((e) => e.WelcomePageModule)
-            // },
             {
                 path: '',
-                loadChildren: () => Promise.all(/*! import() | pages-login-login-module */[__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~4061a8d9"), __webpack_require__.e("pages-login-login-module")]).then(__webpack_require__.bind(null, /*! ../pages/login/login.module */ "./src/app/pages/login/login.module.ts")).then((e) => e.LoginPageModule)
+                canActivate: [_shared_components_authentication_auth_guards_service__WEBPACK_IMPORTED_MODULE_4__["PreLogin"]],
+                loadChildren: () => Promise.all(/*! import() | pages-app-slides-slides-module */[__webpack_require__.e("default~pages-about-us-about-us-module~pages-app-slides-slides-module~pages-apply-coupon-apply-coupo~8876a910"), __webpack_require__.e("pages-app-slides-slides-module")]).then(__webpack_require__.bind(null, /*! ../pages/app-slides/slides.module */ "./src/app/pages/app-slides/slides.module.ts")).then((e) => e.SlidesModule)
             }, {
-                path: 'signup',
-                loadChildren: () => __webpack_require__.e(/*! import() | pages-signup-signup-module */ "pages-signup-signup-module").then(__webpack_require__.bind(null, /*! ../pages/signup/signup.module */ "./src/app/pages/signup/signup.module.ts")).then((e) => e.SignupPageModule)
+                path: 'login',
+                canActivate: [_shared_components_authentication_auth_guards_service__WEBPACK_IMPORTED_MODULE_4__["PreLogin"]],
+                loadChildren: () => Promise.all(/*! import() | pages-login-login-module */[__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-app-slides-slides-module~pages-apply-coupon-apply-coupo~8876a910"), __webpack_require__.e("pages-login-login-module")]).then(__webpack_require__.bind(null, /*! ../pages/login/login.module */ "./src/app/pages/login/login.module.ts")).then((e) => e.LoginPageModule)
+            }, {
+                path: 'sign-up',
+                canActivate: [_shared_components_authentication_auth_guards_service__WEBPACK_IMPORTED_MODULE_4__["LoginGuard"]],
+                loadChildren: () => Promise.all(/*! import() | pages-signup-signup-module */[__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-app-slides-slides-module~pages-apply-coupon-apply-coupo~8876a910"), __webpack_require__.e("pages-signup-signup-module")]).then(__webpack_require__.bind(null, /*! ../pages/signup/signup.module */ "./src/app/pages/signup/signup.module.ts")).then((e) => e.SignupPageModule)
             }
         ]
     }

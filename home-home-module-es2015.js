@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<router-outlet></router-outlet>\r\n<div class=\"footer-container\">\r\n  <ion-tabs>\r\n    <div class=\"footer-tab\">\r\n      <ion-tab-bar slot=\"bottom\">\r\n        <ion-tab-button class=\"menu-container\" tab=\"feed\">\r\n          <i style=\"font-size: 30px;\" class=\"fa fa-home\"></i>\r\n          <ion-label>Feed</ion-label>\r\n        </ion-tab-button>\r\n\r\n        <ion-tab-button class=\"menu-container\" tab=\"bookings\">\r\n          <i style=\"font-size: 30px;\" class=\"fa fa-calendar-check-o\"></i>\r\n          <ion-label>Appointments</ion-label>\r\n        </ion-tab-button>\r\n\r\n        <ion-tab-button class=\"menu-container\" tab=\"portfolio\">\r\n          <i style=\"font-size: 30px;\" class=\"fa fa-suitcase\"></i>\r\n          <ion-label>Portfolio</ion-label>\r\n        </ion-tab-button>\r\n\r\n        <ion-tab-button class=\"menu-container\" tab=\"settings\">\r\n          <i style=\"font-size: 30px;\" class=\"fa fa-user-circle-o\"></i>\r\n          <ion-label>Profile</ion-label>\r\n        </ion-tab-button>\r\n      </ion-tab-bar>\r\n    </div>\r\n  </ion-tabs>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<router-outlet></router-outlet>\r\n<app-logo-spinner></app-logo-spinner>\r\n\r\n<div class=\"footer-container\">\r\n  <ion-tabs>\r\n    <div class=\"footer-tab\">\r\n      <ion-tab-bar slot=\"bottom\">\r\n        <ion-tab-button class=\"menu-container\" tab=\"feed\">\r\n          <i style=\"font-size: 30px;\" class=\"fa fa-home\"></i>\r\n          <ion-label>Feed</ion-label>\r\n        </ion-tab-button>\r\n\r\n        <ion-tab-button class=\"menu-container\" tab=\"bookings\">\r\n          <i style=\"font-size: 30px;\" class=\"fa fa-calendar-check-o\"></i>\r\n          <ion-label>Appointments</ion-label>\r\n        </ion-tab-button>\r\n\r\n        <ion-tab-button class=\"menu-container\" tab=\"portfolio\">\r\n          <i style=\"font-size: 30px;\" class=\"fa fa-suitcase\"></i>\r\n          <ion-label>Portfolio</ion-label>\r\n        </ion-tab-button>\r\n\r\n        <ion-tab-button class=\"menu-container\" tab=\"settings\">\r\n          <i style=\"font-size: 30px;\" class=\"fa fa-user-circle-o\"></i>\r\n          <ion-label>Profile</ion-label>\r\n        </ion-tab-button>\r\n      </ion-tab-bar>\r\n    </div>\r\n  </ion-tabs>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -44,6 +44,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _home_page__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./home.page */ "./src/app/home/home.page.ts");
 /* harmony import */ var _home_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./home.router */ "./src/app/home/home.router.ts");
 /* harmony import */ var _shared_components_header_component_header_component_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../shared-components/header-component/header-component.module */ "./src/app/shared-components/header-component/header-component.module.ts");
+/* harmony import */ var _shared_components_logo_spinner_logo_spinner_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../shared-components/logo-spinner/logo-spinner.module */ "./src/app/shared-components/logo-spinner/logo-spinner.module.ts");
+
 
 
 
@@ -61,7 +63,8 @@ HomePageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"],
             _home_router__WEBPACK_IMPORTED_MODULE_6__["HomeRouter"],
-            _shared_components_header_component_header_component_module__WEBPACK_IMPORTED_MODULE_7__["HeaderModule"]
+            _shared_components_header_component_header_component_module__WEBPACK_IMPORTED_MODULE_7__["HeaderModule"],
+            _shared_components_logo_spinner_logo_spinner_module__WEBPACK_IMPORTED_MODULE_8__["LogoSpinnerModule"]
         ],
         declarations: [_home_page__WEBPACK_IMPORTED_MODULE_5__["HomePage"]]
     })
@@ -141,19 +144,19 @@ const routes = [
         children: [
             {
                 path: '',
-                loadChildren: () => __webpack_require__.e(/*! import() | pages-feed-feed-module */ "pages-feed-feed-module").then(__webpack_require__.bind(null, /*! ../pages/feed/feed.module */ "./src/app/pages/feed/feed.module.ts")).then((e) => e.FeedPageModule)
+                loadChildren: () => Promise.all(/*! import() | pages-feed-feed-module */[__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("pages-feed-feed-module")]).then(__webpack_require__.bind(null, /*! ../pages/feed/feed.module */ "./src/app/pages/feed/feed.module.ts")).then((e) => e.FeedPageModule)
             },
             {
                 path: 'feed',
-                loadChildren: () => __webpack_require__.e(/*! import() | pages-feed-feed-module */ "pages-feed-feed-module").then(__webpack_require__.bind(null, /*! ../pages/feed/feed.module */ "./src/app/pages/feed/feed.module.ts")).then((e) => e.FeedPageModule)
+                loadChildren: () => Promise.all(/*! import() | pages-feed-feed-module */[__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("pages-feed-feed-module")]).then(__webpack_require__.bind(null, /*! ../pages/feed/feed.module */ "./src/app/pages/feed/feed.module.ts")).then((e) => e.FeedPageModule)
             },
             {
                 path: 'about-us',
-                loadChildren: () => Promise.all(/*! import() | pages-about-us-about-us-module */[__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~4061a8d9"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-packages-packages-module~pages-products-products-module~620d296f"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-products-products-module"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-services-services-module"), __webpack_require__.e("common"), __webpack_require__.e("pages-about-us-about-us-module")]).then(__webpack_require__.bind(null, /*! ../pages/about-us/about-us.module */ "./src/app/pages/about-us/about-us.module.ts")).then((e) => e.AboutUsPageModule)
+                loadChildren: () => Promise.all(/*! import() | pages-about-us-about-us-module */[__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-app-slides-slides-module~pages-apply-coupon-apply-coupo~8876a910"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-products-products-module"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-services-services-module"), __webpack_require__.e("common"), __webpack_require__.e("pages-about-us-about-us-module")]).then(__webpack_require__.bind(null, /*! ../pages/about-us/about-us.module */ "./src/app/pages/about-us/about-us.module.ts")).then((e) => e.AboutUsPageModule)
             },
             {
                 path: 'services',
-                loadChildren: () => Promise.all(/*! import() | pages-services-services-module */[__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~4061a8d9"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-packages-packages-module~pages-products-products-module~620d296f"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-services-services-module")]).then(__webpack_require__.bind(null, /*! ../pages/services/services.module */ "./src/app/pages/services/services.module.ts")).then((e) => e.ServicePageModule)
+                loadChildren: () => Promise.all(/*! import() | pages-services-services-module */[__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-app-slides-slides-module~pages-apply-coupon-apply-coupo~8876a910"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-services-services-module"), __webpack_require__.e("pages-services-services-module")]).then(__webpack_require__.bind(null, /*! ../pages/services/services.module */ "./src/app/pages/services/services.module.ts")).then((e) => e.ServicePageModule)
             }, {
                 path: 'portfolio',
                 loadChildren: () => Promise.all(/*! import() | pages-portfolio-portfolio-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-portfolio-portfolio-module")]).then(__webpack_require__.bind(null, /*! ../pages/portfolio/portfolio.module */ "./src/app/pages/portfolio/portfolio.module.ts")).then((e) => e.PortfolioModule)
@@ -165,22 +168,22 @@ const routes = [
                 loadChildren: () => __webpack_require__.e(/*! import() | pages-messages-messages-module */ "pages-messages-messages-module").then(__webpack_require__.bind(null, /*! ../pages/messages/messages.module */ "./src/app/pages/messages/messages.module.ts")).then((e) => e.MessagesPageModule)
             }, {
                 path: 'settings',
-                loadChildren: () => Promise.all(/*! import() | pages-settings-settings-module */[__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~4061a8d9"), __webpack_require__.e("pages-settings-settings-module")]).then(__webpack_require__.bind(null, /*! ../pages/settings/settings.module */ "./src/app/pages/settings/settings.module.ts")).then((e) => e.SettingsPageModule)
+                loadChildren: () => Promise.all(/*! import() | pages-settings-settings-module */[__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-app-slides-slides-module~pages-apply-coupon-apply-coupo~8876a910"), __webpack_require__.e("pages-settings-settings-module")]).then(__webpack_require__.bind(null, /*! ../pages/settings/settings.module */ "./src/app/pages/settings/settings.module.ts")).then((e) => e.SettingsPageModule)
             }, {
                 path: 'packages',
-                loadChildren: () => Promise.all(/*! import() | pages-packages-packages-module */[__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~4061a8d9"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-packages-packages-module~pages-products-products-module~620d296f"), __webpack_require__.e("common"), __webpack_require__.e("pages-packages-packages-module")]).then(__webpack_require__.bind(null, /*! ../pages/packages/packages.module */ "./src/app/pages/packages/packages.module.ts")).then((e) => e.PackagesModule)
+                loadChildren: () => Promise.all(/*! import() | pages-packages-packages-module */[__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-app-slides-slides-module~pages-apply-coupon-apply-coupo~8876a910"), __webpack_require__.e("common"), __webpack_require__.e("pages-packages-packages-module")]).then(__webpack_require__.bind(null, /*! ../pages/packages/packages.module */ "./src/app/pages/packages/packages.module.ts")).then((e) => e.PackagesModule)
             }, {
                 path: 'products',
-                loadChildren: () => Promise.all(/*! import() | pages-products-products-module */[__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~4061a8d9"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-packages-packages-module~pages-products-products-module~620d296f"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-products-products-module"), __webpack_require__.e("pages-products-products-module")]).then(__webpack_require__.bind(null, /*! ../pages/products/products.module */ "./src/app/pages/products/products.module.ts")).then((e) => e.ProductsModule)
+                loadChildren: () => Promise.all(/*! import() | pages-products-products-module */[__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-app-slides-slides-module~pages-apply-coupon-apply-coupo~8876a910"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-products-products-module"), __webpack_require__.e("pages-products-products-module")]).then(__webpack_require__.bind(null, /*! ../pages/products/products.module */ "./src/app/pages/products/products.module.ts")).then((e) => e.ProductsModule)
             }, {
                 path: 'bookings',
-                loadChildren: () => Promise.all(/*! import() | pages-bookings-bookings-module */[__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~4061a8d9"), __webpack_require__.e("pages-bookings-bookings-module")]).then(__webpack_require__.bind(null, /*! ../pages/bookings/bookings.module */ "./src/app/pages/bookings/bookings.module.ts")).then((e) => e.BookingsModule)
+                loadChildren: () => Promise.all(/*! import() | pages-bookings-bookings-module */[__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-app-slides-slides-module~pages-apply-coupon-apply-coupo~8876a910"), __webpack_require__.e("pages-bookings-bookings-module")]).then(__webpack_require__.bind(null, /*! ../pages/bookings/bookings.module */ "./src/app/pages/bookings/bookings.module.ts")).then((e) => e.BookingsModule)
             }, {
                 path: 'apply-coupon',
-                loadChildren: () => Promise.all(/*! import() | pages-apply-coupon-apply-coupon-module */[__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~4061a8d9"), __webpack_require__.e("pages-apply-coupon-apply-coupon-module")]).then(__webpack_require__.bind(null, /*! ../pages/apply-coupon/apply-coupon.module */ "./src/app/pages/apply-coupon/apply-coupon.module.ts")).then((e) => e.ApplyCouponModule)
+                loadChildren: () => Promise.all(/*! import() | pages-apply-coupon-apply-coupon-module */[__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-app-slides-slides-module~pages-apply-coupon-apply-coupo~8876a910"), __webpack_require__.e("pages-apply-coupon-apply-coupon-module")]).then(__webpack_require__.bind(null, /*! ../pages/apply-coupon/apply-coupon.module */ "./src/app/pages/apply-coupon/apply-coupon.module.ts")).then((e) => e.ApplyCouponModule)
             }, {
                 path: 'schedule-appointment',
-                loadChildren: () => Promise.all(/*! import() | pages-schedule-appointment-schedule-appointment-module */[__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~4061a8d9"), __webpack_require__.e("pages-schedule-appointment-schedule-appointment-module")]).then(__webpack_require__.bind(null, /*! ../pages/schedule-appointment/schedule-appointment.module */ "./src/app/pages/schedule-appointment/schedule-appointment.module.ts"))
+                loadChildren: () => Promise.all(/*! import() | pages-schedule-appointment-schedule-appointment-module */[__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-app-slides-slides-module~pages-apply-coupon-apply-coupo~8876a910"), __webpack_require__.e("pages-schedule-appointment-schedule-appointment-module")]).then(__webpack_require__.bind(null, /*! ../pages/schedule-appointment/schedule-appointment.module */ "./src/app/pages/schedule-appointment/schedule-appointment.module.ts"))
                     .then((e) => e.ScheduleAppointmentModule)
             }, {
                 path: 'payments',
@@ -188,11 +191,11 @@ const routes = [
                     .then((e) => e.PaymentModule)
             }, {
                 path: 'package-details',
-                loadChildren: () => __webpack_require__.e(/*! import() | pages-packages-package-details-package-details-module */ "pages-packages-package-details-package-details-module").then(__webpack_require__.bind(null, /*! ../pages/packages/package-details/package-details.module */ "./src/app/pages/packages/package-details/package-details.module.ts"))
+                loadChildren: () => Promise.all(/*! import() | pages-packages-package-details-package-details-module */[__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("pages-packages-package-details-package-details-module")]).then(__webpack_require__.bind(null, /*! ../pages/packages/package-details/package-details.module */ "./src/app/pages/packages/package-details/package-details.module.ts"))
                     .then((e) => e.PackageDetailsModule)
             }, {
                 path: 'product-details',
-                loadChildren: () => __webpack_require__.e(/*! import() | pages-products-product-details-product-details-module */ "pages-products-product-details-product-details-module").then(__webpack_require__.bind(null, /*! ../pages/products/product-details/product-details.module */ "./src/app/pages/products/product-details/product-details.module.ts"))
+                loadChildren: () => Promise.all(/*! import() | pages-products-product-details-product-details-module */[__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("pages-products-product-details-product-details-module")]).then(__webpack_require__.bind(null, /*! ../pages/products/product-details/product-details.module */ "./src/app/pages/products/product-details/product-details.module.ts"))
                     .then((e) => e.ProductDetailsModule)
             }
         ]

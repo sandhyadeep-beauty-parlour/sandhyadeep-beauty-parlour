@@ -41,7 +41,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"item-list\">\r\n    <mat-accordion>\r\n        <ng-container *ngFor=\"let mainService of mainServices\">\r\n            <mat-expansion-panel class=\"mat-elevation-z0\">\r\n                <mat-expansion-panel-header [collapsedHeight]=\"'50px'\">\r\n                    <mat-panel-title>\r\n                        <div class=\"main-item-name-sub-container\">\r\n                            <img src=\"{{mainService.url}}\" alt=\"\">\r\n                            <div [class.text-bold]=\"mainService.show\" class=\"main-item-name\">{{mainService.name}} </div>\r\n                        </div>\r\n                    </mat-panel-title>\r\n                </mat-expansion-panel-header>\r\n                <div>\r\n                    <div style=\"padding: 15px\" *ngIf=\"mainService.services?.length === 0\">\r\n                        We dont have any services available\r\n                    </div>\r\n                    <ng-container *ngFor=\"let service of mainService.services; let index = index\">\r\n                        <div (click)=\"onSelectServices(service)\" class=\"sub-item-container\">\r\n                            <div class=\"sub-item-name\">\r\n                                <label class=\"name\">{{service.serviceName}}</label>\r\n                                <div class=\"time\"><i\r\n                                        class=\"fa fa-clock-o\"></i> {{service.duration ? service.duration + ' Minutes' : ''}}\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"sub-item-price\">\r\n                                <div class=\"color-666\">Price:</div>\r\n                                {{service.price}} ₹\r\n                            </div>\r\n                            <div class=\"sub-item-checkbox\">\r\n                                <ion-checkbox class=\"zoom-07\" color=\"primary\"\r\n                                              [(ngModel)]=\"service.isChecked\"></ion-checkbox>\r\n                            </div>\r\n                        </div>\r\n                    </ng-container>\r\n                </div>\r\n            </mat-expansion-panel>\r\n        </ng-container>\r\n    </mat-accordion>\r\n</div>\r\n\r\n\r\n\r\n";
+    __webpack_exports__["default"] = "<div class=\"item-list\">\r\n    <mat-accordion>\r\n        <ng-container *ngFor=\"let mainService of mainServices; let index = index\">\r\n            <mat-expansion-panel class=\"mat-elevation-z0\">\r\n                <mat-expansion-panel-header [collapsedHeight]=\"'50px'\">\r\n                    <mat-panel-title>\r\n                        <div [ngStyle]=\"{'animation-delay': (index+1)/6 + 's'}\" class=\"animate__fast animate__fadeInLeft animate__animated main-item-name-sub-container\">\r\n                            <img src=\"{{mainService.url}}\" alt=\"\">\r\n                            <div [class.text-bold]=\"mainService.show\" class=\"main-item-name\">{{mainService.name}} </div>\r\n                        </div>\r\n                    </mat-panel-title>\r\n                </mat-expansion-panel-header>\r\n                <div>\r\n                    <div style=\"padding: 15px\" *ngIf=\"mainService.services?.length === 0\">\r\n                        We dont have any services available\r\n                    </div>\r\n                    <ng-container *ngFor=\"let service of mainService.services; let index = index\">\r\n                        <div (click)=\"onSelectServices(service)\" class=\"sub-item-container\">\r\n                            <div class=\"sub-item-name\">\r\n                                <label class=\"name\">{{service.name}}</label>\r\n                                <div class=\"time\"><i\r\n                                        class=\"fa fa-clock-o\"></i> {{service.duration ? service.duration + ' Minutes' : ''}}\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"sub-item-price\">\r\n                                <div class=\"color-666\">Price:</div>\r\n                                {{service.price}} ₹\r\n                            </div>\r\n                            <div class=\"sub-item-checkbox\">\r\n                                <mat-checkbox [(ngModel)]=\"service.isChecked\" color=\"primary\"></mat-checkbox>\r\n                            </div>\r\n                        </div>\r\n                    </ng-container>\r\n                </div>\r\n            </mat-expansion-panel>\r\n        </ng-container>\r\n    </mat-accordion>\r\n</div>\r\n\r\n\r\n\r\n";
     /***/
   },
 
@@ -413,7 +413,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".item-container {\n  margin-bottom: 15px;\n}\n\n.main-item-name-container {\n  display: flex;\n  justify-content: space-between;\n  padding: 5px 0;\n  border-bottom: 1px solid lightgray;\n}\n\n.sub-item-list {\n  max-height: 0;\n  overflow-y: hidden;\n  transition: ease-in-out 400ms max-height;\n}\n\n.sub-item-list.opened {\n  max-height: 100%;\n  transition: ease-in-out 600ms max-height;\n}\n\n.sub-item-container {\n  display: flex;\n  padding: 5px 0;\n  border-bottom: 1px solid lightgray;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.sub-item-name {\n  flex-basis: 50%;\n  line-height: 0.7;\n}\n\n.sub-item-name .name {\n  font-size: 16px;\n}\n\n.sub-item-name .time {\n  font-size: 14px;\n  color: #666;\n}\n\n.sub-item-checkbox {\n  display: flex;\n}\n\n.main-item-name-sub-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.main-item-name-sub-container img {\n  margin-right: 10px;\n  width: 35px;\n  height: 35px;\n}\n\n.main-item-name {\n  font-size: 16px;\n}\n\n.main-item-arrow {\n  color: #666;\n}\n\n.down {\n  transform: rotate(90deg);\n  -webkit-transform: rotate(90deg);\n  transition: ease-in-out 300ms;\n}\n\n.color-666 {\n  color: #666;\n}\n\n.text-bold {\n  font-weight: bold;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkLWNvbXBvbmVudHMvc2VydmljZXMtbGlzdC9DOlxcVXNlcnNcXGFhYmhhZ3dhXFxzYW5kaHlhZGVlcCBpb25pYyBzdGFjay9zcmNcXGFwcFxcc2hhcmVkLWNvbXBvbmVudHNcXHNlcnZpY2VzLWxpc3RcXHNlcnZpY2VzLWxpc3QucGFnZS5zY3NzIiwic3JjL2FwcC9zaGFyZWQtY29tcG9uZW50cy9zZXJ2aWNlcy1saXN0L3NlcnZpY2VzLWxpc3QucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQU1BO0VBQ0UsbUJBQUE7QUNMRjs7QURRQTtFQUNFLGFBQUE7RUFDQSw4QkFBQTtFQUNBLGNBQUE7RUFDQSxrQ0FBQTtBQ0xGOztBRFFBO0VBQ0UsYUFBQTtFQUNBLGtCQUFBO0VBQ0Esd0NBQUE7QUNMRjs7QURNRTtFQUNFLGdCQUFBO0VBQ0Esd0NBQUE7QUNKSjs7QURRQTtFQUNFLGFBQUE7RUFDQSxjQUFBO0VBQ0Esa0NBQUE7RUFDQSw4QkFBQTtFQUNBLG1CQUFBO0FDTEY7O0FEUUE7RUFDRSxlQUFBO0VBQ0EsZ0JBQUE7QUNMRjs7QURNRTtFQUNFLGVBQUE7QUNKSjs7QURNRTtFQUNFLGVBQUE7RUFDQSxXQUFBO0FDSko7O0FEUUE7RUFDRSxhQUFBO0FDTEY7O0FET0E7RUFDRSxhQUFBO0VBQWUsdUJBQUE7RUFBeUIsbUJBQUE7QUNGMUM7O0FER0U7RUFDRSxrQkFBQTtFQUFvQixXQUFBO0VBQWEsWUFBQTtBQ0NyQzs7QURFQTtFQUNFLGVBQUE7QUNDRjs7QURDQTtFQUNFLFdBQUE7QUNFRjs7QURFQTtFQUNFLHdCQUFBO0VBQ0EsZ0NBQUE7RUFDQSw2QkFBQTtBQ0FGOztBREVBO0VBQ0UsV0FBQTtBQ0NGOztBRElBO0VBQ0UsaUJBQUE7QUNERiIsImZpbGUiOiJzcmMvYXBwL3NoYXJlZC1jb21wb25lbnRzL3NlcnZpY2VzLWxpc3Qvc2VydmljZXMtbGlzdC5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0IFwiLi4vLi4vLi4vc2FuZGh5YWRlZXAtdGhlbWVcIjtcclxuXHJcbi5pdGVtLWxpc3Qge1xyXG5cclxufVxyXG5cclxuLml0ZW0tY29udGFpbmVyIHtcclxuICBtYXJnaW4tYm90dG9tOiAxNXB4O1xyXG59XHJcblxyXG4ubWFpbi1pdGVtLW5hbWUtY29udGFpbmVyIHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcclxuICBwYWRkaW5nOiA1cHggMDtcclxuICBib3JkZXItYm90dG9tOiAxcHggc29saWQgbGlnaHRncmF5O1xyXG5cclxufVxyXG4uc3ViLWl0ZW0tbGlzdCB7XHJcbiAgbWF4LWhlaWdodDogMDtcclxuICBvdmVyZmxvdy15OiBoaWRkZW47XHJcbiAgdHJhbnNpdGlvbjogZWFzZS1pbi1vdXQgNDAwbXMgbWF4LWhlaWdodDtcclxuICAmLm9wZW5lZCB7XHJcbiAgICBtYXgtaGVpZ2h0OiAxMDAlO1xyXG4gICAgdHJhbnNpdGlvbjogZWFzZS1pbi1vdXQgNjAwbXMgbWF4LWhlaWdodDtcclxuICB9XHJcbn1cclxuXHJcbi5zdWItaXRlbS1jb250YWluZXIge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgcGFkZGluZzogNXB4IDA7XHJcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIGxpZ2h0Z3JheTtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XHJcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuXHJcbn1cclxuLnN1Yi1pdGVtLW5hbWUge1xyXG4gIGZsZXgtYmFzaXM6IDUwJTtcclxuICBsaW5lLWhlaWdodDogMC43O1xyXG4gIC5uYW1lIHtcclxuICAgIGZvbnQtc2l6ZTogMTZweDtcclxuICB9XHJcbiAgLnRpbWUge1xyXG4gICAgZm9udC1zaXplOiAxNHB4O1xyXG4gICAgY29sb3I6ICM2NjY7XHJcbiAgfVxyXG59XHJcbi5zdWItaXRlbS1wcmljZSB7fVxyXG4uc3ViLWl0ZW0tY2hlY2tib3gge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbn1cclxuLm1haW4taXRlbS1uYW1lLXN1Yi1jb250YWluZXIge1xyXG4gIGRpc3BsYXk6IGZsZXg7IGp1c3RpZnktY29udGVudDogY2VudGVyOyBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gIGltZyB7XHJcbiAgICBtYXJnaW4tcmlnaHQ6IDEwcHg7IHdpZHRoOiAzNXB4OyBoZWlnaHQ6IDM1cHg7XHJcbiAgfVxyXG59XHJcbi5tYWluLWl0ZW0tbmFtZSB7XHJcbiAgZm9udC1zaXplOiAxNnB4O1xyXG59XHJcbi5tYWluLWl0ZW0tYXJyb3cge1xyXG4gIGNvbG9yOiAjNjY2O1xyXG4gIC5yaWdodC1pY29uIHtcclxuICB9XHJcbn1cclxuLmRvd24ge1xyXG4gIHRyYW5zZm9ybTogcm90YXRlKDkwZGVnKTtcclxuICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDkwZGVnKTtcclxuICB0cmFuc2l0aW9uOiBlYXNlLWluLW91dCAzMDBtcztcclxufVxyXG4uY29sb3ItNjY2IHtcclxuICBjb2xvcjogIzY2NjtcclxufVxyXG5cclxuXHJcblxyXG4udGV4dC1ib2xkIHtcclxuICBmb250LXdlaWdodDogYm9sZDtcclxufVxyXG5cclxuIiwiLml0ZW0tY29udGFpbmVyIHtcbiAgbWFyZ2luLWJvdHRvbTogMTVweDtcbn1cblxuLm1haW4taXRlbS1uYW1lLWNvbnRhaW5lciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgcGFkZGluZzogNXB4IDA7XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCBsaWdodGdyYXk7XG59XG5cbi5zdWItaXRlbS1saXN0IHtcbiAgbWF4LWhlaWdodDogMDtcbiAgb3ZlcmZsb3cteTogaGlkZGVuO1xuICB0cmFuc2l0aW9uOiBlYXNlLWluLW91dCA0MDBtcyBtYXgtaGVpZ2h0O1xufVxuLnN1Yi1pdGVtLWxpc3Qub3BlbmVkIHtcbiAgbWF4LWhlaWdodDogMTAwJTtcbiAgdHJhbnNpdGlvbjogZWFzZS1pbi1vdXQgNjAwbXMgbWF4LWhlaWdodDtcbn1cblxuLnN1Yi1pdGVtLWNvbnRhaW5lciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIHBhZGRpbmc6IDVweCAwO1xuICBib3JkZXItYm90dG9tOiAxcHggc29saWQgbGlnaHRncmF5O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG5cbi5zdWItaXRlbS1uYW1lIHtcbiAgZmxleC1iYXNpczogNTAlO1xuICBsaW5lLWhlaWdodDogMC43O1xufVxuLnN1Yi1pdGVtLW5hbWUgLm5hbWUge1xuICBmb250LXNpemU6IDE2cHg7XG59XG4uc3ViLWl0ZW0tbmFtZSAudGltZSB7XG4gIGZvbnQtc2l6ZTogMTRweDtcbiAgY29sb3I6ICM2NjY7XG59XG5cbi5zdWItaXRlbS1jaGVja2JveCB7XG4gIGRpc3BsYXk6IGZsZXg7XG59XG5cbi5tYWluLWl0ZW0tbmFtZS1zdWItY29udGFpbmVyIHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG4ubWFpbi1pdGVtLW5hbWUtc3ViLWNvbnRhaW5lciBpbWcge1xuICBtYXJnaW4tcmlnaHQ6IDEwcHg7XG4gIHdpZHRoOiAzNXB4O1xuICBoZWlnaHQ6IDM1cHg7XG59XG5cbi5tYWluLWl0ZW0tbmFtZSB7XG4gIGZvbnQtc2l6ZTogMTZweDtcbn1cblxuLm1haW4taXRlbS1hcnJvdyB7XG4gIGNvbG9yOiAjNjY2O1xufVxuLmRvd24ge1xuICB0cmFuc2Zvcm06IHJvdGF0ZSg5MGRlZyk7XG4gIC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoOTBkZWcpO1xuICB0cmFuc2l0aW9uOiBlYXNlLWluLW91dCAzMDBtcztcbn1cblxuLmNvbG9yLTY2NiB7XG4gIGNvbG9yOiAjNjY2O1xufVxuXG4udGV4dC1ib2xkIHtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG59Il19 */";
+    __webpack_exports__["default"] = ".item-container {\n  margin-bottom: 15px;\n}\n\n.main-item-name-container {\n  display: flex;\n  justify-content: space-between;\n  padding: 5px 0;\n  border-bottom: 1px solid lightgray;\n}\n\n.sub-item-list {\n  max-height: 0;\n  overflow-y: hidden;\n  transition: ease-in-out 400ms max-height;\n}\n\n.sub-item-list.opened {\n  max-height: 100%;\n  transition: ease-in-out 600ms max-height;\n}\n\n.sub-item-container {\n  display: flex;\n  padding: 5px 0;\n  border-bottom: 1px solid lightgray;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.sub-item-name {\n  flex-basis: 50%;\n  line-height: 0.7;\n}\n\n.sub-item-name .name {\n  font-size: 14px;\n}\n\n.sub-item-name .time {\n  font-size: 12px;\n  color: #666;\n}\n\n.sub-item-checkbox {\n  display: flex;\n}\n\n.main-item-name-sub-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.main-item-name-sub-container img {\n  margin-right: 10px;\n  width: 35px;\n  height: 35px;\n}\n\n.main-item-name {\n  font-size: 16px;\n}\n\n.main-item-arrow {\n  color: #666;\n}\n\n.down {\n  transform: rotate(90deg);\n  -webkit-transform: rotate(90deg);\n  transition: ease-in-out 300ms;\n}\n\n.color-666 {\n  color: #666;\n}\n\n.text-bold {\n  font-weight: bold;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkLWNvbXBvbmVudHMvc2VydmljZXMtbGlzdC9DOlxcVXNlcnNcXGFhYmhhZ3dhXFxzYW5kaHlhZGVlcCBpb25pYyBzdGFjay9zcmNcXGFwcFxcc2hhcmVkLWNvbXBvbmVudHNcXHNlcnZpY2VzLWxpc3RcXHNlcnZpY2VzLWxpc3QucGFnZS5zY3NzIiwic3JjL2FwcC9zaGFyZWQtY29tcG9uZW50cy9zZXJ2aWNlcy1saXN0L3NlcnZpY2VzLWxpc3QucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQU1BO0VBQ0UsbUJBQUE7QUNMRjs7QURRQTtFQUNFLGFBQUE7RUFDQSw4QkFBQTtFQUNBLGNBQUE7RUFDQSxrQ0FBQTtBQ0xGOztBRFFBO0VBQ0UsYUFBQTtFQUNBLGtCQUFBO0VBQ0Esd0NBQUE7QUNMRjs7QURNRTtFQUNFLGdCQUFBO0VBQ0Esd0NBQUE7QUNKSjs7QURRQTtFQUNFLGFBQUE7RUFDQSxjQUFBO0VBQ0Esa0NBQUE7RUFDQSw4QkFBQTtFQUNBLG1CQUFBO0FDTEY7O0FEUUE7RUFDRSxlQUFBO0VBQ0EsZ0JBQUE7QUNMRjs7QURNRTtFQUNFLGVBQUE7QUNKSjs7QURNRTtFQUNFLGVBQUE7RUFDQSxXQUFBO0FDSko7O0FEUUE7RUFDRSxhQUFBO0FDTEY7O0FET0E7RUFDRSxhQUFBO0VBQWUsdUJBQUE7RUFBeUIsbUJBQUE7QUNGMUM7O0FER0U7RUFDRSxrQkFBQTtFQUFvQixXQUFBO0VBQWEsWUFBQTtBQ0NyQzs7QURFQTtFQUNFLGVBQUE7QUNDRjs7QURDQTtFQUNFLFdBQUE7QUNFRjs7QURFQTtFQUNFLHdCQUFBO0VBQ0EsZ0NBQUE7RUFDQSw2QkFBQTtBQ0FGOztBREVBO0VBQ0UsV0FBQTtBQ0NGOztBRElBO0VBQ0UsaUJBQUE7QUNERiIsImZpbGUiOiJzcmMvYXBwL3NoYXJlZC1jb21wb25lbnRzL3NlcnZpY2VzLWxpc3Qvc2VydmljZXMtbGlzdC5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0IFwiLi4vLi4vLi4vc2FuZGh5YWRlZXAtdGhlbWVcIjtcclxuXHJcbi5pdGVtLWxpc3Qge1xyXG5cclxufVxyXG5cclxuLml0ZW0tY29udGFpbmVyIHtcclxuICBtYXJnaW4tYm90dG9tOiAxNXB4O1xyXG59XHJcblxyXG4ubWFpbi1pdGVtLW5hbWUtY29udGFpbmVyIHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcclxuICBwYWRkaW5nOiA1cHggMDtcclxuICBib3JkZXItYm90dG9tOiAxcHggc29saWQgbGlnaHRncmF5O1xyXG5cclxufVxyXG4uc3ViLWl0ZW0tbGlzdCB7XHJcbiAgbWF4LWhlaWdodDogMDtcclxuICBvdmVyZmxvdy15OiBoaWRkZW47XHJcbiAgdHJhbnNpdGlvbjogZWFzZS1pbi1vdXQgNDAwbXMgbWF4LWhlaWdodDtcclxuICAmLm9wZW5lZCB7XHJcbiAgICBtYXgtaGVpZ2h0OiAxMDAlO1xyXG4gICAgdHJhbnNpdGlvbjogZWFzZS1pbi1vdXQgNjAwbXMgbWF4LWhlaWdodDtcclxuICB9XHJcbn1cclxuXHJcbi5zdWItaXRlbS1jb250YWluZXIge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgcGFkZGluZzogNXB4IDA7XHJcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIGxpZ2h0Z3JheTtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XHJcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuXHJcbn1cclxuLnN1Yi1pdGVtLW5hbWUge1xyXG4gIGZsZXgtYmFzaXM6IDUwJTtcclxuICBsaW5lLWhlaWdodDogMC43O1xyXG4gIC5uYW1lIHtcclxuICAgIGZvbnQtc2l6ZTogMTRweDtcclxuICB9XHJcbiAgLnRpbWUge1xyXG4gICAgZm9udC1zaXplOiAxMnB4O1xyXG4gICAgY29sb3I6ICM2NjY7XHJcbiAgfVxyXG59XHJcbi5zdWItaXRlbS1wcmljZSB7fVxyXG4uc3ViLWl0ZW0tY2hlY2tib3gge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbn1cclxuLm1haW4taXRlbS1uYW1lLXN1Yi1jb250YWluZXIge1xyXG4gIGRpc3BsYXk6IGZsZXg7IGp1c3RpZnktY29udGVudDogY2VudGVyOyBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gIGltZyB7XHJcbiAgICBtYXJnaW4tcmlnaHQ6IDEwcHg7IHdpZHRoOiAzNXB4OyBoZWlnaHQ6IDM1cHg7XHJcbiAgfVxyXG59XHJcbi5tYWluLWl0ZW0tbmFtZSB7XHJcbiAgZm9udC1zaXplOiAxNnB4O1xyXG59XHJcbi5tYWluLWl0ZW0tYXJyb3cge1xyXG4gIGNvbG9yOiAjNjY2O1xyXG4gIC5yaWdodC1pY29uIHtcclxuICB9XHJcbn1cclxuLmRvd24ge1xyXG4gIHRyYW5zZm9ybTogcm90YXRlKDkwZGVnKTtcclxuICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDkwZGVnKTtcclxuICB0cmFuc2l0aW9uOiBlYXNlLWluLW91dCAzMDBtcztcclxufVxyXG4uY29sb3ItNjY2IHtcclxuICBjb2xvcjogIzY2NjtcclxufVxyXG5cclxuXHJcblxyXG4udGV4dC1ib2xkIHtcclxuICBmb250LXdlaWdodDogYm9sZDtcclxufVxyXG5cclxuIiwiLml0ZW0tY29udGFpbmVyIHtcbiAgbWFyZ2luLWJvdHRvbTogMTVweDtcbn1cblxuLm1haW4taXRlbS1uYW1lLWNvbnRhaW5lciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgcGFkZGluZzogNXB4IDA7XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCBsaWdodGdyYXk7XG59XG5cbi5zdWItaXRlbS1saXN0IHtcbiAgbWF4LWhlaWdodDogMDtcbiAgb3ZlcmZsb3cteTogaGlkZGVuO1xuICB0cmFuc2l0aW9uOiBlYXNlLWluLW91dCA0MDBtcyBtYXgtaGVpZ2h0O1xufVxuLnN1Yi1pdGVtLWxpc3Qub3BlbmVkIHtcbiAgbWF4LWhlaWdodDogMTAwJTtcbiAgdHJhbnNpdGlvbjogZWFzZS1pbi1vdXQgNjAwbXMgbWF4LWhlaWdodDtcbn1cblxuLnN1Yi1pdGVtLWNvbnRhaW5lciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIHBhZGRpbmc6IDVweCAwO1xuICBib3JkZXItYm90dG9tOiAxcHggc29saWQgbGlnaHRncmF5O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG5cbi5zdWItaXRlbS1uYW1lIHtcbiAgZmxleC1iYXNpczogNTAlO1xuICBsaW5lLWhlaWdodDogMC43O1xufVxuLnN1Yi1pdGVtLW5hbWUgLm5hbWUge1xuICBmb250LXNpemU6IDE0cHg7XG59XG4uc3ViLWl0ZW0tbmFtZSAudGltZSB7XG4gIGZvbnQtc2l6ZTogMTJweDtcbiAgY29sb3I6ICM2NjY7XG59XG5cbi5zdWItaXRlbS1jaGVja2JveCB7XG4gIGRpc3BsYXk6IGZsZXg7XG59XG5cbi5tYWluLWl0ZW0tbmFtZS1zdWItY29udGFpbmVyIHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG4ubWFpbi1pdGVtLW5hbWUtc3ViLWNvbnRhaW5lciBpbWcge1xuICBtYXJnaW4tcmlnaHQ6IDEwcHg7XG4gIHdpZHRoOiAzNXB4O1xuICBoZWlnaHQ6IDM1cHg7XG59XG5cbi5tYWluLWl0ZW0tbmFtZSB7XG4gIGZvbnQtc2l6ZTogMTZweDtcbn1cblxuLm1haW4taXRlbS1hcnJvdyB7XG4gIGNvbG9yOiAjNjY2O1xufVxuLmRvd24ge1xuICB0cmFuc2Zvcm06IHJvdGF0ZSg5MGRlZyk7XG4gIC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoOTBkZWcpO1xuICB0cmFuc2l0aW9uOiBlYXNlLWluLW91dCAzMDBtcztcbn1cblxuLmNvbG9yLTY2NiB7XG4gIGNvbG9yOiAjNjY2O1xufVxuXG4udGV4dC1ib2xkIHtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG59Il19 */";
     /***/
   },
 
@@ -460,11 +460,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _api_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! ../../api.service */
     "./src/app/api.service.ts");
+    /* harmony import */
+
+
+    var _shared_service_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ../../shared-service.service */
+    "./src/app/shared-service.service.ts");
 
     var ServicesListPage = /*#__PURE__*/function () {
-      function ServicesListPage(router, adminService) {
+      function ServicesListPage(sharedService, router, adminService) {
         _classCallCheck(this, ServicesListPage);
 
+        this.sharedService = sharedService;
         this.router = router;
         this.adminService = adminService;
         this.updateAmount = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
@@ -480,10 +487,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "ngOnInit",
         value: function ngOnInit() {
           this.getMainServices();
-        }
+        } //
+        // ngOnChanges(changes: SimpleChanges) {
+        //   this.getMainServices();
+        // }
+
       }, {
-        key: "ngOnChanges",
-        value: function ngOnChanges(changes) {
+        key: "ionViewWillLeave",
+        value: function ionViewWillLeave() {
           this.getMainServices();
         }
       }, {
@@ -496,7 +507,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function getServices() {
           var _this2 = this;
 
-          this.adminService.getServicesData().subscribe(function (res) {
+          this.adminService.getAllServices().subscribe(function (res) {
             return _this2.getAllServicesSuccess(res);
           }, function (error) {
             _this2.adminService.commonError(error);
@@ -507,7 +518,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function getMainServices() {
           var _this3 = this;
 
-          this.adminService.getMainServiceData().subscribe(function (res) {
+          this.sharedService.showSpinner.next(true);
+          this.adminService.getAllServiceTypes().subscribe(function (res) {
             return _this3.getMainServicesSuccess(res);
           }, function (error) {
             _this3.adminService.commonError(error);
@@ -518,10 +530,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function getAllServicesSuccess(res) {
           var _this4 = this;
 
-          this.services = res;
+          this.services = res.data;
           this.mainServices = this.mainServices.map(function (serv) {
             serv.services = _this4.services.filter(function (v) {
-              return v.mainServiceId === serv.id;
+              return v.serviceTypeId === serv._id;
             });
             serv.show = false;
             return serv;
@@ -531,7 +543,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getMainServicesSuccess",
         value: function getMainServicesSuccess(res) {
-          this.mainServices = res;
+          this.mainServices = res.data;
+          this.sharedService.showSpinner.next(false);
           this.getServices();
         }
       }, {
@@ -570,6 +583,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     ServicesListPage.ctorParameters = function () {
       return [{
+        type: _shared_service_service__WEBPACK_IMPORTED_MODULE_4__["SharedServiceService"]
+      }, {
         type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
       }, {
         type: _api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"]
@@ -586,7 +601,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./services-list.page.scss */
       "./src/app/shared-components/services-list/services-list.page.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"]])], ServicesListPage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_service_service__WEBPACK_IMPORTED_MODULE_4__["SharedServiceService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"]])], ServicesListPage);
     /***/
   }
 }]);
