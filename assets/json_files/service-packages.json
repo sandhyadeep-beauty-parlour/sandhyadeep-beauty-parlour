@@ -9,7 +9,7 @@
         },
         "description": " Some Desc",
         "services" : [2,5,6,4],
-        "images": [{"imgUrl": "assets/s2.jpg"}, {"imgUrl": "assets/s3.jpg"}, {"imgUrl": "assets/s4.jpeg"}],
+        "images": [{"imgUrl": "assets/75x60.jpg"}, {"imgUrl": "assets/75x60.jpg"}, {"imgUrl": "assets/75x60.jpg"}, {"imgUrl": "assets/75x60.jpg"}],
         "addedInCart": 0
     },
     {
@@ -22,7 +22,7 @@
             },
             "description": " Some Desc",
             "services" : [2,5,6,4],
-            "images": [{"imgUrl": "assets/s2.jpg"}, {"imgUrl": "assets/s3.jpg"}, {"imgUrl": "assets/s4.jpeg"}],
+            "images": [{"imgUrl": "assets/75x60.jpg"}, {"imgUrl": "assets/75x60.jpg"}, {"imgUrl": "assets/75x60.jpg"}, {"imgUrl": "assets/75x60.jpg"}],
             "addedInCart": 0
 
         },
@@ -36,7 +36,7 @@
                 },
                 "description": " Some Desc",
                 "services" : [2,5,6,4],
-                "images": [{"imgUrl": "assets/s2.jpg"}, {"imgUrl": "assets/s3.jpg"}, {"imgUrl": "assets/s4.jpeg"}],
+                "images": [{"imgUrl": "assets/75x60.jpg"}, {"imgUrl": "assets/75x60.jpg"}, {"imgUrl": "assets/75x60.jpg"}, {"imgUrl": "assets/75x60.jpg"}],
                 "addedInCart": 0
 
             }
