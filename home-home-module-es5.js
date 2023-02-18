@@ -339,9 +339,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         path: 'packages',
         loadChildren: function loadChildren() {
-          return __webpack_require__.e(
+          return Promise.all(
           /*! import() | pages-packages-packages-module */
-          "pages-packages-packages-module").then(__webpack_require__.bind(null,
+          [__webpack_require__.e("common"), __webpack_require__.e("pages-packages-packages-module")]).then(__webpack_require__.bind(null,
           /*! ../pages/packages/packages.module */
           "./src/app/pages/packages/packages.module.ts")).then(function (e) {
             return e.PackagesModule;
@@ -405,9 +405,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         path: 'package-details',
         loadChildren: function loadChildren() {
-          return __webpack_require__.e(
+          return Promise.all(
           /*! import() | pages-packages-package-details-package-details-module */
-          "pages-packages-package-details-package-details-module").then(__webpack_require__.bind(null,
+          [__webpack_require__.e("common"), __webpack_require__.e("pages-packages-package-details-package-details-module")]).then(__webpack_require__.bind(null,
           /*! ../pages/packages/package-details/package-details.module */
           "./src/app/pages/packages/package-details/package-details.module.ts")).then(function (e) {
             return e.PackageDetailsModule;
