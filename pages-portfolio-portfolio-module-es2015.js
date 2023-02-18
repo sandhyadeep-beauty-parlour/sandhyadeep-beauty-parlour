@@ -129,13 +129,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
 /* harmony import */ var _shared_components_modal_popup_modal_popup_page__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../shared-components/modal-popup/modal-popup.page */ "./src/app/shared-components/modal-popup/modal-popup.page.ts");
+/* harmony import */ var _shared_service_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../shared-service.service */ "./src/app/shared-service.service.ts");
+
 
 
 
 
 
 let PortfolioPage = class PortfolioPage {
-    constructor(location, modalController) {
+    constructor(sharedService, location, modalController) {
+        this.sharedService = sharedService;
         this.location = location;
         this.modalController = modalController;
         this.imagesData = [
@@ -209,7 +212,12 @@ let PortfolioPage = class PortfolioPage {
             }
         ];
     }
-    ngOnInit() {
+    ngOnInit() { }
+    ionViewDidEnter() {
+        this.sharedService.showSpinner.next(true);
+        setTimeout(() => {
+            this.sharedService.showSpinner.next(false);
+        }, 1000);
     }
     onLike(list, index) {
         list[index].check = true;
@@ -252,6 +260,7 @@ let PortfolioPage = class PortfolioPage {
     }
 };
 PortfolioPage.ctorParameters = () => [
+    { type: _shared_service_service__WEBPACK_IMPORTED_MODULE_5__["SharedServiceService"] },
     { type: _angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"] },
     { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ModalController"] }
 ];
@@ -261,7 +270,7 @@ PortfolioPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./portfolio.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/portfolio/portfolio.page.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./portfolio.page.scss */ "./src/app/pages/portfolio/portfolio.page.scss")).default]
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"], _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ModalController"]])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_service_service__WEBPACK_IMPORTED_MODULE_5__["SharedServiceService"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"], _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ModalController"]])
 ], PortfolioPage);
 
 

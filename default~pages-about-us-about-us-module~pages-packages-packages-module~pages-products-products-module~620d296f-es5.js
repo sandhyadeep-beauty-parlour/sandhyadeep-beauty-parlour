@@ -74,12 +74,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! @angular/common/http */
     "./node_modules/@angular/common/fesm2015/http.js");
+    /* harmony import */
+
+
+    var _ionic_angular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @ionic/angular */
+    "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
 
     var ApiService = /*#__PURE__*/function () {
-      function ApiService(http) {
+      function ApiService(http, toastController) {
         _classCallCheck(this, ApiService);
 
         this.http = http;
+        this.toastController = toastController;
         this.baseURL = _environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].baseURLAdminAPIs;
         this.country = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"]('');
         this.currentCountry = this.country.asObservable();
@@ -147,7 +154,47 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "commonError",
         value: function commonError(err) {
-          console.log(err);
+          this.presentToast(err.error.message).then();
+        }
+      }, {
+        key: "presentToast",
+        value: function presentToast(displayMessage) {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+            var toast;
+            return regeneratorRuntime.wrap(function _callee$(_context) {
+              while (1) {
+                switch (_context.prev = _context.next) {
+                  case 0:
+                    _context.next = 2;
+                    return this.toastController.create({
+                      message: displayMessage,
+                      position: 'top',
+                      cssClass: 'ionic-error-toast',
+                      duration: 2000
+                    });
+
+                  case 2:
+                    toast = _context.sent;
+                    toast.present();
+
+                  case 4:
+                  case "end":
+                    return _context.stop();
+                }
+              }
+            }, _callee, this);
+          }));
+        } //Actual APIS -
+
+      }, {
+        key: "signInApi",
+        value: function signInApi(data) {
+          return this.http.post("".concat(this.baseURL, "signin"), data, {});
+        }
+      }, {
+        key: "verifyOtp",
+        value: function verifyOtp(data) {
+          return this.http.post("".concat(this.baseURL, "verifyOtp"), data, {});
         }
       }]);
 
@@ -157,12 +204,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     ApiService.ctorParameters = function () {
       return [{
         type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"]
+      }, {
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["ToastController"]
       }];
     };
 
     ApiService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
       providedIn: 'root'
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"]])], ApiService);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"], _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["ToastController"]])], ApiService);
     /***/
   },
 

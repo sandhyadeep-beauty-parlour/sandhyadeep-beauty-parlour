@@ -246,11 +246,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _shared_components_modal_popup_modal_popup_page__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ../../shared-components/modal-popup/modal-popup.page */
     "./src/app/shared-components/modal-popup/modal-popup.page.ts");
+    /* harmony import */
+
+
+    var _shared_service_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ../../shared-service.service */
+    "./src/app/shared-service.service.ts");
 
     var PortfolioPage = /*#__PURE__*/function () {
-      function PortfolioPage(location, modalController) {
+      function PortfolioPage(sharedService, location, modalController) {
         _classCallCheck(this, PortfolioPage);
 
+        this.sharedService = sharedService;
         this.location = location;
         this.modalController = modalController;
         this.imagesData = [{
@@ -326,6 +333,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "ngOnInit",
         value: function ngOnInit() {}
       }, {
+        key: "ionViewDidEnter",
+        value: function ionViewDidEnter() {
+          var _this = this;
+
+          this.sharedService.showSpinner.next(true);
+          setTimeout(function () {
+            _this.sharedService.showSpinner.next(false);
+          }, 1000);
+        }
+      }, {
         key: "onLike",
         value: function onLike(list, index) {
           list[index].check = true;
@@ -361,7 +378,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "openModal",
         value: function openModal(image) {
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-            var _this = this;
+            var _this2 = this;
 
             var modal;
             return regeneratorRuntime.wrap(function _callee$(_context) {
@@ -380,7 +397,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     modal = _context.sent;
                     modal.onDidDismiss().then(function (dataReturned) {
                       if (dataReturned !== null) {
-                        _this.dataReturned = dataReturned.data; //alert('Modal Sent Data :'+ dataReturned);
+                        _this2.dataReturned = dataReturned.data; //alert('Modal Sent Data :'+ dataReturned);
                       }
                     });
                     _context.next = 6;
@@ -404,6 +421,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     PortfolioPage.ctorParameters = function () {
       return [{
+        type: _shared_service_service__WEBPACK_IMPORTED_MODULE_5__["SharedServiceService"]
+      }, {
         type: _angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"]
       }, {
         type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ModalController"]
@@ -418,7 +437,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./portfolio.page.scss */
       "./src/app/pages/portfolio/portfolio.page.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"], _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ModalController"]])], PortfolioPage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_service_service__WEBPACK_IMPORTED_MODULE_5__["SharedServiceService"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"], _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ModalController"]])], PortfolioPage);
     /***/
   }
 }]);
