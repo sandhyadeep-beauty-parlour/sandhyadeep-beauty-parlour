@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-content>\n  <div class=\"settings-container\">\n    <div class=\"before-login\">\n      <div>\n        <div>Login/Signup</div>\n        <div></div>\n      </div>\n      <div>\n        <div>About Sandhyadeep</div>\n        <div></div>\n      </div>\n      <div>\n        <div>Terms & Conditions</div>\n        <div></div>\n      </div>\n    </div>\n\n    <div class=\"after-login\">\n      <div>\n        <div></div>\n        <div></div>\n      </div>\n      <div>\n        <div>About Sandhyadeep</div>\n        <div></div>\n      </div>\n      <div>\n        <div>Terms & Conditions</div>\n        <div></div>\n      </div>\n    </div>\n  </div>\n</ion-content>\n";
+    __webpack_exports__["default"] = "<sandhyadeep-header class=\"z-index-99\"></sandhyadeep-header>\n<ion-content>\n  <div class=\"settings-container\">\n    <div class=\"before-login\">\n      <div>\n        <div>Login/Signup</div>\n        <div></div>\n      </div>\n      <div>\n        <div>About Sandhyadeep</div>\n        <div></div>\n      </div>\n      <div>\n        <div>Terms & Conditions</div>\n        <div></div>\n      </div>\n    </div>\n\n    <div class=\"after-login\">\n      <div>\n        <div></div>\n        <div></div>\n      </div>\n      <div>\n        <div>About Sandhyadeep</div>\n        <div></div>\n      </div>\n      <div>\n        <div>Terms & Conditions</div>\n        <div></div>\n      </div>\n    </div>\n  </div>\n</ion-content>\n";
     /***/
   },
 
@@ -146,13 +146,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _settings_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! ./settings.page */
     "./src/app/pages/settings/settings.page.ts");
+    /* harmony import */
+
+
+    var _shared_components_header_component_header_component_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ../../shared-components/header-component/header-component.module */
+    "./src/app/shared-components/header-component/header-component.module.ts");
 
     var SettingsPageModule = function SettingsPageModule() {
       _classCallCheck(this, SettingsPageModule);
     };
 
     SettingsPageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _settings_routing_module__WEBPACK_IMPORTED_MODULE_5__["SettingsPageRoutingModule"]],
+      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _settings_routing_module__WEBPACK_IMPORTED_MODULE_5__["SettingsPageRoutingModule"], _shared_components_header_component_header_component_module__WEBPACK_IMPORTED_MODULE_7__["HeaderModule"]],
       declarations: [_settings_page__WEBPACK_IMPORTED_MODULE_6__["SettingsPage"]]
     })], SettingsPageModule);
     /***/
