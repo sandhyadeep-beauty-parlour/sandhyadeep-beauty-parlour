@@ -1135,6 +1135,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _environments_environment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ./environments/environment */
     "./src/environments/environment.ts");
+    /* harmony import */
+
+
+    var hammerjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! hammerjs */
+    "./node_modules/hammerjs/hammer.js");
+    /* harmony import */
+
+
+    var hammerjs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(hammerjs__WEBPACK_IMPORTED_MODULE_5__);
 
     if (_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].production) {
       Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["enableProdMode"])();
