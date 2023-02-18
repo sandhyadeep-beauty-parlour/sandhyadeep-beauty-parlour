@@ -370,11 +370,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         }
       }, {
+        path: 'apply-coupon',
+        loadChildren: function loadChildren() {
+          return Promise.all(
+          /*! import() | pages-apply-coupon-apply-coupon-module */
+          [__webpack_require__.e("common"), __webpack_require__.e("pages-apply-coupon-apply-coupon-module")]).then(__webpack_require__.bind(null,
+          /*! ../pages/apply-coupon/apply-coupon.module */
+          "./src/app/pages/apply-coupon/apply-coupon.module.ts")).then(function (e) {
+            return e.ApplyCouponModule;
+          });
+        }
+      }, {
         path: 'schedule-appointment',
         loadChildren: function loadChildren() {
-          return __webpack_require__.e(
+          return Promise.all(
           /*! import() | pages-schedule-appointment-schedule-appointment-module */
-          "pages-schedule-appointment-schedule-appointment-module").then(__webpack_require__.bind(null,
+          [__webpack_require__.e("common"), __webpack_require__.e("pages-schedule-appointment-schedule-appointment-module")]).then(__webpack_require__.bind(null,
           /*! ../pages/schedule-appointment/schedule-appointment.module */
           "./src/app/pages/schedule-appointment/schedule-appointment.module.ts")).then(function (e) {
             return e.ScheduleAppointmentModule;
