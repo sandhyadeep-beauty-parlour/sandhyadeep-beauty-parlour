@@ -228,13 +228,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var routes = [{
       path: '',
       component: _index_page__WEBPACK_IMPORTED_MODULE_3__["IndexPage"],
-      children: [{
+      children: [// {
+      //     path: '**',
+      //     canActivate: [PreLogin],
+      //     loadChildren: () => import('../pages/login/login.module').then((e) => e.LoginPageModule)
+      // },
+      {
         path: '',
         canActivate: [_shared_components_authentication_auth_guards_service__WEBPACK_IMPORTED_MODULE_4__["PreLogin"]],
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | pages-app-slides-slides-module */
-          [__webpack_require__.e("default~pages-about-us-about-us-module~pages-app-slides-slides-module~pages-apply-coupon-apply-coupo~8876a910"), __webpack_require__.e("pages-app-slides-slides-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~home-home-module~pages-app-slides-slides-module~pages-login-login-module~pages-signup-signup-module"), __webpack_require__.e("pages-app-slides-slides-module")]).then(__webpack_require__.bind(null,
           /*! ../pages/app-slides/slides.module */
           "./src/app/pages/app-slides/slides.module.ts")).then(function (e) {
             return e.SlidesModule;
@@ -246,7 +251,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | pages-login-login-module */
-          [__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-app-slides-slides-module~pages-apply-coupon-apply-coupo~8876a910"), __webpack_require__.e("pages-login-login-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("default~home-home-module~pages-app-slides-slides-module~pages-login-login-module~pages-signup-signup-module"), __webpack_require__.e("pages-login-login-module")]).then(__webpack_require__.bind(null,
           /*! ../pages/login/login.module */
           "./src/app/pages/login/login.module.ts")).then(function (e) {
             return e.LoginPageModule;
@@ -258,7 +263,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | pages-signup-signup-module */
-          [__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-app-slides-slides-module~pages-apply-coupon-apply-coupo~8876a910"), __webpack_require__.e("pages-signup-signup-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~83a2ce79"), __webpack_require__.e("default~home-home-module~pages-app-slides-slides-module~pages-login-login-module~pages-signup-signup-module"), __webpack_require__.e("pages-signup-signup-module")]).then(__webpack_require__.bind(null,
           /*! ../pages/signup/signup.module */
           "./src/app/pages/signup/signup.module.ts")).then(function (e) {
             return e.SignupPageModule;

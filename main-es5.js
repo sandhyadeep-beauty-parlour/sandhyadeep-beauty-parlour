@@ -843,9 +843,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       path: '',
       canActivate: [_shared_components_authentication_auth_guards_service__WEBPACK_IMPORTED_MODULE_3__["LoginGuard"]],
       loadChildren: function loadChildren() {
-        return __webpack_require__.e(
+        return Promise.all(
         /*! import() | home-home-module */
-        "home-home-module").then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~home-home-module~pages-app-slides-slides-module~pages-login-login-module~pages-signup-signup-module"), __webpack_require__.e("home-home-module")]).then(__webpack_require__.bind(null,
         /*! ./home/home.module */
         "./src/app/home/home.module.ts")).then(function (m) {
           return m.HomePageModule;
@@ -859,7 +859,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
       imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes, {
-        preloadingStrategy: _angular_router__WEBPACK_IMPORTED_MODULE_2__["PreloadAllModules"]
+        preloadingStrategy: _angular_router__WEBPACK_IMPORTED_MODULE_2__["PreloadAllModules"],
+        useHash: true
       })],
       exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
     })], AppRoutingModule);
@@ -1585,6 +1586,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.onSettingEvent = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](false);
         this.showBackIcon = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](false);
         this.showSpinner = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](false);
+        this.selectedProduct = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
       }
 
       _createClass(SharedServiceService, [{

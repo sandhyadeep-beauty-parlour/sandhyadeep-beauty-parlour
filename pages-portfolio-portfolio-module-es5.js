@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<sandhyadeep-header [showBackIcon]=\"true\" class=\"z-index-99\"></sandhyadeep-header>\r\n<ion-content [scrollEvents]=\"true\" (ionScroll)=\"onIonScroll($event)\">\r\n    <div class=\"page-heading\">\r\n        <div class=\"heading-text\">\r\n            <b>Portfolio</b>\r\n        </div>\r\n    </div>\r\n    <div class=\"portfolio-container\">\r\n        <div class=\"photos-container\">\r\n            <div [ngClass]=\"{ animate__animated: changeToggleAnim, animate__bounceIn: changeToggleAnim, animate__fast: changeToggleAnim }\" class=\"  photo left animate__animated animate__bounceIn animate__fast\" *ngFor=\"let image of imagesData; let index = index\">\r\n                <div (dblclick)=\"onLike(imagesData, index)\" (click)=\"showImage(image.url)\" class=\"single-photo\">\r\n                    <svg class=\"icon icon-heart\" [class.like]=\"image.check\">\r\n                        <use xlink:href=\"#icon-heart\"></use>\r\n                    </svg>\r\n                    <img src=\"{{image.url}}\" />\r\n                </div>\r\n                <div class=\"photo-likes-container\">\r\n                    <div class=\"photo-likes\">\r\n                        Likes {{image.likes}}\r\n                    </div>\r\n                    <div (click)=\"onUnlike(imagesData, index)\" *ngIf=\"image.isLiked\" class=\"like-icon\"><i class=\"fa fa-heart\"></i></div>\r\n                    <div *ngIf=\"!image.isLiked\" class=\"like-icon\"><i class=\"fa fa-heart-o\"></i></div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"photos-container\">\r\n            <div [ngClass]=\"{ animate__animated: changeToggleAnim, animate__bounceIn: changeToggleAnim, animate__fast: changeToggleAnim }\" class=\"photo right animate__animated animate__bounceIn animate__fast\" *ngFor=\"let image of imagesData1; let index = index\">\r\n                <div (dblclick)=\"onLike(imagesData1, index)\" (click)=\"showImage(image.url)\" class=\"single-photo\">\r\n                    <svg class=\"icon icon-heart\" [class.like]=\"image.check\">\r\n                        <use xlink:href=\"#icon-heart\"></use>\r\n                    </svg>\r\n                    <img src=\"{{image.url}}\" />\r\n                </div>\r\n                <div class=\"photo-likes-container\">\r\n                    <div class=\"photo-likes\">\r\n                        Likes {{image.likes}}\r\n                    </div>\r\n                    <div (click)=\"onUnlike(imagesData1, index)\"  *ngIf=\"image.isLiked\" class=\"like-icon\"><i class=\"fa fa-heart\"></i></div>\r\n                    <div *ngIf=\"!image.isLiked\" class=\"like-icon\"><i class=\"fa fa-heart-o\"></i></div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <svg aria-hidden=\"true\" style=\"position: absolute; width: 0; height: 0; overflow: hidden;\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\r\n        <defs>\r\n            <symbol id=\"icon-heart\" viewBox=\"0 0 32 32\">\r\n                <path d=\"M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z\"></path>\r\n            </symbol>\r\n        </defs>\r\n    </svg>\r\n</ion-content>\r\n";
+    __webpack_exports__["default"] = "<sandhyadeep-header [showBackIcon]=\"true\" class=\"z-index-99\"></sandhyadeep-header>\r\n<ion-content [scrollEvents]=\"true\" (ionScroll)=\"onIonScroll($event)\">\r\n    <div class=\"page-heading\">\r\n        <div class=\"heading-text\">\r\n            <b>Portfolio</b>\r\n        </div>\r\n    </div>\r\n    <div class=\"portfolio-container\">\r\n        <div class=\"photos-container\">\r\n            <div class=\"photo left animate__animated animate__bounceIn animate__fast\" *ngFor=\"let image of imagesData; let index = index\">\r\n                <div (dblclick)=\"onLike(imagesData, index)\" (click)=\"showImage(image.url)\" class=\"single-photo\">\r\n                    <svg class=\"icon icon-heart\" [class.like]=\"image.check\">\r\n                        <use xlink:href=\"#icon-heart\"></use>\r\n                    </svg>\r\n                    <img src=\"{{image.url}}\" />\r\n                </div>\r\n                <div class=\"photo-likes-container\">\r\n                    <div class=\"photo-likes\">\r\n                        Likes {{image.likes}}\r\n                    </div>\r\n                    <div (click)=\"onUnlike(imagesData, index)\" *ngIf=\"image.isLiked\" class=\"like-icon\"><i class=\"fa fa-heart\"></i></div>\r\n                    <div *ngIf=\"!image.isLiked\" class=\"like-icon\"><i class=\"fa fa-heart-o\"></i></div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"photos-container\">\r\n            <div class=\"photo right animate__animated animate__bounceIn animate__fast\" *ngFor=\"let image of imagesData1; let index = index\">\r\n                <div (dblclick)=\"onLike(imagesData1, index)\" (click)=\"showImage(image.url)\" class=\"single-photo\">\r\n                    <svg class=\"icon icon-heart\" [class.like]=\"image.check\">\r\n                        <use xlink:href=\"#icon-heart\"></use>\r\n                    </svg>\r\n                    <img src=\"{{image.url}}\" />\r\n                </div>\r\n                <div class=\"photo-likes-container\">\r\n                    <div class=\"photo-likes\">\r\n                        Likes {{image.likes}}\r\n                    </div>\r\n                    <div (click)=\"onUnlike(imagesData1, index)\"  *ngIf=\"image.isLiked\" class=\"like-icon\"><i class=\"fa fa-heart\"></i></div>\r\n                    <div *ngIf=\"!image.isLiked\" class=\"like-icon\"><i class=\"fa fa-heart-o\"></i></div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <svg aria-hidden=\"true\" style=\"position: absolute; width: 0; height: 0; overflow: hidden;\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\r\n        <defs>\r\n            <symbol id=\"icon-heart\" viewBox=\"0 0 32 32\">\r\n                <path d=\"M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z\"></path>\r\n            </symbol>\r\n        </defs>\r\n    </svg>\r\n</ion-content>\r\n";
     /***/
   },
 
@@ -332,14 +332,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       _createClass(PortfolioPage, [{
         key: "onIonScroll",
-        value: function onIonScroll(event) {
-          var _this = this;
-
-          var eventDetails = event.detail;
-          this.changeToggleAnim = false;
-          setTimeout(function () {
-            _this.changeToggleAnim = true;
-          }, 500);
+        value: function onIonScroll(event) {// const eventDetails = event.detail;
+          // this.changeToggleAnim = false;
+          // setTimeout(() => {
+          //   this.changeToggleAnim = true;
+          // }, 500);
         }
       }, {
         key: "ngOnInit",
@@ -347,11 +344,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "ionViewDidEnter",
         value: function ionViewDidEnter() {
-          var _this2 = this;
+          var _this = this;
 
           this.sharedService.showSpinner.next(true);
           setTimeout(function () {
-            _this2.sharedService.showSpinner.next(false);
+            _this.sharedService.showSpinner.next(false);
           }, 1000);
         }
       }, {
@@ -390,7 +387,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "openModal",
         value: function openModal(image) {
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-            var _this3 = this;
+            var _this2 = this;
 
             var modal;
             return regeneratorRuntime.wrap(function _callee$(_context) {
@@ -409,7 +406,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     modal = _context.sent;
                     modal.onDidDismiss().then(function (dataReturned) {
                       if (dataReturned !== null) {
-                        _this3.dataReturned = dataReturned.data; //alert('Modal Sent Data :'+ dataReturned);
+                        _this2.dataReturned = dataReturned.data; //alert('Modal Sent Data :'+ dataReturned);
                       }
                     });
                     _context.next = 6;

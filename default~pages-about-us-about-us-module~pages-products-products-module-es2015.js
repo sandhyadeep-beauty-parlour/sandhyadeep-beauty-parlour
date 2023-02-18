@@ -278,17 +278,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _shared_service_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared-service.service */ "./src/app/shared-service.service.ts");
+
 
 
 
 let ProductListComponent = class ProductListComponent {
-    constructor(router) {
+    constructor(sharedService, router) {
+        this.sharedService = sharedService;
         this.router = router;
     }
     goToProductDetails(id) {
         this.router.navigate(['home/product-details'], { queryParams: { productId: id } });
     }
     onUpdateCounter(event, index) {
+        this.sharedService.selectedProduct.next([this.productList[index]]);
         this.productList[index].showSpinner = true;
         setTimeout(() => {
             this.productList[index].showSpinner = false;
@@ -297,6 +301,7 @@ let ProductListComponent = class ProductListComponent {
     ngOnInit() { }
 };
 ProductListComponent.ctorParameters = () => [
+    { type: _shared_service_service__WEBPACK_IMPORTED_MODULE_3__["SharedServiceService"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -309,7 +314,7 @@ ProductListComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./product-list.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/shared-components/product-list/product-list.component.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./product-list.component.scss */ "./src/app/shared-components/product-list/product-list.component.scss")).default]
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_service_service__WEBPACK_IMPORTED_MODULE_3__["SharedServiceService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
 ], ProductListComponent);
 
 

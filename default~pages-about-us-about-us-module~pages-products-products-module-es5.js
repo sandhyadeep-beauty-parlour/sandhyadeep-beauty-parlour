@@ -467,11 +467,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _shared_service_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ../../shared-service.service */
+    "./src/app/shared-service.service.ts");
 
     var ProductListComponent = /*#__PURE__*/function () {
-      function ProductListComponent(router) {
+      function ProductListComponent(sharedService, router) {
         _classCallCheck(this, ProductListComponent);
 
+        this.sharedService = sharedService;
         this.router = router;
       }
 
@@ -489,6 +496,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function onUpdateCounter(event, index) {
           var _this = this;
 
+          this.sharedService.selectedProduct.next([this.productList[index]]);
           this.productList[index].showSpinner = true;
           setTimeout(function () {
             _this.productList[index].showSpinner = false;
@@ -504,6 +512,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     ProductListComponent.ctorParameters = function () {
       return [{
+        type: _shared_service_service__WEBPACK_IMPORTED_MODULE_3__["SharedServiceService"]
+      }, {
         type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
       }];
     };
@@ -517,7 +527,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./product-list.component.scss */
       "./src/app/shared-components/product-list/product-list.component.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])], ProductListComponent);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_service_service__WEBPACK_IMPORTED_MODULE_3__["SharedServiceService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])], ProductListComponent);
     /***/
   },
 

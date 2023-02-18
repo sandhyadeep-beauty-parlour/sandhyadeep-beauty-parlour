@@ -494,13 +494,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "getServicePackageSuccess",
         value: function getServicePackageSuccess(res) {
           this.packageList = res;
-          this.sharedService.showSpinner.next(true);
+          this.sharedService.showSpinner.next(false);
         }
       }, {
         key: "getProducts",
         value: function getProducts() {
           var _this6 = this;
 
+          this.sharedService.showSpinner.next(true);
           this.adminService.getProducts().subscribe(function (res) {
             return _this6.getProductSuccess(res);
           }, function (error) {
@@ -511,6 +512,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "getProductSuccess",
         value: function getProductSuccess(res) {
           this.productList = res;
+          this.sharedService.showSpinner.next(false);
         }
       }, {
         key: "getServiceTypes",

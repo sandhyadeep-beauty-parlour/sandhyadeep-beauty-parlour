@@ -348,15 +348,17 @@ let FeedPage = class FeedPage {
     }
     getServicePackageSuccess(res) {
         this.packageList = res;
-        this.sharedService.showSpinner.next(true);
+        this.sharedService.showSpinner.next(false);
     }
     getProducts() {
+        this.sharedService.showSpinner.next(true);
         this.adminService.getProducts().subscribe(res => this.getProductSuccess(res), error => {
             this.adminService.commonError(error);
         });
     }
     getProductSuccess(res) {
         this.productList = res;
+        this.sharedService.showSpinner.next(false);
     }
     getServiceTypes() {
         this.sharedService.showSpinner.next(true);
