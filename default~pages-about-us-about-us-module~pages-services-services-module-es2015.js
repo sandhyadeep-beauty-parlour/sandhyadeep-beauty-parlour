@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<search-header></search-header>\n<ion-content>\n    <div class=\"page-container\">\n        <div class=\"page-heading\">\n            <div class=\"heading-text\">\n                <b>Services</b>\n            </div>\n        </div>\n        <service-list (updateAmount)=\"updateData($event)\"></service-list>\n    </div>\n</ion-content>\n<ion-footer class=\"ion-no-border\">\n    <ion-toolbar>\n        <div class=\"appointment-footer\">\n            <div class=\"total-div-container\">\n                <div class=\"total-div\">\n                    <div>Total</div>\n                    <div class=\"total-div-price\">{{selectedServices}} Services</div>\n                </div>\n                <div>\n                    {{amountPurchased}} ₹\n                </div>\n            </div>\n            <div (click)=\"onBookAppointment()\" class=\"default-button\">\n                <button> Book Appointment</button>\n            </div>\n        </div>\n    </ion-toolbar>\n</ion-footer>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<search-header></search-header>\n<ion-content>\n    <ion-refresher slot=\"fixed\" (ionRefresh)=\"refreshPage($event)\">\n        <ion-refresher-content pulling-icon=\"arrow-dropdown\" refreshing-spinner=\"circles\">\n\n        </ion-refresher-content>\n    </ion-refresher>\n    <div class=\"page-container\">\n        <div class=\"page-heading\">\n            <div class=\"heading-text\">\n                <b>Services</b>\n            </div>\n        </div>\n        <service-list [isRefreshed]=\"isRefreshed\" (updateAmount)=\"updateData($event)\"></service-list>\n    </div>\n</ion-content>\n<ion-footer class=\"ion-no-border\">\n    <ion-toolbar>\n        <div class=\"appointment-footer\">\n            <div class=\"total-div-container\">\n                <div class=\"total-div\">\n                    <div>Total</div>\n                    <div class=\"total-div-price\">{{selectedServices}} Services</div>\n                </div>\n                <div>\n                    {{amountPurchased}} ₹\n                </div>\n            </div>\n            <div (click)=\"onBookAppointment()\" class=\"default-button\">\n                <button> Book Appointment</button>\n            </div>\n        </div>\n    </ion-toolbar>\n</ion-footer>\n");
 
 /***/ }),
 
@@ -247,8 +247,17 @@ let ServicesPage = class ServicesPage {
         this.adminService = adminService;
         this.amountPurchased = 0;
         this.selectedServices = 0;
+        this.isRefreshed = false;
     }
     ngOnInit() {
+    }
+    refreshPage(event) {
+        setTimeout(() => {
+            this.isRefreshed = !this.isRefreshed;
+            this.amountPurchased = 0;
+            this.selectedServices = 0;
+            event.target.complete();
+        }, 1500);
     }
     onBookAppointment() {
         this.router.navigate(['home/schedule-appointment']);
@@ -459,6 +468,9 @@ let ServicesListPage = class ServicesListPage {
     ngOnInit() {
         this.getMainServices();
     }
+    ngOnChanges(changes) {
+        this.getMainServices();
+    }
     onBookAppointment() {
         this.router.navigate(['home/schedule-appointment']);
     }
@@ -515,6 +527,10 @@ tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
 ], ServicesListPage.prototype, "updateAmount", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
+], ServicesListPage.prototype, "isRefreshed", void 0);
 ServicesListPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'service-list',
