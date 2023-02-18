@@ -182,6 +182,10 @@ const routes = [
                 path: 'schedule-appointment',
                 loadChildren: () => Promise.all(/*! import() | pages-schedule-appointment-schedule-appointment-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-schedule-appointment-schedule-appointment-module")]).then(__webpack_require__.bind(null, /*! ../pages/schedule-appointment/schedule-appointment.module */ "./src/app/pages/schedule-appointment/schedule-appointment.module.ts"))
                     .then((e) => e.ScheduleAppointmentModule)
+            }, {
+                path: 'payments',
+                loadChildren: () => Promise.all(/*! import() | pages-payment-payment-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-payment-payment-module")]).then(__webpack_require__.bind(null, /*! ../pages/payment/payment.module */ "./src/app/pages/payment/payment.module.ts"))
+                    .then((e) => e.PaymentModule)
             }
         ]
     }
