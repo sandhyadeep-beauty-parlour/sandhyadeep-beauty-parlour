@@ -229,9 +229,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       {
         path: '',
         loadChildren: function loadChildren() {
-          return __webpack_require__.e(
+          return Promise.all(
           /*! import() | pages-login-login-module */
-          "pages-login-login-module").then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~pages-about-us-about-us-module~pages-apply-coupon-apply-coupon-module~pages-bookings-booking~4061a8d9"), __webpack_require__.e("pages-login-login-module")]).then(__webpack_require__.bind(null,
           /*! ../pages/login/login.module */
           "./src/app/pages/login/login.module.ts")).then(function (e) {
             return e.LoginPageModule;

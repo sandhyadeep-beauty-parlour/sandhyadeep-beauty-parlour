@@ -20806,7 +20806,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".bookings-container .wizard-navigation {\n  padding: 5px;\n  border: 2px solid #d3d3d391;\n  border-radius: 10px;\n  text-align: center;\n  position: relative;\n  font-size: 14px;\n}\n.bookings-container .moving-tab {\n  position: absolute;\n  text-align: center;\n  padding: 7px;\n  font-size: 12px;\n  -webkit-font-smoothing: subpixel-antialiased;\n  background-color: #753a88;\n  top: -4px;\n  left: 0;\n  color: #FFFFFF;\n  cursor: pointer;\n  font-weight: 500;\n}\n.bookings-container .first {\n  border-top-left-radius: 10px;\n  font-weight: bold;\n  border-bottom-left-radius: 10px;\n  width: 50%;\n  transform: translate3d(0, 12%, 0);\n  transition: all 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;\n}\n.bookings-container .second {\n  font-weight: bold;\n  border-top-right-radius: 10px;\n  border-bottom-right-radius: 10px;\n  width: 50%;\n  transform: translate3d(100%, 12%, 0px);\n  transition: all 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;\n}\n.no-bookings-img {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.no-active-bookings .no-bookings-text {\n  font-size: 24px;\n  text-align: center;\n}\n.no-active-bookings .button-container {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.no-active-bookings .button-container button.search-button {\n  width: 80%;\n  color: white;\n  padding: 15px;\n  margin: 15px 0;\n  display: flex;\n  border-radius: 7px;\n  justify-content: center;\n  text-align: center;\n  background: linear-gradient(225deg, #cc2b5e 2%, #753a88 63%);\n}\n.historyTable {\n  width: 100%;\n}\n.historyTable .mat-cell {\n  font-size: 12px !important;\n}\n.historyTable th.mat-header-cell {\n  font-size: 14px !important;\n}\n.booking-cards {\n  padding: 20px;\n}\n.booking-card {\n  padding: 10px 15px !important;\n}\n.errorSnack {\n  background: red !important;\n}\n.successSnack {\n  background: #198754 !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvYm9va2luZ3MvQzpcXFVzZXJzXFxhYWJoYWd3YVxcc2FuZGh5YWRlZXAgaW9uaWMgc3RhY2svc3JjXFxhcHBcXHBhZ2VzXFxib29raW5nc1xcYm9va2luZ3MucGFnZS5zY3NzIiwic3JjL2FwcC9wYWdlcy9ib29raW5ncy9ib29raW5ncy5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0U7RUFDRSxZQUFBO0VBQ0EsMkJBQUE7RUFDQSxtQkFBQTtFQUNBLGtCQUFBO0VBQ0Esa0JBQUE7RUFDQSxlQUFBO0FDQUo7QURFRTtFQUNFLGtCQUFBO0VBQ0Esa0JBQUE7RUFDQSxZQUFBO0VBQ0EsZUFBQTtFQUNBLDRDQUFBO0VBQ0EseUJBQUE7RUFDQSxTQUFBO0VBQ0EsT0FBQTtFQUNBLGNBQUE7RUFDQSxlQUFBO0VBQ0EsZ0JBQUE7QUNBSjtBRElFO0VBQ0UsNEJBQUE7RUFDQSxpQkFBQTtFQUNBLCtCQUFBO0VBQ0EsVUFBQTtFQUFZLGlDQUFBO0VBQW1DLHlEQUFBO0FDQW5EO0FERUU7RUFDRSxpQkFBQTtFQUNBLDZCQUFBO0VBQ0EsZ0NBQUE7RUFDQSxVQUFBO0VBQVksc0NBQUE7RUFBd0MseURBQUE7QUNFeEQ7QURHQTtFQUNFLGFBQUE7RUFDQSx1QkFBQTtFQUNBLG1CQUFBO0FDQUY7QURJRTtFQUNFLGVBQUE7RUFDQSxrQkFBQTtBQ0RKO0FESUU7RUFDRSxhQUFBO0VBQ0Esc0JBQUE7RUFDQSx1QkFBQTtFQUNBLG1CQUFBO0FDRko7QURHSTtFQUNFLFVBQUE7RUFDQSxZQUFBO0VBQ0EsYUFBQTtFQUNBLGNBQUE7RUFDQSxhQUFBO0VBQ0Esa0JBQUE7RUFDQSx1QkFBQTtFQUNBLGtCQUFBO0VBQ0EsNERBQUE7QUNETjtBRE9BO0VBQ0UsV0FBQTtBQ0pGO0FES0U7RUFDRSwwQkFBQTtBQ0hKO0FES0U7RUFDRSwwQkFBQTtBQ0hKO0FETUE7RUFDRSxhQUFBO0FDSEY7QURNQTtFQUNFLDZCQUFBO0FDSEY7QURNQTtFQUNFLDBCQUFBO0FDSEY7QURNQTtFQUNFLDhCQUFBO0FDSEYiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9ib29raW5ncy9ib29raW5ncy5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYm9va2luZ3MtY29udGFpbmVyIHtcclxuICAud2l6YXJkLW5hdmlnYXRpb24ge1xyXG4gICAgcGFkZGluZzogNXB4O1xyXG4gICAgYm9yZGVyOiAycHggc29saWQgI2QzZDNkMzkxO1xyXG4gICAgYm9yZGVyLXJhZGl1czogMTBweDtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIGZvbnQtc2l6ZTogMTRweDtcclxuICB9XHJcbiAgLm1vdmluZy10YWIge1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgcGFkZGluZzogN3B4O1xyXG4gICAgZm9udC1zaXplOiAxMnB4O1xyXG4gICAgLXdlYmtpdC1mb250LXNtb290aGluZzogc3VicGl4ZWwtYW50aWFsaWFzZWQ7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNzUzYTg4O1xyXG4gICAgdG9wOiAtNHB4O1xyXG4gICAgbGVmdDogMDtcclxuICAgIGNvbG9yOiAjRkZGRkZGO1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgZm9udC13ZWlnaHQ6IDUwMDtcclxuICAgIC8vYm94LXNoYWRvdzogMCAxNnB4IDI2cHggLTEwcHggcmdiYSgyNDQsIDY3LCA1NCwgMC41NiksIDAgNHB4IDI1cHggMHB4IHJnYmEoMCwgMCwgMCwgMC4xMiksIDAgOHB4IDEwcHggLTVweCByZ2JhKDI0NCwgNjcsIDU0LCAwLjIpO1xyXG4gIH1cclxuXHJcbiAgLmZpcnN0IHtcclxuICAgIGJvcmRlci10b3AtbGVmdC1yYWRpdXM6IDEwcHg7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIGJvcmRlci1ib3R0b20tbGVmdC1yYWRpdXM6IDEwcHg7XHJcbiAgICB3aWR0aDogNTAlOyB0cmFuc2Zvcm06IHRyYW5zbGF0ZTNkKDAsIDEyJSwgMCk7IHRyYW5zaXRpb246IGFsbCAwLjVzIGN1YmljLWJlemllcigwLjI5LCAxLjQyLCAwLjc5LCAxKSAwcztcclxuICB9XHJcbiAgLnNlY29uZCB7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIGJvcmRlci10b3AtcmlnaHQtcmFkaXVzOiAxMHB4O1xyXG4gICAgYm9yZGVyLWJvdHRvbS1yaWdodC1yYWRpdXM6IDEwcHg7XHJcbiAgICB3aWR0aDogNTAlOyB0cmFuc2Zvcm06IHRyYW5zbGF0ZTNkKDEwMCUsIDEyJSwgMHB4KTsgdHJhbnNpdGlvbjogYWxsIDAuNXMgY3ViaWMtYmV6aWVyKDAuMjksIDEuNDIsIDAuNzksIDEpIDBzO1xyXG4gIH1cclxuXHJcbn1cclxuXHJcbi5uby1ib29raW5ncy1pbWcge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxufVxyXG4ubm8tYWN0aXZlLWJvb2tpbmdzIHtcclxuXHJcbiAgLm5vLWJvb2tpbmdzLXRleHQge1xyXG4gICAgZm9udC1zaXplOiAyNHB4O1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIH1cclxuXHJcbiAgLmJ1dHRvbi1jb250YWluZXIge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgICBidXR0b24uc2VhcmNoLWJ1dHRvbiB7XHJcbiAgICAgIHdpZHRoOiA4MCU7XHJcbiAgICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgICAgcGFkZGluZzogMTVweDtcclxuICAgICAgbWFyZ2luOiAxNXB4IDA7XHJcbiAgICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICAgIGJvcmRlci1yYWRpdXM6IDdweDtcclxuICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgICAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDIyNWRlZywgI2NjMmI1ZSAyJSwgIzc1M2E4OCA2MyUpO1xyXG4gICAgfVxyXG4gIH1cclxuXHJcbn1cclxuXHJcbi5oaXN0b3J5VGFibGUge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIC5tYXQtY2VsbCB7XHJcbiAgICBmb250LXNpemU6IDEycHggIWltcG9ydGFudDtcclxuICB9XHJcbiAgdGgubWF0LWhlYWRlci1jZWxsIHtcclxuICAgIGZvbnQtc2l6ZTogMTRweCAhaW1wb3J0YW50O1xyXG4gIH1cclxufVxyXG4uYm9va2luZy1jYXJkcyB7XHJcbiAgcGFkZGluZzogMjBweDtcclxufVxyXG5cclxuLmJvb2tpbmctY2FyZCB7XHJcbiAgcGFkZGluZzogMTBweCAxNXB4ICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbi5lcnJvclNuYWNrIHtcclxuICBiYWNrZ3JvdW5kOiByZWQgIWltcG9ydGFudDtcclxufVxyXG5cclxuLnN1Y2Nlc3NTbmFjayB7XHJcbiAgYmFja2dyb3VuZDogIzE5ODc1NCAhaW1wb3J0YW50O1xyXG59XHJcbiIsIi5ib29raW5ncy1jb250YWluZXIgLndpemFyZC1uYXZpZ2F0aW9uIHtcbiAgcGFkZGluZzogNXB4O1xuICBib3JkZXI6IDJweCBzb2xpZCAjZDNkM2QzOTE7XG4gIGJvcmRlci1yYWRpdXM6IDEwcHg7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBmb250LXNpemU6IDE0cHg7XG59XG4uYm9va2luZ3MtY29udGFpbmVyIC5tb3ZpbmctdGFiIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHBhZGRpbmc6IDdweDtcbiAgZm9udC1zaXplOiAxMnB4O1xuICAtd2Via2l0LWZvbnQtc21vb3RoaW5nOiBzdWJwaXhlbC1hbnRpYWxpYXNlZDtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzc1M2E4ODtcbiAgdG9wOiAtNHB4O1xuICBsZWZ0OiAwO1xuICBjb2xvcjogI0ZGRkZGRjtcbiAgY3Vyc29yOiBwb2ludGVyO1xuICBmb250LXdlaWdodDogNTAwO1xufVxuLmJvb2tpbmdzLWNvbnRhaW5lciAuZmlyc3Qge1xuICBib3JkZXItdG9wLWxlZnQtcmFkaXVzOiAxMHB4O1xuICBmb250LXdlaWdodDogYm9sZDtcbiAgYm9yZGVyLWJvdHRvbS1sZWZ0LXJhZGl1czogMTBweDtcbiAgd2lkdGg6IDUwJTtcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGUzZCgwLCAxMiUsIDApO1xuICB0cmFuc2l0aW9uOiBhbGwgMC41cyBjdWJpYy1iZXppZXIoMC4yOSwgMS40MiwgMC43OSwgMSkgMHM7XG59XG4uYm9va2luZ3MtY29udGFpbmVyIC5zZWNvbmQge1xuICBmb250LXdlaWdodDogYm9sZDtcbiAgYm9yZGVyLXRvcC1yaWdodC1yYWRpdXM6IDEwcHg7XG4gIGJvcmRlci1ib3R0b20tcmlnaHQtcmFkaXVzOiAxMHB4O1xuICB3aWR0aDogNTAlO1xuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZTNkKDEwMCUsIDEyJSwgMHB4KTtcbiAgdHJhbnNpdGlvbjogYWxsIDAuNXMgY3ViaWMtYmV6aWVyKDAuMjksIDEuNDIsIDAuNzksIDEpIDBzO1xufVxuXG4ubm8tYm9va2luZ3MtaW1nIHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG5cbi5uby1hY3RpdmUtYm9va2luZ3MgLm5vLWJvb2tpbmdzLXRleHQge1xuICBmb250LXNpemU6IDI0cHg7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbi5uby1hY3RpdmUtYm9va2luZ3MgLmJ1dHRvbi1jb250YWluZXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cbi5uby1hY3RpdmUtYm9va2luZ3MgLmJ1dHRvbi1jb250YWluZXIgYnV0dG9uLnNlYXJjaC1idXR0b24ge1xuICB3aWR0aDogODAlO1xuICBjb2xvcjogd2hpdGU7XG4gIHBhZGRpbmc6IDE1cHg7XG4gIG1hcmdpbjogMTVweCAwO1xuICBkaXNwbGF5OiBmbGV4O1xuICBib3JkZXItcmFkaXVzOiA3cHg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgyMjVkZWcsICNjYzJiNWUgMiUsICM3NTNhODggNjMlKTtcbn1cblxuLmhpc3RvcnlUYWJsZSB7XG4gIHdpZHRoOiAxMDAlO1xufVxuLmhpc3RvcnlUYWJsZSAubWF0LWNlbGwge1xuICBmb250LXNpemU6IDEycHggIWltcG9ydGFudDtcbn1cbi5oaXN0b3J5VGFibGUgdGgubWF0LWhlYWRlci1jZWxsIHtcbiAgZm9udC1zaXplOiAxNHB4ICFpbXBvcnRhbnQ7XG59XG5cbi5ib29raW5nLWNhcmRzIHtcbiAgcGFkZGluZzogMjBweDtcbn1cblxuLmJvb2tpbmctY2FyZCB7XG4gIHBhZGRpbmc6IDEwcHggMTVweCAhaW1wb3J0YW50O1xufVxuXG4uZXJyb3JTbmFjayB7XG4gIGJhY2tncm91bmQ6IHJlZCAhaW1wb3J0YW50O1xufVxuXG4uc3VjY2Vzc1NuYWNrIHtcbiAgYmFja2dyb3VuZDogIzE5ODc1NCAhaW1wb3J0YW50O1xufSJdfQ== */";
+    __webpack_exports__["default"] = ".bookings-container .wizard-navigation {\n  padding: 5px;\n  border: 2px solid #d3d3d391;\n  border-radius: 10px;\n  text-align: center;\n  position: relative;\n  font-size: 14px;\n}\n.bookings-container .moving-tab {\n  position: absolute;\n  text-align: center;\n  padding: 7px;\n  font-size: 12px;\n  -webkit-font-smoothing: subpixel-antialiased;\n  background-color: #753a88;\n  top: -4px;\n  left: 0;\n  color: #FFFFFF;\n  cursor: pointer;\n  font-weight: 500;\n}\n.bookings-container .first {\n  border-top-left-radius: 10px;\n  font-weight: bold;\n  border-bottom-left-radius: 10px;\n  width: 50%;\n  transform: translate3d(0, 12%, 0);\n  transition: all 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;\n}\n.bookings-container .second {\n  font-weight: bold;\n  border-top-right-radius: 10px;\n  border-bottom-right-radius: 10px;\n  width: 50%;\n  transform: translate3d(100%, 12%, 0px);\n  transition: all 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;\n}\n.no-bookings-img {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.no-active-bookings .no-bookings-text {\n  font-size: 24px;\n  text-align: center;\n}\n.no-active-bookings .button-container {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.no-active-bookings .button-container button.search-button {\n  width: 80%;\n  color: white;\n  padding: 15px;\n  margin: 15px 0;\n  display: flex;\n  border-radius: 7px;\n  justify-content: center;\n  text-align: center;\n  background: linear-gradient(225deg, #cc2b5e 2%, #753a88 63%);\n}\n.historyTable {\n  width: 100%;\n}\n.historyTable .mat-cell {\n  font-size: 12px !important;\n}\n.historyTable th.mat-header-cell {\n  font-size: 14px !important;\n}\n.booking-cards {\n  padding: 20px;\n}\n.booking-card {\n  padding: 10px 15px !important;\n}\n.errorSnack {\n  background: red !important;\n}\n.successSnack {\n  background: #198754 !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvYm9va2luZ3MvQzpcXFVzZXJzXFxhYWJoYWd3YVxcc2FuZGh5YWRlZXAgaW9uaWMgc3RhY2svc3JjXFxhcHBcXHBhZ2VzXFxib29raW5nc1xcYm9va2luZ3MucGFnZS5zY3NzIiwic3JjL2FwcC9wYWdlcy9ib29raW5ncy9ib29raW5ncy5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0U7RUFDRSxZQUFBO0VBQ0EsMkJBQUE7RUFDQSxtQkFBQTtFQUNBLGtCQUFBO0VBQ0Esa0JBQUE7RUFDQSxlQUFBO0FDQUo7QURFRTtFQUNFLGtCQUFBO0VBQ0Esa0JBQUE7RUFDQSxZQUFBO0VBQ0EsZUFBQTtFQUNBLDRDQUFBO0VBQ0EseUJBQUE7RUFDQSxTQUFBO0VBQ0EsT0FBQTtFQUNBLGNBQUE7RUFDQSxlQUFBO0VBQ0EsZ0JBQUE7QUNBSjtBRElFO0VBQ0UsNEJBQUE7RUFDQSxpQkFBQTtFQUNBLCtCQUFBO0VBQ0EsVUFBQTtFQUFZLGlDQUFBO0VBQW1DLHlEQUFBO0FDQW5EO0FERUU7RUFDRSxpQkFBQTtFQUNBLDZCQUFBO0VBQ0EsZ0NBQUE7RUFDQSxVQUFBO0VBQVksc0NBQUE7RUFBd0MseURBQUE7QUNFeEQ7QURHQTtFQUNFLGFBQUE7RUFDQSx1QkFBQTtFQUNBLG1CQUFBO0FDQUY7QURJRTtFQUNFLGVBQUE7RUFDQSxrQkFBQTtBQ0RKO0FESUU7RUFDRSxhQUFBO0VBQ0Esc0JBQUE7RUFDQSx1QkFBQTtFQUNBLG1CQUFBO0FDRko7QURHSTtFQUNFLFVBQUE7RUFDQSxZQUFBO0VBQ0EsYUFBQTtFQUNBLGNBQUE7RUFDQSxhQUFBO0VBQ0Esa0JBQUE7RUFDQSx1QkFBQTtFQUNBLGtCQUFBO0VBQ0EsNERBQUE7QUNETjtBRE9BO0VBQ0UsV0FBQTtBQ0pGO0FES0U7RUFDRSwwQkFBQTtBQ0hKO0FES0U7RUFDRSwwQkFBQTtBQ0hKO0FETUE7RUFDRSxhQUFBO0FDSEY7QURNQTtFQUNFLDZCQUFBO0FDSEY7QURNQTtFQUNFLDBCQUFBO0FDSEY7QURNQTtFQUNFLDhCQUFBO0FDSEYiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9ib29raW5ncy9ib29raW5ncy5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYm9va2luZ3MtY29udGFpbmVyIHtcclxuICAud2l6YXJkLW5hdmlnYXRpb24ge1xyXG4gICAgcGFkZGluZzogNXB4O1xyXG4gICAgYm9yZGVyOiAycHggc29saWQgI2QzZDNkMzkxO1xyXG4gICAgYm9yZGVyLXJhZGl1czogMTBweDtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIGZvbnQtc2l6ZTogMTRweDtcclxuICB9XHJcbiAgLm1vdmluZy10YWIge1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgcGFkZGluZzogN3B4O1xyXG4gICAgZm9udC1zaXplOiAxMnB4O1xyXG4gICAgLXdlYmtpdC1mb250LXNtb290aGluZzogc3VicGl4ZWwtYW50aWFsaWFzZWQ7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNzUzYTg4O1xyXG4gICAgdG9wOiAtNHB4O1xyXG4gICAgbGVmdDogMDtcclxuICAgIGNvbG9yOiAjRkZGRkZGO1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgZm9udC13ZWlnaHQ6IDUwMDtcclxuICAgIC8vYm94LXNoYWRvdzogMCAxNnB4IDI2cHggLTEwcHggcmdiYSgyNDQsIDY3LCA1NCwgMC41NiksIDAgNHB4IDI1cHggMHB4IHJnYmEoMCwgMCwgMCwgMC4xMiksIDAgOHB4IDEwcHggLTVweCByZ2JhKDI0NCwgNjcsIDU0LCAwLjIpO1xyXG4gIH1cclxuXHJcbiAgLmZpcnN0IHtcclxuICAgIGJvcmRlci10b3AtbGVmdC1yYWRpdXM6IDEwcHg7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIGJvcmRlci1ib3R0b20tbGVmdC1yYWRpdXM6IDEwcHg7XHJcbiAgICB3aWR0aDogNTAlOyB0cmFuc2Zvcm06IHRyYW5zbGF0ZTNkKDAsIDEyJSwgMCk7IHRyYW5zaXRpb246IGFsbCAwLjVzIGN1YmljLWJlemllcigwLjI5LCAxLjQyLCAwLjc5LCAxKSAwcztcclxuICB9XHJcbiAgLnNlY29uZCB7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIGJvcmRlci10b3AtcmlnaHQtcmFkaXVzOiAxMHB4O1xyXG4gICAgYm9yZGVyLWJvdHRvbS1yaWdodC1yYWRpdXM6IDEwcHg7XHJcbiAgICB3aWR0aDogNTAlOyB0cmFuc2Zvcm06IHRyYW5zbGF0ZTNkKDEwMCUsIDEyJSwgMHB4KTsgdHJhbnNpdGlvbjogYWxsIDAuNXMgY3ViaWMtYmV6aWVyKDAuMjksIDEuNDIsIDAuNzksIDEpIDBzO1xyXG4gIH1cclxuXHJcbn1cclxuXHJcbi5uby1ib29raW5ncy1pbWcge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxufVxyXG4ubm8tYWN0aXZlLWJvb2tpbmdzIHtcclxuXHJcbiAgLm5vLWJvb2tpbmdzLXRleHQge1xyXG4gICAgZm9udC1zaXplOiAyNHB4O1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIH1cclxuXHJcbiAgLmJ1dHRvbi1jb250YWluZXIge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgICBidXR0b24uc2VhcmNoLWJ1dHRvbiB7XHJcbiAgICAgIHdpZHRoOiA4MCU7XHJcbiAgICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgICAgcGFkZGluZzogMTVweDtcclxuICAgICAgbWFyZ2luOiAxNXB4IDA7XHJcbiAgICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICAgIGJvcmRlci1yYWRpdXM6IDdweDtcclxuICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgICAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDIyNWRlZywgI2NjMmI1ZSAyJSwgIzc1M2E4OCA2MyUpO1xyXG4gICAgfVxyXG4gIH1cclxuXHJcbn1cclxuXHJcbi5oaXN0b3J5VGFibGUge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIC5tYXQtY2VsbCB7XHJcbiAgICBmb250LXNpemU6IDEycHggIWltcG9ydGFudDtcclxuICB9XHJcbiAgdGgubWF0LWhlYWRlci1jZWxsIHtcclxuICAgIGZvbnQtc2l6ZTogMTRweCAhaW1wb3J0YW50O1xyXG4gIH1cclxufVxyXG4uYm9va2luZy1jYXJkcyB7XHJcbiAgcGFkZGluZzogMjBweDtcclxufVxyXG5cclxuLmJvb2tpbmctY2FyZCB7XHJcbiAgcGFkZGluZzogMTBweCAxNXB4ICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbi5lcnJvclNuYWNrIHtcclxuICBiYWNrZ3JvdW5kOiByZWQgIWltcG9ydGFudDtcclxufVxyXG5cclxuLnN1Y2Nlc3NTbmFjayB7XHJcbiAgYmFja2dyb3VuZDogIzE5ODc1NCAhaW1wb3J0YW50O1xyXG59XHJcblxyXG4iLCIuYm9va2luZ3MtY29udGFpbmVyIC53aXphcmQtbmF2aWdhdGlvbiB7XG4gIHBhZGRpbmc6IDVweDtcbiAgYm9yZGVyOiAycHggc29saWQgI2QzZDNkMzkxO1xuICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgZm9udC1zaXplOiAxNHB4O1xufVxuLmJvb2tpbmdzLWNvbnRhaW5lciAubW92aW5nLXRhYiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBwYWRkaW5nOiA3cHg7XG4gIGZvbnQtc2l6ZTogMTJweDtcbiAgLXdlYmtpdC1mb250LXNtb290aGluZzogc3VicGl4ZWwtYW50aWFsaWFzZWQ7XG4gIGJhY2tncm91bmQtY29sb3I6ICM3NTNhODg7XG4gIHRvcDogLTRweDtcbiAgbGVmdDogMDtcbiAgY29sb3I6ICNGRkZGRkY7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgZm9udC13ZWlnaHQ6IDUwMDtcbn1cbi5ib29raW5ncy1jb250YWluZXIgLmZpcnN0IHtcbiAgYm9yZGVyLXRvcC1sZWZ0LXJhZGl1czogMTBweDtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIGJvcmRlci1ib3R0b20tbGVmdC1yYWRpdXM6IDEwcHg7XG4gIHdpZHRoOiA1MCU7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlM2QoMCwgMTIlLCAwKTtcbiAgdHJhbnNpdGlvbjogYWxsIDAuNXMgY3ViaWMtYmV6aWVyKDAuMjksIDEuNDIsIDAuNzksIDEpIDBzO1xufVxuLmJvb2tpbmdzLWNvbnRhaW5lciAuc2Vjb25kIHtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIGJvcmRlci10b3AtcmlnaHQtcmFkaXVzOiAxMHB4O1xuICBib3JkZXItYm90dG9tLXJpZ2h0LXJhZGl1czogMTBweDtcbiAgd2lkdGg6IDUwJTtcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGUzZCgxMDAlLCAxMiUsIDBweCk7XG4gIHRyYW5zaXRpb246IGFsbCAwLjVzIGN1YmljLWJlemllcigwLjI5LCAxLjQyLCAwLjc5LCAxKSAwcztcbn1cblxuLm5vLWJvb2tpbmdzLWltZyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuXG4ubm8tYWN0aXZlLWJvb2tpbmdzIC5uby1ib29raW5ncy10ZXh0IHtcbiAgZm9udC1zaXplOiAyNHB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG4ubm8tYWN0aXZlLWJvb2tpbmdzIC5idXR0b24tY29udGFpbmVyIHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG4ubm8tYWN0aXZlLWJvb2tpbmdzIC5idXR0b24tY29udGFpbmVyIGJ1dHRvbi5zZWFyY2gtYnV0dG9uIHtcbiAgd2lkdGg6IDgwJTtcbiAgY29sb3I6IHdoaXRlO1xuICBwYWRkaW5nOiAxNXB4O1xuICBtYXJnaW46IDE1cHggMDtcbiAgZGlzcGxheTogZmxleDtcbiAgYm9yZGVyLXJhZGl1czogN3B4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoMjI1ZGVnLCAjY2MyYjVlIDIlLCAjNzUzYTg4IDYzJSk7XG59XG5cbi5oaXN0b3J5VGFibGUge1xuICB3aWR0aDogMTAwJTtcbn1cbi5oaXN0b3J5VGFibGUgLm1hdC1jZWxsIHtcbiAgZm9udC1zaXplOiAxMnB4ICFpbXBvcnRhbnQ7XG59XG4uaGlzdG9yeVRhYmxlIHRoLm1hdC1oZWFkZXItY2VsbCB7XG4gIGZvbnQtc2l6ZTogMTRweCAhaW1wb3J0YW50O1xufVxuXG4uYm9va2luZy1jYXJkcyB7XG4gIHBhZGRpbmc6IDIwcHg7XG59XG5cbi5ib29raW5nLWNhcmQge1xuICBwYWRkaW5nOiAxMHB4IDE1cHggIWltcG9ydGFudDtcbn1cblxuLmVycm9yU25hY2sge1xuICBiYWNrZ3JvdW5kOiByZWQgIWltcG9ydGFudDtcbn1cblxuLnN1Y2Nlc3NTbmFjayB7XG4gIGJhY2tncm91bmQ6ICMxOTg3NTQgIWltcG9ydGFudDtcbn0iXX0= */";
     /***/
   },
 
@@ -20871,9 +20871,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     "./node_modules/@angular/material/esm2015/material.js");
 
     var BookingsPage = /*#__PURE__*/function () {
-      function BookingsPage(snackBar, adminService, alertController) {
+      function BookingsPage(toastController, snackBar, adminService, alertController) {
         _classCallCheck(this, BookingsPage);
 
+        this.toastController = toastController;
         this.snackBar = snackBar;
         this.adminService = adminService;
         this.alertController = alertController;
@@ -20909,10 +20910,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               _this.bookingsOnUi[index].showSpinner = false;
             }, 1000);
           } else {
-            this.snackBar.open('Ratings have already Added', '', {
-              panelClass: ['errorSnack'],
-              duration: 1000
-            });
+            // this.presentToast('bottom', 'Appointment Cancelled', 1000, 'ionic-success-toast');
+            this.presentToast('bottom', 'Ratings have already Added', 1000, 'ionic-error-toast').then();
           }
         }
       }, {
@@ -20932,17 +20931,47 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           });
         }
       }, {
-        key: "reasonAlert",
-        value: function reasonAlert() {
+        key: "presentToast",
+        value: function presentToast(toastPosition, toastMessage, toastDuration, customClass) {
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-            var _this3 = this;
-
-            var alert;
+            var toast;
             return regeneratorRuntime.wrap(function _callee$(_context) {
               while (1) {
                 switch (_context.prev = _context.next) {
                   case 0:
                     _context.next = 2;
+                    return this.toastController.create({
+                      message: toastMessage,
+                      duration: toastDuration,
+                      position: toastPosition,
+                      cssClass: customClass
+                    });
+
+                  case 2:
+                    toast = _context.sent;
+                    _context.next = 5;
+                    return toast.present();
+
+                  case 5:
+                  case "end":
+                    return _context.stop();
+                }
+              }
+            }, _callee, this);
+          }));
+        }
+      }, {
+        key: "reasonAlert",
+        value: function reasonAlert() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+            var _this3 = this;
+
+            var alert;
+            return regeneratorRuntime.wrap(function _callee2$(_context2) {
+              while (1) {
+                switch (_context2.prev = _context2.next) {
+                  case 0:
+                    _context2.next = 2;
                     return this.alertController.create({
                       header: 'Please enter the reason of cancellation',
                       buttons: [{
@@ -20958,54 +20987,54 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                           // console.log(data);
                           // debugger;
                           if (data[0] && data[0].length > 0) {
-                            _this3.snackBar.open('Appointment Cancelled', '', {
-                              panelClass: ['successSnack'],
-                              duration: 1000
-                            });
+                            _this3.presentToast('bottom', 'Appointment Cancelled', 1000, 'ionic-success-toast');
 
                             return true;
                           } else {
-                            _this3.snackBar.open('Please submit reason before cancellation', '', {
-                              panelClass: ['errorSnack'],
-                              duration: 1000
-                            });
+                            _this3.presentToast('bottom', 'Please submit reason before cancellation', 1000, 'ionic-error-toast');
 
                             return false;
                           }
                         }
                       }],
                       inputs: [{
-                        type: 'textarea',
-                        placeholder: 'Reason'
+                        type: 'checkbox',
+                        label: 'Reason 1',
+                        value: 'value1',
+                        checked: true
+                      }, {
+                        type: 'checkbox',
+                        label: 'Reason 2',
+                        value: 'value2'
                       }]
                     });
 
                   case 2:
-                    alert = _context.sent;
-                    _context.next = 5;
+                    alert = _context2.sent;
+                    _context2.next = 5;
                     return alert.present();
 
                   case 5:
                   case "end":
-                    return _context.stop();
+                    return _context2.stop();
                 }
               }
-            }, _callee, this);
+            }, _callee2, this);
           }));
         }
       }, {
         key: "presentAlert",
         value: function presentAlert() {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
             var _this4 = this;
 
             var alert, _yield$alert$onDidDis, role;
 
-            return regeneratorRuntime.wrap(function _callee2$(_context2) {
+            return regeneratorRuntime.wrap(function _callee3$(_context3) {
               while (1) {
-                switch (_context2.prev = _context2.next) {
+                switch (_context3.prev = _context3.next) {
                   case 0:
-                    _context2.next = 2;
+                    _context3.next = 2;
                     return this.alertController.create({
                       header: 'Do you want to cancel the Appointment!',
                       cssClass: 'alert-popup',
@@ -21027,25 +21056,25 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                     });
 
                   case 2:
-                    alert = _context2.sent;
-                    _context2.next = 5;
+                    alert = _context3.sent;
+                    _context3.next = 5;
                     return alert.present();
 
                   case 5:
-                    _context2.next = 7;
+                    _context3.next = 7;
                     return alert.onDidDismiss();
 
                   case 7:
-                    _yield$alert$onDidDis = _context2.sent;
+                    _yield$alert$onDidDis = _context3.sent;
                     role = _yield$alert$onDidDis.role;
                     this.roleMessage = "Dismissed with role: ".concat(role);
 
                   case 10:
                   case "end":
-                    return _context2.stop();
+                    return _context3.stop();
                 }
               }
-            }, _callee2, this);
+            }, _callee3, this);
           }));
         }
       }, {
@@ -21089,6 +21118,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     BookingsPage.ctorParameters = function () {
       return [{
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["ToastController"]
+      }, {
         type: _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"]
       }, {
         type: _api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"]
@@ -21105,7 +21136,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./bookings.page.scss */
       "./src/app/pages/bookings/bookings.page.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"], _api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["AlertController"]])], BookingsPage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_4__["ToastController"], _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"], _api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["AlertController"]])], BookingsPage);
     /***/
   },
 
@@ -21166,12 +21197,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/material */
     "./node_modules/@angular/material/esm2015/material.js");
+    /* harmony import */
+
+
+    var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @ionic/angular */
+    "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
 
     var StarRatingsComponent = /*#__PURE__*/function () {
-      function StarRatingsComponent(snackBar) {
+      function StarRatingsComponent(snackBar, toastController) {
         _classCallCheck(this, StarRatingsComponent);
 
         this.snackBar = snackBar;
+        this.toastController = toastController;
         this.rating = 3;
         this.starCount = 5;
         this.color = 'accent';
@@ -21192,12 +21230,39 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "onClick",
         value: function onClick(rating) {
-          this.snackBar.open('Thanks for Ratings', '', {
-            panelClass: ['successSnack'],
-            duration: this.snackBarDuration
-          });
+          this.presentToast('bottom', 'Thanks for Ratings', 1000, 'ionic-success-toast').then();
           this.ratingUpdated.emit(rating);
           return false;
+        }
+      }, {
+        key: "presentToast",
+        value: function presentToast(toastPosition, toastMessage, toastDuration, customClass) {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
+            var toast;
+            return regeneratorRuntime.wrap(function _callee4$(_context4) {
+              while (1) {
+                switch (_context4.prev = _context4.next) {
+                  case 0:
+                    _context4.next = 2;
+                    return this.toastController.create({
+                      message: toastMessage,
+                      duration: toastDuration,
+                      position: toastPosition,
+                      cssClass: customClass
+                    });
+
+                  case 2:
+                    toast = _context4.sent;
+                    _context4.next = 5;
+                    return toast.present();
+
+                  case 5:
+                  case "end":
+                    return _context4.stop();
+                }
+              }
+            }, _callee4, this);
+          }));
         }
       }, {
         key: "showIcon",
@@ -21216,6 +21281,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     StarRatingsComponent.ctorParameters = function () {
       return [{
         type: _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSnackBar"]
+      }, {
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ToastController"]
       }];
     };
 
@@ -21232,7 +21299,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./star-ratings.component.scss */
       "./src/app/shared-components/star-ratings/star-ratings.component.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSnackBar"]])], StarRatingsComponent);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSnackBar"], _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ToastController"]])], StarRatingsComponent);
     /***/
   },
 
