@@ -293,6 +293,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         }
       }, {
+        path: 'portfolio',
+        loadChildren: function loadChildren() {
+          return __webpack_require__.e(
+          /*! import() | pages-portfolio-portfolio-module */
+          "pages-portfolio-portfolio-module").then(__webpack_require__.bind(null,
+          /*! ../pages/portfolio/portfolio.module */
+          "./src/app/pages/portfolio/portfolio.module.ts")).then(function (e) {
+            return e.PortfolioModule;
+          });
+        }
+      }, {
         path: 'notifications',
         loadChildren: function loadChildren() {
           return __webpack_require__.e(
