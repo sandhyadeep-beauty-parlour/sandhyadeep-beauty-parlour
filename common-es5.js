@@ -1,8 +1,8 @@
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -463,6 +463,26 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   },
 
   /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/shared-components/footer-component/footer-component.component.html":
+  /*!**************************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/shared-components/footer-component/footer-component.component.html ***!
+    \**************************************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppSharedComponentsFooterComponentFooterComponentComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<ion-footer class=\"ion-no-border\">\r\n    <div class=\"footer-container\">\r\n        <div routerLink=\"/feed\" routerLinkActive=\"selected\" class=\"single-tab\">\r\n            <i style=\"font-size: 25px;\" class=\"fa fa-home\"></i>\r\n            <span>Feed</span>\r\n        </div>\r\n        <div routerLink=\"/bookings\" routerLinkActive=\"selected\" class=\"single-tab\">\r\n            <i style=\"font-size: 25px;\" class=\"fa fa-calendar-check-o\"></i>\r\n            <span>Appointments</span>\r\n        </div>\r\n        <div routerLink=\"/portfolio\" routerLinkActive=\"selected\" class=\"single-tab\">\r\n            <i style=\"font-size: 25px;\" class=\"fa fa-suitcase\"></i>\r\n            <span>Portfolio</span>\r\n        </div>\r\n        <div routerLink=\"/settings\" routerLinkActive=\"selected\" class=\"single-tab\">\r\n            <i style=\"font-size: 25px;\" class=\"fa fa-user-circle-o\"></i>\r\n            <span>Profile</span>\r\n        </div>\r\n    </div>\r\n</ion-footer>\r\n";
+    /***/
+  },
+
+  /***/
   "./node_modules/raw-loader/dist/cjs.js!./src/app/shared-components/modal-popup/modal-popup.page.html":
   /*!***********************************************************************************************************!*\
     !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/shared-components/modal-popup/modal-popup.page.html ***!
@@ -478,7 +498,158 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-header>\r\n  <div (click)=\"closeModal()\" class=\"cross-container\"><ion-icon class=\"cross-icon\" name=\"close-outline\"></ion-icon></div>\r\n</ion-header>\r\n<ion-content>\r\n  <div class=\"image-zoom-container\">\r\n    <ion-slides  zoom [options]=\"slideOptsTest\">\r\n      <ion-slide>\r\n        <div class=\"swiper-zoom-container\">\r\n          <img src=\"{{imageUrl}}\" alt=\"\">\r\n        </div>\r\n      </ion-slide>\r\n    </ion-slides>\r\n  </div>\r\n</ion-content>\r\n";
+    __webpack_exports__["default"] = "<ion-header>\r\n  <div (click)=\"closeModal()\" class=\"cross-container\"><ion-icon class=\"cross-icon\" name=\"close-outline\"></ion-icon></div>\r\n</ion-header>\r\n<ion-content>\r\n  <div class=\"image-zoom-container\">\r\n    <ion-slides [options]=\"slideOptsTest\">\r\n      <ion-slide>\r\n        <div class=\"swiper-zoom-container\">\r\n          <img src=\"{{imageUrl}}\" alt=\"\">\r\n        </div>\r\n      </ion-slide>\r\n    </ion-slides>\r\n  </div>\r\n</ion-content>\r\n";
+    /***/
+  },
+
+  /***/
+  "./src/app/shared-components/footer-component/footer-component.component.scss":
+  /*!************************************************************************************!*\
+    !*** ./src/app/shared-components/footer-component/footer-component.component.scss ***!
+    \************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppSharedComponentsFooterComponentFooterComponentComponentScss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = ".footer-container {\n  box-shadow: 4px 17px 20px 20px #6c757d3d;\n  -webkit-box-shadow: 4px 17px 20px 20px #6c757d3d;\n  -moz-box-shadow: 4px 17px 20px 20px #6c757d3d;\n  display: flex;\n  justify-content: space-around;\n  height: 60px;\n  align-items: center;\n}\n.footer-container .single-tab {\n  flex-basis: 25%;\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  align-items: center;\n  font-size: 14px;\n  color: #e95c8f;\n}\n.footer-container .single-tab.selected {\n  color: #614d7f !important;\n}\n.footer-container .footer-tab {\n  font-size: 14px;\n  padding-top: 1px;\n  background: linear-gradient(305deg, #cc2b5e 2%, #753a88 63%);\n}\n.footer-container ion-tab-bar {\n  padding: 8px 0;\n}\n.footer-container ion-tab-bar ion-tab-button {\n  color: #e95c8f;\n}\n.footer-container ion-tab-bar ion-tab-button.tab-selected {\n  color: #614d7f;\n}\n.footer-container ion-tab-bar ion-label {\n  font-weight: bold;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkLWNvbXBvbmVudHMvZm9vdGVyLWNvbXBvbmVudC9DOlxcVXNlcnNcXGFhYmhhZ3dhXFxzYW5kaHlhZGVlcFxcc2FuZGh5YWRlZXAtdWkvc3JjXFxhcHBcXHNoYXJlZC1jb21wb25lbnRzXFxmb290ZXItY29tcG9uZW50XFxmb290ZXItY29tcG9uZW50LmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9zaGFyZWQtY29tcG9uZW50cy9mb290ZXItY29tcG9uZW50L2Zvb3Rlci1jb21wb25lbnQuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3NoYXJlZC1jb21wb25lbnRzL2Zvb3Rlci1jb21wb25lbnQvQzpcXFVzZXJzXFxhYWJoYWd3YVxcc2FuZGh5YWRlZXBcXHNhbmRoeWFkZWVwLXVpL3NyY1xcc2FuZGh5YWRlZXAtdGhlbWUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQTtFQUNFLHdDQUFBO0VBQ0EsZ0RBQUE7RUFDQSw2Q0FBQTtFQUNBLGFBQUE7RUFBZSw2QkFBQTtFQUErQixZQUFBO0VBQWMsbUJBQUE7QUNFOUQ7QURERTtFQUNFLGVBQUE7RUFDQSxhQUFBO0VBQWUsdUJBQUE7RUFBeUIsc0JBQUE7RUFBd0IsbUJBQUE7RUFDaEUsZUVQZ0I7RUZRaEIsY0FBQTtBQ01KO0FETEk7RUFDRSx5QkFBQTtBQ09OO0FESkU7RUFDRSxlRWRnQjtFRmVoQixnQkFBQTtFQUNBLDREQUFBO0FDTUo7QURKRTtFQU9FLGNBQUE7QUNBSjtBRE5JO0VBQ0UsY0FBQTtBQ1FOO0FEUE07RUFDRSxjQUFBO0FDU1I7QURMSTtFQUNFLGlCQUFBO0FDT04iLCJmaWxlIjoic3JjL2FwcC9zaGFyZWQtY29tcG9uZW50cy9mb290ZXItY29tcG9uZW50L2Zvb3Rlci1jb21wb25lbnQuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0IFwiLi4vLi4vLi4vc2FuZGh5YWRlZXAtdGhlbWVcIjtcclxuXHJcbi5mb290ZXItY29udGFpbmVyIHtcclxuICBib3gtc2hhZG93OiA0cHggMTdweCAyMHB4IDIwcHggIzZjNzU3ZDNkO1xyXG4gIC13ZWJraXQtYm94LXNoYWRvdzogNHB4IDE3cHggMjBweCAyMHB4ICM2Yzc1N2QzZDtcclxuICAtbW96LWJveC1zaGFkb3c6IDRweCAxN3B4IDIwcHggMjBweCAjNmM3NTdkM2Q7XHJcbiAgZGlzcGxheTogZmxleDsganVzdGlmeS1jb250ZW50OiBzcGFjZS1hcm91bmQ7IGhlaWdodDogNjBweDsgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAuc2luZ2xlLXRhYiB7XHJcbiAgICBmbGV4LWJhc2lzOiAyNSU7XHJcbiAgICBkaXNwbGF5OiBmbGV4OyBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjsgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIGZvbnQtc2l6ZTogJHJlZ3VsYXItZm9udC1zaXplO1xyXG4gICAgY29sb3I6ICNlOTVjOGY7XHJcbiAgICAmLnNlbGVjdGVkIHtcclxuICAgICAgY29sb3I6ICM2MTRkN2YgIWltcG9ydGFudDtcclxuICAgIH1cclxuICB9XHJcbiAgLmZvb3Rlci10YWIge1xyXG4gICAgZm9udC1zaXplOiAkcmVndWxhci1mb250LXNpemU7XHJcbiAgICBwYWRkaW5nLXRvcDogMXB4O1xyXG4gICAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDMwNWRlZywgI2NjMmI1ZSAyJSwgIzc1M2E4OCA2MyUpO1xyXG4gIH1cclxuICBpb24tdGFiLWJhciB7XHJcbiAgICBpb24tdGFiLWJ1dHRvbiB7XHJcbiAgICAgIGNvbG9yOiAjZTk1YzhmO1xyXG4gICAgICAmLnRhYi1zZWxlY3RlZCB7XHJcbiAgICAgICAgY29sb3I6ICM2MTRkN2Y7XHJcbiAgICAgIH1cclxuICAgIH1cclxuICAgIHBhZGRpbmc6IDhweCAwO1xyXG4gICAgaW9uLWxhYmVsIHtcclxuICAgICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgICB9XHJcbiAgfVxyXG59XHJcbiIsIi5mb290ZXItY29udGFpbmVyIHtcbiAgYm94LXNoYWRvdzogNHB4IDE3cHggMjBweCAyMHB4ICM2Yzc1N2QzZDtcbiAgLXdlYmtpdC1ib3gtc2hhZG93OiA0cHggMTdweCAyMHB4IDIwcHggIzZjNzU3ZDNkO1xuICAtbW96LWJveC1zaGFkb3c6IDRweCAxN3B4IDIwcHggMjBweCAjNmM3NTdkM2Q7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYXJvdW5kO1xuICBoZWlnaHQ6IDYwcHg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG4uZm9vdGVyLWNvbnRhaW5lciAuc2luZ2xlLXRhYiB7XG4gIGZsZXgtYmFzaXM6IDI1JTtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGZvbnQtc2l6ZTogMTRweDtcbiAgY29sb3I6ICNlOTVjOGY7XG59XG4uZm9vdGVyLWNvbnRhaW5lciAuc2luZ2xlLXRhYi5zZWxlY3RlZCB7XG4gIGNvbG9yOiAjNjE0ZDdmICFpbXBvcnRhbnQ7XG59XG4uZm9vdGVyLWNvbnRhaW5lciAuZm9vdGVyLXRhYiB7XG4gIGZvbnQtc2l6ZTogMTRweDtcbiAgcGFkZGluZy10b3A6IDFweDtcbiAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDMwNWRlZywgI2NjMmI1ZSAyJSwgIzc1M2E4OCA2MyUpO1xufVxuLmZvb3Rlci1jb250YWluZXIgaW9uLXRhYi1iYXIge1xuICBwYWRkaW5nOiA4cHggMDtcbn1cbi5mb290ZXItY29udGFpbmVyIGlvbi10YWItYmFyIGlvbi10YWItYnV0dG9uIHtcbiAgY29sb3I6ICNlOTVjOGY7XG59XG4uZm9vdGVyLWNvbnRhaW5lciBpb24tdGFiLWJhciBpb24tdGFiLWJ1dHRvbi50YWItc2VsZWN0ZWQge1xuICBjb2xvcjogIzYxNGQ3Zjtcbn1cbi5mb290ZXItY29udGFpbmVyIGlvbi10YWItYmFyIGlvbi1sYWJlbCB7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xufSIsIiRwcmltYXJ5LWNvbG9yOiAjZTk1YzhmO1xyXG4kc2Vjb25kYXJ5LWNvbG9yOiAjNjE0ZDdmO1xyXG5cclxuJHJlZ3VsYXItZm9udC1zaXplOiAxNHB4O1xyXG4kZm9udC1zaXplLTE6IDE2cHg7XHJcbiRoZWFkZXItc2l6ZTogMjBweDtcclxuJGZvbnQtc2l6ZS0zOiAzMHB4O1xyXG5cclxuJGJ1dHRvbi1oZWlnaHQ6IDQ1cHg7XHJcblxyXG4iXX0= */";
+    /***/
+  },
+
+  /***/
+  "./src/app/shared-components/footer-component/footer-component.component.ts":
+  /*!**********************************************************************************!*\
+    !*** ./src/app/shared-components/footer-component/footer-component.component.ts ***!
+    \**********************************************************************************/
+
+  /*! exports provided: FooterComponentComponent */
+
+  /***/
+  function srcAppSharedComponentsFooterComponentFooterComponentComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "FooterComponentComponent", function () {
+      return FooterComponentComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var FooterComponentComponent = /*#__PURE__*/function () {
+      function FooterComponentComponent() {
+        _classCallCheck(this, FooterComponentComponent);
+      }
+
+      _createClass(FooterComponentComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }]);
+
+      return FooterComponentComponent;
+    }();
+
+    FooterComponentComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-footer-component',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./footer-component.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/shared-components/footer-component/footer-component.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./footer-component.component.scss */
+      "./src/app/shared-components/footer-component/footer-component.component.scss"))["default"]]
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])], FooterComponentComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/shared-components/footer-component/footer-component.module.ts":
+  /*!*******************************************************************************!*\
+    !*** ./src/app/shared-components/footer-component/footer-component.module.ts ***!
+    \*******************************************************************************/
+
+  /*! exports provided: FooterComponentModule */
+
+  /***/
+  function srcAppSharedComponentsFooterComponentFooterComponentModuleTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "FooterComponentModule", function () {
+      return FooterComponentModule;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/common */
+    "./node_modules/@angular/common/fesm2015/common.js");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @ionic/angular */
+    "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _footer_component_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ./footer-component.component */
+    "./src/app/shared-components/footer-component/footer-component.component.ts");
+
+    var FooterComponentModule = function FooterComponentModule() {
+      _classCallCheck(this, FooterComponentModule);
+    };
+
+    FooterComponentModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["RouterModule"]],
+      exports: [_footer_component_component__WEBPACK_IMPORTED_MODULE_6__["FooterComponentComponent"]],
+      declarations: [_footer_component_component__WEBPACK_IMPORTED_MODULE_6__["FooterComponentComponent"]]
+    })], FooterComponentModule);
     /***/
   },
 
@@ -566,7 +737,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "ion-content {\n  --background: transparent;\n}\n\n.image-zoom-container {\n  display: flex;\n  justify-content: center;\n  height: 100%;\n}\n\n.cross-icon {\n  color: white;\n  font-size: 30px;\n  font-weight: bold;\n  display: inline-block;\n  float: right;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkLWNvbXBvbmVudHMvbW9kYWwtcG9wdXAvQzpcXFVzZXJzXFxhYWJoYWd3YVxcc2FuZGh5YWRlZXAgaW9uaWMgc3RhY2svc3JjXFxhcHBcXHNoYXJlZC1jb21wb25lbnRzXFxtb2RhbC1wb3B1cFxcbW9kYWwtcG9wdXAucGFnZS5zY3NzIiwic3JjL2FwcC9zaGFyZWQtY29tcG9uZW50cy9tb2RhbC1wb3B1cC9tb2RhbC1wb3B1cC5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSx5QkFBQTtBQ0NGOztBRENBO0VBQ0UsYUFBQTtFQUFlLHVCQUFBO0VBQXlCLFlBQUE7QUNJMUM7O0FEREE7RUFDRSxZQUFBO0VBQ0EsZUFBQTtFQUNBLGlCQUFBO0VBQ0EscUJBQUE7RUFDQSxZQUFBO0FDSUYiLCJmaWxlIjoic3JjL2FwcC9zaGFyZWQtY29tcG9uZW50cy9tb2RhbC1wb3B1cC9tb2RhbC1wb3B1cC5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpb24tY29udGVudHtcclxuICAtLWJhY2tncm91bmQ6IHRyYW5zcGFyZW50O1xyXG59XHJcbi5pbWFnZS16b29tLWNvbnRhaW5lciB7XHJcbiAgZGlzcGxheTogZmxleDsganVzdGlmeS1jb250ZW50OiBjZW50ZXI7IGhlaWdodDogMTAwJTtcclxufVxyXG5cclxuLmNyb3NzLWljb24ge1xyXG4gIGNvbG9yOiB3aGl0ZTtcclxuICBmb250LXNpemU6IDMwcHg7XHJcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gIGZsb2F0OiByaWdodDtcclxufVxyXG4iLCJpb24tY29udGVudCB7XG4gIC0tYmFja2dyb3VuZDogdHJhbnNwYXJlbnQ7XG59XG5cbi5pbWFnZS16b29tLWNvbnRhaW5lciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBoZWlnaHQ6IDEwMCU7XG59XG5cbi5jcm9zcy1pY29uIHtcbiAgY29sb3I6IHdoaXRlO1xuICBmb250LXNpemU6IDMwcHg7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIGZsb2F0OiByaWdodDtcbn0iXX0= */";
+    __webpack_exports__["default"] = "ion-content {\n  --background: transparent;\n}\n\n.image-zoom-container {\n  display: flex;\n  justify-content: center;\n  height: 100%;\n}\n\n.image-zoom-container ion-slides {\n  width: 100%;\n}\n\n.image-zoom-container ion-slides .swiper-slide img {\n  width: 100% !important;\n}\n\n.cross-icon {\n  color: white;\n  font-size: 30px;\n  font-weight: bold;\n  display: inline-block;\n  float: right;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkLWNvbXBvbmVudHMvbW9kYWwtcG9wdXAvQzpcXFVzZXJzXFxhYWJoYWd3YVxcc2FuZGh5YWRlZXBcXHNhbmRoeWFkZWVwLXVpL3NyY1xcYXBwXFxzaGFyZWQtY29tcG9uZW50c1xcbW9kYWwtcG9wdXBcXG1vZGFsLXBvcHVwLnBhZ2Uuc2NzcyIsInNyYy9hcHAvc2hhcmVkLWNvbXBvbmVudHMvbW9kYWwtcG9wdXAvbW9kYWwtcG9wdXAucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UseUJBQUE7QUNDRjs7QURDQTtFQU9FLGFBQUE7RUFBZSx1QkFBQTtFQUF5QixZQUFBO0FDRjFDOztBREpFO0VBQ0UsV0FBQTtBQ01KOztBRExJO0VBQ0Usc0JBQUE7QUNPTjs7QUREQTtFQUNFLFlBQUE7RUFDQSxlQUFBO0VBQ0EsaUJBQUE7RUFDQSxxQkFBQTtFQUNBLFlBQUE7QUNJRiIsImZpbGUiOiJzcmMvYXBwL3NoYXJlZC1jb21wb25lbnRzL21vZGFsLXBvcHVwL21vZGFsLXBvcHVwLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImlvbi1jb250ZW50e1xyXG4gIC0tYmFja2dyb3VuZDogdHJhbnNwYXJlbnQ7XHJcbn1cclxuLmltYWdlLXpvb20tY29udGFpbmVyIHtcclxuICBpb24tc2xpZGVzIHtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgLnN3aXBlci1zbGlkZSBpbWcge1xyXG4gICAgICB3aWR0aDogMTAwJSAhaW1wb3J0YW50O1xyXG4gICAgfVxyXG4gIH1cclxuICBkaXNwbGF5OiBmbGV4OyBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjsgaGVpZ2h0OiAxMDAlO1xyXG59XHJcblxyXG4uY3Jvc3MtaWNvbiB7XHJcbiAgY29sb3I6IHdoaXRlO1xyXG4gIGZvbnQtc2l6ZTogMzBweDtcclxuICBmb250LXdlaWdodDogYm9sZDtcclxuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgZmxvYXQ6IHJpZ2h0O1xyXG59XHJcbiIsImlvbi1jb250ZW50IHtcbiAgLS1iYWNrZ3JvdW5kOiB0cmFuc3BhcmVudDtcbn1cblxuLmltYWdlLXpvb20tY29udGFpbmVyIHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGhlaWdodDogMTAwJTtcbn1cbi5pbWFnZS16b29tLWNvbnRhaW5lciBpb24tc2xpZGVzIHtcbiAgd2lkdGg6IDEwMCU7XG59XG4uaW1hZ2Utem9vbS1jb250YWluZXIgaW9uLXNsaWRlcyAuc3dpcGVyLXNsaWRlIGltZyB7XG4gIHdpZHRoOiAxMDAlICFpbXBvcnRhbnQ7XG59XG5cbi5jcm9zcy1pY29uIHtcbiAgY29sb3I6IHdoaXRlO1xuICBmb250LXNpemU6IDMwcHg7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIGZsb2F0OiByaWdodDtcbn0iXX0= */";
     /***/
   },
 
