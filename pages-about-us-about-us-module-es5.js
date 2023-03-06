@@ -1089,6 +1089,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                     _context.next = 2;
                     return this.modalController.create({
                       component: _shared_components_modal_popup_modal_popup_page__WEBPACK_IMPORTED_MODULE_3__["ModalPopupPage"],
+                      swipeToClose: true,
                       componentProps: {
                         "paramID": 123,
                         "paramTitle": "Test Title"

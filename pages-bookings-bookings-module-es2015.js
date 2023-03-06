@@ -157,6 +157,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var _shared_service_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../shared-service.service */ "./src/app/shared-service.service.ts");
+
 
 
 
@@ -164,7 +166,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let BookingsPage = class BookingsPage {
-    constructor(toastController, snackBar, adminService, alertController) {
+    constructor(sharedService, toastController, snackBar, adminService, alertController) {
+        this.sharedService = sharedService;
         this.toastController = toastController;
         this.snackBar = snackBar;
         this.adminService = adminService;
@@ -218,6 +221,9 @@ let BookingsPage = class BookingsPage {
             yield toast.present();
         });
     }
+    ionViewWillEnter() {
+        this.sharedService.showBackIcon.next(true);
+    }
     reasonAlert() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
             const alert = yield this.alertController.create({
@@ -234,8 +240,6 @@ let BookingsPage = class BookingsPage {
                         text: 'Confirm',
                         role: 'confirm',
                         handler: (data) => {
-                            // console.log(data);
-                            // debugger;
                             if (data[0] && data[0].length > 0) {
                                 this.presentToast('bottom', 'Appointment Cancelled', 1000, 'ionic-success-toast');
                                 return true;
@@ -319,6 +323,7 @@ let BookingsPage = class BookingsPage {
     }
 };
 BookingsPage.ctorParameters = () => [
+    { type: _shared_service_service__WEBPACK_IMPORTED_MODULE_6__["SharedServiceService"] },
     { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["ToastController"] },
     { type: _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"] },
     { type: _api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"] },
@@ -330,7 +335,7 @@ BookingsPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./bookings.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/bookings/bookings.page.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./bookings.page.scss */ "./src/app/pages/bookings/bookings.page.scss")).default]
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_4__["ToastController"], _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"], _api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["AlertController"]])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_service_service__WEBPACK_IMPORTED_MODULE_6__["SharedServiceService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["ToastController"], _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"], _api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["AlertController"]])
 ], BookingsPage);
 
 

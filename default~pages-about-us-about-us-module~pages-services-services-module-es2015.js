@@ -149,6 +149,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _api_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../api.service */ "./src/app/api.service.ts");
 /* harmony import */ var _shared_service_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../shared-service.service */ "./src/app/shared-service.service.ts");
 /* harmony import */ var _shared_components_storage_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../shared-components/storage.service */ "./src/app/shared-components/storage.service.ts");
+/* harmony import */ var _assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../assets/constants/app-constants */ "./src/assets/constants/app-constants.ts");
+
 
 
 
@@ -180,10 +182,13 @@ let ServicesPage = class ServicesPage {
         }, 1500);
     }
     onBookAppointment() {
-        this.router.navigate(['/schedule-appointment']);
+        this.storageService.getStoredValue(_assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_6__["appConstants"].SELECTED_SERVICES).then((services) => {
+            this.sharedService.updateCart.next(services);
+            this.router.navigate(['/schedule-appointment']);
+        });
     }
     updateData(data) {
-        this.storageService.storeValue('selectedServices', data.selectedServices);
+        this.storageService.storeValue(_assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_6__["appConstants"].SELECTED_SERVICES, data.selectedServices);
         this.selectedServices = data.selectedServices;
         this.amountPurchased = data.amountPurchased;
     }
@@ -283,6 +288,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _api_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../api.service */ "./src/app/api.service.ts");
 /* harmony import */ var _shared_service_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../shared-service.service */ "./src/app/shared-service.service.ts");
 /* harmony import */ var _storage_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../storage.service */ "./src/app/shared-components/storage.service.ts");
+/* harmony import */ var _assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../assets/constants/app-constants */ "./src/assets/constants/app-constants.ts");
+
 
 
 
@@ -333,21 +340,30 @@ let ServicesListPage = class ServicesListPage {
     getAllServicesSuccess(res) {
         this.services = res;
         this.sharedService.showSpinner.next(false);
-        this.storageService.getStoredValue('selectedServices').then((val) => {
-            this.mainServices = this.mainServices.map((serv) => {
-                const storedServiceIds = val.map(v => v.id);
-                serv.services = this.services.filter(v => v.serviceTypeId === serv.id)
-                    .map((service) => {
-                    service.isChecked = !!(storedServiceIds.includes(service.id));
-                    return service;
+        this.storageService.getStoredValue(_assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_6__["appConstants"].SELECTED_SERVICES).then((val) => {
+            if (val && val.length > 0) {
+                this.mainServices = this.mainServices.map((serv) => {
+                    const storedServiceIds = val.map(v => v.id);
+                    serv.services = this.services.filter(v => v.serviceTypeId === serv.id)
+                        .map((service) => {
+                        service.isChecked = !!(storedServiceIds.includes(service.id));
+                        return service;
+                    });
+                    return serv;
                 });
-                return serv;
-            });
-            this.amountPurchased = val.reduce((a, b) => {
-                return a + b.price;
-            }, 0);
-            const data = { amountPurchased: this.amountPurchased, selectedServices: val };
-            this.updateAmount.emit(data);
+                this.amountPurchased = val.reduce((a, b) => {
+                    return a + b.price;
+                }, 0);
+                const data = { amountPurchased: this.amountPurchased, selectedServices: val };
+                this.updateAmount.emit(data);
+            }
+            else {
+                this.mainServices = this.mainServices.map((serv) => {
+                    serv.services = this.services.filter(v => v.serviceTypeId === serv.id);
+                    serv.show = false;
+                    return serv;
+                });
+            }
         });
     }
     getMainServicesSuccess(res) {

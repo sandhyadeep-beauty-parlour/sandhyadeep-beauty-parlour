@@ -287,11 +287,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! @angular/material */
     "./node_modules/@angular/material/esm2015/material.js");
+    /* harmony import */
+
+
+    var _shared_service_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ../../shared-service.service */
+    "./src/app/shared-service.service.ts");
 
     var BookingsPage = /*#__PURE__*/function () {
-      function BookingsPage(toastController, snackBar, adminService, alertController) {
+      function BookingsPage(sharedService, toastController, snackBar, adminService, alertController) {
         _classCallCheck(this, BookingsPage);
 
+        this.sharedService = sharedService;
         this.toastController = toastController;
         this.snackBar = snackBar;
         this.adminService = adminService;
@@ -379,6 +386,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
+        key: "ionViewWillEnter",
+        value: function ionViewWillEnter() {
+          this.sharedService.showBackIcon.next(true);
+        }
+      }, {
         key: "reasonAlert",
         value: function reasonAlert() {
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
@@ -402,8 +414,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                         text: 'Confirm',
                         role: 'confirm',
                         handler: function handler(data) {
-                          // console.log(data);
-                          // debugger;
                           if (data[0] && data[0].length > 0) {
                             _this3.presentToast('bottom', 'Appointment Cancelled', 1000, 'ionic-success-toast');
 
@@ -536,6 +546,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     BookingsPage.ctorParameters = function () {
       return [{
+        type: _shared_service_service__WEBPACK_IMPORTED_MODULE_6__["SharedServiceService"]
+      }, {
         type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["ToastController"]
       }, {
         type: _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"]
@@ -554,7 +566,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./bookings.page.scss */
       "./src/app/pages/bookings/bookings.page.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_4__["ToastController"], _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"], _api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["AlertController"]])], BookingsPage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_service_service__WEBPACK_IMPORTED_MODULE_6__["SharedServiceService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["ToastController"], _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"], _api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["AlertController"]])], BookingsPage);
     /***/
   },
 

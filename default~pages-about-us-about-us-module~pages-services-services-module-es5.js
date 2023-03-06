@@ -278,6 +278,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _shared_components_storage_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! ../../shared-components/storage.service */
     "./src/app/shared-components/storage.service.ts");
+    /* harmony import */
+
+
+    var _assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ../../../assets/constants/app-constants */
+    "./src/assets/constants/app-constants.ts");
 
     var ServicesPage = /*#__PURE__*/function () {
       function ServicesPage(storageService, sharedService, router, adminService) {
@@ -317,12 +323,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "onBookAppointment",
         value: function onBookAppointment() {
-          this.router.navigate(['/schedule-appointment']);
+          var _this2 = this;
+
+          this.storageService.getStoredValue(_assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_6__["appConstants"].SELECTED_SERVICES).then(function (services) {
+            _this2.sharedService.updateCart.next(services);
+
+            _this2.router.navigate(['/schedule-appointment']);
+          });
         }
       }, {
         key: "updateData",
         value: function updateData(data) {
-          this.storageService.storeValue('selectedServices', data.selectedServices);
+          this.storageService.storeValue(_assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_6__["appConstants"].SELECTED_SERVICES, data.selectedServices);
           this.selectedServices = data.selectedServices;
           this.amountPurchased = data.amountPurchased;
         }
@@ -504,6 +516,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _storage_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! ../storage.service */
     "./src/app/shared-components/storage.service.ts");
+    /* harmony import */
+
+
+    var _assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ../../../assets/constants/app-constants */
+    "./src/assets/constants/app-constants.ts");
 
     var ServicesListPage = /*#__PURE__*/function () {
       function ServicesListPage(storageService, sharedService, router, adminService) {
@@ -549,55 +567,65 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getServices",
         value: function getServices() {
-          var _this2 = this;
-
-          this.adminService.getAllServices().subscribe(function (res) {
-            return _this2.getAllServicesSuccess(res);
-          }, function (error) {
-            _this2.adminService.commonError(error);
-          });
-        }
-      }, {
-        key: "getMainServices",
-        value: function getMainServices() {
           var _this3 = this;
 
-          this.sharedService.showSpinner.next(true);
-          this.adminService.getAllServiceTypes().subscribe(function (res) {
-            return _this3.getMainServicesSuccess(res);
+          this.adminService.getAllServices().subscribe(function (res) {
+            return _this3.getAllServicesSuccess(res);
           }, function (error) {
             _this3.adminService.commonError(error);
           });
         }
       }, {
+        key: "getMainServices",
+        value: function getMainServices() {
+          var _this4 = this;
+
+          this.sharedService.showSpinner.next(true);
+          this.adminService.getAllServiceTypes().subscribe(function (res) {
+            return _this4.getMainServicesSuccess(res);
+          }, function (error) {
+            _this4.adminService.commonError(error);
+          });
+        }
+      }, {
         key: "getAllServicesSuccess",
         value: function getAllServicesSuccess(res) {
-          var _this4 = this;
+          var _this5 = this;
 
           this.services = res;
           this.sharedService.showSpinner.next(false);
-          this.storageService.getStoredValue('selectedServices').then(function (val) {
-            _this4.mainServices = _this4.mainServices.map(function (serv) {
-              var storedServiceIds = val.map(function (v) {
-                return v.id;
+          this.storageService.getStoredValue(_assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_6__["appConstants"].SELECTED_SERVICES).then(function (val) {
+            if (val && val.length > 0) {
+              _this5.mainServices = _this5.mainServices.map(function (serv) {
+                var storedServiceIds = val.map(function (v) {
+                  return v.id;
+                });
+                serv.services = _this5.services.filter(function (v) {
+                  return v.serviceTypeId === serv.id;
+                }).map(function (service) {
+                  service.isChecked = !!storedServiceIds.includes(service.id);
+                  return service;
+                });
+                return serv;
               });
-              serv.services = _this4.services.filter(function (v) {
-                return v.serviceTypeId === serv.id;
-              }).map(function (service) {
-                service.isChecked = !!storedServiceIds.includes(service.id);
-                return service;
-              });
-              return serv;
-            });
-            _this4.amountPurchased = val.reduce(function (a, b) {
-              return a + b.price;
-            }, 0);
-            var data = {
-              amountPurchased: _this4.amountPurchased,
-              selectedServices: val
-            };
+              _this5.amountPurchased = val.reduce(function (a, b) {
+                return a + b.price;
+              }, 0);
+              var data = {
+                amountPurchased: _this5.amountPurchased,
+                selectedServices: val
+              };
 
-            _this4.updateAmount.emit(data);
+              _this5.updateAmount.emit(data);
+            } else {
+              _this5.mainServices = _this5.mainServices.map(function (serv) {
+                serv.services = _this5.services.filter(function (v) {
+                  return v.serviceTypeId === serv.id;
+                });
+                serv.show = false;
+                return serv;
+              });
+            }
           });
         }
       }, {
