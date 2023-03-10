@@ -279,15 +279,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "onFileChange",
         value: function onFileChange(event) {
           var image = event.target.files[0];
-          var fileExtension = image.name.split('.')[1].toLowerCase();
+          var fileExtension = image.name.split('.')[1].toLowerCase(); // if (image && image.type.includes('image') && ['png', 'jpg', 'jpeg'].includes(fileExtension)) {
 
-          if (image && image.type.includes('image') && ['png', 'jpg', 'jpeg'].includes(fileExtension)) {
-            this.getImageBase64(image);
-            this.selectedImage = image;
-            this.imageUrl = '';
-          } else {
-            this.sharedService.presentToast('Image format is incorrect', 'error');
-          }
+          this.getImageBase64(image);
+          this.selectedImage = image;
+          this.imageUrl = ''; // } else {
+          //   this.sharedService.presentToast('Image format is incorrect', 'error');
+          // }
         }
       }, {
         key: "getImageBase64",

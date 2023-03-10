@@ -163,14 +163,13 @@ let ServiceTypesModalComponent = class ServiceTypesModalComponent {
     onFileChange(event) {
         const image = event.target.files[0];
         const fileExtension = image.name.split('.')[1].toLowerCase();
-        if (image && image.type.includes('image') && ['png', 'jpg', 'jpeg'].includes(fileExtension)) {
-            this.getImageBase64(image);
-            this.selectedImage = image;
-            this.imageUrl = '';
-        }
-        else {
-            this.sharedService.presentToast('Image format is incorrect', 'error');
-        }
+        // if (image && image.type.includes('image') && ['png', 'jpg', 'jpeg'].includes(fileExtension)) {
+        this.getImageBase64(image);
+        this.selectedImage = image;
+        this.imageUrl = '';
+        // } else {
+        //   this.sharedService.presentToast('Image format is incorrect', 'error');
+        // }
     }
     getImageBase64(file) {
         const reader = new FileReader();
