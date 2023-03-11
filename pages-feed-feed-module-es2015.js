@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<sandhyadeep-header class=\"z-index-999\"></sandhyadeep-header>\r\n<ion-content (ionScroll)=\"onIonScroll($event)\"  [scrollEvents]=\"true\">\r\n    <ion-refresher slot=\"fixed\" (ionRefresh)=\"refreshPage($event)\">\r\n        <ion-refresher-content pulling-icon=\"arrow-dropdown\" refreshing-spinner=\"circles\">\r\n\r\n        </ion-refresher-content>\r\n    </ion-refresher>\r\n    <ion-slides #bannerSlider (ionSlidesDidLoad)=\"slidesDidLoad($event)\" (ionSlidePrevEnd)=\"onLastBannerSlide()\"  class=\"feed-sliders\" pager=\"true\" [options]=\"slideOpts\">\r\n<!--        <ion-slide class=\"feed-images feed-slider feed-slider-one\">-->\r\n\r\n<!--        </ion-slide>-->\r\n        <ion-slide class=\"feed-images feed-slider feed-slider-two\">\r\n\r\n        </ion-slide>\r\n        <ion-slide class=\"feed-images feed-slider feed-slider-three\">\r\n\r\n        </ion-slide>\r\n    </ion-slides>\r\n\r\n    <div  #animationRef class=\"menu-container\">\r\n        <div class=\"quick_menus\">\r\n            <ng-container *ngFor=\"let treatment of serviceTypesList; let index = index\">\r\n                <div [ngStyle]=\"{'animation-delay': (index+1)/6 + 's'}\" [ngClass]=\"{ animate__animated: changeAnim1, animate__fadeInRight: changeAnim1 }\"  (click)=\"goServices()\" class=\"animate__animated animate__fadeInRight menu-container\">\r\n                    <div class=\"menu-image\"><img src=\"{{treatment.imageUrl}}\" alt=\"\"></div>\r\n                    <div class=\"menu-text\">{{treatment.name}}</div>\r\n                </div>\r\n            </ng-container>\r\n        </div>\r\n\r\n        <div class=\"feed-heading\">\r\n            <div class=\"heading-text\">\r\n                <b>Packages</b>\r\n            </div>\r\n            <div [routerLink]=\"['//packages']\" class=\"know-more\">See All <i class=\"fa fa-angle-right\"></i></div>\r\n        </div>\r\n        <div [ngClass]=\"{ animate__animated: changeAnim2, animate__bounceIn: changeAnim2, animate__fast: changeAnim2 }\" #animationRef class=\"slide_container\">\r\n            <ion-content scroll-y=\"false\" [fullscreen]=\"true\">\r\n                <ion-slides (ionSlidePrevEnd)=\"onLastPackageSlide()\" #packagesSlider [options]=\"packagesOption\">\r\n                    <ion-slide *ngFor=\"let packageData of packageList\">\r\n                        <ion-card>\r\n                            <img src=\"{{packageData?.displayImage}}\" alt=\"\">\r\n                        </ion-card>\r\n                    </ion-slide>\r\n                </ion-slides>\r\n            </ion-content>\r\n        </div>\r\n\r\n<!--        Removed products for now -->\r\n<!--        <div class=\"feed-heading\">-->\r\n<!--            <div class=\"heading-text\">-->\r\n<!--                <b>Products</b>-->\r\n<!--            </div>-->\r\n<!--            <div [routerLink]=\"['//products']\" class=\"know-more\">See All <i class=\"fa fa-angle-right\"></i></div>-->\r\n<!--        </div>-->\r\n<!--        <div class=\"products_container\">-->\r\n<!--            <div *ngFor=\"let product of productList, let index = index\" class=\"image-slider-container\">-->\r\n<!--                <div class=\"slider-image\">-->\r\n<!--                    <img src=\"{{product.url}}\" alt=\"\">-->\r\n<!--                </div>-->\r\n<!--                <div class=\"slider-text\">-->\r\n<!--                    <div class=\"product-name-container\">-->\r\n<!--                        <div class=\"product-name\">-->\r\n<!--                            {{product.name}}-->\r\n<!--                        </div>-->\r\n<!--                        <div class=\"product-price-details\">-->\r\n<!--                            <div class=\"price-container\">-->\r\n<!--                                <div class=\"price\">-->\r\n<!--                                    {{product.price}} ₹-->\r\n<!--                                </div>-->\r\n<!--                                <div class=\"discounted-price\">-->\r\n<!--                                    <del> {{product.discountedPrice}} ₹</del>-->\r\n<!--                                </div>-->\r\n<!--                            </div>-->\r\n<!--                        </div>-->\r\n<!--                    </div>-->\r\n<!--                    <add-button (updateCounter)=\"onUpdateCounter($event, index)\"></add-button>-->\r\n<!--                </div>-->\r\n<!--            </div>-->\r\n<!--        </div>-->\r\n\r\n        <div class=\"safety-measures\">\r\n            <div class=\"margin-bottom-10\">\r\n                Best-in-class safety measures\r\n            </div>\r\n            <div class=\"measures-container margin-bottom-10\">\r\n                <div class=\"measure\">\r\n                    <div class=\"measure-image\"><img src=\"assets/mask.png\" alt=\"\"></div>\r\n                    <div class=\"measure-text\">Usage of mask & gloves</div>\r\n                </div>\r\n                <div class=\"measure\">\r\n                    <div class=\"measure-image\"><img src=\"assets/thermometer.png\" alt=\"\"></div>\r\n                    <div class=\"measure-text\">Temperature Checks</div>\r\n                </div>\r\n                <div class=\"measure\">\r\n                    <div class=\"measure-image\"><img src=\"assets/liquid-soap.png\" alt=\"\"></div>\r\n                    <div class=\"measure-text\">Sanitizations of tools & area</div>\r\n                </div>\r\n                <div class=\"measure\">\r\n                    <div class=\"measure-image\"><img src=\"assets/setu.png\" alt=\"\"></div>\r\n                    <div class=\"measure-text\">Arogya Setu to ensure Safety</div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"feed-heading\">\r\n            <div class=\"heading-text\">\r\n                <b>Our Stylist</b>\r\n            </div>\r\n            <div (click)=\"onKnowMore()\" class=\"know-more\">Know More <i class=\"fa fa-angle-right\"></i></div>\r\n        </div>\r\n        <div class=\"application-details\">\r\n            <div class=\"owner-info-container\">\r\n                <div [routerLink]=\"['//about-us']\" class=\"owner-image\">\r\n                    <img src=\"../../../assets/deepaa_bhagwat.jpg\">\r\n                </div>\r\n                <div class=\"owner-details\">\r\n                    <div class=\"owner-name\">Deepaa Bhagwat</div>\r\n                    <div class=\"social-media-icons\">\r\n                        <div class=\"fb-icon\"><i class=\"media-icon fa fa-facebook\"></i></div>\r\n                        <div class=\"insta-icon\"><i class=\"media-icon fa fa-instagram\"></i></div>\r\n                        <div class=\"linkedin-icon\"><i class=\"media-icon fa fa-linkedin\"></i></div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div>\r\n                <div>\r\n                    <ul>\r\n                        <li>Media & Beauty Makeup Diploma · Media Makeup · Fsx · Singapore</li>\r\n                        <li>Makeup Techniques with Air Brush Machine · Mumbai, Maharashtra</li>\r\n                        <li>Master Diploma in Makeup Artistry · Singapore</li>\r\n                        <li>Comite International D’Esthetique Et De Cosmetologie., Zurich.</li>\r\n                        <li>British Association of Beauty Therapy & Cosmetology, London.</li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"copy-rights\">\r\n            <i class=\"fa fa-copyright\"></i> Copyright {{todayYear}} <br> Sandhyadeep Beauty Parlour <br>\r\n        </div>\r\n    </div>\r\n</ion-content>\r\n<app-skeleton-loader></app-skeleton-loader>\r\n<app-footer-component></app-footer-component>\r\n<!--<app-logo-spinner></app-logo-spinner>-->\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<sandhyadeep-header class=\"z-index-999\"></sandhyadeep-header>\r\n<ion-content (ionScroll)=\"onIonScroll($event)\"  [scrollEvents]=\"true\">\r\n    <ion-refresher slot=\"fixed\" (ionRefresh)=\"refreshPage($event)\">\r\n        <ion-refresher-content pulling-icon=\"arrow-dropdown\" refreshing-spinner=\"circles\">\r\n\r\n        </ion-refresher-content>\r\n    </ion-refresher>\r\n    <ion-slides #bannerSlider (ionSlidesDidLoad)=\"slidesDidLoad($event)\" (ionSlidePrevEnd)=\"onLastBannerSlide()\"  class=\"feed-sliders\" pager=\"true\" [options]=\"slideOpts\">\r\n<!--        <ion-slide class=\"feed-images feed-slider feed-slider-one\">-->\r\n\r\n<!--        </ion-slide>-->\r\n        <ion-slide class=\"feed-images feed-slider feed-slider-two\">\r\n\r\n        </ion-slide>\r\n        <ion-slide class=\"feed-images feed-slider feed-slider-three\">\r\n\r\n        </ion-slide>\r\n    </ion-slides>\r\n\r\n    <div  #animationRef class=\"menu-container\">\r\n        <div class=\"quick_menus\">\r\n            <ng-container *ngFor=\"let treatment of serviceTypesList; let index = index\">\r\n                <div [ngStyle]=\"{'animation-delay': (index+1)/6 + 's'}\" [ngClass]=\"{ animate__animated: changeAnim1, animate__fadeInRight: changeAnim1 }\"  (click)=\"goServices()\" class=\"animate__animated animate__fadeInRight menu-container\">\r\n                    <div class=\"menu-image\"><img src=\"{{treatment.imageUrl}}\" alt=\"\"></div>\r\n                    <div class=\"menu-text\">{{treatment.name}}</div>\r\n                </div>\r\n            </ng-container>\r\n        </div>\r\n\r\n        <div class=\"feed-heading\">\r\n            <div class=\"heading-text\">\r\n                <b>Packages</b>\r\n            </div>\r\n            <div [routerLink]=\"['//packages']\" class=\"know-more\">See All <i class=\"fa fa-angle-right\"></i></div>\r\n        </div>\r\n        <div [ngClass]=\"{ animate__animated: changeAnim2, animate__bounceIn: changeAnim2, animate__fast: changeAnim2 }\" #animationRef class=\"slide_container\">\r\n            <ion-content scroll-y=\"false\" [fullscreen]=\"true\">\r\n                <ion-slides (ionSlideReachEnd)=\"onLastPackageSlide()\" #packagesSlider [options]=\"packagesOption\">\r\n                    <ion-slide *ngFor=\"let packageData of packageList\">\r\n                        <ion-card>\r\n                            <img src=\"{{packageData?.displayImage}}\" alt=\"\">\r\n                        </ion-card>\r\n                    </ion-slide>\r\n                </ion-slides>\r\n            </ion-content>\r\n        </div>\r\n\r\n<!--        Removed products for now -->\r\n<!--        <div class=\"feed-heading\">-->\r\n<!--            <div class=\"heading-text\">-->\r\n<!--                <b>Products</b>-->\r\n<!--            </div>-->\r\n<!--            <div [routerLink]=\"['//products']\" class=\"know-more\">See All <i class=\"fa fa-angle-right\"></i></div>-->\r\n<!--        </div>-->\r\n<!--        <div class=\"products_container\">-->\r\n<!--            <div *ngFor=\"let product of productList, let index = index\" class=\"image-slider-container\">-->\r\n<!--                <div class=\"slider-image\">-->\r\n<!--                    <img src=\"{{product.url}}\" alt=\"\">-->\r\n<!--                </div>-->\r\n<!--                <div class=\"slider-text\">-->\r\n<!--                    <div class=\"product-name-container\">-->\r\n<!--                        <div class=\"product-name\">-->\r\n<!--                            {{product.name}}-->\r\n<!--                        </div>-->\r\n<!--                        <div class=\"product-price-details\">-->\r\n<!--                            <div class=\"price-container\">-->\r\n<!--                                <div class=\"price\">-->\r\n<!--                                    {{product.price}} ₹-->\r\n<!--                                </div>-->\r\n<!--                                <div class=\"discounted-price\">-->\r\n<!--                                    <del> {{product.discountedPrice}} ₹</del>-->\r\n<!--                                </div>-->\r\n<!--                            </div>-->\r\n<!--                        </div>-->\r\n<!--                    </div>-->\r\n<!--                    <add-button (updateCounter)=\"onUpdateCounter($event, index)\"></add-button>-->\r\n<!--                </div>-->\r\n<!--            </div>-->\r\n<!--        </div>-->\r\n\r\n        <div class=\"safety-measures\">\r\n            <div class=\"margin-bottom-10\">\r\n                Best-in-class safety measures\r\n            </div>\r\n            <div class=\"measures-container margin-bottom-10\">\r\n                <div class=\"measure\">\r\n                    <div class=\"measure-image\"><img src=\"assets/mask.png\" alt=\"\"></div>\r\n                    <div class=\"measure-text\">Usage of mask & gloves</div>\r\n                </div>\r\n                <div class=\"measure\">\r\n                    <div class=\"measure-image\"><img src=\"assets/thermometer.png\" alt=\"\"></div>\r\n                    <div class=\"measure-text\">Temperature Checks</div>\r\n                </div>\r\n                <div class=\"measure\">\r\n                    <div class=\"measure-image\"><img src=\"assets/liquid-soap.png\" alt=\"\"></div>\r\n                    <div class=\"measure-text\">Sanitizations of tools & area</div>\r\n                </div>\r\n                <div class=\"measure\">\r\n                    <div class=\"measure-image\"><img src=\"assets/setu.png\" alt=\"\"></div>\r\n                    <div class=\"measure-text\">Arogya Setu to ensure Safety</div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"feed-heading\">\r\n            <div class=\"heading-text\">\r\n                <b>Our Stylist</b>\r\n            </div>\r\n            <div (click)=\"onKnowMore()\" class=\"know-more\">Know More <i class=\"fa fa-angle-right\"></i></div>\r\n        </div>\r\n        <div class=\"application-details\">\r\n            <div class=\"owner-info-container\">\r\n                <div [routerLink]=\"['//about-us']\" class=\"owner-image\">\r\n                    <img src=\"../../../assets/deepaa_bhagwat.jpg\">\r\n                </div>\r\n                <div class=\"owner-details\">\r\n                    <div class=\"owner-name\">Deepaa Bhagwat</div>\r\n                    <div class=\"social-media-icons\">\r\n                        <div class=\"fb-icon\"><i class=\"media-icon fa fa-facebook\"></i></div>\r\n                        <div class=\"insta-icon\"><i class=\"media-icon fa fa-instagram\"></i></div>\r\n                        <div class=\"linkedin-icon\"><i class=\"media-icon fa fa-linkedin\"></i></div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div>\r\n                <div>\r\n                    <ul>\r\n                        <li>Media & Beauty Makeup Diploma · Media Makeup · Fsx · Singapore</li>\r\n                        <li>Makeup Techniques with Air Brush Machine · Mumbai, Maharashtra</li>\r\n                        <li>Master Diploma in Makeup Artistry · Singapore</li>\r\n                        <li>Comite International D’Esthetique Et De Cosmetologie., Zurich.</li>\r\n                        <li>British Association of Beauty Therapy & Cosmetology, London.</li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"copy-rights\">\r\n            <i class=\"fa fa-copyright\"></i> Copyright {{todayYear}} <br> Sandhyadeep Beauty Parlour <br>\r\n        </div>\r\n    </div>\r\n</ion-content>\r\n<app-skeleton-loader></app-skeleton-loader>\r\n<app-footer-component></app-footer-component>\r\n<!--<app-logo-spinner></app-logo-spinner>-->\r\n");
 
 /***/ }),
 
@@ -228,81 +228,12 @@ let FeedPage = class FeedPage {
         this.packagesOption = {
             slidesPerView: 1.5,
             centeredSlides: true,
-            loop: true,
             initialSlide: 2,
             spaceBetween: 10,
             speed: 400,
             autoplay: true,
+            loop: true,
         };
-        this.treatments = [
-            {
-                name: 'Threading',
-                sequence: 1,
-                url: 'assets/vector-icons/eyebrow.png',
-            },
-            {
-                name: 'waxing',
-                sequence: 2,
-                url: 'assets/vector-icons/waxing.png',
-            },
-            {
-                name: 'Haircuts',
-                sequence: 3,
-                url: 'assets/vector-icons/haircuts.png',
-            },
-            {
-                name: 'Facials',
-                sequence: 4,
-                url: 'assets/vector-icons/facial.png',
-            },
-            {
-                name: 'Bleach',
-                sequence: 5,
-                url: 'assets/vector-icons/bleach.png',
-            },
-            {
-                name: 'Hairs',
-                sequence: 6,
-                url: 'assets/vector-icons/hair-straightener.png',
-            },
-            {
-                name: 'Body',
-                sequence: 7,
-                url: 'assets/vector-icons/body-treatments.png',
-            },
-            {
-                name: 'Makeup',
-                sequence: 8,
-                url: 'assets/vector-icons/makeup.png',
-            },
-            {
-                name: 'Courses',
-                sequence: 9,
-                url: 'assets/vector-icons/badge.png',
-            }
-        ];
-        this.packages = [
-            {
-                id: 1,
-                sequence: 1,
-                url: 'assets/s1.jpg',
-            },
-            {
-                id: 2,
-                sequence: 2,
-                url: 'assets/s2.jpg',
-            },
-            {
-                id: 3,
-                sequence: 3,
-                url: 'assets/s3.jpg',
-            },
-            {
-                id: 4,
-                sequence: 4,
-                url: 'assets/s4.jpeg',
-            }
-        ];
         this.packageList = [];
         this.productList = [];
         this.serviceTypesList = [];
@@ -365,7 +296,9 @@ let FeedPage = class FeedPage {
         this.bannerSlider.slideTo(2).then();
     }
     onLastPackageSlide() {
-        this.packagesSlider.slideTo(2).then();
+        setTimeout(() => {
+            this.packagesSlider.slideTo(0).then();
+        }, 3000);
     }
     ngOnInit() {
     }
