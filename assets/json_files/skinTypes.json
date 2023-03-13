@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Normal"
+  },
+  {
+    "name": "Dry"
+  },
+  {
+    "name": "Oily"
+  },
+  {
+    "name": "Combination"
+  },
+  {
+    "name": "Mature"
+  },
+  {
+    "name": "Pigmented"
+  },
+  {
+    "name": "Acne Prone"
+  },
+  {
+    "name": "Sensitive"
+  },
+  {
+    "name": "Uneven Toned"
+  },
+  {
+    "name": "couperose"
+  },
+  {
+    "name": "Crusty"
+  }
+]

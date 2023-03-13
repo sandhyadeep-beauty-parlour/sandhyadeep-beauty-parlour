@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <div>\n    <div class=\"drawer\"></div>\n  </div>\n  <div class=\"admin-modal-title-container\">\n    <div style=\"display: flex; justify-content: end;\">\n      <i (click)=\"closeModal()\" class=\"fa fa-times close-button\" aria-hidden=\"true\"></i>\n    </div>\n    <div class=\"admin-modal-title\">{{editMode ? 'Update' : 'Add'}} Service</div>\n  </div>\n</ion-header>\n<ion-content>\n  <form [formGroup]='servicesForm'>\n    <div class=\"modal-form-image\">\n      <div class=\"modal-image\">\n        <img *ngIf=\"imageBase64 && !imageUrl\" src=\"{{imageBase64}}\" alt=\"\">\n        <img *ngIf=\"!imageBase64 && !imageUrl\" src=\"/assets/no-image.png\" alt=\"\">\n        <img *ngIf=\"editMode && imageUrl\" [src]=\"imageUrl\" alt=\"\">\n      </div>\n      <div class=\"image-changer\">\n        <input accept=\"image/*\" (change)=\"onFileChange($event)\" type=\"file\" id=\"upload\"\n               hidden/>\n        <label style=\"margin-bottom: 0\" for=\"upload\">\n          <ion-icon name=\"add-circle-outline\"></ion-icon>\n        </label>\n      </div>\n    </div>\n    <div class=\"modal-form-container\">\n      <ion-list>\n        <ion-item>\n          <ion-label class=\"required-label\" position=\"floating\">Service Name</ion-label>\n          <ion-input maxlength=\"20\" formControlName=\"name\"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label class=\"required-label\" position=\"floating\">Duration (Minutes)</ion-label>\n          <ion-input maxlength=\"3\" formControlName=\"duration\" style=\"width: 100px\" type=\"number\"></ion-input>\n          <!--        <ion-label class=\"required-label\">Minutes</ion-label>-->\n        </ion-item>\n        <ion-item>\n          <ion-label class=\"required-label\" position=\"floating\">Price (₹)</ion-label>\n          <ion-input maxlength=\"6\" formControlName=\"price\" style=\"width: 100px\" type=\"number\"></ion-input>\n          <!--        <ion-label class=\"required-label\">₹</ion-label>-->\n        </ion-item>\n        <ion-item>\n          <ion-label class=\"required-label\" *ngIf=\"editMode\" position=\"stacked\">Sub Service</ion-label>\n          <ion-label class=\"required-label\" *ngIf=\"!editMode\" position=\"floating\">Sub Service</ion-label>\n          <ion-select  formControlName=\"subService\" okText=\"Okay\" cancelText=\"Dismiss\">\n            <ion-select-option [value]=\"subService?.id\" *ngFor=\"let subService of subServices\">{{subService?.name}}</ion-select-option>\n          </ion-select>\n        </ion-item>\n        <ion-item>\n          <ion-label class=\"required-label\" position=\"floating\">Type</ion-label>\n          <ion-select formControlName=\"type\" okText=\"Okay\" cancelText=\"Dismiss\">\n            <ion-select-option value=\"convincing\">Convincing</ion-select-option>\n            <ion-select-option value=\"frequent\">Frequent</ion-select-option>\n          </ion-select>\n        </ion-item>\n        <ion-item>\n          <ion-label class=\"required-label\" position=\"floating\">Description</ion-label>\n          <ion-textarea maxlength=\"120\" class=\"service-textarea\" formControlName=\"description\"></ion-textarea>\n        </ion-item>\n        <ion-item>\n          <ion-label class=\"required-label\" position=\"floating\">Brands Used</ion-label>\n          <ion-select [multiple]=\"true\" formControlName=\"brands\" okText=\"Okay\" cancelText=\"Dismiss\">\n            <ion-select-option value=\"Lakme\">Lakme</ion-select-option>\n            <ion-select-option value=\"MamaEarth\">MamaEarth</ion-select-option>\n            <ion-select-option value=\"O3+\">O3+</ion-select-option>\n          </ion-select>\n        </ion-item>\n        <ion-item>\n          <ion-label class=\"required-label\" position=\"floating\">Skin Type</ion-label>\n          <ion-select  [multiple]=\"true\" formControlName=\"skinTypes\" okText=\"Okay\" cancelText=\"Dismiss\">\n            <ion-select-option value=\"Oily Skin\">Oily Skin</ion-select-option>\n            <ion-select-option value=\"Dry Skin\">Dry Skin</ion-select-option>\n            <ion-select-option value=\"Pale Skin\">Pale Skin</ion-select-option>\n          </ion-select>\n        </ion-item>\n      </ion-list>\n    </div>\n  </form>\n\n</ion-content>\n\n<ion-footer>\n  <div style=\"display: flex; justify-content: center; padding: 10px;\">\n    <button (click)=\"onAddService()\" style=\"width: 250px\"\n            mat-raised-button color=\"primary\">{{editMode ? 'Update' : 'Save'}}\n    </button>\n  </div>\n</ion-footer>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <div>\n    <div class=\"drawer\"></div>\n  </div>\n  <div class=\"admin-modal-title-container\">\n    <div style=\"display: flex; justify-content: end;\">\n      <i (click)=\"closeModal()\" class=\"fa fa-times close-button\" aria-hidden=\"true\"></i>\n    </div>\n    <div class=\"admin-modal-title\">{{editMode ? 'Update' : 'Add'}} Service</div>\n  </div>\n</ion-header>\n<ion-content>\n  <form [formGroup]='servicesForm'>\n    <div class=\"modal-form-image\">\n      <div class=\"modal-image\">\n        <img *ngIf=\"imageBase64 && !imageUrl\" src=\"{{imageBase64}}\" alt=\"\">\n        <img *ngIf=\"!imageBase64 && !imageUrl\" src=\"/assets/no-image.png\" alt=\"\">\n        <img *ngIf=\"editMode && imageUrl\" [src]=\"imageUrl\" alt=\"\">\n      </div>\n      <div class=\"image-changer\">\n        <input accept=\"image/*\" (change)=\"onFileChange($event)\" type=\"file\" id=\"upload\"\n               hidden/>\n        <label style=\"margin-bottom: 0\" for=\"upload\">\n          <ion-icon name=\"add-circle-outline\"></ion-icon>\n        </label>\n      </div>\n    </div>\n    <div class=\"modal-form-container\">\n      <ion-list>\n        <ion-item>\n          <ion-label class=\"required-label\" position=\"floating\">Service Name</ion-label>\n          <ion-input maxlength=\"20\" formControlName=\"name\"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label class=\"required-label\" position=\"floating\">Duration (Minutes)</ion-label>\n          <ion-input maxlength=\"3\" formControlName=\"duration\" style=\"width: 100px\" type=\"number\"></ion-input>\n          <!--        <ion-label class=\"required-label\">Minutes</ion-label>-->\n        </ion-item>\n        <ion-item>\n          <ion-label class=\"required-label\" position=\"floating\">Price (₹)</ion-label>\n          <ion-input maxlength=\"6\" formControlName=\"price\" style=\"width: 100px\" type=\"number\"></ion-input>\n          <!--        <ion-label class=\"required-label\">₹</ion-label>-->\n        </ion-item>\n        <ion-item>\n          <ion-label class=\"required-label\" *ngIf=\"editMode\" position=\"stacked\">Sub Service</ion-label>\n          <ion-label class=\"required-label\" *ngIf=\"!editMode\" position=\"floating\">Sub Service</ion-label>\n          <ion-select  formControlName=\"subService\" okText=\"Okay\" cancelText=\"Dismiss\">\n            <ion-select-option [value]=\"subService?.id\" *ngFor=\"let subService of subServices\">{{subService?.name}}</ion-select-option>\n          </ion-select>\n        </ion-item>\n        <ion-item>\n          <ion-label class=\"required-label\" position=\"floating\">Type</ion-label>\n          <ion-select formControlName=\"type\" okText=\"Okay\" cancelText=\"Dismiss\">\n            <ion-select-option value=\"convincing\">Convincing</ion-select-option>\n            <ion-select-option value=\"frequent\">Frequent</ion-select-option>\n          </ion-select>\n        </ion-item>\n        <ion-item>\n          <ion-label class=\"required-label\" position=\"floating\">Description</ion-label>\n          <ion-textarea maxlength=\"150\" class=\"service-textarea\" formControlName=\"description\"></ion-textarea>\n        </ion-item>\n        <ion-item>\n          <ion-label class=\"required-label\" position=\"floating\">Brands Used</ion-label>\n          <ion-select (ionChange)=\"onChangingBrand($event)\"  [multiple]=\"true\" formControlName=\"brands\" okText=\"Okay\" cancelText=\"Dismiss\">\n            <ion-select-option value=\"no_brands\">No Brands</ion-select-option>\n            <ion-select-option *ngFor=\"let brand of brandsList\" value=\"{{brand?.value}}\">{{brand?.name}}</ion-select-option>\n          </ion-select>\n        </ion-item>\n        <ion-item>\n          <ion-label class=\"required-label\" position=\"floating\">Skin Type</ion-label>\n          <ion-select (ionChange)=\"onChangingSkinType($event)\"  [multiple]=\"true\" formControlName=\"skinTypes\" okText=\"Okay\" cancelText=\"Dismiss\">\n            <ion-select-option value=\"all\">All Skin Types</ion-select-option>\n            <ion-select-option *ngFor=\"let skinType of skinTypesList\" value=\"{{skinType?.value}}\">{{skinType?.name}}</ion-select-option>\n          </ion-select>\n        </ion-item>\n      </ion-list>\n    </div>\n  </form>\n\n</ion-content>\n\n<ion-footer>\n  <div style=\"display: flex; justify-content: center; padding: 10px;\">\n    <button (click)=\"onAddService()\" style=\"width: 250px\"\n            mat-raised-button color=\"primary\">{{editMode ? 'Update' : 'Save'}}\n    </button>\n  </div>\n</ion-footer>\n");
 
 /***/ }),
 
@@ -80,6 +80,8 @@ let ServicesModalComponent = class ServicesModalComponent {
         this.serviceId = '';
         this.editMode = false;
         this.subServices = [];
+        this.brandsList = [];
+        this.skinTypesList = [];
     }
     ngOnInit() {
         this.servicesForm = this.formBuilder.group({
@@ -114,12 +116,52 @@ let ServicesModalComponent = class ServicesModalComponent {
     }
     ionViewWillEnter() {
         this.getSubServices();
+        this.getBrands();
+        this.getSkinTypes();
     }
     patchServiceData() {
         this.editMode = false;
         if (this.navParams && this.navParams.data && this.navParams.data.id) {
             this.editMode = true;
             this.patchModalData(this.navParams.data);
+        }
+    }
+    getBrands() {
+        this.sharedService.showSkeletonSpinner.next(true);
+        this.adminService.getBrands().subscribe(res => this.getBrandsSuccess(res), error => {
+            this.adminService.commonError(error);
+        });
+    }
+    getBrandsSuccess(res) {
+        this.brandsList = res;
+        this.brandsList = this.brandsList.map((val) => {
+            val.value = val.name.trim().split(' ').join('_');
+            return val;
+        });
+    }
+    getSkinTypes() {
+        this.sharedService.showSkeletonSpinner.next(true);
+        this.adminService.getSkinTypes().subscribe(res => this.getSkinTypesSuccess(res), error => {
+            this.adminService.commonError(error);
+        });
+    }
+    getSkinTypesSuccess(res) {
+        this.skinTypesList = res;
+        this.skinTypesList = this.skinTypesList.map((val) => {
+            val.value = val.name.trim().split(' ').join('_');
+            return val;
+        });
+    }
+    onChangingSkinType(event) {
+        const selectedValues = event.target.value.map(v => v.toLowerCase());
+        if (selectedValues.includes('all')) {
+            this.servicesForm.get('skinTypes').setValue('all');
+        }
+    }
+    onChangingBrand(event) {
+        const selectedValues = event.target.value.map(v => v.toLowerCase());
+        if (selectedValues.includes('no_brands')) {
+            this.servicesForm.get('brands').setValue('no_brands');
         }
     }
     patchModalData(patchData) {

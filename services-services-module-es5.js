@@ -21,7 +21,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-header>\n  <div>\n    <div class=\"drawer\"></div>\n  </div>\n  <div class=\"admin-modal-title-container\">\n    <div style=\"display: flex; justify-content: end;\">\n      <i (click)=\"closeModal()\" class=\"fa fa-times close-button\" aria-hidden=\"true\"></i>\n    </div>\n    <div class=\"admin-modal-title\">{{editMode ? 'Update' : 'Add'}} Service</div>\n  </div>\n</ion-header>\n<ion-content>\n  <form [formGroup]='servicesForm'>\n    <div class=\"modal-form-image\">\n      <div class=\"modal-image\">\n        <img *ngIf=\"imageBase64 && !imageUrl\" src=\"{{imageBase64}}\" alt=\"\">\n        <img *ngIf=\"!imageBase64 && !imageUrl\" src=\"/assets/no-image.png\" alt=\"\">\n        <img *ngIf=\"editMode && imageUrl\" [src]=\"imageUrl\" alt=\"\">\n      </div>\n      <div class=\"image-changer\">\n        <input accept=\"image/*\" (change)=\"onFileChange($event)\" type=\"file\" id=\"upload\"\n               hidden/>\n        <label style=\"margin-bottom: 0\" for=\"upload\">\n          <ion-icon name=\"add-circle-outline\"></ion-icon>\n        </label>\n      </div>\n    </div>\n    <div class=\"modal-form-container\">\n      <ion-list>\n        <ion-item>\n          <ion-label class=\"required-label\" position=\"floating\">Service Name</ion-label>\n          <ion-input maxlength=\"20\" formControlName=\"name\"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label class=\"required-label\" position=\"floating\">Duration (Minutes)</ion-label>\n          <ion-input maxlength=\"3\" formControlName=\"duration\" style=\"width: 100px\" type=\"number\"></ion-input>\n          <!--        <ion-label class=\"required-label\">Minutes</ion-label>-->\n        </ion-item>\n        <ion-item>\n          <ion-label class=\"required-label\" position=\"floating\">Price (₹)</ion-label>\n          <ion-input maxlength=\"6\" formControlName=\"price\" style=\"width: 100px\" type=\"number\"></ion-input>\n          <!--        <ion-label class=\"required-label\">₹</ion-label>-->\n        </ion-item>\n        <ion-item>\n          <ion-label class=\"required-label\" *ngIf=\"editMode\" position=\"stacked\">Sub Service</ion-label>\n          <ion-label class=\"required-label\" *ngIf=\"!editMode\" position=\"floating\">Sub Service</ion-label>\n          <ion-select  formControlName=\"subService\" okText=\"Okay\" cancelText=\"Dismiss\">\n            <ion-select-option [value]=\"subService?.id\" *ngFor=\"let subService of subServices\">{{subService?.name}}</ion-select-option>\n          </ion-select>\n        </ion-item>\n        <ion-item>\n          <ion-label class=\"required-label\" position=\"floating\">Type</ion-label>\n          <ion-select formControlName=\"type\" okText=\"Okay\" cancelText=\"Dismiss\">\n            <ion-select-option value=\"convincing\">Convincing</ion-select-option>\n            <ion-select-option value=\"frequent\">Frequent</ion-select-option>\n          </ion-select>\n        </ion-item>\n        <ion-item>\n          <ion-label class=\"required-label\" position=\"floating\">Description</ion-label>\n          <ion-textarea maxlength=\"120\" class=\"service-textarea\" formControlName=\"description\"></ion-textarea>\n        </ion-item>\n        <ion-item>\n          <ion-label class=\"required-label\" position=\"floating\">Brands Used</ion-label>\n          <ion-select [multiple]=\"true\" formControlName=\"brands\" okText=\"Okay\" cancelText=\"Dismiss\">\n            <ion-select-option value=\"Lakme\">Lakme</ion-select-option>\n            <ion-select-option value=\"MamaEarth\">MamaEarth</ion-select-option>\n            <ion-select-option value=\"O3+\">O3+</ion-select-option>\n          </ion-select>\n        </ion-item>\n        <ion-item>\n          <ion-label class=\"required-label\" position=\"floating\">Skin Type</ion-label>\n          <ion-select  [multiple]=\"true\" formControlName=\"skinTypes\" okText=\"Okay\" cancelText=\"Dismiss\">\n            <ion-select-option value=\"Oily Skin\">Oily Skin</ion-select-option>\n            <ion-select-option value=\"Dry Skin\">Dry Skin</ion-select-option>\n            <ion-select-option value=\"Pale Skin\">Pale Skin</ion-select-option>\n          </ion-select>\n        </ion-item>\n      </ion-list>\n    </div>\n  </form>\n\n</ion-content>\n\n<ion-footer>\n  <div style=\"display: flex; justify-content: center; padding: 10px;\">\n    <button (click)=\"onAddService()\" style=\"width: 250px\"\n            mat-raised-button color=\"primary\">{{editMode ? 'Update' : 'Save'}}\n    </button>\n  </div>\n</ion-footer>\n";
+    __webpack_exports__["default"] = "<ion-header>\n  <div>\n    <div class=\"drawer\"></div>\n  </div>\n  <div class=\"admin-modal-title-container\">\n    <div style=\"display: flex; justify-content: end;\">\n      <i (click)=\"closeModal()\" class=\"fa fa-times close-button\" aria-hidden=\"true\"></i>\n    </div>\n    <div class=\"admin-modal-title\">{{editMode ? 'Update' : 'Add'}} Service</div>\n  </div>\n</ion-header>\n<ion-content>\n  <form [formGroup]='servicesForm'>\n    <div class=\"modal-form-image\">\n      <div class=\"modal-image\">\n        <img *ngIf=\"imageBase64 && !imageUrl\" src=\"{{imageBase64}}\" alt=\"\">\n        <img *ngIf=\"!imageBase64 && !imageUrl\" src=\"/assets/no-image.png\" alt=\"\">\n        <img *ngIf=\"editMode && imageUrl\" [src]=\"imageUrl\" alt=\"\">\n      </div>\n      <div class=\"image-changer\">\n        <input accept=\"image/*\" (change)=\"onFileChange($event)\" type=\"file\" id=\"upload\"\n               hidden/>\n        <label style=\"margin-bottom: 0\" for=\"upload\">\n          <ion-icon name=\"add-circle-outline\"></ion-icon>\n        </label>\n      </div>\n    </div>\n    <div class=\"modal-form-container\">\n      <ion-list>\n        <ion-item>\n          <ion-label class=\"required-label\" position=\"floating\">Service Name</ion-label>\n          <ion-input maxlength=\"20\" formControlName=\"name\"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label class=\"required-label\" position=\"floating\">Duration (Minutes)</ion-label>\n          <ion-input maxlength=\"3\" formControlName=\"duration\" style=\"width: 100px\" type=\"number\"></ion-input>\n          <!--        <ion-label class=\"required-label\">Minutes</ion-label>-->\n        </ion-item>\n        <ion-item>\n          <ion-label class=\"required-label\" position=\"floating\">Price (₹)</ion-label>\n          <ion-input maxlength=\"6\" formControlName=\"price\" style=\"width: 100px\" type=\"number\"></ion-input>\n          <!--        <ion-label class=\"required-label\">₹</ion-label>-->\n        </ion-item>\n        <ion-item>\n          <ion-label class=\"required-label\" *ngIf=\"editMode\" position=\"stacked\">Sub Service</ion-label>\n          <ion-label class=\"required-label\" *ngIf=\"!editMode\" position=\"floating\">Sub Service</ion-label>\n          <ion-select  formControlName=\"subService\" okText=\"Okay\" cancelText=\"Dismiss\">\n            <ion-select-option [value]=\"subService?.id\" *ngFor=\"let subService of subServices\">{{subService?.name}}</ion-select-option>\n          </ion-select>\n        </ion-item>\n        <ion-item>\n          <ion-label class=\"required-label\" position=\"floating\">Type</ion-label>\n          <ion-select formControlName=\"type\" okText=\"Okay\" cancelText=\"Dismiss\">\n            <ion-select-option value=\"convincing\">Convincing</ion-select-option>\n            <ion-select-option value=\"frequent\">Frequent</ion-select-option>\n          </ion-select>\n        </ion-item>\n        <ion-item>\n          <ion-label class=\"required-label\" position=\"floating\">Description</ion-label>\n          <ion-textarea maxlength=\"150\" class=\"service-textarea\" formControlName=\"description\"></ion-textarea>\n        </ion-item>\n        <ion-item>\n          <ion-label class=\"required-label\" position=\"floating\">Brands Used</ion-label>\n          <ion-select (ionChange)=\"onChangingBrand($event)\"  [multiple]=\"true\" formControlName=\"brands\" okText=\"Okay\" cancelText=\"Dismiss\">\n            <ion-select-option value=\"no_brands\">No Brands</ion-select-option>\n            <ion-select-option *ngFor=\"let brand of brandsList\" value=\"{{brand?.value}}\">{{brand?.name}}</ion-select-option>\n          </ion-select>\n        </ion-item>\n        <ion-item>\n          <ion-label class=\"required-label\" position=\"floating\">Skin Type</ion-label>\n          <ion-select (ionChange)=\"onChangingSkinType($event)\"  [multiple]=\"true\" formControlName=\"skinTypes\" okText=\"Okay\" cancelText=\"Dismiss\">\n            <ion-select-option value=\"all\">All Skin Types</ion-select-option>\n            <ion-select-option *ngFor=\"let skinType of skinTypesList\" value=\"{{skinType?.value}}\">{{skinType?.name}}</ion-select-option>\n          </ion-select>\n        </ion-item>\n      </ion-list>\n    </div>\n  </form>\n\n</ion-content>\n\n<ion-footer>\n  <div style=\"display: flex; justify-content: center; padding: 10px;\">\n    <button (click)=\"onAddService()\" style=\"width: 250px\"\n            mat-raised-button color=\"primary\">{{editMode ? 'Update' : 'Save'}}\n    </button>\n  </div>\n</ion-footer>\n";
     /***/
   },
 
@@ -150,6 +150,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.serviceId = '';
         this.editMode = false;
         this.subServices = [];
+        this.brandsList = [];
+        this.skinTypesList = [];
       }
 
       _createClass(ServicesModalComponent, [{
@@ -199,6 +201,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "ionViewWillEnter",
         value: function ionViewWillEnter() {
           this.getSubServices();
+          this.getBrands();
+          this.getSkinTypes();
         }
       }, {
         key: "patchServiceData",
@@ -208,6 +212,70 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           if (this.navParams && this.navParams.data && this.navParams.data.id) {
             this.editMode = true;
             this.patchModalData(this.navParams.data);
+          }
+        }
+      }, {
+        key: "getBrands",
+        value: function getBrands() {
+          var _this = this;
+
+          this.sharedService.showSkeletonSpinner.next(true);
+          this.adminService.getBrands().subscribe(function (res) {
+            return _this.getBrandsSuccess(res);
+          }, function (error) {
+            _this.adminService.commonError(error);
+          });
+        }
+      }, {
+        key: "getBrandsSuccess",
+        value: function getBrandsSuccess(res) {
+          this.brandsList = res;
+          this.brandsList = this.brandsList.map(function (val) {
+            val.value = val.name.trim().split(' ').join('_');
+            return val;
+          });
+        }
+      }, {
+        key: "getSkinTypes",
+        value: function getSkinTypes() {
+          var _this2 = this;
+
+          this.sharedService.showSkeletonSpinner.next(true);
+          this.adminService.getSkinTypes().subscribe(function (res) {
+            return _this2.getSkinTypesSuccess(res);
+          }, function (error) {
+            _this2.adminService.commonError(error);
+          });
+        }
+      }, {
+        key: "getSkinTypesSuccess",
+        value: function getSkinTypesSuccess(res) {
+          this.skinTypesList = res;
+          this.skinTypesList = this.skinTypesList.map(function (val) {
+            val.value = val.name.trim().split(' ').join('_');
+            return val;
+          });
+        }
+      }, {
+        key: "onChangingSkinType",
+        value: function onChangingSkinType(event) {
+          var selectedValues = event.target.value.map(function (v) {
+            return v.toLowerCase();
+          });
+
+          if (selectedValues.includes('all')) {
+            this.servicesForm.get('skinTypes').setValue('all');
+          }
+        }
+      }, {
+        key: "onChangingBrand",
+        value: function onChangingBrand(event) {
+          var selectedValues = event.target.value.map(function (v) {
+            return v.toLowerCase();
+          });
+
+          if (selectedValues.includes('no_brands')) {
+            this.servicesForm.get('brands').setValue('no_brands');
           }
         }
       }, {
@@ -247,7 +315,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "patchService",
         value: function patchService() {
-          var _this = this;
+          var _this3 = this;
 
           var formData = new FormData();
           formData.append('name', this.servicesForm.get('name').value);
@@ -265,15 +333,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           }
 
           this.adminService.updateService(formData, this.serviceId).subscribe(function (res) {
-            return _this.createServiceSuccess(res);
+            return _this3.createServiceSuccess(res);
           }, function (error) {
-            _this.adminService.commonError(error);
+            _this3.adminService.commonError(error);
           });
         }
       }, {
         key: "createService",
         value: function createService() {
-          var _this2 = this;
+          var _this4 = this;
 
           var formData = new FormData();
           var fileName = "service-".concat(this.servicesForm.get('name').value.toLowerCase().trim().split(' ').join('-'), ".").concat(this.selectedImage.name.split('.')[1]);
@@ -287,9 +355,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           formData.append('skinTypes', this.servicesForm.get('skinTypes').value);
           formData.append('file', this.selectedImage, fileName);
           this.adminService.createService(formData).subscribe(function (res) {
-            return _this2.createServiceSuccess(res);
+            return _this4.createServiceSuccess(res);
           }, function (error) {
-            _this2.adminService.commonError(error);
+            _this4.adminService.commonError(error);
           });
         }
       }, {
@@ -338,24 +406,24 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "getImageBase64",
         value: function getImageBase64(file) {
-          var _this3 = this;
+          var _this5 = this;
 
           var reader = new FileReader();
           reader.readAsDataURL(file);
 
           reader.onload = function () {
-            _this3.imageBase64 = reader.result;
+            _this5.imageBase64 = reader.result;
           };
         }
       }, {
         key: "getSubServices",
         value: function getSubServices() {
-          var _this4 = this;
+          var _this6 = this;
 
           this.adminService.getAllSubService().subscribe(function (res) {
-            return _this4.getAllSubServiceSuccess(res);
+            return _this6.getAllSubServiceSuccess(res);
           }, function (error) {
-            _this4.adminService.commonError(error);
+            _this6.adminService.commonError(error);
           });
         }
       }, {
@@ -726,7 +794,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "presentModal",
         value: function presentModal(componentData) {
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
-            var _this5 = this;
+            var _this7 = this;
 
             var modal;
             return regeneratorRuntime.wrap(function _callee2$(_context2) {
@@ -746,7 +814,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                   case 2:
                     modal = _context2.sent;
                     modal.onWillDismiss().then(function () {
-                      _this5.getAllServices();
+                      _this7.getAllServices();
                     });
                     _context2.next = 6;
                     return modal.present();
@@ -798,7 +866,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "onDelete",
         value: function onDelete(serviceType) {
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
-            var _this6 = this;
+            var _this8 = this;
 
             var serviceTypeId, alert;
             return regeneratorRuntime.wrap(function _callee4$(_context4) {
@@ -815,13 +883,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                         text: 'Cancel',
                         role: 'cancel',
                         handler: function handler() {
-                          _this6.communicationService.showAdminSpinner.next(false);
+                          _this8.communicationService.showAdminSpinner.next(false);
                         }
                       }, {
                         text: 'OK',
                         role: 'confirm',
                         handler: function handler() {
-                          _this6.deleteService(serviceTypeId);
+                          _this8.deleteService(serviceTypeId);
                         }
                       }]
                     });
@@ -842,12 +910,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "deleteService",
         value: function deleteService(serviceTypeId) {
-          var _this7 = this;
+          var _this9 = this;
 
           this.adminService.deleteService(serviceTypeId).subscribe(function (res) {
-            return _this7.deleteServiceSuccess(res);
+            return _this9.deleteServiceSuccess(res);
           }, function (error) {
-            _this7.adminService.commonError(error);
+            _this9.adminService.commonError(error);
           });
         }
       }, {
@@ -869,12 +937,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "getAllServices",
         value: function getAllServices() {
-          var _this8 = this;
+          var _this10 = this;
 
           this.adminService.getAllServices().subscribe(function (res) {
-            return _this8.getAllServicesSuccess(res);
+            return _this10.getAllServicesSuccess(res);
           }, function (error) {
-            _this8.adminService.commonError(error);
+            _this10.adminService.commonError(error);
           });
         }
       }, {

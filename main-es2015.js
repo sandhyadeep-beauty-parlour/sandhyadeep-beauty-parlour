@@ -1176,6 +1176,14 @@ let ApiService = class ApiService {
         return this.http.delete(`${this.baseURL}services/${serviceId}`, {});
     }
     // -------------------------  JSON APIS ------------------------------
+    getBrands() {
+        const localUrl = 'assets/json_files/brands.json';
+        return this.http.get(localUrl);
+    }
+    getSkinTypes() {
+        const localUrl = 'assets/json_files/skinTypes.json';
+        return this.http.get(localUrl);
+    }
     getUserRole() {
         return localStorage.getItem('role');
     }

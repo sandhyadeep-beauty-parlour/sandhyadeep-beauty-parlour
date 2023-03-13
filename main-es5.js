@@ -1411,6 +1411,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         } // -------------------------  JSON APIS ------------------------------
 
       }, {
+        key: "getBrands",
+        value: function getBrands() {
+          var localUrl = 'assets/json_files/brands.json';
+          return this.http.get(localUrl);
+        }
+      }, {
+        key: "getSkinTypes",
+        value: function getSkinTypes() {
+          var localUrl = 'assets/json_files/skinTypes.json';
+          return this.http.get(localUrl);
+        }
+      }, {
         key: "getUserRole",
         value: function getUserRole() {
           return localStorage.getItem('role');
