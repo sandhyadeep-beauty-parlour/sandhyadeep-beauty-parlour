@@ -2383,12 +2383,9 @@ const environment = {
     appName: 'Sandhyadeep Beauty Parlour',
     envName: 'DEV',
     test: false,
-    // baseAuthUrl: 'https://sandhyadeep-beauty-parlour-api.onrender.com/v1/auth/',
-    // baseURLAdminAPIs: 'https://sandhyadeep-beauty-parlour-api.onrender.com/v1/',
-    // domainUrlApi: 'https://sandhyadeep-beauty-parlour-api.onrender.com/',
-    baseAuthUrl: 'http://localhost:3000/v1/auth/',
-    baseURLAdminAPIs: 'http://localhost:3000/v1/',
-    domainUrlApi: 'http://localhost:3000/',
+    baseAuthUrl: 'https://sandhyadeep-beauty-parlour-api.onrender.com/v1/auth/',
+    baseURLAdminAPIs: 'https://sandhyadeep-beauty-parlour-api.onrender.com/v1/',
+    domainUrlApi: 'https://sandhyadeep-beauty-parlour-api.onrender.com/',
 };
 /*
  * For easier debugging in development mode, you can import the following file
