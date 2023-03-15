@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<sandhyadeep-header class=\"z-index-999\"></sandhyadeep-header>\n\n<ion-content>\n    <ion-refresher slot=\"fixed\" (ionRefresh)=\"refreshPage($event)\">\n        <ion-refresher-content pulling-icon=\"arrow-dropdown\" refreshing-spinner=\"circles\">\n\n        </ion-refresher-content>\n    </ion-refresher>\n    <div class=\"page-container\">\n        <div class=\"page-heading\">\n            <div class=\"heading-text\">\n                <b>Services</b>\n            </div>\n        </div>\n        <div style=\"border-bottom: 10px solid #d3d3d37a;\"></div>\n        <service-list [isRefreshed]=\"isRefreshed\" (updateAmount)=\"updateData($event)\"></service-list>\n    </div>\n</ion-content>\n<ion-footer class=\"ion-no-border\">\n    <ion-toolbar>\n        <div class=\"appointment-footer\">\n            <div class=\"total-div-container\">\n                <div class=\"total-div\">\n                    <div>Total</div>\n                    <div class=\"total-div-price\">{{selectedServices?.length}} Services</div>\n                </div>\n                <div>\n                    {{amountPurchased}} ₹\n                </div>\n            </div>\n            <div (click)=\"onBookAppointment()\" class=\"default-button\">\n                <button> Book Appointment</button>\n            </div>\n        </div>\n    </ion-toolbar>\n</ion-footer>\n<app-logo-spinner></app-logo-spinner>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<sandhyadeep-header class=\"z-index-999\"></sandhyadeep-header>\n\n<ion-content>\n    <ion-refresher slot=\"fixed\" (ionRefresh)=\"refreshPage($event)\">\n        <ion-refresher-content pulling-icon=\"arrow-dropdown\" refreshing-spinner=\"circles\">\n\n        </ion-refresher-content>\n    </ion-refresher>\n    <div class=\"page-container\">\n        <div class=\"page-heading\">\n            <div class=\"heading-text\">\n                <b>Services</b>\n            </div>\n        </div>\n        <div style=\"border-bottom: 10px solid #d3d3d37a;\"></div>\n        <service-list [refreshRate]=\"refreshRate\" [isRefreshed]=\"isRefreshed\" (updateAmount)=\"updateData($event)\"></service-list>\n    </div>\n</ion-content>\n<ion-footer class=\"ion-no-border\">\n    <ion-toolbar>\n        <div class=\"appointment-footer\">\n            <div class=\"total-div-container\">\n                <div class=\"total-div\">\n                    <div>Total</div>\n                    <div class=\"total-div-price\">{{selectedServices?.length}} Services</div>\n                </div>\n                <div>\n                    {{amountPurchased}} ₹\n                </div>\n            </div>\n            <div (click)=\"onBookAppointment()\" class=\"default-button\">\n                <button> Book Appointment</button>\n            </div>\n        </div>\n    </ion-toolbar>\n</ion-footer>\n<app-logo-spinner></app-logo-spinner>\n");
 
 /***/ }),
 
@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"item-list\">\n    <mat-accordion>\n        <ng-container *ngFor=\"let mainService of mainServices; let index = index\">\n            <mat-expansion-panel class=\"mat-elevation-z0\">\n                <mat-expansion-panel-header [collapsedHeight]=\"'50px'\">\n                    <mat-panel-title>\n                        <div class=\"animate__faster animate__fadeInLeft animate__animated main-item-name-sub-container\">\n                            <img src=\"{{mainService.url}}\" alt=\"\">\n                            <div [class.text-bold]=\"mainService.show\" class=\"main-item-name\">{{mainService.name}} </div>\n                        </div>\n                    </mat-panel-title>\n                </mat-expansion-panel-header>\n                <div>\n                    <div style=\"padding: 15px\" *ngIf=\"mainService.services?.length === 0\">\n                        We dont have any services available\n                    </div>\n                    <ng-container *ngFor=\"let service of mainService.services; let index = index\">\n                        <div (click)=\"onSelectServices(service)\" class=\"sub-item-container\">\n                            <div class=\"sub-item-name\">\n                                <label class=\"name\">{{service.name}}</label>\n                                <div class=\"time\"><i\n                                        class=\"fa fa-clock-o\"></i> {{service.duration ? service.duration + ' Minutes' : ''}}\n                                </div>\n                            </div>\n                            <div class=\"sub-item-price\">\n                                <div class=\"color-666\">Price:</div>\n                                {{service.price}} ₹\n                            </div>\n                            <div class=\"sub-item-checkbox\">\n                                <mat-checkbox [(ngModel)]=\"service.isChecked\" color=\"primary\"></mat-checkbox>\n                            </div>\n                        </div>\n                    </ng-container>\n                </div>\n            </mat-expansion-panel>\n        </ng-container>\n    </mat-accordion>\n</div>\n\n\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"item-list\">\n    <mat-accordion>\n        <ng-container *ngFor=\"let mainService of mainServices; let index = index\">\n            <mat-expansion-panel class=\"mat-elevation-z0 service-list-accordion\">\n                <mat-expansion-panel-header class=\"expansion-header\" [collapsedHeight]=\"'50px'\">\n                    <mat-panel-title>\n                        <div class=\"animate__faster animate__fadeInLeft animate__animated main-item-name-sub-container\">\n                            <img src=\"{{mainService.url}}\" alt=\"\">\n                            <div [class.text-bold]=\"mainService?.show\" class=\"main-item-name\">{{mainService.name}} </div>\n                        </div>\n                    </mat-panel-title>\n                </mat-expansion-panel-header>\n                <div>\n                    <div style=\"padding: 15px\" *ngIf=\"mainService?.services?.length === 0 && mainService?.subServices?.length === 0\">\n                        We dont have any services available\n                    </div>\n                    <ng-container *ngIf=\"mainService.subServices && mainService.subServices.length > 0\" >\n                        <mat-accordion>\n                            <mat-expansion-panel *ngFor=\"let subService of mainService?.subServices\" class=\"mat-elevation-z5\">\n                                <mat-expansion-panel-header [collapsedHeight]=\"'50px'\">\n                                    <mat-panel-title>\n                                        {{subService.name}}\n                                    </mat-panel-title>\n                                </mat-expansion-panel-header>\n                                <div *ngFor=\"let service of subService.services; let index = index\" (click)=\"onSelectServices(service)\" class=\"sub-item-container\">\n                                    <div class=\"sub-item-name\">\n                                        <label class=\"name\">{{service.name}}</label>\n                                        <div class=\"time\"><i\n                                                class=\"fa fa-clock-o\"></i> {{service.duration ? service.duration + ' Minutes' : ''}}\n                                        </div>\n                                    </div>\n                                    <div class=\"sub-item-price\">\n                                        <div class=\"color-666\">Price:</div>\n                                        {{service.price}} ₹\n                                    </div>\n                                    <div class=\"sub-item-checkbox\">\n                                        <mat-checkbox [(ngModel)]=\"service.isChecked\" color=\"primary\"></mat-checkbox>\n                                    </div>\n                                </div>\n                            </mat-expansion-panel>\n                        </mat-accordion>\n                    </ng-container>\n\n<!--                    If No Sub Service is there -->\n                    <ng-container *ngIf=\"mainService.services && mainService.services.length > 0\" >\n                        <div *ngFor=\"let service of mainService.services; let index = index\" (click)=\"onSelectServices(service)\" class=\"sub-item-container\">\n                            <div class=\"sub-item-name\">\n                                <label class=\"name\">{{service.name}}</label>\n                                <div class=\"time\"><i\n                                        class=\"fa fa-clock-o\"></i> {{service.duration ? service.duration + ' Minutes' : ''}}\n                                </div>\n                            </div>\n                            <div class=\"sub-item-price\">\n                                <div class=\"color-666\">Price:</div>\n                                {{service.price}} ₹\n                            </div>\n                            <div class=\"sub-item-checkbox\">\n                                <mat-checkbox [(ngModel)]=\"service.isChecked\" color=\"primary\"></mat-checkbox>\n                            </div>\n                        </div>\n                    </ng-container>\n                </div>\n            </mat-expansion-panel>\n        </ng-container>\n    </mat-accordion>\n</div>\n\n\n\n");
 
 /***/ }),
 
@@ -166,9 +166,11 @@ let ServicesPage = class ServicesPage {
         this.amountPurchased = 0;
         this.selectedServices = [];
         this.isRefreshed = false;
+        this.refreshRate = Math.random();
     }
     ionViewWillEnter() {
         this.sharedService.showSearchBox.next(true);
+        this.refreshRate = Math.random();
     }
     ionViewWillLeave() {
         this.sharedService.showSearchBox.next(false);
@@ -268,7 +270,7 @@ ServicesListModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".item-container {\n  margin-bottom: 15px;\n}\n\n.main-item-name-container {\n  display: flex;\n  justify-content: space-between;\n  padding: 5px 0;\n  border-bottom: 1px solid lightgray;\n}\n\n.sub-item-list {\n  max-height: 0;\n  overflow-y: hidden;\n  transition: ease-in-out 400ms max-height;\n}\n\n.sub-item-list.opened {\n  max-height: 100%;\n  transition: ease-in-out 600ms max-height;\n}\n\n.sub-item-container {\n  display: flex;\n  padding: 5px 0;\n  border-bottom: 1px solid lightgray;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.sub-item-name {\n  flex-basis: 50%;\n  line-height: 0.7;\n}\n\n.sub-item-name .name {\n  font-size: 14px;\n}\n\n.sub-item-name .time {\n  font-size: 12px;\n  color: #666;\n}\n\n.sub-item-checkbox {\n  display: flex;\n}\n\n.main-item-name-sub-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.main-item-name-sub-container img {\n  margin-right: 10px;\n  width: 35px;\n  height: 35px;\n}\n\n.main-item-name {\n  font-size: 16px;\n}\n\n.main-item-arrow {\n  color: #666;\n}\n\n.down {\n  transform: rotate(90deg);\n  -webkit-transform: rotate(90deg);\n  transition: ease-in-out 300ms;\n}\n\n.color-666 {\n  color: #666;\n}\n\n.text-bold {\n  font-weight: bold;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hYXNoaXNoYmhhZ3dhdC9Eb2N1bWVudHMvc2FuZGh5YWRlZXAtdWkvc2FuZGh5YWRlZXAtYmVhdXR5LXBhcmxvdXIvc3JjL2FwcC9zaGFyZWQtY29tcG9uZW50cy9zZXJ2aWNlcy1saXN0L3NlcnZpY2VzLWxpc3QucGFnZS5zY3NzIiwic3JjL2FwcC9zaGFyZWQtY29tcG9uZW50cy9zZXJ2aWNlcy1saXN0L3NlcnZpY2VzLWxpc3QucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQU1BO0VBQ0UsbUJBQUE7QUNMRjs7QURRQTtFQUNFLGFBQUE7RUFDQSw4QkFBQTtFQUNBLGNBQUE7RUFDQSxrQ0FBQTtBQ0xGOztBRFFBO0VBQ0UsYUFBQTtFQUNBLGtCQUFBO0VBQ0Esd0NBQUE7QUNMRjs7QURNRTtFQUNFLGdCQUFBO0VBQ0Esd0NBQUE7QUNKSjs7QURRQTtFQUNFLGFBQUE7RUFDQSxjQUFBO0VBQ0Esa0NBQUE7RUFDQSw4QkFBQTtFQUNBLG1CQUFBO0FDTEY7O0FEUUE7RUFDRSxlQUFBO0VBQ0EsZ0JBQUE7QUNMRjs7QURNRTtFQUNFLGVBQUE7QUNKSjs7QURNRTtFQUNFLGVBQUE7RUFDQSxXQUFBO0FDSko7O0FEUUE7RUFDRSxhQUFBO0FDTEY7O0FET0E7RUFDRSxhQUFBO0VBQWUsdUJBQUE7RUFBeUIsbUJBQUE7QUNGMUM7O0FER0U7RUFDRSxrQkFBQTtFQUFvQixXQUFBO0VBQWEsWUFBQTtBQ0NyQzs7QURFQTtFQUNFLGVBQUE7QUNDRjs7QURDQTtFQUNFLFdBQUE7QUNFRjs7QURFQTtFQUNFLHdCQUFBO0VBQ0EsZ0NBQUE7RUFDQSw2QkFBQTtBQ0FGOztBREVBO0VBQ0UsV0FBQTtBQ0NGOztBRElBO0VBQ0UsaUJBQUE7QUNERiIsImZpbGUiOiJzcmMvYXBwL3NoYXJlZC1jb21wb25lbnRzL3NlcnZpY2VzLWxpc3Qvc2VydmljZXMtbGlzdC5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0IFwiLi4vLi4vLi4vc2FuZGh5YWRlZXAtdGhlbWVcIjtcblxuLml0ZW0tbGlzdCB7XG5cbn1cblxuLml0ZW0tY29udGFpbmVyIHtcbiAgbWFyZ2luLWJvdHRvbTogMTVweDtcbn1cblxuLm1haW4taXRlbS1uYW1lLWNvbnRhaW5lciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgcGFkZGluZzogNXB4IDA7XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCBsaWdodGdyYXk7XG5cbn1cbi5zdWItaXRlbS1saXN0IHtcbiAgbWF4LWhlaWdodDogMDtcbiAgb3ZlcmZsb3cteTogaGlkZGVuO1xuICB0cmFuc2l0aW9uOiBlYXNlLWluLW91dCA0MDBtcyBtYXgtaGVpZ2h0O1xuICAmLm9wZW5lZCB7XG4gICAgbWF4LWhlaWdodDogMTAwJTtcbiAgICB0cmFuc2l0aW9uOiBlYXNlLWluLW91dCA2MDBtcyBtYXgtaGVpZ2h0O1xuICB9XG59XG5cbi5zdWItaXRlbS1jb250YWluZXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBwYWRkaW5nOiA1cHggMDtcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIGxpZ2h0Z3JheTtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuXG59XG4uc3ViLWl0ZW0tbmFtZSB7XG4gIGZsZXgtYmFzaXM6IDUwJTtcbiAgbGluZS1oZWlnaHQ6IDAuNztcbiAgLm5hbWUge1xuICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgfVxuICAudGltZSB7XG4gICAgZm9udC1zaXplOiAxMnB4O1xuICAgIGNvbG9yOiAjNjY2O1xuICB9XG59XG4uc3ViLWl0ZW0tcHJpY2Uge31cbi5zdWItaXRlbS1jaGVja2JveCB7XG4gIGRpc3BsYXk6IGZsZXg7XG59XG4ubWFpbi1pdGVtLW5hbWUtc3ViLWNvbnRhaW5lciB7XG4gIGRpc3BsYXk6IGZsZXg7IGp1c3RpZnktY29udGVudDogY2VudGVyOyBhbGlnbi1pdGVtczogY2VudGVyO1xuICBpbWcge1xuICAgIG1hcmdpbi1yaWdodDogMTBweDsgd2lkdGg6IDM1cHg7IGhlaWdodDogMzVweDtcbiAgfVxufVxuLm1haW4taXRlbS1uYW1lIHtcbiAgZm9udC1zaXplOiAxNnB4O1xufVxuLm1haW4taXRlbS1hcnJvdyB7XG4gIGNvbG9yOiAjNjY2O1xuICAucmlnaHQtaWNvbiB7XG4gIH1cbn1cbi5kb3duIHtcbiAgdHJhbnNmb3JtOiByb3RhdGUoOTBkZWcpO1xuICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDkwZGVnKTtcbiAgdHJhbnNpdGlvbjogZWFzZS1pbi1vdXQgMzAwbXM7XG59XG4uY29sb3ItNjY2IHtcbiAgY29sb3I6ICM2NjY7XG59XG5cblxuXG4udGV4dC1ib2xkIHtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG59XG5cbiIsIi5pdGVtLWNvbnRhaW5lciB7XG4gIG1hcmdpbi1ib3R0b206IDE1cHg7XG59XG5cbi5tYWluLWl0ZW0tbmFtZS1jb250YWluZXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG4gIHBhZGRpbmc6IDVweCAwO1xuICBib3JkZXItYm90dG9tOiAxcHggc29saWQgbGlnaHRncmF5O1xufVxuXG4uc3ViLWl0ZW0tbGlzdCB7XG4gIG1heC1oZWlnaHQ6IDA7XG4gIG92ZXJmbG93LXk6IGhpZGRlbjtcbiAgdHJhbnNpdGlvbjogZWFzZS1pbi1vdXQgNDAwbXMgbWF4LWhlaWdodDtcbn1cbi5zdWItaXRlbS1saXN0Lm9wZW5lZCB7XG4gIG1heC1oZWlnaHQ6IDEwMCU7XG4gIHRyYW5zaXRpb246IGVhc2UtaW4tb3V0IDYwMG1zIG1heC1oZWlnaHQ7XG59XG5cbi5zdWItaXRlbS1jb250YWluZXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBwYWRkaW5nOiA1cHggMDtcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIGxpZ2h0Z3JheTtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuXG4uc3ViLWl0ZW0tbmFtZSB7XG4gIGZsZXgtYmFzaXM6IDUwJTtcbiAgbGluZS1oZWlnaHQ6IDAuNztcbn1cbi5zdWItaXRlbS1uYW1lIC5uYW1lIHtcbiAgZm9udC1zaXplOiAxNHB4O1xufVxuLnN1Yi1pdGVtLW5hbWUgLnRpbWUge1xuICBmb250LXNpemU6IDEycHg7XG4gIGNvbG9yOiAjNjY2O1xufVxuXG4uc3ViLWl0ZW0tY2hlY2tib3gge1xuICBkaXNwbGF5OiBmbGV4O1xufVxuXG4ubWFpbi1pdGVtLW5hbWUtc3ViLWNvbnRhaW5lciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuLm1haW4taXRlbS1uYW1lLXN1Yi1jb250YWluZXIgaW1nIHtcbiAgbWFyZ2luLXJpZ2h0OiAxMHB4O1xuICB3aWR0aDogMzVweDtcbiAgaGVpZ2h0OiAzNXB4O1xufVxuXG4ubWFpbi1pdGVtLW5hbWUge1xuICBmb250LXNpemU6IDE2cHg7XG59XG5cbi5tYWluLWl0ZW0tYXJyb3cge1xuICBjb2xvcjogIzY2Njtcbn1cbi5kb3duIHtcbiAgdHJhbnNmb3JtOiByb3RhdGUoOTBkZWcpO1xuICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDkwZGVnKTtcbiAgdHJhbnNpdGlvbjogZWFzZS1pbi1vdXQgMzAwbXM7XG59XG5cbi5jb2xvci02NjYge1xuICBjb2xvcjogIzY2Njtcbn1cblxuLnRleHQtYm9sZCB7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xufSJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".item-container {\n  margin-bottom: 15px;\n}\n\n.main-item-name-container {\n  display: flex;\n  justify-content: space-between;\n  padding: 5px 0;\n  border-bottom: 1px solid lightgray;\n}\n\n.sub-item-list {\n  max-height: 0;\n  overflow-y: hidden;\n  transition: ease-in-out 400ms max-height;\n}\n\n.sub-item-list.opened {\n  max-height: 100%;\n  transition: ease-in-out 600ms max-height;\n}\n\n.sub-item-container {\n  display: flex;\n  padding: 15px 20px;\n  border-bottom: 1px solid lightgray;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.sub-item-container:last-child {\n  border-bottom: 0;\n}\n\n.sub-item-container:first-child {\n  border-top: 1px solid lightgray;\n}\n\n.sub-item-name {\n  flex-basis: 50%;\n  line-height: 0.7;\n}\n\n.sub-item-name .name {\n  font-size: 14px;\n}\n\n.sub-item-name .time {\n  font-size: 12px;\n  color: #666;\n}\n\n.sub-item-checkbox {\n  display: flex;\n}\n\n.main-item-name-sub-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.main-item-name-sub-container img {\n  margin-right: 10px;\n  width: 35px;\n  height: 35px;\n}\n\n.main-item-name {\n  font-size: 16px;\n}\n\n.main-item-arrow {\n  color: #666;\n}\n\n.down {\n  transform: rotate(90deg);\n  -webkit-transform: rotate(90deg);\n  transition: ease-in-out 300ms;\n}\n\n.color-666 {\n  color: #666;\n}\n\n.text-bold {\n  font-weight: bold;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hYXNoaXNoYmhhZ3dhdC9Eb2N1bWVudHMvc2FuZGh5YWRlZXAtdWkvc2FuZGh5YWRlZXAtYmVhdXR5LXBhcmxvdXIvc3JjL2FwcC9zaGFyZWQtY29tcG9uZW50cy9zZXJ2aWNlcy1saXN0L3NlcnZpY2VzLWxpc3QucGFnZS5zY3NzIiwic3JjL2FwcC9zaGFyZWQtY29tcG9uZW50cy9zZXJ2aWNlcy1saXN0L3NlcnZpY2VzLWxpc3QucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQU1BO0VBQ0UsbUJBQUE7QUNMRjs7QURRQTtFQUNFLGFBQUE7RUFDQSw4QkFBQTtFQUNBLGNBQUE7RUFDQSxrQ0FBQTtBQ0xGOztBRFFBO0VBQ0UsYUFBQTtFQUNBLGtCQUFBO0VBQ0Esd0NBQUE7QUNMRjs7QURNRTtFQUNFLGdCQUFBO0VBQ0Esd0NBQUE7QUNKSjs7QURRQTtFQUNFLGFBQUE7RUFDQSxrQkFBQTtFQUNBLGtDQUFBO0VBQ0EsOEJBQUE7RUFDQSxtQkFBQTtBQ0xGOztBRE1FO0VBQ0UsZ0JBQUE7QUNKSjs7QURNRTtFQUNFLCtCQUFBO0FDSko7O0FEUUE7RUFDRSxlQUFBO0VBQ0EsZ0JBQUE7QUNMRjs7QURNRTtFQUNFLGVBQUE7QUNKSjs7QURNRTtFQUNFLGVBQUE7RUFDQSxXQUFBO0FDSko7O0FEUUE7RUFDRSxhQUFBO0FDTEY7O0FET0E7RUFDRSxhQUFBO0VBQWUsdUJBQUE7RUFBeUIsbUJBQUE7QUNGMUM7O0FER0U7RUFDRSxrQkFBQTtFQUFvQixXQUFBO0VBQWEsWUFBQTtBQ0NyQzs7QURFQTtFQUNFLGVBQUE7QUNDRjs7QURDQTtFQUNFLFdBQUE7QUNFRjs7QURFQTtFQUNFLHdCQUFBO0VBQ0EsZ0NBQUE7RUFDQSw2QkFBQTtBQ0FGOztBREVBO0VBQ0UsV0FBQTtBQ0NGOztBRElBO0VBQ0UsaUJBQUE7QUNERiIsImZpbGUiOiJzcmMvYXBwL3NoYXJlZC1jb21wb25lbnRzL3NlcnZpY2VzLWxpc3Qvc2VydmljZXMtbGlzdC5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0IFwiLi4vLi4vLi4vc2FuZGh5YWRlZXAtdGhlbWVcIjtcblxuLml0ZW0tbGlzdCB7XG5cbn1cblxuLml0ZW0tY29udGFpbmVyIHtcbiAgbWFyZ2luLWJvdHRvbTogMTVweDtcbn1cblxuLm1haW4taXRlbS1uYW1lLWNvbnRhaW5lciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgcGFkZGluZzogNXB4IDA7XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCBsaWdodGdyYXk7XG5cbn1cbi5zdWItaXRlbS1saXN0IHtcbiAgbWF4LWhlaWdodDogMDtcbiAgb3ZlcmZsb3cteTogaGlkZGVuO1xuICB0cmFuc2l0aW9uOiBlYXNlLWluLW91dCA0MDBtcyBtYXgtaGVpZ2h0O1xuICAmLm9wZW5lZCB7XG4gICAgbWF4LWhlaWdodDogMTAwJTtcbiAgICB0cmFuc2l0aW9uOiBlYXNlLWluLW91dCA2MDBtcyBtYXgtaGVpZ2h0O1xuICB9XG59XG5cbi5zdWItaXRlbS1jb250YWluZXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBwYWRkaW5nOiAxNXB4IDIwcHg7XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCBsaWdodGdyYXk7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgJjpsYXN0LWNoaWxkIHtcbiAgICBib3JkZXItYm90dG9tOiAwO1xuICB9XG4gICY6Zmlyc3QtY2hpbGQge1xuICAgIGJvcmRlci10b3A6IDFweCBzb2xpZCBsaWdodGdyYXk7XG4gIH1cblxufVxuLnN1Yi1pdGVtLW5hbWUge1xuICBmbGV4LWJhc2lzOiA1MCU7XG4gIGxpbmUtaGVpZ2h0OiAwLjc7XG4gIC5uYW1lIHtcbiAgICBmb250LXNpemU6IDE0cHg7XG4gIH1cbiAgLnRpbWUge1xuICAgIGZvbnQtc2l6ZTogMTJweDtcbiAgICBjb2xvcjogIzY2NjtcbiAgfVxufVxuLnN1Yi1pdGVtLXByaWNlIHt9XG4uc3ViLWl0ZW0tY2hlY2tib3gge1xuICBkaXNwbGF5OiBmbGV4O1xufVxuLm1haW4taXRlbS1uYW1lLXN1Yi1jb250YWluZXIge1xuICBkaXNwbGF5OiBmbGV4OyBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjsgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgaW1nIHtcbiAgICBtYXJnaW4tcmlnaHQ6IDEwcHg7IHdpZHRoOiAzNXB4OyBoZWlnaHQ6IDM1cHg7XG4gIH1cbn1cbi5tYWluLWl0ZW0tbmFtZSB7XG4gIGZvbnQtc2l6ZTogMTZweDtcbn1cbi5tYWluLWl0ZW0tYXJyb3cge1xuICBjb2xvcjogIzY2NjtcbiAgLnJpZ2h0LWljb24ge1xuICB9XG59XG4uZG93biB7XG4gIHRyYW5zZm9ybTogcm90YXRlKDkwZGVnKTtcbiAgLXdlYmtpdC10cmFuc2Zvcm06IHJvdGF0ZSg5MGRlZyk7XG4gIHRyYW5zaXRpb246IGVhc2UtaW4tb3V0IDMwMG1zO1xufVxuLmNvbG9yLTY2NiB7XG4gIGNvbG9yOiAjNjY2O1xufVxuXG5cblxuLnRleHQtYm9sZCB7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xufVxuIiwiLml0ZW0tY29udGFpbmVyIHtcbiAgbWFyZ2luLWJvdHRvbTogMTVweDtcbn1cblxuLm1haW4taXRlbS1uYW1lLWNvbnRhaW5lciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgcGFkZGluZzogNXB4IDA7XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCBsaWdodGdyYXk7XG59XG5cbi5zdWItaXRlbS1saXN0IHtcbiAgbWF4LWhlaWdodDogMDtcbiAgb3ZlcmZsb3cteTogaGlkZGVuO1xuICB0cmFuc2l0aW9uOiBlYXNlLWluLW91dCA0MDBtcyBtYXgtaGVpZ2h0O1xufVxuLnN1Yi1pdGVtLWxpc3Qub3BlbmVkIHtcbiAgbWF4LWhlaWdodDogMTAwJTtcbiAgdHJhbnNpdGlvbjogZWFzZS1pbi1vdXQgNjAwbXMgbWF4LWhlaWdodDtcbn1cblxuLnN1Yi1pdGVtLWNvbnRhaW5lciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIHBhZGRpbmc6IDE1cHggMjBweDtcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIGxpZ2h0Z3JheTtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuLnN1Yi1pdGVtLWNvbnRhaW5lcjpsYXN0LWNoaWxkIHtcbiAgYm9yZGVyLWJvdHRvbTogMDtcbn1cbi5zdWItaXRlbS1jb250YWluZXI6Zmlyc3QtY2hpbGQge1xuICBib3JkZXItdG9wOiAxcHggc29saWQgbGlnaHRncmF5O1xufVxuXG4uc3ViLWl0ZW0tbmFtZSB7XG4gIGZsZXgtYmFzaXM6IDUwJTtcbiAgbGluZS1oZWlnaHQ6IDAuNztcbn1cbi5zdWItaXRlbS1uYW1lIC5uYW1lIHtcbiAgZm9udC1zaXplOiAxNHB4O1xufVxuLnN1Yi1pdGVtLW5hbWUgLnRpbWUge1xuICBmb250LXNpemU6IDEycHg7XG4gIGNvbG9yOiAjNjY2O1xufVxuXG4uc3ViLWl0ZW0tY2hlY2tib3gge1xuICBkaXNwbGF5OiBmbGV4O1xufVxuXG4ubWFpbi1pdGVtLW5hbWUtc3ViLWNvbnRhaW5lciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuLm1haW4taXRlbS1uYW1lLXN1Yi1jb250YWluZXIgaW1nIHtcbiAgbWFyZ2luLXJpZ2h0OiAxMHB4O1xuICB3aWR0aDogMzVweDtcbiAgaGVpZ2h0OiAzNXB4O1xufVxuXG4ubWFpbi1pdGVtLW5hbWUge1xuICBmb250LXNpemU6IDE2cHg7XG59XG5cbi5tYWluLWl0ZW0tYXJyb3cge1xuICBjb2xvcjogIzY2Njtcbn1cbi5kb3duIHtcbiAgdHJhbnNmb3JtOiByb3RhdGUoOTBkZWcpO1xuICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDkwZGVnKTtcbiAgdHJhbnNpdGlvbjogZWFzZS1pbi1vdXQgMzAwbXM7XG59XG5cbi5jb2xvci02NjYge1xuICBjb2xvcjogIzY2Njtcbn1cblxuLnRleHQtYm9sZCB7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xufSJdfQ== */");
 
 /***/ }),
 
@@ -289,6 +291,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_service_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../shared-service.service */ "./src/app/shared-service.service.ts");
 /* harmony import */ var _storage_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../storage.service */ "./src/app/shared-components/storage.service.ts");
 /* harmony import */ var _assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../assets/constants/app-constants */ "./src/assets/constants/app-constants.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+
 
 
 
@@ -307,69 +311,64 @@ let ServicesListPage = class ServicesListPage {
         this.show1 = false;
         this.mainServices = [];
         this.services = [];
+        this.subServices = [];
         this.amountPurchased = 0;
         this.selectedServices = [];
     }
     ngOnInit() {
-        this.getMainServices();
+        this.getAllDataAtOnce();
     }
-    //
-    // ngOnChanges(changes: SimpleChanges) {
-    //   this.getMainServices();
-    // }
-    ionViewWillLeave() {
-        this.getMainServices();
+    ngOnChanges(changes) {
+        this.getAllDataAtOnce();
     }
     ionViewWillEnter() {
-        this.getMainServices();
+        this.getAllDataAtOnce();
     }
     onBookAppointment() {
         this.router.navigate(['/schedule-appointment']);
     }
-    getServices() {
-        this.adminService.getAllServices().subscribe(res => this.getAllServicesSuccess(res), error => {
-            this.adminService.commonError(error);
-        });
-    }
-    getMainServices() {
-        this.sharedService.showSpinner.next(true);
-        this.adminService.getAllServiceTypes().subscribe(res => this.getMainServicesSuccess(res), error => {
-            this.adminService.commonError(error);
-        });
-    }
-    getAllServicesSuccess(res) {
-        this.services = res;
-        this.sharedService.showSpinner.next(false);
-        this.storageService.getStoredValue(_assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_6__["appConstants"].SELECTED_SERVICES).then((val) => {
-            if (val && val.length > 0) {
-                this.mainServices = this.mainServices.map((serv) => {
-                    const storedServiceIds = val.map(v => v.id);
-                    serv.services = this.services.filter(v => v.serviceTypeId === serv.id)
-                        .map((service) => {
-                        service.isChecked = !!(storedServiceIds.includes(service.id));
-                        return service;
+    getAllDataAtOnce() {
+        const serviceTypes$ = this.adminService.getAllServiceTypes();
+        const subServices$ = this.adminService.getAllSubService();
+        const services$ = this.adminService.getAllServices();
+        Object(rxjs__WEBPACK_IMPORTED_MODULE_7__["forkJoin"])([serviceTypes$, subServices$, services$]).subscribe(results => {
+            this.mainServices = results[0];
+            this.subServices = results[1];
+            this.services = results[2];
+            this.storageService.getStoredValue(_assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_6__["appConstants"].SELECTED_SERVICES).then((val) => {
+                if (val && val.length > 0) {
+                    this.mainServices = this.mainServices.map((serv) => {
+                        const storedServiceIds = val.map(v => v.id);
+                        serv.services = this.services.filter(v => v.serviceTypeId === serv.id)
+                            .map((service) => {
+                            service.isChecked = !!(storedServiceIds.includes(service.id));
+                            return service;
+                        });
+                        return serv;
                     });
-                    return serv;
-                });
-                this.amountPurchased = val.reduce((a, b) => {
-                    return a + b.price;
-                }, 0);
-                const data = { amountPurchased: this.amountPurchased, selectedServices: val };
-                this.updateAmount.emit(data);
-            }
-            else {
-                this.mainServices = this.mainServices.map((serv) => {
-                    serv.services = this.services.filter(v => v.serviceTypeId === serv.id);
-                    serv.show = false;
-                    return serv;
-                });
-            }
+                    this.amountPurchased = val.reduce((a, b) => {
+                        return a + b.price;
+                    }, 0);
+                    const data = { amountPurchased: this.amountPurchased, selectedServices: val };
+                    this.updateAmount.emit(data);
+                }
+                else {
+                    this.mainServices = this.mainServices.map((main) => {
+                        main.subServices = this.subServices.filter(v => v.serviceType.id === main.id)
+                            .map((sub) => {
+                            sub.services = this.services
+                                .filter(ser => ser.subService && ser.subService.id === sub.id);
+                            return sub;
+                        });
+                        main.services = this.services.filter(ser => ser.serviceType.id === main.id)
+                            .filter(v => !v.subService);
+                        main.show = false;
+                        return main;
+                    });
+                    console.log(this.mainServices, '--------');
+                }
+            });
         });
-    }
-    getMainServicesSuccess(res) {
-        this.mainServices = res;
-        this.sharedService.showSpinner.next(false);
-        this.getServices();
     }
     onSelectServices(service) {
         service.isChecked = !service.isChecked;
@@ -409,6 +408,10 @@ tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
 ], ServicesListPage.prototype, "isRefreshed", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
+], ServicesListPage.prototype, "refreshRate", void 0);
 ServicesListPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'service-list',
