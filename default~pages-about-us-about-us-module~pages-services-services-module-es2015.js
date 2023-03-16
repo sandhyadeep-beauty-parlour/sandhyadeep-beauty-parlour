@@ -9,7 +9,20 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<sandhyadeep-header class=\"z-index-999\"></sandhyadeep-header>\n\n<ion-content>\n    <ion-refresher slot=\"fixed\" (ionRefresh)=\"refreshPage($event)\">\n        <ion-refresher-content pulling-icon=\"arrow-dropdown\" refreshing-spinner=\"circles\">\n\n        </ion-refresher-content>\n    </ion-refresher>\n    <div class=\"page-container\">\n        <div class=\"page-heading\">\n            <div class=\"heading-text\">\n                <b>Services</b>\n            </div>\n        </div>\n        <div style=\"border-bottom: 10px solid #d3d3d37a;\"></div>\n        <service-list [refreshRate]=\"refreshRate\" [isRefreshed]=\"isRefreshed\" (updateAmount)=\"updateData($event)\"></service-list>\n    </div>\n</ion-content>\n<ion-footer class=\"ion-no-border\">\n    <ion-toolbar>\n        <div class=\"appointment-footer\">\n            <div class=\"total-div-container\">\n                <div class=\"total-div\">\n                    <div>Total</div>\n                    <div class=\"total-div-price\">{{selectedServices?.length}} Services</div>\n                </div>\n                <div>\n                    {{amountPurchased}} ₹\n                </div>\n            </div>\n            <div (click)=\"onBookAppointment()\" class=\"default-button\">\n                <button> Book Appointment</button>\n            </div>\n        </div>\n    </ion-toolbar>\n</ion-footer>\n<app-logo-spinner></app-logo-spinner>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<sandhyadeep-header class=\"z-index-999\"></sandhyadeep-header>\n\n<ion-content>\n    <ion-refresher slot=\"fixed\" (ionRefresh)=\"refreshPage($event)\">\n        <ion-refresher-content pulling-icon=\"arrow-dropdown\" refreshing-spinner=\"circles\">\n\n        </ion-refresher-content>\n    </ion-refresher>\n    <div class=\"page-container\">\n        <div class=\"page-heading\">\n            <div class=\"heading-text\">\n                <b>Services</b>\n            </div>\n        </div>\n        <div style=\"border-bottom: 10px solid #d3d3d37a;\"></div>\n        <service-list [refreshRate]=\"refreshRate\" [isRefreshed]=\"isRefreshed\" (updateAmount)=\"updateData($event)\"></service-list>\n    </div>\n</ion-content>\n<ion-footer class=\"ion-no-border\">\n    <ion-toolbar>\n        <div class=\"appointment-footer\">\n            <div class=\"total-div-container\">\n                <div class=\"total-div\">\n                    <div>Total</div>\n                    <div class=\"total-div-price\">{{selectedServices?.length}} Services</div>\n                </div>\n                <div>\n                    {{sharedService?.updateServiceTotal | async}} ₹\n                </div>\n            </div>\n            <div (click)=\"onBookAppointment()\" class=\"default-button\">\n                <button> Book Appointment</button>\n            </div>\n        </div>\n    </ion-toolbar>\n</ion-footer>\n<app-logo-spinner></app-logo-spinner>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/shared-components/search-header-component/search-header-component.page.html":
+/*!***********************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/shared-components/search-header-component/search-header-component.page.html ***!
+  \***********************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"header-container\">\n    <ion-header>\n        <div class=\"search-header-container\">\n           <div class=\"header-back-container\">\n               <div (click)=\"backClicked()\" class=\"header-back\">\n                   <i class=\"fa fa-angle-left\"></i>\n               </div>\n               <div class=\"header-search\">\n                   <ion-searchbar color=\"light\" class=\"search-bar\" placeholder=\"Search\"></ion-searchbar>\n               </div>\n           </div>\n            <div *ngIf=\"!hideProfileIcon\" [routerLink]=\"['/settings']\" class=\"profileIcon\">\n                <img src=\"assets/icon/profile-icon.png\" alt=\"\">\n            </div>\n        </div>\n    </ion-header>\n</div>\n");
 
 /***/ }),
 
@@ -22,7 +35,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"item-list\">\n    <mat-accordion>\n        <ng-container *ngFor=\"let mainService of mainServices; let index = index\">\n            <mat-expansion-panel class=\"mat-elevation-z0 service-list-accordion\">\n                <mat-expansion-panel-header class=\"expansion-header\" [collapsedHeight]=\"'50px'\">\n                    <mat-panel-title>\n                        <div class=\"animate__faster animate__fadeInLeft animate__animated main-item-name-sub-container\">\n                            <img src=\"{{mainService.url}}\" alt=\"\">\n                            <div [class.text-bold]=\"mainService?.show\" class=\"main-item-name\">{{mainService.name}} </div>\n                        </div>\n                    </mat-panel-title>\n                </mat-expansion-panel-header>\n                <div>\n                    <div style=\"padding: 15px\" *ngIf=\"mainService?.services?.length === 0 && mainService?.subServices?.length === 0\">\n                        We dont have any services available\n                    </div>\n                    <ng-container *ngIf=\"mainService.subServices && mainService.subServices.length > 0\" >\n                        <mat-accordion>\n                            <mat-expansion-panel *ngFor=\"let subService of mainService?.subServices\" class=\"mat-elevation-z5\">\n                                <mat-expansion-panel-header [collapsedHeight]=\"'50px'\">\n                                    <mat-panel-title>\n                                        {{subService.name}}\n                                    </mat-panel-title>\n                                </mat-expansion-panel-header>\n                                <div *ngFor=\"let service of subService.services; let index = index\" (click)=\"onSelectServices(service)\" class=\"sub-item-container\">\n                                    <div class=\"sub-item-name\">\n                                        <label class=\"name\">{{service.name}}</label>\n                                        <div class=\"time\"><i\n                                                class=\"fa fa-clock-o\"></i> {{service.duration ? service.duration + ' Minutes' : ''}}\n                                        </div>\n                                    </div>\n                                    <div class=\"sub-item-price\">\n                                        <div class=\"color-666\">Price:</div>\n                                        {{service.price}} ₹\n                                    </div>\n                                    <div class=\"sub-item-checkbox\">\n                                        <mat-checkbox [(ngModel)]=\"service.isChecked\" color=\"primary\"></mat-checkbox>\n                                    </div>\n                                </div>\n                            </mat-expansion-panel>\n                        </mat-accordion>\n                    </ng-container>\n\n<!--                    If No Sub Service is there -->\n                    <ng-container *ngIf=\"mainService.services && mainService.services.length > 0\" >\n                        <div *ngFor=\"let service of mainService.services; let index = index\" (click)=\"onSelectServices(service)\" class=\"sub-item-container\">\n                            <div class=\"sub-item-name\">\n                                <label class=\"name\">{{service.name}}</label>\n                                <div class=\"time\"><i\n                                        class=\"fa fa-clock-o\"></i> {{service.duration ? service.duration + ' Minutes' : ''}}\n                                </div>\n                            </div>\n                            <div class=\"sub-item-price\">\n                                <div class=\"color-666\">Price:</div>\n                                {{service.price}} ₹\n                            </div>\n                            <div class=\"sub-item-checkbox\">\n                                <mat-checkbox [(ngModel)]=\"service.isChecked\" color=\"primary\"></mat-checkbox>\n                            </div>\n                        </div>\n                    </ng-container>\n                </div>\n            </mat-expansion-panel>\n        </ng-container>\n    </mat-accordion>\n</div>\n\n\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"item-list\">\n    <mat-accordion>\n        <ng-container *ngFor=\"let mainService of mainServices; let index = index\">\n            <mat-expansion-panel class=\"mat-elevation-z0 service-list-accordion\">\n                <mat-expansion-panel-header class=\"expansion-header\" [collapsedHeight]=\"'50px'\">\n                    <mat-panel-title>\n                        <div class=\"animate__faster animate__fadeInLeft animate__animated main-item-name-sub-container\">\n                            <img src=\"{{mainService.url}}\" alt=\"\">\n                            <div [class.text-bold]=\"mainService?.show\" class=\"main-item-name\">{{mainService.name}} </div>\n                        </div>\n                    </mat-panel-title>\n                </mat-expansion-panel-header>\n                <div>\n                    <div style=\"padding: 15px\" *ngIf=\"mainService?.services?.length === 0 && mainService?.subServices?.length === 0\">\n                        We dont have any services available\n                    </div>\n                    <ng-container *ngIf=\"mainService.subServices && mainService.subServices.length > 0\" >\n                        <mat-accordion>\n                            <mat-expansion-panel *ngFor=\"let subService of mainService?.subServices\" class=\"mat-elevation-z5\">\n                                <mat-expansion-panel-header [collapsedHeight]=\"'50px'\">\n                                    <mat-panel-title>\n                                        {{subService.name}}\n                                    </mat-panel-title>\n                                </mat-expansion-panel-header>\n                                <div style=\"padding: 15px\" *ngIf=\"subService.services?.length === 0\">\n                                    We dont have any services available\n                                </div>\n                                <div *ngFor=\"let service of subService.services; let index = index\" (click)=\"onSelectServices(service)\" class=\"sub-item-container\">\n                                    <div class=\"sub-item-name\">\n                                        <label class=\"name\">{{service.name}}</label>\n                                        <div class=\"time\"><i\n                                                class=\"fa fa-clock-o\"></i> {{service.duration ? service.duration + ' Minutes' : ''}}\n                                        </div>\n                                    </div>\n                                    <div class=\"sub-item-price\">\n                                        <div class=\"color-666\">Price:</div>\n                                        {{service.price}} ₹\n                                    </div>\n                                    <div class=\"sub-item-checkbox\">\n                                        <mat-checkbox [(ngModel)]=\"service.isChecked\" color=\"primary\"></mat-checkbox>\n                                    </div>\n                                </div>\n                            </mat-expansion-panel>\n                        </mat-accordion>\n                    </ng-container>\n\n<!--                    If No Sub Service is there -->\n                    <ng-container *ngIf=\"mainService.services && mainService.services.length > 0\" >\n                        <div *ngFor=\"let service of mainService.services; let index = index\" (click)=\"onSelectServices(service)\" class=\"sub-item-container\">\n                            <div class=\"sub-item-name\">\n                                <label class=\"name\">{{service.name}}</label>\n                                <div class=\"time\"><i\n                                        class=\"fa fa-clock-o\"></i> {{service.duration ? service.duration + ' Minutes' : ''}}\n                                </div>\n                            </div>\n                            <div class=\"sub-item-price\">\n                                <div class=\"color-666\">Price:</div>\n                                {{service.price}} ₹\n                            </div>\n                            <div class=\"sub-item-checkbox\">\n                                <mat-checkbox [(ngModel)]=\"service.isChecked\" color=\"primary\"></mat-checkbox>\n                            </div>\n                        </div>\n                    </ng-container>\n                </div>\n            </mat-expansion-panel>\n        </ng-container>\n    </mat-accordion>\n</div>\n\n\n\n");
 
 /***/ }),
 
@@ -166,11 +179,14 @@ let ServicesPage = class ServicesPage {
         this.amountPurchased = 0;
         this.selectedServices = [];
         this.isRefreshed = false;
-        this.refreshRate = Math.random();
+        this.refreshRate = 0;
     }
     ionViewWillEnter() {
         this.sharedService.showSearchBox.next(true);
         this.refreshRate = Math.random();
+    }
+    ionViewDidEnter() {
+        this.selectedServices = this.storageService.getStorageValue(_assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_6__["appConstants"].SELECTED_SERVICES);
     }
     ionViewWillLeave() {
         this.sharedService.showSearchBox.next(false);
@@ -178,21 +194,22 @@ let ServicesPage = class ServicesPage {
     refreshPage(event) {
         setTimeout(() => {
             this.isRefreshed = !this.isRefreshed;
-            this.amountPurchased = 0;
             this.selectedServices = [];
             event.target.complete();
         }, 1500);
     }
     onBookAppointment() {
-        this.storageService.getStoredValue(_assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_6__["appConstants"].SELECTED_SERVICES).then((services) => {
-            this.sharedService.updateCart.next(services);
-            this.router.navigate(['/schedule-appointment']);
-        });
+        const storedServices = this.storageService.getStorageValue(_assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_6__["appConstants"].SELECTED_SERVICES);
+        if (!storedServices || storedServices.length === 0) {
+            this.sharedService.presentToast('Please add service to Book Appointment', 'error');
+            return;
+        }
+        this.sharedService.updateCart.next(storedServices);
+        this.router.navigate(['/schedule-appointment']);
     }
     updateData(data) {
         this.storageService.storeValue(_assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_6__["appConstants"].SELECTED_SERVICES, data.selectedServices);
         this.selectedServices = data.selectedServices;
-        this.amountPurchased = data.amountPurchased;
     }
 };
 ServicesPage.ctorParameters = () => [
@@ -209,6 +226,115 @@ ServicesPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     }),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_components_storage_service__WEBPACK_IMPORTED_MODULE_5__["StorageService"], _shared_service_service__WEBPACK_IMPORTED_MODULE_4__["SharedServiceService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"]])
 ], ServicesPage);
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared-components/search-header-component/search-header-component.module.ts":
+/*!*********************************************************************************************!*\
+  !*** ./src/app/shared-components/search-header-component/search-header-component.module.ts ***!
+  \*********************************************************************************************/
+/*! exports provided: SearchHeaderComponentModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchHeaderComponentModule", function() { return SearchHeaderComponentModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
+/* harmony import */ var _search_header_component_page__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./search-header-component.page */ "./src/app/shared-components/search-header-component/search-header-component.page.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
+
+
+
+
+
+
+
+let SearchHeaderComponentModule = class SearchHeaderComponentModule {
+};
+SearchHeaderComponentModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        imports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatFormFieldModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatIconModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatInputModule"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_7__["RouterModule"],
+        ],
+        exports: [
+            _search_header_component_page__WEBPACK_IMPORTED_MODULE_5__["SearchHeaderComponentPage"]
+        ],
+        declarations: [_search_header_component_page__WEBPACK_IMPORTED_MODULE_5__["SearchHeaderComponentPage"]]
+    })
+], SearchHeaderComponentModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared-components/search-header-component/search-header-component.page.scss":
+/*!*********************************************************************************************!*\
+  !*** ./src/app/shared-components/search-header-component/search-header-component.page.scss ***!
+  \*********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".header-container {\n  padding-bottom: 3px;\n  z-index: 999;\n  background: linear-gradient(305deg, #BD1E51 2%, #265791 63%);\n}\n.header-container ion-header {\n  background: white;\n}\n.header-container .search-header-container {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding-right: 10px;\n}\n.header-container .search-header-container .header-back-container {\n  flex: auto;\n  display: flex;\n}\n.header-back {\n  padding: 15px;\n  font-size: 30px;\n  color: #666;\n  display: flex;\n}\n.header-search {\n  display: flex;\n  width: 80%;\n  justify-content: center;\n  align-items: center;\n}\n.icons-list {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n.icons-list .icon-container {\n  margin: 0 5px;\n}\n.icons-list .icon-container.cart-icon {\n  margin: 0 15px 0 5px;\n}\n.icons-list .icon-container i {\n  font-size: 22px;\n  color: #BD1E51;\n}\n.profileIcon img {\n  width: 40px;\n  height: 40px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  overflow: hidden;\n  border-radius: 50%;\n  border: 2px solid #265791;\n  padding: 2px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9hYXNoaXNoYmhhZ3dhdC9Eb2N1bWVudHMvc2FuZGh5YWRlZXAtdWkvc2FuZGh5YWRlZXAtYmVhdXR5LXBhcmxvdXIvc3JjL2FwcC9zaGFyZWQtY29tcG9uZW50cy9zZWFyY2gtaGVhZGVyLWNvbXBvbmVudC9zZWFyY2gtaGVhZGVyLWNvbXBvbmVudC5wYWdlLnNjc3MiLCJzcmMvYXBwL3NoYXJlZC1jb21wb25lbnRzL3NlYXJjaC1oZWFkZXItY29tcG9uZW50L3NlYXJjaC1oZWFkZXItY29tcG9uZW50LnBhZ2Uuc2NzcyIsIi9Vc2Vycy9hYXNoaXNoYmhhZ3dhdC9Eb2N1bWVudHMvc2FuZGh5YWRlZXAtdWkvc2FuZGh5YWRlZXAtYmVhdXR5LXBhcmxvdXIvc3JjL3NhbmRoeWFkZWVwLXRoZW1lLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUE7RUFDRSxtQkFBQTtFQUNBLFlBQUE7RUFDQSw0REFBQTtBQ0RGO0FER0U7RUFDRSxpQkFBQTtBQ0RKO0FESUU7RUFDRSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSw4QkFBQTtFQUNBLG1CQUFBO0FDRko7QURJSTtFQUNFLFVBQUE7RUFDQSxhQUFBO0FDRk47QURPQTtFQUNFLGFBQUE7RUFDQSxlQUFBO0VBQ0EsV0FBQTtFQUNBLGFBQUE7QUNKRjtBRE9BO0VBQ0UsYUFBQTtFQUNBLFVBQUE7RUFDQSx1QkFBQTtFQUNBLG1CQUFBO0FDSkY7QURXQTtFQUNFLGFBQUE7RUFDQSxtQkFBQTtFQUNBLDhCQUFBO0FDVEY7QURXRTtFQUNFLGFBQUE7QUNUSjtBRFdJO0VBQ0Usb0JBQUE7QUNUTjtBRFlJO0VBQ0UsZUFBQTtFQUNBLGNFbkRVO0FEeUNoQjtBRGdCRTtFQUNFLFdBQUE7RUFDQSxZQUFBO0VBQ0Esb0JBQUE7S0FBQSxpQkFBQTtFQUNBLGdCQUFBO0VBQ0Esa0JBQUE7RUFDQSx5QkFBQTtFQUNBLFlBQUE7QUNiSiIsImZpbGUiOiJzcmMvYXBwL3NoYXJlZC1jb21wb25lbnRzL3NlYXJjaC1oZWFkZXItY29tcG9uZW50L3NlYXJjaC1oZWFkZXItY29tcG9uZW50LnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgXCIuLi8uLi8uLi9zYW5kaHlhZGVlcC10aGVtZVwiO1xuXG4uaGVhZGVyLWNvbnRhaW5lciB7XG4gIHBhZGRpbmctYm90dG9tOiAzcHg7XG4gIHotaW5kZXg6IDk5OTtcbiAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDMwNWRlZywgJHByaW1hcnktY29sb3IgMiUsICRzZWNvbmRhcnktY29sb3IgNjMlKTtcblxuICBpb24taGVhZGVyIHtcbiAgICBiYWNrZ3JvdW5kOiB3aGl0ZTtcbiAgfVxuXG4gIC5zZWFyY2gtaGVhZGVyLWNvbnRhaW5lciB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgICBwYWRkaW5nLXJpZ2h0OiAxMHB4O1xuXG4gICAgLmhlYWRlci1iYWNrLWNvbnRhaW5lciB7XG4gICAgICBmbGV4OiBhdXRvO1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICB9XG4gIH1cbn1cblxuLmhlYWRlci1iYWNrIHtcbiAgcGFkZGluZzogMTVweDtcbiAgZm9udC1zaXplOiAzMHB4O1xuICBjb2xvcjogIzY2NjtcbiAgZGlzcGxheTogZmxleDtcbn1cblxuLmhlYWRlci1zZWFyY2gge1xuICBkaXNwbGF5OiBmbGV4O1xuICB3aWR0aDogODAlO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcblxuICAuc2VhcmNoLWJhciB7XG5cbiAgfVxufVxuXG4uaWNvbnMtbGlzdCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcblxuICAuaWNvbi1jb250YWluZXIge1xuICAgIG1hcmdpbjogMCA1cHg7XG5cbiAgICAmLmNhcnQtaWNvbiB7XG4gICAgICBtYXJnaW46IDAgMTVweCAwIDVweDtcbiAgICB9XG5cbiAgICBpIHtcbiAgICAgIGZvbnQtc2l6ZTogMjJweDtcbiAgICAgIGNvbG9yOiAkcHJpbWFyeS1jb2xvclxuICAgIH1cbiAgfVxufVxuXG4ucHJvZmlsZUljb24ge1xuICBpbWcge1xuICAgIHdpZHRoOiA0MHB4O1xuICAgIGhlaWdodDogNDBweDtcbiAgICBvYmplY3QtZml0OiBjb3ZlcjtcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgIGJvcmRlci1yYWRpdXM6IDUwJTtcbiAgICBib3JkZXI6IDJweCBzb2xpZCAkc2Vjb25kYXJ5LWNvbG9yO1xuICAgIHBhZGRpbmc6IDJweDtcbiAgfVxufVxuIiwiLmhlYWRlci1jb250YWluZXIge1xuICBwYWRkaW5nLWJvdHRvbTogM3B4O1xuICB6LWluZGV4OiA5OTk7XG4gIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgzMDVkZWcsICNCRDFFNTEgMiUsICMyNjU3OTEgNjMlKTtcbn1cbi5oZWFkZXItY29udGFpbmVyIGlvbi1oZWFkZXIge1xuICBiYWNrZ3JvdW5kOiB3aGl0ZTtcbn1cbi5oZWFkZXItY29udGFpbmVyIC5zZWFyY2gtaGVhZGVyLWNvbnRhaW5lciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgcGFkZGluZy1yaWdodDogMTBweDtcbn1cbi5oZWFkZXItY29udGFpbmVyIC5zZWFyY2gtaGVhZGVyLWNvbnRhaW5lciAuaGVhZGVyLWJhY2stY29udGFpbmVyIHtcbiAgZmxleDogYXV0bztcbiAgZGlzcGxheTogZmxleDtcbn1cblxuLmhlYWRlci1iYWNrIHtcbiAgcGFkZGluZzogMTVweDtcbiAgZm9udC1zaXplOiAzMHB4O1xuICBjb2xvcjogIzY2NjtcbiAgZGlzcGxheTogZmxleDtcbn1cblxuLmhlYWRlci1zZWFyY2gge1xuICBkaXNwbGF5OiBmbGV4O1xuICB3aWR0aDogODAlO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cbi5pY29ucy1saXN0IHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xufVxuLmljb25zLWxpc3QgLmljb24tY29udGFpbmVyIHtcbiAgbWFyZ2luOiAwIDVweDtcbn1cbi5pY29ucy1saXN0IC5pY29uLWNvbnRhaW5lci5jYXJ0LWljb24ge1xuICBtYXJnaW46IDAgMTVweCAwIDVweDtcbn1cbi5pY29ucy1saXN0IC5pY29uLWNvbnRhaW5lciBpIHtcbiAgZm9udC1zaXplOiAyMnB4O1xuICBjb2xvcjogI0JEMUU1MTtcbn1cblxuLnByb2ZpbGVJY29uIGltZyB7XG4gIHdpZHRoOiA0MHB4O1xuICBoZWlnaHQ6IDQwcHg7XG4gIG9iamVjdC1maXQ6IGNvdmVyO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBib3JkZXItcmFkaXVzOiA1MCU7XG4gIGJvcmRlcjogMnB4IHNvbGlkICMyNjU3OTE7XG4gIHBhZGRpbmc6IDJweDtcbn0iLCIvLyBwcmV2aW91cyBUaGVtZVxuLy8kcHJpbWFyeS1jb2xvcjogI2U5NWM4Zjtcbi8vJHNlY29uZGFyeS1jb2xvcjogIzYxNGQ3ZjtcblxuLy8gTmV3IFRoZW1lXG4kcHJpbWFyeS1jb2xvcjogI0JEMUU1MTtcbiRzZWNvbmRhcnktY29sb3I6ICMyNjU3OTE7XG5cbiRyZWd1bGFyLWZvbnQtc2l6ZTogMTRweDtcbiRmb250LXNpemUtMTogMTZweDtcbiRoZWFkZXItc2l6ZTogMjBweDtcbiRmb250LXNpemUtMzogMzBweDtcblxuJGJ1dHRvbi1oZWlnaHQ6IDQ1cHg7XG5cbiJdfQ== */");
+
+/***/ }),
+
+/***/ "./src/app/shared-components/search-header-component/search-header-component.page.ts":
+/*!*******************************************************************************************!*\
+  !*** ./src/app/shared-components/search-header-component/search-header-component.page.ts ***!
+  \*******************************************************************************************/
+/*! exports provided: SearchHeaderComponentPage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchHeaderComponentPage", function() { return SearchHeaderComponentPage; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
+
+
+
+
+let SearchHeaderComponentPage = class SearchHeaderComponentPage {
+    constructor(navCtrl, location) {
+        this.navCtrl = navCtrl;
+        this.location = location;
+        this.hideProfileIcon = false;
+    }
+    ngOnInit() { }
+    backClicked() {
+        this.navCtrl.back();
+    }
+};
+SearchHeaderComponentPage.ctorParameters = () => [
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["NavController"] },
+    { type: _angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"] }
+];
+SearchHeaderComponentPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'search-header',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./search-header-component.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/shared-components/search-header-component/search-header-component.page.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./search-header-component.page.scss */ "./src/app/shared-components/search-header-component/search-header-component.page.scss")).default]
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_3__["NavController"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"]])
+], SearchHeaderComponentPage);
 
 
 
@@ -314,15 +440,35 @@ let ServicesListPage = class ServicesListPage {
         this.subServices = [];
         this.amountPurchased = 0;
         this.selectedServices = [];
+        this.apiCalled = 0;
     }
     ngOnInit() {
-        this.getAllDataAtOnce();
+        if (this.apiCalled === 0) {
+            this.apiCalled = this.apiCalled + 1;
+            this.getAllDataAtOnce();
+        }
     }
     ngOnChanges(changes) {
-        this.getAllDataAtOnce();
+        for (const propName in changes) {
+            if (changes.hasOwnProperty(propName)) {
+                switch (propName) {
+                    case 'refreshRate': {
+                        setTimeout(() => {
+                            if (this.apiCalled === 0) {
+                                this.apiCalled = this.apiCalled + 1;
+                                this.getAllDataAtOnce();
+                            }
+                        }, 500);
+                    }
+                }
+            }
+        }
     }
     ionViewWillEnter() {
-        this.getAllDataAtOnce();
+        if (this.apiCalled === 0) {
+            this.apiCalled = this.apiCalled + 1;
+            this.getAllDataAtOnce();
+        }
     }
     onBookAppointment() {
         this.router.navigate(['/schedule-appointment']);
@@ -332,64 +478,80 @@ let ServicesListPage = class ServicesListPage {
         const subServices$ = this.adminService.getAllSubService();
         const services$ = this.adminService.getAllServices();
         Object(rxjs__WEBPACK_IMPORTED_MODULE_7__["forkJoin"])([serviceTypes$, subServices$, services$]).subscribe(results => {
+            this.apiCalled = this.apiCalled + 1;
             this.mainServices = results[0];
             this.subServices = results[1];
             this.services = results[2];
-            this.storageService.getStoredValue(_assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_6__["appConstants"].SELECTED_SERVICES).then((val) => {
-                if (val && val.length > 0) {
-                    this.mainServices = this.mainServices.map((serv) => {
-                        const storedServiceIds = val.map(v => v.id);
-                        serv.services = this.services.filter(v => v.serviceTypeId === serv.id)
-                            .map((service) => {
-                            service.isChecked = !!(storedServiceIds.includes(service.id));
-                            return service;
-                        });
-                        return serv;
+            const selectedServices = this.storageService.getStorageValue(_assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_6__["appConstants"].SELECTED_SERVICES);
+            const selectedServiceIds = selectedServices && selectedServices.length ?
+                selectedServices.map(v => v.id) : [];
+            this.mainServices = this.mainServices.map((main) => {
+                main.subServices = this.subServices.filter(v => v.serviceType.id === main.id)
+                    .map((sub) => {
+                    sub.services = this.services
+                        .filter(ser => ser.subService && ser.subService.id === sub.id)
+                        .map((service) => {
+                        service.isChecked = !!selectedServiceIds.includes(service.id);
+                        return service;
                     });
-                    this.amountPurchased = val.reduce((a, b) => {
-                        return a + b.price;
-                    }, 0);
-                    const data = { amountPurchased: this.amountPurchased, selectedServices: val };
-                    this.updateAmount.emit(data);
-                }
-                else {
-                    this.mainServices = this.mainServices.map((main) => {
-                        main.subServices = this.subServices.filter(v => v.serviceType.id === main.id)
-                            .map((sub) => {
-                            sub.services = this.services
-                                .filter(ser => ser.subService && ser.subService.id === sub.id);
-                            return sub;
-                        });
-                        main.services = this.services.filter(ser => ser.serviceType.id === main.id)
-                            .filter(v => !v.subService);
-                        main.show = false;
-                        return main;
-                    });
-                    console.log(this.mainServices, '--------');
-                }
+                    return sub;
+                });
+                main.services = this.services
+                    .filter(ser => ser.serviceType.id === main.id)
+                    .filter(v => !v.subService)
+                    .map((service) => {
+                    service.isChecked = !!selectedServiceIds.includes(service.id);
+                    return service;
+                });
+                main.show = false;
+                return main;
             });
+            this.amountPurchased = this.calculateTotalAmount();
+            this.sharedService.updateServiceTotal.next(this.amountPurchased);
         });
     }
-    onSelectServices(service) {
-        service.isChecked = !service.isChecked;
-        this.amountPurchased = this.mainServices.reduce((acc, first) => {
-            const servicePrice = first.services.reduce((acc2, second) => {
+    calculateTotalAmount() {
+        return this.mainServices.reduce((acc, first) => {
+            const onlyServicePrice = first.services.reduce((acc2, second) => {
                 if (second.isChecked) {
                     acc2 = acc2 + parseInt(second.price, 10);
                 }
                 return acc2;
             }, 0);
-            acc = parseInt(acc, 10) + parseInt(servicePrice, 10);
+            const subServiceServicesPrice = first.subServices.reduce((acc2, subServ) => {
+                if (subServ && subServ.services && subServ.services.length > 0) {
+                    subServ.services.filter(v => v.isChecked).forEach((val) => {
+                        acc2 = acc2 + parseInt(val.price, 10);
+                    });
+                }
+                return acc2;
+            }, 0);
+            acc = parseInt(acc, 10) + parseInt(onlyServicePrice, 10) + parseInt(subServiceServicesPrice, 10);
             return acc;
         }, 0);
+    }
+    onSelectServices(service) {
+        service.isChecked = !service.isChecked;
+        this.amountPurchased = this.calculateTotalAmount();
         this.selectedServices = this.mainServices.reduce((acc, first) => {
             let selectedServices = [];
             selectedServices = first.services.filter(v => v.isChecked);
             if (selectedServices.length > 0) {
                 acc.push(selectedServices);
             }
+            if (first.subServices && first.subServices.length > 0) {
+                selectedServices = [];
+                selectedServices = first.subServices.reduce((acc2, subServ) => {
+                    if (subServ && subServ.services && subServ.services.length > 0) {
+                        acc2 = acc2.concat(subServ.services.filter(v => v.isChecked));
+                    }
+                    return acc2;
+                }, []);
+                acc = acc.concat(selectedServices);
+            }
             return acc;
         }, []);
+        this.sharedService.updateServiceTotal.next(this.amountPurchased);
         const data = { amountPurchased: this.amountPurchased, selectedServices: [].concat.apply([], this.selectedServices) };
         this.updateAmount.emit(data);
     }
@@ -418,7 +580,8 @@ ServicesListPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./services-list.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/shared-components/services-list/services-list.page.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./services-list.page.scss */ "./src/app/shared-components/services-list/services-list.page.scss")).default]
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_storage_service__WEBPACK_IMPORTED_MODULE_5__["StorageService"], _shared_service_service__WEBPACK_IMPORTED_MODULE_4__["SharedServiceService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"]])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_storage_service__WEBPACK_IMPORTED_MODULE_5__["StorageService"], _shared_service_service__WEBPACK_IMPORTED_MODULE_4__["SharedServiceService"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _api_service__WEBPACK_IMPORTED_MODULE_3__["ApiService"]])
 ], ServicesListPage);
 
 

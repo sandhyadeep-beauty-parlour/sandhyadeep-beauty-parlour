@@ -141,12 +141,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _api_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../api.service */ "./src/app/api.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _shared_service_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../shared-service.service */ "./src/app/shared-service.service.ts");
+
 
 
 
 
 let ApplyCouponPage = class ApplyCouponPage {
-    constructor(adminService, router) {
+    constructor(sharedService, adminService, router) {
+        this.sharedService = sharedService;
         this.adminService = adminService;
         this.router = router;
         this.totalCouponList = [];
@@ -157,6 +160,10 @@ let ApplyCouponPage = class ApplyCouponPage {
     }
     ngOnInit() {
         this.getCoupons();
+        this.sharedService.showBackIcon.next(true);
+    }
+    ionViewWillEnter() {
+        this.sharedService.showBackIcon.next(true);
     }
     getCoupons() {
         this.adminService.getCoupons().subscribe(res => this.getMainServicesSuccess(res), error => {
@@ -184,6 +191,7 @@ let ApplyCouponPage = class ApplyCouponPage {
     }
 };
 ApplyCouponPage.ctorParameters = () => [
+    { type: _shared_service_service__WEBPACK_IMPORTED_MODULE_4__["SharedServiceService"] },
     { type: _api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
 ];
@@ -193,7 +201,7 @@ ApplyCouponPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./apply-coupon.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/apply-coupon/apply-coupon.page.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./apply-coupon.page.scss */ "./src/app/pages/apply-coupon/apply-coupon.page.scss")).default]
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_service_service__WEBPACK_IMPORTED_MODULE_4__["SharedServiceService"], _api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
 ], ApplyCouponPage);
 
 

@@ -259,11 +259,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _shared_service_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ../../shared-service.service */
+    "./src/app/shared-service.service.ts");
 
     var ApplyCouponPage = /*#__PURE__*/function () {
-      function ApplyCouponPage(adminService, router) {
+      function ApplyCouponPage(sharedService, adminService, router) {
         _classCallCheck(this, ApplyCouponPage);
 
+        this.sharedService = sharedService;
         this.adminService = adminService;
         this.router = router;
         this.totalCouponList = [];
@@ -277,6 +284,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "ngOnInit",
         value: function ngOnInit() {
           this.getCoupons();
+          this.sharedService.showBackIcon.next(true);
+        }
+      }, {
+        key: "ionViewWillEnter",
+        value: function ionViewWillEnter() {
+          this.sharedService.showBackIcon.next(true);
         }
       }, {
         key: "getCoupons",
@@ -327,6 +340,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     ApplyCouponPage.ctorParameters = function () {
       return [{
+        type: _shared_service_service__WEBPACK_IMPORTED_MODULE_4__["SharedServiceService"]
+      }, {
         type: _api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"]
       }, {
         type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
@@ -341,7 +356,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./apply-coupon.page.scss */
       "./src/app/pages/apply-coupon/apply-coupon.page.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])], ApplyCouponPage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_service_service__WEBPACK_IMPORTED_MODULE_4__["SharedServiceService"], _api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])], ApplyCouponPage);
     /***/
   },
 

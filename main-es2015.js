@@ -751,7 +751,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"header-container\">\n  <ion-header>\n    <div style=\"display: flex; align-items: center; justify-content: space-between; margin-right: 10px; height: 65px\">\n      <div style=\"display: flex; align-items: center; justify-content: space-between;\">\n        <div *ngIf=\"showBackIcon\" (click)=\"backClicked()\" class=\"header-back\">\n          <i class=\"fa fa-angle-left\"></i>\n        </div>\n        <div *ngIf=\"!showSearchBox\" [routerLink]=\"['/feed']\" style=\"width: 65px; overflow: hidden; display: inline-block;\">\n          <img src=\"/assets/new-theme/Sandhyadeep_logo.png\">\n        </div>\n        <ng-container *ngIf=\"showSearchBox\">\n          <div style=\"width: 230px\">\n            <ion-searchbar [(ngModel)]=\"searchTerm\" (ionInput)=\"setFilteredItems($event)\"></ion-searchbar>\n          </div>\n        </ng-container>\n        <div *ngIf=\"!showSearchBox\" class=\"logo-container\">\n          <div class=\"logo-text\">\n            Sandhyadeep\n          </div>\n          <div class=\"slogan-text\">\n            Have a hair affair with us\n          </div>\n        </div>\n      </div>\n      <div style=\"display: flex; justify-content: space-between; align-items: center;\">\n        <div *ngIf=\"cartDetails && cartDetails.length > 0\" class=\"demo-section\">\n          <mat-icon color=\"primary\" matBadge=\"{{cartDetails.length}}\" matBadgeColor=\"warn\">shopping_cart</mat-icon>\n        </div>\n        <div *ngIf=\"!hideProfileIcon\" [routerLink]=\"['/settings']\" class=\"profileIcon\">\n          <img src=\"assets/icon/profile-icon.png\" alt=\"\">\n        </div>\n      </div>\n\n<!--      <div style=\"display: flex; align-items: center; justify-content: space-between;\">-->\n<!--        <div style=\"margin: 0 5px; position: relative;\">-->\n<!--          <i style=\"font-size: 22px; color: $primary-color\" class=\"fa fa-bell\"></i>-->\n<!--&lt;!&ndash;          <span style=\"padding: 3px 7px; font-weight: 700; border-radius: 50%; border: 1px solid; font-size: 10px; position: absolute; left: 25%; top: -7px; background: $secondary-color; color: white;\">99</span>&ndash;&gt;-->\n<!--        </div>-->\n<!--        <div style=\"margin: 0 5px\">-->\n<!--          <i style=\"font-size: 22px; color: $primary-color\" class=\"fa fa-search\"></i>-->\n<!--        </div>-->\n<!--        <div style=\"margin: 0 25px 0 5px; position: relative;\">-->\n<!--          <i style=\"font-size: 22px; color: $primary-color\" class=\"fa fa-shopping-cart\"></i>-->\n<!--          <span style=\"padding: 3px 9px; font-weight: 700; border-radius: 50%; border: 1px solid; font-size: 10px; position: absolute; left: 40%; top: -7px; background: $secondary-color; color: white;\">2</span>-->\n<!--        </div>-->\n<!--      </div>-->\n    </div>\n  </ion-header>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"header-container\">\n  <ion-header>\n    <div style=\"display: flex; align-items: center; justify-content: space-between; margin-right: 10px; height: 65px\">\n      <div style=\"display: flex; align-items: center; justify-content: space-between;\">\n        <div *ngIf=\"showBackIcon\" (click)=\"backClicked()\" class=\"header-back\">\n          <i class=\"fa fa-angle-left\"></i>\n        </div>\n        <div *ngIf=\"!showSearchBox\" [routerLink]=\"['/feed']\" style=\"width: 65px; overflow: hidden; display: inline-block;\">\n          <img src=\"/assets/new-theme/Sandhyadeep_logo.png\">\n        </div>\n        <ng-container *ngIf=\"showSearchBox\">\n          <div style=\"width: 230px\">\n            <ion-searchbar [(ngModel)]=\"searchTerm\" (ionInput)=\"setFilteredItems($event)\"></ion-searchbar>\n          </div>\n        </ng-container>\n        <div *ngIf=\"!showSearchBox\" class=\"logo-container\">\n          <div class=\"logo-text\">\n            Sandhyadeep\n          </div>\n          <div class=\"slogan-text\">\n            Have a hair affair with us\n          </div>\n        </div>\n      </div>\n      <div style=\"display: flex; justify-content: space-between; align-items: center;\">\n        <div *ngIf=\"cartDetails && cartDetails.length > 0\" class=\"demo-section\">\n          <mat-icon [routerLink]=\"['/schedule-appointment']\"  color=\"primary\" matBadge=\"{{cartDetails.length}}\" matBadgeColor=\"warn\">shopping_cart</mat-icon>\n        </div>\n        <div *ngIf=\"!hideProfileIcon\" [routerLink]=\"['/settings']\" class=\"profileIcon\">\n          <img src=\"assets/icon/profile-icon.png\" alt=\"\">\n        </div>\n      </div>\n    </div>\n  </ion-header>\n</div>\n");
 
 /***/ }),
 
@@ -1339,12 +1339,12 @@ const routes = [
     {
         path: 'services',
         canActivate: [_shared_components_authentication_auth_guards_service__WEBPACK_IMPORTED_MODULE_3__["LoginGuard"]],
-        loadChildren: () => Promise.all(/*! import() | pages-services-services-module */[__webpack_require__.e("default~pages-about-us-about-us-module~pages-services-services-module"), __webpack_require__.e("pages-services-services-module")]).then(__webpack_require__.bind(null, /*! ./pages/services/services.module */ "./src/app/pages/services/services.module.ts")).then((e) => e.ServicePageModule)
+        loadChildren: () => __webpack_require__.e(/*! import() | pages-services-services-module */ "default~pages-about-us-about-us-module~pages-services-services-module").then(__webpack_require__.bind(null, /*! ./pages/services/services.module */ "./src/app/pages/services/services.module.ts")).then((e) => e.ServicePageModule)
     },
     {
         path: 'about-us',
         canActivate: [_shared_components_authentication_auth_guards_service__WEBPACK_IMPORTED_MODULE_3__["LoginGuard"]],
-        loadChildren: () => Promise.all(/*! import() | pages-about-us-about-us-module */[__webpack_require__.e("default~pages-about-us-about-us-module~pages-products-products-module"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-services-services-module"), __webpack_require__.e("common"), __webpack_require__.e("pages-about-us-about-us-module")]).then(__webpack_require__.bind(null, /*! ./pages/about-us/about-us.module */ "./src/app/pages/about-us/about-us.module.ts")).then((e) => e.AboutUsPageModule)
+        loadChildren: () => Promise.all(/*! import() | pages-about-us-about-us-module */[__webpack_require__.e("default~pages-about-us-about-us-module~pages-services-services-module"), __webpack_require__.e("default~pages-about-us-about-us-module~pages-products-products-module"), __webpack_require__.e("common"), __webpack_require__.e("pages-about-us-about-us-module")]).then(__webpack_require__.bind(null, /*! ./pages/about-us/about-us.module */ "./src/app/pages/about-us/about-us.module.ts")).then((e) => e.AboutUsPageModule)
     },
     {
         path: 'portfolio',
@@ -2053,8 +2053,11 @@ let HeaderComponentPage = class HeaderComponentPage {
         });
     }
     backClicked() {
-        // this.navCtrl.back();
-        this.router.navigate(['admin-panel']);
+        if (this.router.url === '/feed') {
+            this.router.navigate(['admin-panel']);
+            return;
+        }
+        this.navCtrl.back();
     }
 };
 HeaderComponentPage.ctorParameters = () => [
@@ -2269,6 +2272,8 @@ let SharedServiceService = class SharedServiceService {
         this.showSkeletonSpinner = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](false);
         this.updateCart = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
         this.onLoadToken = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]('');
+        this.updateServiceTotal = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
+        this.selectedServicesCount = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
     }
     presentToast(displayMessage, status) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
@@ -2319,12 +2324,7 @@ let SharedServiceService = class SharedServiceService {
         return localStorage.getItem('franchiseId');
     }
     isFranchise() {
-        if (this.getRole() === 'franchise') {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return this.getRole() === 'franchise';
     }
 };
 SharedServiceService.ctorParameters = () => [
