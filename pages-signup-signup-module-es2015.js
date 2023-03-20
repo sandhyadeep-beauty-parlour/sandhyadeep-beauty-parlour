@@ -143,9 +143,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let SignupPage = class SignupPage {
-    constructor(storageService, adminService, alertController, location, sharedService, router, formBuilder) {
+    constructor(storageService, apiService, alertController, location, sharedService, router, formBuilder) {
         this.storageService = storageService;
-        this.adminService = adminService;
+        this.apiService = apiService;
         this.alertController = alertController;
         this.location = location;
         this.sharedService = sharedService;
@@ -178,8 +178,8 @@ let SignupPage = class SignupPage {
             };
             // const userId = this.sharedService.getUserId();
             const userInfo = yield this.storageService.getStoredValue(_assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_10__["appConstants"].USER_INFO);
-            this.adminService.updateUser(data, userInfo.id).subscribe(res => this.updateUserSuccess(res), error => {
-                this.adminService.commonError(error);
+            this.apiService.updateUser(data, userInfo.id).subscribe(res => this.updateUserSuccess(res), error => {
+                this.apiService.commonError(error);
                 this.sharedService.showSpinner.next(false);
             });
         });
@@ -199,16 +199,17 @@ let SignupPage = class SignupPage {
                         text: 'Cancel',
                         role: 'cancel',
                         handler: () => {
-                            this.storageService.removeStoredItem(_assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_10__["appConstants"].REFRESH_TOKEN_KEY);
-                            this.storageService.removeStoredItem(_assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_10__["appConstants"].ACCESS_TOKEN_KEY);
-                            this.storageService.removeStoredItem(_assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_10__["appConstants"].USER_INFO);
+                            this.loginForm.reset();
                         },
                     },
                     {
                         text: 'OK',
                         role: 'confirm',
                         handler: () => {
-                            this.sharedService.removeAllUserDetails();
+                            this.apiService.isAuthenticated.next(false);
+                            this.storageService.removeStoredItem(_assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_10__["appConstants"].REFRESH_TOKEN_KEY);
+                            this.storageService.removeStoredItem(_assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_10__["appConstants"].ACCESS_TOKEN_KEY);
+                            this.storageService.removeStoredItem(_assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_10__["appConstants"].USER_INFO);
                             this.router.navigate(['login']);
                             this.handlerMessage = 'Alert confirmed';
                         },

@@ -275,11 +275,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./src/assets/constants/app-constants.ts");
 
     var SignupPage = /*#__PURE__*/function () {
-      function SignupPage(storageService, adminService, alertController, location, sharedService, router, formBuilder) {
+      function SignupPage(storageService, apiService, alertController, location, sharedService, router, formBuilder) {
         _classCallCheck(this, SignupPage);
 
         this.storageService = storageService;
-        this.adminService = adminService;
+        this.apiService = apiService;
         this.alertController = alertController;
         this.location = location;
         this.sharedService = sharedService;
@@ -339,10 +339,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 7:
                     userInfo = _context.sent;
-                    this.adminService.updateUser(data, userInfo.id).subscribe(function (res) {
+                    this.apiService.updateUser(data, userInfo.id).subscribe(function (res) {
                       return _this.updateUserSuccess(res);
                     }, function (error) {
-                      _this.adminService.commonError(error);
+                      _this.apiService.commonError(error);
 
                       _this.sharedService.showSpinner.next(false);
                     });
@@ -381,17 +381,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                         text: 'Cancel',
                         role: 'cancel',
                         handler: function handler() {
-                          _this2.storageService.removeStoredItem(_assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_10__["appConstants"].REFRESH_TOKEN_KEY);
-
-                          _this2.storageService.removeStoredItem(_assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_10__["appConstants"].ACCESS_TOKEN_KEY);
-
-                          _this2.storageService.removeStoredItem(_assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_10__["appConstants"].USER_INFO);
+                          _this2.loginForm.reset();
                         }
                       }, {
                         text: 'OK',
                         role: 'confirm',
                         handler: function handler() {
-                          _this2.sharedService.removeAllUserDetails();
+                          _this2.apiService.isAuthenticated.next(false);
+
+                          _this2.storageService.removeStoredItem(_assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_10__["appConstants"].REFRESH_TOKEN_KEY);
+
+                          _this2.storageService.removeStoredItem(_assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_10__["appConstants"].ACCESS_TOKEN_KEY);
+
+                          _this2.storageService.removeStoredItem(_assets_constants_app_constants__WEBPACK_IMPORTED_MODULE_10__["appConstants"].USER_INFO);
 
                           _this2.router.navigate(['login']);
 

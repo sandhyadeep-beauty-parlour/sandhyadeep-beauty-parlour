@@ -3538,9 +3538,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       // baseURLAdminAPIs: 'https://sandhyadeep-beauty-parlour-api.onrender.com/v1/',
       // domainUrlApi: 'https://sandhyadeep-beauty-parlour-api.onrender.com/',
       // sandhyadeep-production
-      baseAuthUrl: 'http://89.116.227.150/v1/auth/',
-      baseURLAdminAPIs: 'http://89.116.227.150/v1/',
-      domainUrlApi: 'http://89.116.227.150/'
+      baseAuthUrl: 'https://www.sandhyadeep.in/api/v1/auth/',
+      baseURLAdminAPIs: 'https://www.sandhyadeep.in/api/v1/',
+      domainUrlApi: 'https://www.sandhyadeep.in/api/'
     };
     /*
      * For easier debugging in development mode, you can import the following file
